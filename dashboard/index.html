@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>글로벌 AI 벤치마킹 대시보드 — LGE AX 전략</title>
+<style>
+:root{
+  --bg:#fff;--bg2:#f5f4f0;--bg3:#eceae3;
+  --text:#1a1a18;--text2:#4a4a46;--text3:#888780;
+  --border:rgba(0,0,0,0.12);--border2:rgba(0,0,0,0.22);
+  --green-bg:#E1F5EE;--green:#085041;--green-b:#5DCAA5;
+  --amber-bg:#FAEEDA;--amber:#633806;--amber-b:#EF9F27;
+  --blue-bg:#E6F1FB;--blue:#0C447C;--blue-b:#85B7EB;
+  --radius:12px;--radius-sm:8px;
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Noto Sans KR",sans-serif;
+}
+@media(prefers-color-scheme:dark){:root{
+  --bg:#1a1a18;--bg2:#242420;--bg3:#2c2c28;
+  --text:#e8e6df;--text2:#b0aea6;--text3:#6a6860;
+  --border:rgba(255,255,255,.10);--border2:rgba(255,255,255,.20);
+  --green-bg:#085041;--green:#9FE1CB;--green-b:#1D9E75;
+  --amber-bg:#633806;--amber:#FAC775;--amber-b:#BA7517;
+  --blue-bg:#042C53;--blue:#85B7EB;--blue-b:#185FA5;
+}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);font-family:var(--font);color:var(--text);padding:20px 20px 48px}
+
+.page-hd{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:4px}
+.page-title{font-size:16px;font-weight:500}
+.last-updated{font-size:11px;color:var(--text3)}
+.page-sub{font-size:12px;color:var(--text3);margin-bottom:16px}
+
+/* DB */
+.db{display:flex;border:0.5px solid var(--border);border-radius:var(--radius);overflow:hidden;background:var(--bg);min-height:620px}
+.nav{width:172px;flex-shrink:0;background:var(--bg2);border-right:0.5px solid var(--border);padding:10px 0 16px;overflow-y:auto}
+.nav-sec{font-size:10px;font-weight:500;color:var(--text3);padding:14px 12px 5px;letter-spacing:.05em}
+.nav-item{padding:7px 12px;cursor:pointer;display:flex;align-items:flex-start;gap:7px;transition:background .1s}
+.nav-item:hover{background:var(--bg3)}
+.nav-item.act-t{background:var(--green-bg)}
+.nav-item.act-b{background:var(--amber-bg)}
+.nav-pill{font-size:10px;font-weight:500;padding:1px 5px;border-radius:3px;flex-shrink:0;margin-top:2px}
+.nav-pill.t{background:var(--green-bg);color:var(--green)}
+.nav-pill.b{background:var(--amber-bg);color:var(--amber)}
+.act-t .nav-pill.t,.act-b .nav-pill.b{background:rgba(255,255,255,.45)}
+.nav-lbl{font-size:12px;color:var(--text2);line-height:1.35}
+.act-t .nav-lbl{color:var(--green);font-weight:500}
+.act-b .nav-lbl{color:var(--amber);font-weight:500}
+
+.center{flex:1;padding:14px;min-width:0}
+.ch{display:flex;align-items:baseline;gap:8px;margin-bottom:3px}
+.ch-title{font-size:15px;font-weight:500}
+.ch-count{font-size:11px;padding:2px 7px;border-radius:10px;font-weight:500}
+.ch-count.t{background:var(--green-bg);color:var(--green)}
+.ch-count.b{background:var(--amber-bg);color:var(--amber)}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+
+.card{border:0.5px solid var(--border);border-radius:var(--radius);overflow:hidden;cursor:pointer;background:var(--bg);transition:border-color .12s}
+.card:hover{border-color:var(--border2)}
+.card.sel{border:1.5px solid var(--blue-b);background:var(--blue-bg)}
+.card-top{padding:12px 14px 8px;display:flex;align-items:flex-start;justify-content:space-between;gap:6px}
+.co-circle{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:500;flex-shrink:0}
+.card-kpi{text-align:right}
+.kpi-val{font-size:20px;font-weight:500;line-height:1}
+.kpi-lbl{font-size:10px;opacity:.8;margin-top:2px}
+.card-body{padding:0 14px 10px}
+.card-co{font-size:11px;color:var(--text3);margin-bottom:2px}
+.card-ttl{font-size:13px;font-weight:500;line-height:1.35;margin-bottom:4px}
+.card-desc{font-size:11px;color:var(--text2);line-height:1.5}
+.card-ft{padding:7px 14px;border-top:0.5px solid var(--border);display:flex;align-items:center;justify-content:space-between;background:var(--bg2)}
+.card-tag{font-size:10px;font-weight:500;padding:2px 7px;border-radius:3px}
+.card-tag.t{background:var(--green-bg);color:var(--green)}
+.card-tag.b{background:var(--amber-bg);color:var(--amber)}
+.card-new{font-size:9px;font-weight:500;padding:1px 5px;border-radius:3px;background:#FFF3CD;color:#856404;margin-left:4px}
+.card-see{font-size:11px;color:var(--blue);font-weight:500}
+
+.det{width:0;flex-shrink:0;border-left:0.5px solid var(--border);overflow:hidden;transition:width .18s;background:var(--bg)}
+.det.open{width:288px}
+.det-in{width:288px;padding:14px}
+.det-hd{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:12px;padding-bottom:12px;border-bottom:0.5px solid var(--border)}
+.det-co{display:flex;align-items:center;gap:9px}
+.det-badge{width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;flex-shrink:0}
+.det-co-name{font-size:14px;font-weight:500}
+.det-co-cat{font-size:11px;color:var(--text3);margin-top:2px}
+.det-close{font-size:18px;color:var(--text3);cursor:pointer;padding:2px 4px;line-height:1;user-select:none}
+.det-close:hover{color:var(--text)}
+.det-tag{display:inline-block;font-size:10px;font-weight:500;padding:2px 7px;border-radius:3px;margin-bottom:10px}
+.det-tag.t{background:var(--green-bg);color:var(--green)}
+.det-tag.b{background:var(--amber-bg);color:var(--amber)}
+.det-unverified{font-size:10px;color:#856404;background:#FFF3CD;padding:2px 7px;border-radius:3px;display:inline-block;margin-bottom:8px}
+.det-ttl{font-size:14px;font-weight:500;margin-bottom:8px;line-height:1.4}
+.det-body{font-size:12px;color:var(--text2);line-height:1.75;margin-bottom:14px}
+.det-metrics{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-bottom:14px}
+.met{background:var(--bg2);border-radius:var(--radius-sm);padding:10px 10px 8px}
+.met-v{font-size:18px;font-weight:500}
+.met-v.pos{color:var(--green)}
+.met-v.neg,.met-v.neu{color:var(--blue)}
+.met-l{font-size:10px;color:var(--text3);margin-top:2px;line-height:1.3}
+.det-src a{font-size:11px;color:var(--blue);text-decoration:none;border-bottom:0.5px solid var(--blue-b)}
+.det-src a:hover{opacity:.75}
+.det-tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:10px}
+.det-tag-pill{font-size:10px;padding:2px 6px;border-radius:4px;background:var(--bg2);color:var(--text3)}
+
+.loading{display:flex;align-items:center;justify-content:center;height:400px;font-size:13px;color:var(--text3)}
+
+@media(max-width:800px){
+  .db{flex-direction:column}
+  .nav{width:100%;border-right:none;border-bottom:0.5px solid var(--border);display:flex;overflow-x:auto;padding:8px;gap:4px}
+  .nav-sec{display:none}
+  .nav-item{flex-shrink:0;border-radius:6px;padding:5px 10px}
+  .det.open{width:100%;border-left:none;border-top:0.5px solid var(--border)}
+  .det-in{width:100%}
+  .cards{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="page-hd">
+  <span class="page-title">글로벌 AI 벤치마킹 대시보드</span>
+  <span class="last-updated" id="last-updated">로딩 중...</span>
+</div>
+<div class="page-sub">LG전자 AX 전략 참고 | 카테고리 선택 → 카드 클릭 → 상세 출처 확인</div>
+
+<div class="db">
+  <div class="nav" id="nav"></div>
+  <div class="center" id="center"><div class="loading">데이터 불러오는 중...</div></div>
+  <div class="det" id="det"><div class="det-in" id="det-in"></div></div>
+</div>
+
+<script>
+let DB = null;
+let activeCat = null;
+let activeCard = null;
+
+// ── Load data ──────────────────────────────────────────────────────────────────
+async function loadData() {
+  try {
+    const res = await fetch('../data/cases.json');
+    DB = await res.json();
+    document.getElementById('last-updated').textContent =
+      'Updated: ' + new Date(DB.meta.last_updated).toLocaleDateString('ko-KR') +
+      ` (${DB.meta.total_cases}개 사례)`;
+    buildNav();
+    selCat(Object.keys(DB.categories)[0]);
+  } catch(e) {
+    document.getElementById('center').innerHTML =
+      '<div class="loading">데이터 로드 실패. cases.json을 확인하세요.</div>';
+  }
+}
+
+// ── Nav ────────────────────────────────────────────────────────────────────────
+function buildNav() {
+  const nav = document.getElementById('nav');
+  const cats = DB.categories;
+  const topCats = Object.entries(cats).filter(([,v]) => v.type === 'top');
+  const botCats = Object.entries(cats).filter(([,v]) => v.type === 'bot');
+
+  let h = '<div class="nav-sec">TOP-LINE 향상</div>';
+  topCats.forEach(([id, cat]) => {
+    const count = DB.cases.filter(c => c.category === id).length;
+    h += `<div class="nav-item" id="nav-${id}" onclick="selCat('${id}')">
+      <span class="nav-pill t">${id}</span>
+      <span class="nav-lbl">${cat.name} <span style="font-size:10px;opacity:.6">${count}</span></span>
+    </div>`;
+  });
+  h += '<div style="height:0.5px;background:var(--border);margin:8px 0"></div>';
+  h += '<div class="nav-sec">BOTTOM-LINE 개선</div>';
+  botCats.forEach(([id, cat]) => {
+    const count = DB.cases.filter(c => c.category === id).length;
+    h += `<div class="nav-item" id="nav-${id}" onclick="selCat('${id}')">
+      <span class="nav-pill b">${id}</span>
+      <span class="nav-lbl">${cat.name} <span style="font-size:10px;opacity:.6">${count}</span></span>
+    </div>`;
+  });
+  nav.innerHTML = h;
+}
+
+// ── Category select ────────────────────────────────────────────────────────────
+function selCat(id) {
+  if (activeCat) {
+    const p = document.getElementById('nav-' + activeCat);
+    if (p) p.classList.remove('act-t', 'act-b');
+  }
+  activeCat = id;
+  const cat = DB.categories[id];
+  const el = document.getElementById('nav-' + id);
+  if (el) el.classList.add(cat.type === 'top' ? 'act-t' : 'act-b');
+
+  activeCard = null;
+  document.getElementById('det').classList.remove('open');
+
+  const cases = DB.cases.filter(c => c.category === id);
+  const tt = cat.type === 'top' ? 't' : 'b';
+
+  let h = `<div class="ch">
+    <span class="ch-title">${cat.name}</span>
+    <span class="ch-count ${tt}">${id} · ${cases.length}개 사례</span>
+  </div>
+  <div style="font-size:12px;color:var(--text3);margin-top:2px">${cat.sub}</div>
+  <div class="cards">`;
+
+  cases.forEach((c, i) => {
+    const isNew = !c.verified;
+    h += `<div class="card" id="card-${id}-${i}" onclick="selCard('${id}',${i})">
+      <div class="card-top" style="background:${c.color_bg}25">
+        <div class="co-circle" style="background:${c.color_bg};color:${c.color_text}">${c.short}</div>
+        <div class="card-kpi" style="color:${c.color_text}">
+          <div class="kpi-val">${c.kpi_value}</div>
+          <div class="kpi-lbl">${c.kpi_label}</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-co">${c.company}</div>
+        <div class="card-ttl">${c.title}</div>
+        <div class="card-desc">${c.description}</div>
+      </div>
+      <div class="card-ft">
+        <span>
+          <span class="card-tag ${tt}">${id}</span>
+          ${isNew ? '<span class="card-new">NEW</span>' : ''}
+        </span>
+        <span class="card-see">자세히 보기 →</span>
+      </div>
+    </div>`;
+  });
+  h += '</div>';
+  document.getElementById('center').innerHTML = h;
+}
+
+// ── Case detail ────────────────────────────────────────────────────────────────
+function selCard(catId, idx) {
+  if (activeCard !== null) {
+    const p = document.getElementById(`card-${activeCat}-${activeCard}`);
+    if (p) p.classList.remove('sel');
+  }
+  activeCard = idx;
+  const el = document.getElementById(`card-${catId}-${idx}`);
+  if (el) el.classList.add('sel');
+
+  const cat = DB.categories[catId];
+  const cases = DB.cases.filter(c => c.category === catId);
+  const c = cases[idx];
+  const tt = cat.type === 'top' ? 't' : 'b';
+
+  const mh = (c.metrics || []).map(m => `
+    <div class="met">
+      <div class="met-v ${m.trend || 'pos'}">${m.value}</div>
+      <div class="met-l">${m.label}</div>
+    </div>`).join('');
+
+  const tagPills = (c.tags || []).map(t => `<span class="det-tag-pill">${t}</span>`).join('');
+
+  document.getElementById('det-in').innerHTML = `
+    <div class="det-hd">
+      <div class="det-co">
+        <div class="det-badge" style="background:${c.color_bg};color:${c.color_text}">${c.short}</div>
+        <div>
+          <div class="det-co-name">${c.company}</div>
+          <div class="det-co-cat">${catId} ${cat.name}</div>
+        </div>
+      </div>
+      <span class="det-close" onclick="closeDet()">×</span>
+    </div>
+    <span class="det-tag ${tt}">${cat.sub}</span>
+    ${!c.verified ? '<div><span class="det-unverified">자동 수집 (미검증)</span></div>' : ''}
+    <div class="det-ttl">${c.title}</div>
+    <div class="det-body">${c.body}</div>
+    <div class="det-metrics">${mh}</div>
+    <div class="det-src"><a href="${c.url}" target="_blank" rel="noopener">${c.source} ↗</a></div>
+    <div class="det-tags">${tagPills}</div>`;
+
+  document.getElementById('det').classList.add('open');
+}
+
+function closeDet() {
+  document.getElementById('det').classList.remove('open');
+  if (activeCard !== null) {
+    const p = document.getElementById(`card-${activeCat}-${activeCard}`);
+    if (p) p.classList.remove('sel');
+    activeCard = null;
+  }
+}
+
+loadData();
+</script>
+</body>
+</html>

@@ -1,0 +1,742 @@
+{
+  "meta": {
+    "last_updated": "2026-05-05T10:00:00+09:00",
+    "total_cases": 40,
+    "version": "1.2",
+    "description": "LGE AX Strategy — Global AI Sales & Marketing Benchmark DB"
+  },
+  "categories": {
+    "1-1": { "name": "신규 고객 획득", "sub": "더 많이 데려오기", "type": "top" },
+    "1-2": { "name": "전환율 상승", "sub": "더 잘 사게 만들기", "type": "top" },
+    "1-3": { "name": "객단가·Mix 개선", "sub": "더 비싸고 좋게 팔기", "type": "top" },
+    "1-4": { "name": "재구매·LTV 확대", "sub": "더 오래 유지하기", "type": "top" },
+    "1-5": { "name": "신규 수익모델", "sub": "새로운 매출원 만들기", "type": "top" },
+    "2-1": { "name": "마케팅 운영비 절감", "sub": "만드는 비용 줄이기", "type": "bot" },
+    "2-2": { "name": "영업 운영비 절감", "sub": "파는 비용 줄이기", "type": "bot" },
+    "2-3": { "name": "CS·케어 비용 절감", "sub": "응대 비용 줄이기", "type": "bot" },
+    "2-4": { "name": "운영 판단력·실행력", "sub": "더 빠르고 정교하게", "type": "bot" },
+    "2-5": { "name": "리스크·품질 비용", "sub": "손실 줄이기", "type": "bot" }
+  },
+  "cases": [
+    {
+      "id": "SEP-001", "category": "1-1", "company": "Sephora", "short": "SEP",
+      "color_bg": "#FBEAF0", "color_text": "#72243E",
+      "kpi_value": "+11%", "kpi_label": "신규 고객 유입",
+      "title": "AI 버추얼 아티스트 — 체험형 고객 획득",
+      "description": "AR 가상 메이크업 체험 + AI 개인화 추천으로 디지털 신규 고객 대폭 확보, 전환율 크게 향상",
+      "body": "세포라의 Virtual Artist는 AR 기술과 AI를 결합해 앱에서 립스틱·아이섀도 등을 가상 체험할 수 있게 했다. 8.5백만 명 이상이 이 기능을 사용했으며, 체험 후 구매 전환율이 일반 방문 대비 크게 높았다. AI Color IQ는 3,600만 가지 피부톤 데이터를 분석해 개인 맞춤 제품을 추천한다. 개인화 추천을 받은 고객의 전환율은 80% 이상 높고, 온라인 신규 고객 획득의 핵심 채널이 됐다.",
+      "metrics": [
+        { "value": "8.5M+", "label": "AR 가상체험 사용자", "trend": "pos" },
+        { "value": "+80%", "label": "개인화 추천 전환율", "trend": "pos" },
+        { "value": "3,600만", "label": "Color IQ 피부톤 분석", "trend": "pos" },
+        { "value": "+11%", "label": "디지털 신규 고객", "trend": "pos" }
+      ],
+      "tags": ["retail", "AR", "personalization", "beauty"],
+      "source": "Pragmatic Digital AI Marketing Case Studies, 2024",
+      "url": "https://www.pragmatic.digital/blog/ai-marketing-case-study-successful-campaigns",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "LOR-001", "category": "1-1", "company": "로레알", "short": "LOR",
+      "color_bg": "#EEEDFE", "color_text": "#3C3489",
+      "kpi_value": "+67%", "kpi_label": "CTR 향상",
+      "title": "Google AI Max 검색 마케팅",
+      "description": "AI Max for Search로 클릭률·전환·ROAS 동시 개선, 20개+ 시장 적용",
+      "body": "로레알은 Google AI Max for Search를 칠레 헤어·스킨케어 캠페인에 파일럿 적용했다. AI가 검색 의도를 분석해 최적 광고 문구와 입찰가를 실시간으로 결정한다. CTR 67% 향상, 전환당 비용 31% 절감, ROAS 20% 개선의 성과를 냈으며 현재 20개 이상 EMEA 시장으로 확대했다.",
+      "metrics": [
+        { "value": "+67%", "label": "CTR (클릭률)", "trend": "pos" },
+        { "value": "-31%", "label": "전환당 비용(CPC)", "trend": "pos" },
+        { "value": "+20%", "label": "ROAS", "trend": "pos" },
+        { "value": "+28%", "label": "북유럽 전환 수", "trend": "pos" }
+      ],
+      "tags": ["search", "media", "ROAS", "beauty"],
+      "source": "Think with Google, 2025",
+      "url": "https://business.google.com/us/think/ai-excellence/loreal-ai-max-search-marketing-strategy/",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "UNI-001", "category": "1-1", "company": "유니레버", "short": "UNI",
+      "color_bg": "#E1F5EE", "color_text": "#085041",
+      "kpi_value": "52%", "kpi_label": "신규 고객 비율",
+      "title": "AI 타겟팅·소비자 인사이트",
+      "description": "AI 소비자 인사이트 플랫폼으로 신규 고객 비율 52%, 연 €3,000만 리서치 절감",
+      "body": "유니레버의 People Data Centre(PDC)는 수백만 건의 소비자 데이터를 AI로 분석해 실시간 타겟팅에 활용한다. 특정 캠페인에서 AI 타겟팅으로 35억 소셜미디어 노출을 달성하고 신규 고객 비율 52%를 기록했다. 동시에 소비자 리서치 비용을 연간 €3,000만 절감했다.",
+      "metrics": [
+        { "value": "52%", "label": "신규 고객 비율", "trend": "pos" },
+        { "value": "€3,000만", "label": "리서치 비용 절감/년", "trend": "pos" },
+        { "value": "35억", "label": "소셜미디어 노출", "trend": "pos" },
+        { "value": "+30%", "label": "스마트 리테일 매출", "trend": "pos" }
+      ],
+      "tags": ["targeting", "consumer_insights", "FMCG"],
+      "source": "Unilever Annual Report / InfotechLead, 2024",
+      "url": "https://infotechlead.com/cio/unilever-drives-digital-ai-and-e-commerce-growth-with-2x-faster-marketing-and-e800-mn-cost-savings-94832",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "CCO-001", "category": "1-1", "company": "코카콜라", "short": "CCO",
+      "color_bg": "#FAEEDA", "color_text": "#633806",
+      "kpi_value": "×10", "kpi_label": "콘텐츠 속도",
+      "title": "Project Fizzion — AI 캠페인 자동화",
+      "description": "Adobe AI와 협력, 브랜드 가이드를 AI 에셋으로 자동 변환해 100개+ 시장에 즉시 배포",
+      "body": "코카콜라는 Adobe와 Project Fizzion을 통해 브랜드 가이드라인을 AI 에셋으로 자동 변환하는 크리에이티브 인텔리전스 시스템을 구축했다. 수백 개의 현지화 캠페인 변형을 자동 생성하고, 100개 이상 시장의 다국어 텍스트를 자동화한다. 콘텐츠 제작 속도가 최대 10배 빨라지고 Microsoft와 $11억 규모의 AI 파트너십도 체결했다.",
+      "metrics": [
+        { "value": "×10", "label": "콘텐츠 제작 속도", "trend": "pos" },
+        { "value": "100+", "label": "적용 시장 수", "trend": "pos" },
+        { "value": "$11억", "label": "MS AI 파트너십", "trend": "pos" },
+        { "value": "자동화", "label": "다국어 텍스트", "trend": "neu" }
+      ],
+      "tags": ["content", "localization", "creative_AI", "FMCG"],
+      "source": "Coca-Cola Media Center, 2025",
+      "url": "https://www.coca-colacompany.com/media-center/the-coca-cola-company-introduces-fizzion",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "WAY-001", "category": "1-2", "company": "Wayfair", "short": "WAY",
+      "color_bg": "#E6F1FB", "color_text": "#0C447C",
+      "kpi_value": "+40%", "kpi_label": "전환율",
+      "title": "AI 고객 여정 개인화",
+      "description": "ML로 구매 의향·선호도 분석, 전환율 +40%, 반품률 -18% 동시 달성",
+      "body": "Wayfair는 머신러닝을 활용해 계절 트렌드, 스타일 선호도, 방 크기까지 분석하는 개인화 추천 엔진을 구축했다. 과거 구매, 주택 소유 여부, 브라우징 습관을 결합해 맞춤형 제품 카탈로그를 생성한다. 고객 여정 매핑으로 전환율이 40% 향상되고 반품률이 18% 감소했다.",
+      "metrics": [
+        { "value": "+40%", "label": "전환율 최적화", "trend": "pos" },
+        { "value": "-18%", "label": "반품률", "trend": "pos" },
+        { "value": "AI", "label": "실시간 카탈로그", "trend": "neu" },
+        { "value": "ML", "label": "구매 의향 예측", "trend": "neu" }
+      ],
+      "tags": ["personalization", "conversion", "e-commerce"],
+      "source": "EComposer Research, 2024",
+      "url": "https://ecomposer.io/blogs/ecommerce/ai-personalization-ecommerce",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "MSF-001", "category": "1-2", "company": "Microsoft", "short": "MSF",
+      "color_bg": "#E6F1FB", "color_text": "#0C447C",
+      "kpi_value": "+9.4%", "kpi_label": "셀러당 매출",
+      "title": "Copilot for Sales — 영업 코파일럿",
+      "description": "자사 영업 조직에 Copilot 도입, 셀러당 매출 9.4%↑, 딜 성사율 20%↑",
+      "body": "Microsoft는 자사 영업 조직(687명)에 Copilot for Sales를 도입하고 6개월간 A/B 테스트를 진행했다. Copilot을 매일 사용하는 셀러는 비사용 셀러 대비 셀러당 매출이 9.4% 증가하고 딜 성사율이 20% 향상되었다. 고객 케이스 해결 속도도 약 12% 개선됐다(95% 신뢰구간).",
+      "metrics": [
+        { "value": "+9.4%", "label": "셀러당 매출", "trend": "pos" },
+        { "value": "+20%", "label": "딜 성사율", "trend": "pos" },
+        { "value": "+12%", "label": "케이스 해결 속도", "trend": "pos" },
+        { "value": "687명", "label": "추적 셀러 수", "trend": "neu" }
+      ],
+      "tags": ["sales_copilot", "CRM", "B2B", "productivity"],
+      "source": "Microsoft Blog, 2024",
+      "url": "https://blogs.microsoft.com/blog/2024/10/21/new-autonomous-agents-scale-your-team-like-never-before/",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "SIE-001", "category": "1-2", "company": "지멘스", "short": "SIE",
+      "color_bg": "#E1F5EE", "color_text": "#085041",
+      "kpi_value": "2,800건", "kpi_label": "주간 리드 심사",
+      "title": "Salesforce Agentforce — 인바운드 자동화",
+      "description": "18,000명 영업 조직에 AI 에이전트 도입, 주 2,800건 리드 자동 심사",
+      "body": "지멘스는 Salesforce Agentforce를 18,000명 영업 조직에 도입했다. AI가 인바운드 리드의 BANT(예산·권한·필요·타이밍)를 자동 분석하고 우선순위를 정한다. 주당 2,800건의 비적격 인바운드 리드가 자동 처리되고, 기존에 방치되던 SMB 시장 커버리지가 확대됐다.",
+      "metrics": [
+        { "value": "2,800건", "label": "주간 자동 리드 심사", "trend": "pos" },
+        { "value": "자동화", "label": "BANT 분석", "trend": "neu" },
+        { "value": "확대", "label": "SMB 커버리지", "trend": "pos" },
+        { "value": "100%", "label": "방문 해결률↑", "trend": "pos" }
+      ],
+      "tags": ["sales_agent", "lead_qualification", "B2B"],
+      "source": "Salesforce Customer Stories, 2024",
+      "url": "https://www.salesforce.com/customer-stories/siemens/",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "AMZ-001", "category": "1-2", "company": "Amazon", "short": "AMZ",
+      "color_bg": "#FAEEDA", "color_text": "#633806",
+      "kpi_value": "35%", "kpi_label": "매출 기여",
+      "title": "AI 추천 엔진 — 크로스셀",
+      "description": "AI 추천 엔진이 연간 전체 매출의 35% 창출, 상품 발견부터 구매까지 AI 연결",
+      "body": "Amazon의 AI 추천 엔진은 사용자의 브라우징, 구매 이력, 장바구니 행동, 포기된 결제 흐름까지 학습한다. '이 상품을 구매한 고객은 이것도 샀습니다' 섹션부터 검색 결과 순위까지 AI가 개인화한다. 추천을 클릭한 고객은 클릭하지 않은 고객 대비 구매 확률이 4.5배 높다.",
+      "metrics": [
+        { "value": "35%", "label": "전체 매출 기여", "trend": "pos" },
+        { "value": "4.5배", "label": "추천 클릭 구매 확률", "trend": "pos" },
+        { "value": "AI", "label": "실시간 개인화", "trend": "neu" },
+        { "value": "24/7", "label": "자동 최적화", "trend": "neu" }
+      ],
+      "tags": ["recommendation", "cross-sell", "e-commerce", "personalization"],
+      "source": "Netguru / McKinsey Analysis, 2024",
+      "url": "https://www.netguru.com/blog/machine-learning-sales-cross-sell-upsell-campaigns",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "RYN-001", "category": "1-3", "company": "Ryanair", "short": "RYN",
+      "color_bg": "#FAEEDA", "color_text": "#633806",
+      "kpi_value": "+25%", "kpi_label": "업셀 매출",
+      "title": "AI 부가 서비스 업셀링",
+      "description": "AI가 최적 타이밍에 좌석 업그레이드·수하물·보험 오퍼 자동 제안, 매출 25% 증가",
+      "body": "Ryanair는 AI를 활용해 항공권 구매 여정 중 가장 전환율이 높은 순간에 좌석 업그레이드, 수하물, 여행 보험 등 부가 서비스를 제안한다. AI가 고객 데이터를 분석해 개인별 맞춤 오퍼를 생성하고, Black Friday/Cyber Monday 기간에는 42.1%의 업셀 수락률을 기록했다.",
+      "metrics": [
+        { "value": "+25%", "label": "부가 서비스 매출", "trend": "pos" },
+        { "value": "42%", "label": "성수기 업셀 수락률", "trend": "pos" },
+        { "value": "AI", "label": "실시간 오퍼 생성", "trend": "neu" },
+        { "value": "개인화", "label": "고객별 맞춤 제안", "trend": "neu" }
+      ],
+      "tags": ["upsell", "ancillary", "travel", "dynamic_pricing"],
+      "source": "SuperAGI Report, 2025",
+      "url": "https://superagi.com/case-study-how-companies-are-using-ai-to-identify-upsell-and-cross-sell-opportunities-in-2025/",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "PNG-001", "category": "1-3", "company": "P&G", "short": "P&G",
+      "color_bg": "#E1F5EE", "color_text": "#085041",
+      "kpi_value": "4배", "kpi_label": "리테일 미디어 ROI",
+      "title": "AI 알고리즘 미디어 바잉",
+      "description": "AI 자동 입찰기로 리테일 미디어 수익률 4배, 광고 효율화 연간 $5~7억 여력",
+      "body": "P&G는 AI 기반 리테일 미디어 자동 입찰기(Auto-bidder)를 구축해 15분 간격으로 광고 입찰을 최적화한다. 인하우스 전환으로 에이전시 비용 $6,500만을 절감했으며, 알고리즘 TV 광고 바잉에서 추가 $4,000만 절감을 기대하고 있다.",
+      "metrics": [
+        { "value": "4배", "label": "리테일 미디어 수익률", "trend": "pos" },
+        { "value": "$6,500만", "label": "에이전시 비용 절감", "trend": "pos" },
+        { "value": "1/10", "label": "광고 테스트 비용", "trend": "pos" },
+        { "value": "$5~7억", "label": "연간 효율화 여력", "trend": "pos" }
+      ],
+      "tags": ["media_buying", "retail_media", "FMCG", "programmatic"],
+      "source": "Marketing Week / Marketing Dive, 2024",
+      "url": "https://www.marketingweek.com/pg-ai-best-possible-value-ad/",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "BCG-001", "category": "1-3", "company": "BCG", "short": "BCG",
+      "color_bg": "#EEEDFE", "color_text": "#3C3489",
+      "kpi_value": "+6~10%", "kpi_label": "매출 uplift",
+      "title": "AI 개인화 번들 — 소비재 벤치마크",
+      "description": "BCG 분석: AI 개인화 번들 전략 도입 시 소비재 기업 매출 6~10% uplift",
+      "body": "BCG 연구에 따르면 AI 기반 개인화를 실행하는 소비재 기업은 경쟁사 대비 5~10% 빠른 성장을 기록한다. 특히 번들·세트 제안을 AI로 최적화하면 AOV(평균 주문 금액)가 10% 이상 향상된다. 비워킹 마케팅 지출에서 25~50% 절감이 가능하며 ROAS는 50~100% 개선된다.",
+      "metrics": [
+        { "value": "+6~10%", "label": "소비재 매출 uplift", "trend": "pos" },
+        { "value": "+10%", "label": "AOV 향상", "trend": "pos" },
+        { "value": "5~10%", "label": "경쟁사 대비 성장", "trend": "pos" },
+        { "value": "+50~100%", "label": "ROAS 개선", "trend": "pos" }
+      ],
+      "tags": ["bundle", "personalization", "FMCG", "research"],
+      "source": "BCG GenAI Marketing Report, 2025",
+      "url": "https://www.bcg.com/publications/2025/are-you-generating-value-from-ai-the-widening-gap",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "IKE-001", "category": "1-3", "company": "이케아", "short": "IKE",
+      "color_bg": "#FAEEDA", "color_text": "#633806",
+      "kpi_value": "+3~5%p", "kpi_label": "마진율",
+      "title": "AI 동적 프라이싱",
+      "description": "재고·경쟁사·수요를 실시간 분석해 가격 자동 최적화, 마진 2~5%p 개선",
+      "body": "이케아는 AI 프라이싱 시스템을 도입해 재고 수준, 경쟁사 가격, 수요 탄력성을 실시간 분석하고 최적 가격을 자동으로 결정한다. 업계 전반적으로 AI 동적 가격 도입 시 마진율이 2~5%p 개선되는 것으로 나타났다.",
+      "metrics": [
+        { "value": "+2~5%p", "label": "마진율 개선", "trend": "pos" },
+        { "value": "실시간", "label": "수요·재고 분석", "trend": "neu" },
+        { "value": "자동화", "label": "경쟁사 가격 추적", "trend": "neu" },
+        { "value": "최적화", "label": "재고 소진율 향상", "trend": "pos" }
+      ],
+      "tags": ["dynamic_pricing", "retail", "margin"],
+      "source": "ArticleSledge ML Retail Case Studies, 2024",
+      "url": "https://www.articsledge.com/post/machine-learning-retail-case-studies",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "NFX-001", "category": "1-4", "company": "Netflix", "short": "NFX",
+      "color_bg": "#E6F1FB", "color_text": "#0C447C",
+      "kpi_value": "2.3%", "kpi_label": "이탈률",
+      "title": "AI 개인화 추천으로 최저 이탈률",
+      "description": "AI 추천이 구독 유지의 핵심, 월간 이탈률 2.3%로 경쟁사(4.1%) 대비 압도적",
+      "body": "Netflix의 AI 추천 알고리즘은 시청 이력, 시간대, 중단 패턴까지 분석해 이탈 위험 고객을 사전에 탐지한다. 개인화 추천으로 사용자 참여도를 유지하며 월간 이탈률 2.3%를 달성했다(경쟁사 Hulu 4.1%). AI가 제공하는 개인화 경험이 구독 Lock-in의 핵심 동력이다.",
+      "metrics": [
+        { "value": "2.3%", "label": "월간 이탈률", "trend": "neu" },
+        { "value": "4.1%", "label": "경쟁사(Hulu) 이탈률", "trend": "neu" },
+        { "value": "AI", "label": "이탈 위험 사전 탐지", "trend": "neu" },
+        { "value": "개인화", "label": "구독 Lock-in 강화", "trend": "neu" }
+      ],
+      "tags": ["churn", "subscription", "recommendation", "streaming"],
+      "source": "Prose Media Analysis, 2024",
+      "url": "https://www.prosemedia.com/blog/predicting-customer-churn-before-it-happens-how-ai-driven-insights-help-retain-high-value-clients",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "TMO-001", "category": "1-4", "company": "T-Mobile", "short": "TMO",
+      "color_bg": "#E1F5EE", "color_text": "#085041",
+      "kpi_value": "-20%", "kpi_label": "이탈 감소",
+      "title": "AI 이탈 예측 CRM",
+      "description": "AI 이탈 예측 모델로 고위험 고객을 선제 파악, 맞춤 오퍼 자동 발송해 이탈 20% 감소",
+      "body": "T-Mobile은 AI 기반 이탈 예측 모델을 CRM에 통합해 고위험 고객을 사전에 식별한다. AI가 통화 패턴, 불만 이력, 결제 행동, 경쟁사 접촉 신호를 분석해 이탈 확률을 산출하고, 선제적으로 맞춤 리텐션 오퍼를 자동 발송한다.",
+      "metrics": [
+        { "value": "-20%", "label": "고객 이탈 감소", "trend": "pos" },
+        { "value": "선제적", "label": "리텐션 오퍼 자동 발송", "trend": "neu" },
+        { "value": "AI", "label": "고위험 고객 식별", "trend": "neu" },
+        { "value": "통합", "label": "CRM AI 연동", "trend": "neu" }
+      ],
+      "tags": ["churn_prediction", "CRM", "telecom", "retention"],
+      "source": "Prose Media Research, 2024",
+      "url": "https://www.prosemedia.com/blog/predicting-customer-churn-before-it-happens-how-ai-driven-insights-help-retain-high-value-clients",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "NKE-001", "category": "1-4", "company": "나이키", "short": "NKE",
+      "color_bg": "#FAEEDA", "color_text": "#633806",
+      "kpi_value": "+30%", "kpi_label": "재구매율",
+      "title": "AI CRM 개인화 — D2C 재구매",
+      "description": "앱 사용·구매 이력·소셜 데이터 결합, AI 개인화로 재구매율 최대 30% 향상",
+      "body": "나이키는 앱 사용 데이터, 구매 이력, 소셜 시그널을 결합한 예측형 AI 개인화를 구현했다. AI 챗봇 기반 개인화 콘텐츠는 전통적 배너 광고 대비 CTR 20% 상승을 기록했다. D2C 채널 강화와 AI CRM 결합으로 재구매율이 최대 30% 향상됐으며 고객 LTV가 크게 증가했다.",
+      "metrics": [
+        { "value": "+30%", "label": "재구매율 향상", "trend": "pos" },
+        { "value": "+20%", "label": "AI 챗봇 CTR", "trend": "pos" },
+        { "value": "D2C", "label": "직판 채널 강화", "trend": "neu" },
+        { "value": "AI", "label": "소셜 신호 분석", "trend": "neu" }
+      ],
+      "tags": ["CRM", "D2C", "repurchase", "LTV", "sportswear"],
+      "source": "DigitalDefynd, 2024",
+      "url": "https://digitaldefynd.com/IQ/ways-nike-use-ai/",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "ADB-001", "category": "1-4", "company": "Audiobooks.com", "short": "ADB",
+      "color_bg": "#E6F1FB", "color_text": "#0C447C",
+      "kpi_value": "95%+", "kpi_label": "이탈 예측 정확도",
+      "title": "AI 구독 이탈 예측 모델",
+      "description": "Random Forest 기반 AI로 이탈 예측 정확도 98~99%, 월간 이탈률 유의미 감소",
+      "body": "Audiobooks.com은 Provectus와 함께 구독 이탈 예측 AI 모델을 구축했다. Decision Tree, Random Forest, CatBoost 앙상블 모델이 이탈 고객을 사전 탐지하며 95% 이상의 정밀도와 재현율을 달성했다.",
+      "metrics": [
+        { "value": "98~99%", "label": "모델 예측 정확도", "trend": "pos" },
+        { "value": "감소", "label": "월간 이탈률", "trend": "pos" },
+        { "value": "개선", "label": "LTV·CPC 즉각 향상", "trend": "pos" },
+        { "value": "AI", "label": "이탈 패턴 학습", "trend": "neu" }
+      ],
+      "tags": ["churn_prediction", "subscription", "ML_model"],
+      "source": "Provectus Case Study, 2024",
+      "url": "https://provectus.com/case-studies/user-churn-prediction-with-ai/",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "BOA-001", "category": "1-5", "company": "뱅크오브아메리카", "short": "BOA",
+      "color_bg": "#E6F1FB", "color_text": "#0C447C",
+      "kpi_value": "30억건", "kpi_label": "AI 인터랙션",
+      "title": "Erica AI — 금융 서비스 신수익",
+      "description": "AI 가상비서 Erica로 5,000만 사용자 확보, 크로스셀 매출 19% 증가",
+      "body": "뱅크오브아메리카의 AI 가상비서 Erica는 10년간 30억 건 이상의 고객 인터랙션을 처리하며 5,000만 사용자를 확보했다. 사용자의 98%가 필요한 정보를 찾아 콜센터 통화량을 대폭 감소시켰다. 디지털 채널을 통한 AI 크로스셀링으로 매출이 19% 증가했다.",
+      "metrics": [
+        { "value": "30억건", "label": "누적 AI 인터랙션", "trend": "pos" },
+        { "value": "5,000만", "label": "사용자 수", "trend": "pos" },
+        { "value": "+19%", "label": "크로스셀 매출", "trend": "pos" },
+        { "value": "98%", "label": "정보 탐색 성공률", "trend": "pos" }
+      ],
+      "tags": ["virtual_assistant", "cross-sell", "fintech", "platform"],
+      "source": "BofA Newsroom, 2025",
+      "url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2025/08/a-decade-of-ai-innovation--bofa-s-virtual-assistant-erica-surpas.html",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "LMN-001", "category": "1-5", "company": "루멘 테크놀로지스", "short": "LMN",
+      "color_bg": "#EEEDFE", "color_text": "#3C3489",
+      "kpi_value": "$5,000만", "kpi_label": "연간 효율화",
+      "title": "MS Copilot — B2B 영업 신시장",
+      "description": "Copilot 도입으로 연 $5,000만 영업 운영 효율화, 미커버 신규 시장 자동 커버",
+      "body": "루멘 테크놀로지스(통신)는 Microsoft Copilot을 수천 명 영업·CS 인력에 배포했다. 영업 담당자는 주당 평균 4시간을 절약하고, 고객 리서치 시간이 4시간에서 15분으로 단축됐다. 기존에 방치하던 SMB 시장 공략도 가능해졌으며 Copilot 활용률은 93%에 달한다.",
+      "metrics": [
+        { "value": "$5,000만", "label": "연간 효율화 효과", "trend": "pos" },
+        { "value": "93%", "label": "Copilot 활용률", "trend": "pos" },
+        { "value": "4h→15분", "label": "고객 리서치 단축", "trend": "pos" },
+        { "value": "주 4시간", "label": "1인당 절약", "trend": "pos" }
+      ],
+      "tags": ["sales_productivity", "B2B", "telecom", "copilot"],
+      "source": "Microsoft News Source, 2024",
+      "url": "https://news.microsoft.com/source/features/digital-transformation/the-only-way-how-copilot-is-helping-propel-an-evolution-at-lumen-technologies/",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "SFO-001", "category": "1-5", "company": "Salesforce", "short": "SFO",
+      "color_bg": "#E1F5EE", "color_text": "#085041",
+      "kpi_value": "+15%", "kpi_label": "파이프라인 확대",
+      "title": "Agentforce — AI 영업 에이전트",
+      "description": "자사 Agentforce 도입으로 마케팅 파이프라인 15%↑, 리드 전환율 80%↑",
+      "body": "Salesforce는 자사 영업에 Agentforce(Einstein SDR Agent)를 도입해 인바운드 마케팅 파이프라인을 15% 확대하고 리드 전환율을 80% 향상시켰다. AI 에이전트가 인바운드 리드를 24시간 자동 응대하고, 영업 담당자는 AI가 준비한 고객 인사이트를 바탕으로 미팅에만 집중한다.",
+      "metrics": [
+        { "value": "+15%", "label": "마케팅 파이프라인", "trend": "pos" },
+        { "value": "+80%", "label": "리드 전환율", "trend": "pos" },
+        { "value": "24/7", "label": "AI 자동 응대", "trend": "neu" },
+        { "value": "자동화", "label": "인바운드 처리", "trend": "neu" }
+      ],
+      "tags": ["sales_agent", "pipeline", "SDR", "automation"],
+      "source": "Salesforce on Salesforce, 2024",
+      "url": "https://www.salesforce.com/salesforce-on-salesforce-stories/",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "GE-001", "category": "1-5", "company": "GE (산업)", "short": "GE",
+      "color_bg": "#FAEEDA", "color_text": "#633806",
+      "kpi_value": "+30%", "kpi_label": "서비스 매출 비중",
+      "title": "AI 예측 정비 서비스 SaaS화",
+      "description": "산업용 장비 AI 예측 정비를 구독 SaaS로 전환, 서비스 매출 비중 대폭 확대",
+      "body": "GE는 산업 장비의 AI 예측 정비 서비스를 구독형 SaaS로 전환해 하드웨어 일회성 매출에서 반복 수익 구조로 변화했다. AI가 센서 데이터를 분석해 고장 전에 정비를 예측하는 Predix 플랫폼은 고객의 다운타임을 40~50% 줄이고 정비 비용을 25~30% 절감한다.",
+      "metrics": [
+        { "value": "-40~50%", "label": "설비 다운타임", "trend": "pos" },
+        { "value": "-25~30%", "label": "정비 비용", "trend": "pos" },
+        { "value": "구독형", "label": "SaaS 수익 구조", "trend": "neu" },
+        { "value": "확대", "label": "서비스 매출 비중", "trend": "pos" }
+      ],
+      "tags": ["predictive_maintenance", "SaaS", "industrial", "IoT"],
+      "source": "McKinsey Industry 4.0, 2024",
+      "url": "https://www.mckinsey.com/capabilities/operations/our-insights/capturing-the-true-value-of-industry-4-0",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "KLA-001", "category": "2-1", "company": "클라르나", "short": "KLA",
+      "color_bg": "#FAEEDA", "color_text": "#633806",
+      "kpi_value": "-25%", "kpi_label": "에이전시 비용",
+      "title": "GenAI 인하우스 콘텐츠 팩토리",
+      "description": "Midjourney·DALL-E로 인하우스 전환, 에이전시 비용 25%↓, 연 $400만 절감",
+      "body": "클라르나는 Midjourney, DALL-E, Adobe Firefly로 인하우스 AI 콘텐츠 팩토리를 구축했다. 이미지 제작 비용 연간 $600만을 절감하고, AI 카피 어시스턴트가 전체 카피라이팅의 80%를 처리한다. 이미지 개발 주기가 6주에서 7일로 단축됐으며, 마케팅 팀 인력은 200명에서 100명으로 줄었다.",
+      "metrics": [
+        { "value": "-25%", "label": "에이전시 비용", "trend": "pos" },
+        { "value": "$600만", "label": "연간 이미지 비용 절감", "trend": "pos" },
+        { "value": "6주→7일", "label": "이미지 개발 주기", "trend": "pos" },
+        { "value": "200→100명", "label": "마케팅 인력", "trend": "pos" }
+      ],
+      "tags": ["content_AI", "inhouse", "agency", "fintech"],
+      "source": "Klarna Press Release, 2024",
+      "url": "https://www.klarna.com/international/press/ai-helps-klarna-cut-marketing-agency-spend-by-25-and-run-more-campaigns/",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "UNI-002", "category": "2-1", "company": "유니레버", "short": "UNI",
+      "color_bg": "#E1F5EE", "color_text": "#085041",
+      "kpi_value": "-50%", "kpi_label": "제작비",
+      "title": "NVIDIA Omniverse 디지털 트윈",
+      "description": "3D 디지털 트윈으로 제품 이미지 자동 생성, 제작비 50%↓ 속도 2배",
+      "body": "유니레버는 NVIDIA Omniverse 기반 디지털 트윈으로 4,000개 3D 마스터 제품을 구축했다. AI가 제품 이미지를 자동 생성해 이커머스·디지털 미디어 콘텐츠를 즉시 공급한다. TRESemmé 태국 캠페인에서 87% 비용 절감과 구매 의향 5%p 상승을 동시에 달성했다.",
+      "metrics": [
+        { "value": "-50%", "label": "콘텐츠 제작비", "trend": "pos" },
+        { "value": "×2", "label": "제작 속도", "trend": "pos" },
+        { "value": "-87%", "label": "태국 캠페인 비용", "trend": "pos" },
+        { "value": "€800만", "label": "연간 절감 목표", "trend": "pos" }
+      ],
+      "tags": ["digital_twin", "content_production", "3D", "FMCG"],
+      "source": "NVIDIA GTC / Technology Magazine, 2025",
+      "url": "https://technologymagazine.com/articles/how-unilever-is-reinventing-product-marketing-with-ai",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "NES-001", "category": "2-1", "company": "네슬레", "short": "NES",
+      "color_bg": "#FAEEDA", "color_text": "#633806",
+      "kpi_value": "6개월→6주", "kpi_label": "아이디어 프로세스",
+      "title": "NesGPT — 마케팅 인사이트 AI",
+      "description": "내부 GPT로 제품 아이디어 프로세스를 6개월에서 6주로 단축, 리서치 대폭 절감",
+      "body": "네슬레는 내부 AI 도구 NesGPT를 통해 제품 아이디어 프로세스를 6개월에서 6주로 단축했다. 브랜드 디지털 트윈 구축으로 Purina, Nescafé, Nespresso 등 주요 브랜드 마케팅 에셋을 AI로 자동 생성한다. 2027년까지 CHF 30억의 비용 절감을 목표로 하는 Fuel for Growth 프로그램의 핵심 도구다.",
+      "metrics": [
+        { "value": "6개월→6주", "label": "아이디어 프로세스", "trend": "pos" },
+        { "value": "CHF 30억", "label": "절감 목표 (2027)", "trend": "pos" },
+        { "value": "자동화", "label": "브랜드 에셋 생성", "trend": "neu" },
+        { "value": "AI", "label": "마케팅 인사이트", "trend": "neu" }
+      ],
+      "tags": ["GenAI", "product_development", "marketing_ops", "FMCG"],
+      "source": "Nestlé Media, 2024",
+      "url": "https://www.nestle.com/media/news/brands-ai-digital-twins-content-service",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "PNG-002", "category": "2-1", "company": "P&G", "short": "P&G",
+      "color_bg": "#E6F1FB", "color_text": "#0C447C",
+      "kpi_value": "$6,500만", "kpi_label": "에이전시 절감",
+      "title": "에이전시 통합 + AI 인하우스 전환",
+      "description": "3,000개+ 에이전시를 통합, AI 인하우스 모델 전환으로 $6,500만 절감",
+      "body": "P&G는 수천 개에 달하던 외부 에이전시를 통합하고 인하우스 AI 마케팅 모델로 전환하고 있다. AI 광고 테스트가 기존 대비 비용 1/10, 기간 수주→수일로 단축됐다. 패브릭 케어 부문 인하우스 전환으로 $6,500만을 절감했으며 전체 광고 효율화 여력을 $5~7억으로 추산한다.",
+      "metrics": [
+        { "value": "$6,500만", "label": "패브릭케어 절감", "trend": "pos" },
+        { "value": "1/10", "label": "AI 광고 테스트 비용", "trend": "pos" },
+        { "value": "$5~7억", "label": "연간 효율화 여력", "trend": "pos" },
+        { "value": "축소", "label": "외부 에이전시 의존도", "trend": "pos" }
+      ],
+      "tags": ["inhouse", "agency", "marketing_ops", "FMCG"],
+      "source": "Marketing Week, 2024",
+      "url": "https://www.marketingweek.com/pg-ai-best-possible-value-ad/",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "LMN-002", "category": "2-2", "company": "루멘 테크놀로지스", "short": "LMN",
+      "color_bg": "#EEEDFE", "color_text": "#3C3489",
+      "kpi_value": "4h→15분", "kpi_label": "고객 리서치",
+      "title": "MS Copilot — 영업 생산성 혁신",
+      "description": "영업 담당자 고객 리서치 4시간→15분, 연 $5,000만 효율화, 활용률 93%",
+      "body": "루멘 테크놀로지스는 Microsoft Copilot for Sales를 배포해 영업 생산성을 혁신했다. AI가 전날 밤 고객 분석과 제안서 초안을 완성하고, 영업 담당자는 30분 검토 후 미팅에 집중한다. 고객 아웃리치 리서치 시간이 4시간에서 15분으로 단축됐으며 주당 4시간의 시간을 절약한다.",
+      "metrics": [
+        { "value": "4h→15분", "label": "고객 리서치", "trend": "pos" },
+        { "value": "주 4시간", "label": "1인당 절약", "trend": "pos" },
+        { "value": "93%", "label": "Copilot 활용률", "trend": "pos" },
+        { "value": "$5,000만", "label": "연간 효율화", "trend": "pos" }
+      ],
+      "tags": ["sales_productivity", "copilot", "B2B", "telecom"],
+      "source": "Microsoft News Source, 2024",
+      "url": "https://news.microsoft.com/source/features/digital-transformation/the-only-way-how-copilot-is-helping-propel-an-evolution-at-lumen-technologies/",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "BAI-001", "category": "2-2", "company": "Bain & Company", "short": "BAI",
+      "color_bg": "#E1F5EE", "color_text": "#085041",
+      "kpi_value": "25%→50%", "kpi_label": "영업 활동 비중",
+      "title": "AI로 영업 활동 시간 2배",
+      "description": "Bain 분석: AI 도입 시 영업 담당자의 실제 판매 활동 비중 25%→50%로 확대 가능",
+      "body": "Bain & Company 2025년 보고서에 따르면 영업 담당자가 실제 판매 활동에 쓰는 시간은 전체의 25%에 불과하다. AI 도입 시 이를 50%로 2배 늘릴 수 있다. AI 조기 도입 기업에서 수주율이 30% 이상 개선됐으며, AI가 영업 통화 비용을 40~60% 줄이고 리드·미팅 수를 50% 늘릴 수 있다.",
+      "metrics": [
+        { "value": "25%→50%", "label": "영업 활동 비중", "trend": "pos" },
+        { "value": "+30%", "label": "수주율 개선", "trend": "pos" },
+        { "value": "-40~60%", "label": "영업 통화 비용", "trend": "pos" },
+        { "value": "+50%", "label": "리드·미팅 수", "trend": "pos" }
+      ],
+      "tags": ["sales_productivity", "research", "B2B"],
+      "source": "Bain Technology Report, 2025",
+      "url": "https://www.bain.com/insights/ai-transforming-productivity-sales-remains-new-frontier-technology-report-2025/",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "CRC-001", "category": "2-2", "company": "CRC Industries", "short": "CRC",
+      "color_bg": "#FAEEDA", "color_text": "#633806",
+      "kpi_value": "-90%", "kpi_label": "견적 처리 시간",
+      "title": "Copilot Studio 견적 자동화",
+      "description": "특수화학 B2B 기업, AI 견적 자동화로 처리 시간 90%↓, 비용 89%↓",
+      "body": "B2B 특수화학 기업 CRC Industries는 Microsoft Copilot Studio로 기술 데이터 시트(TDS) 처리와 견적 생성을 자동화했다. AI가 제품 사양, 고객 요구사항, 재고 상황을 분석해 견적서를 자동 생성한다. 처리 시간이 90% 단축되고 비용이 89% 절감됐다.",
+      "metrics": [
+        { "value": "-90%", "label": "견적 처리 시간", "trend": "pos" },
+        { "value": "-89%", "label": "처리 비용", "trend": "pos" },
+        { "value": "자동화", "label": "TDS 처리", "trend": "neu" },
+        { "value": "AI", "label": "견적 자동 생성", "trend": "neu" }
+      ],
+      "tags": ["quote_automation", "B2B", "copilot", "chemical"],
+      "source": "C5 Insight Case Study, 2025",
+      "url": "https://c5insight.com/3-microsoft-365-copilot-case-studies/",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "FOR-001", "category": "2-2", "company": "Forrester", "short": "FOR",
+      "color_bg": "#E6F1FB", "color_text": "#0C447C",
+      "kpi_value": "112~457%", "kpi_label": "3년 ROI",
+      "title": "MS 365 Copilot TEI 연구",
+      "description": "Forrester TEI: MS 365 Copilot 도입 시 3년 ROI 112~457%, 딜 클로징 33% 단축",
+      "body": "Forrester Total Economic Impact(TEI) 연구에 따르면 Microsoft 365 Copilot 도입 시 3년 ROI가 112~457%에 달한다. 월간 영업 제안서 완성 수가 10% 증가하고, 딜 클로징 기간이 30일에서 20일로 단축된다.",
+      "metrics": [
+        { "value": "112~457%", "label": "3년 ROI", "trend": "pos" },
+        { "value": "30→20일", "label": "딜 클로징 기간", "trend": "pos" },
+        { "value": "+10%", "label": "월간 제안서 완성 수", "trend": "pos" },
+        { "value": "절감", "label": "관리 업무 시간", "trend": "pos" }
+      ],
+      "tags": ["ROI", "copilot", "research", "sales"],
+      "source": "Forrester TEI Study, 2024",
+      "url": "https://www.gestisoft.com/en/blog/copilot-roi",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "KLA-002", "category": "2-3", "company": "클라르나", "short": "KLA",
+      "color_bg": "#FAEEDA", "color_text": "#633806",
+      "kpi_value": "700명", "kpi_label": "FTE 대체 효과",
+      "title": "AI CS 챗봇 — 서비스 자동화",
+      "description": "OpenAI 기반 챗봇 출시 첫 달 230만 건 처리, FTE 700명 상당, $4,000만 이익↑",
+      "body": "클라르나의 OpenAI 기반 AI 어시스턴트는 출시 첫 달 230만 건의 대화를 처리했다. 상담 해결 시간이 11분에서 2분으로 82% 단축됐으며 반복 문의가 25% 감소했다. 고객 만족도는 인간 상담원과 동등 수준을 유지하면서 연간 $4,000만의 이익 개선을 전망했다.",
+      "metrics": [
+        { "value": "700명", "label": "FTE 대체 효과", "trend": "pos" },
+        { "value": "11분→2분", "label": "해결 시간 단축", "trend": "pos" },
+        { "value": "$4,000만", "label": "연간 이익 개선", "trend": "pos" },
+        { "value": "2/3", "label": "문의 자동 처리율", "trend": "pos" }
+      ],
+      "tags": ["chatbot", "CS_automation", "fintech", "LLM"],
+      "source": "Klarna AI Assistant PR, 2024",
+      "url": "https://www.klarna.com/international/press/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month/",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "VOD-001", "category": "2-3", "company": "보다폰", "short": "VOD",
+      "color_bg": "#E6F1FB", "color_text": "#0C447C",
+      "kpi_value": "-70%", "kpi_label": "채팅 비용",
+      "title": "TOBi AI — 15개국 CS 자동화",
+      "description": "IBM watsonx 기반 TOBi, 15개국 14개 언어, 채팅 비용 70%↓, 일 100만 건 처리",
+      "body": "보다폰의 TOBi 챗봇은 IBM watsonx를 기반으로 15개 이상 시장, 14개 언어로 운영된다. 이탈리아의 GenAI 업그레이드 버전 SuperTOBi는 950만 고객 대상 90% 정확도, 82% 해결률을 달성했다. NPS는 약 80에 도달하며 기존 AI 대비 만족도가 50% 향상됐다.",
+      "metrics": [
+        { "value": "-70%", "label": "채팅 비용", "trend": "pos" },
+        { "value": "일 100만건", "label": "처리량", "trend": "pos" },
+        { "value": "82%", "label": "자동 해결률", "trend": "pos" },
+        { "value": "NPS 80", "label": "고객 만족도", "trend": "pos" }
+      ],
+      "tags": ["chatbot", "CS_automation", "telecom", "multilingual"],
+      "source": "IBM Case Study, 2024",
+      "url": "https://www.ibm.com/case-studies/vodafone-tobi",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "BSC-001", "category": "2-3", "company": "보쉬", "short": "BSC",
+      "color_bg": "#E1F5EE", "color_text": "#085041",
+      "kpi_value": "90+", "kpi_label": "챗봇 유즈케이스",
+      "title": "Cognigy Agent Copilot",
+      "description": "90개+ 유즈케이스 AI 적용, 실시간 감성 분석·지식 추천으로 AHT 30~40% 단축",
+      "body": "보쉬는 Cognigy.AI 기반으로 90개 이상의 CS 유즈케이스에 챗봇을 적용했다. Bosch Power Tools 컨택센터에 Agent Copilot을 도입해 통화 중 실시간 감성 분석, 차선 행동 제안, 자동 요약을 수행한다. 상담원이 복잡한 케어에 집중할 수 있어 AHT(평균 처리 시간)가 30~40% 단축됐다.",
+      "metrics": [
+        { "value": "90+", "label": "AI 유즈케이스", "trend": "pos" },
+        { "value": "-30~40%", "label": "AHT 단축", "trend": "pos" },
+        { "value": "실시간", "label": "감성 분석", "trend": "neu" },
+        { "value": "자동", "label": "통화 요약", "trend": "neu" }
+      ],
+      "tags": ["agent_copilot", "AHT", "CS", "manufacturing"],
+      "source": "Cognigy AI Agents, 2024",
+      "url": "https://www.cognigy.com/ai-agents/examples-ai-agents",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "PAN-001", "category": "2-3", "company": "파나소닉 CE", "short": "PAN",
+      "color_bg": "#FAEEDA", "color_text": "#633806",
+      "kpi_value": "80%", "kpi_label": "채팅 자동화",
+      "title": "Freshworks Freddy AI",
+      "description": "소비자 가전 CS에 Freddy AI 도입, 채팅 80% 자동화, 상담원 생산성 대폭 향상",
+      "body": "파나소닉 소비자 가전(CE)은 Freshworks의 Freddy AI를 도입해 채팅 상호작용의 80%를 AI가 처리한다. 상담원 생산성이 크게 개선됐으며, 간단한 문의를 AI가 처리하면서 상담원은 복잡한 케이스에 집중할 수 있게 됐다. 향후 사전 예측형 이슈 감지를 위한 Agentic AI 배포를 계획 중이다.",
+      "metrics": [
+        { "value": "80%", "label": "채팅 자동화율", "trend": "pos" },
+        { "value": "향상", "label": "상담원 생산성", "trend": "pos" },
+        { "value": "계획", "label": "Agentic AI 도입", "trend": "neu" },
+        { "value": "AI", "label": "복잡 케이스 집중", "trend": "neu" }
+      ],
+      "tags": ["chatbot", "CS_automation", "consumer_electronics"],
+      "source": "Diginomica, 2024",
+      "url": "https://diginomica.com/customer-voice-panasonic-consumer-electronics-and-ringcentral-execs-talk-about-their-ai-journeys",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "WMT-001", "category": "2-4", "company": "Walmart", "short": "WMT",
+      "color_bg": "#E1F5EE", "color_text": "#085041",
+      "kpi_value": "90%", "kpi_label": "재고 정확도",
+      "title": "AI 수요 예측 & 공급망 최적화",
+      "description": "AI 수요예측으로 재고 정확도 90%, 과잉재고 $49억 감소, 운전 3,000만 마일 절감",
+      "body": "Walmart은 AI·ML 기반 수요 예측을 전사 공급망에 통합했다. 매장·날씨·소셜·이벤트 등 100개+ 데이터를 4시간 주기로 업데이트해 재고를 자동 최적화한다. 2023~2024년 과잉재고를 $49억 감소시키고 AI 물류 최적화로 불필요 운전 3,000만 마일을 절감했다.",
+      "metrics": [
+        { "value": "90%", "label": "재고 예측 정확도", "trend": "pos" },
+        { "value": "$49억", "label": "과잉재고 감소", "trend": "pos" },
+        { "value": "3,000만", "label": "절감 운전 마일", "trend": "pos" },
+        { "value": "100+", "label": "분석 데이터 포인트", "trend": "pos" }
+      ],
+      "tags": ["demand_forecasting", "supply_chain", "retail", "inventory"],
+      "source": "Supply Chain Dive, 2024",
+      "url": "https://www.supplychaindive.com/news/4-walmart-supply-chain-ai-uses/760891/",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "ZAR-001", "category": "2-4", "company": "자라 (Inditex)", "short": "ZAR",
+      "color_bg": "#FAEEDA", "color_text": "#633806",
+      "kpi_value": "실시간", "kpi_label": "재고 조정",
+      "title": "AI 실시간 재고·수요 관리",
+      "description": "매장 판매 데이터를 AI가 실시간 분석해 2주 단위 생산 조정, 미판매 재고 최소화",
+      "body": "자라(Inditex)는 매장 판매 데이터를 AI로 실시간 분석해 2주 단위 생산 계획을 자동 조정한다. 소셜 트렌드, 날씨, 지역 이벤트를 반영한 수요 예측으로 미판매 재고를 업계 최저 수준으로 유지한다. AI 기반 모델로 경쟁사 대비 재고 회전율이 2~3배 높다.",
+      "metrics": [
+        { "value": "최소화", "label": "미판매 재고", "trend": "pos" },
+        { "value": "2주", "label": "생산 조정 주기", "trend": "pos" },
+        { "value": "2~3배", "label": "재고 회전율", "trend": "pos" },
+        { "value": "실시간", "label": "수요 트렌드 반영", "trend": "neu" }
+      ],
+      "tags": ["inventory", "demand_forecasting", "fashion", "fast_fashion"],
+      "source": "World J. Advanced Research, 2024",
+      "url": "https://wjarr.com/sites/default/files/WJARR-2024-2173.pdf",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "MCK-001", "category": "2-4", "company": "McKinsey", "short": "MCK",
+      "color_bg": "#E6F1FB", "color_text": "#0C447C",
+      "kpi_value": "-70~80%", "kpi_label": "보고서 작성 시간",
+      "title": "GenAI 의사결정 보조",
+      "description": "McKinsey: GenAI로 보고서 작성 70~80% 단축, 영업·마케팅 생산성 5~15% 향상",
+      "body": "McKinsey 연구에 따르면 GenAI를 활용한 보고서 작성은 기존 대비 70~80% 시간이 단축된다. 영업·마케팅 기능에서만 연간 $0.8~1.2조의 생산성 향상 잠재력이 있다. AI 도입 기업은 마케팅 생산성이 5~15%, 고객 서비스 생산성은 30~45% 개선된다.",
+      "metrics": [
+        { "value": "-70~80%", "label": "보고서 작성 시간", "trend": "pos" },
+        { "value": "5~15%", "label": "마케팅 생산성", "trend": "pos" },
+        { "value": "+30~45%", "label": "CS 생산성", "trend": "pos" },
+        { "value": "$0.8~1.2조", "label": "연간 잠재 가치", "trend": "pos" }
+      ],
+      "tags": ["research", "GenAI", "decision_support", "productivity"],
+      "source": "McKinsey State of AI, 2024",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "SAM-001", "category": "2-4", "company": "삼성전자", "short": "SAM",
+      "color_bg": "#E1F5EE", "color_text": "#085041",
+      "kpi_value": "6시간", "kpi_label": "재고 재배분",
+      "title": "AI SCM — 글로벌 재고 자동 재배분",
+      "description": "S24 사전 주문 28% 초과 시 AI가 74개국 재고를 6시간 내 자동 재배분",
+      "body": "삼성전자의 AI 공급망 시스템은 Galaxy S24 사전 주문이 예측보다 28% 초과했을 때, 부품 주문 조정과 타 시장 재고 재배분을 6시간 내에 완료했다. AI 시스템이 74개국 유통 데이터와 이동통신사 계약 데이터, 경쟁사 출시 일정까지 통합 분석한다.",
+      "metrics": [
+        { "value": "6시간", "label": "재고 재배분 완료", "trend": "pos" },
+        { "value": "74개국", "label": "AI 재고 관리", "trend": "pos" },
+        { "value": "+28%", "label": "S24 초과 수요 대응", "trend": "pos" },
+        { "value": "통합", "label": "이통사·경쟁사 분석", "trend": "neu" }
+      ],
+      "tags": ["SCM", "inventory", "consumer_electronics", "global"],
+      "source": "ProInsightsPortal, 2024",
+      "url": "https://proinsightsportal.com/ai/ai-powered-inventory-forecasting-how-retailers-cut-overstock-costs-by-60-using-demand-prediction-models/",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "UNI-003", "category": "2-5", "company": "유니레버", "short": "UNI",
+      "color_bg": "#E1F5EE", "color_text": "#085041",
+      "kpi_value": "조기", "kpi_label": "불만 탐지",
+      "title": "AI 소비자 인사이트 — VOC 조기 탐지",
+      "description": "AI가 수백만 건 소셜·리뷰 데이터 실시간 분석, 제품 불만 패턴 조기 포착",
+      "body": "유니레버의 AI 소비자 인사이트 플랫폼은 소셜미디어, 리뷰 사이트, 고객 피드백을 실시간으로 분석해 제품 불만 패턴을 조기에 탐지한다. 이를 통해 잠재적 클레임을 사전에 차단하고 제품 개선 사이클을 단축한다.",
+      "metrics": [
+        { "value": "조기", "label": "불만 패턴 탐지", "trend": "pos" },
+        { "value": "€3,000만", "label": "리서치 비용 절감", "trend": "pos" },
+        { "value": "실시간", "label": "소셜·리뷰 분석", "trend": "neu" },
+        { "value": "단축", "label": "제품 개선 사이클", "trend": "pos" }
+      ],
+      "tags": ["VOC", "social_listening", "risk", "FMCG"],
+      "source": "Unilever Annual Report, 2024",
+      "url": "https://infotechlead.com/cio/unilever-drives-digital-ai-and-e-commerce-growth-with-2x-faster-marketing-and-e800-mn-cost-savings-94832",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "ZND-001", "category": "2-5", "company": "Zendesk", "short": "ZND",
+      "color_bg": "#FAEEDA", "color_text": "#633806",
+      "kpi_value": "자동", "kpi_label": "위험 케이스 탐지",
+      "title": "AI Spotlight — 위험 케이스 자동 감지",
+      "description": "AI가 CS 상호작용에서 위험 신호 자동 감지, 담당자에게 우선 대응 알림",
+      "body": "Zendesk의 AI Spotlight 기능은 고객 상호작용을 분석해 감정 악화, 이탈 위험, 클레임 확대 가능성을 자동으로 탐지한다. 위험 케이스를 우선순위화해 담당자에게 알리고, AI가 최적 대응 방안을 제안한다.",
+      "metrics": [
+        { "value": "자동", "label": "위험 케이스 탐지", "trend": "pos" },
+        { "value": "AI", "label": "감성 악화 감지", "trend": "neu" },
+        { "value": "선제", "label": "클레임 확대 방지", "trend": "pos" },
+        { "value": "우선", "label": "대응 큐 자동 정렬", "trend": "neu" }
+      ],
+      "tags": ["risk_detection", "CS", "sentiment", "SaaS"],
+      "source": "Prose Media / Zendesk Research, 2024",
+      "url": "https://www.prosemedia.com/blog/predicting-customer-churn-before-it-happens-how-ai-driven-insights-help-retain-high-value-clients",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "ADB-002", "category": "2-5", "company": "Audiobooks.com", "short": "ADB",
+      "color_bg": "#E6F1FB", "color_text": "#0C447C",
+      "kpi_value": "98~99%", "kpi_label": "탐지 정확도",
+      "title": "AI 구독 리스크 조기 대응",
+      "description": "AI 이탈 모델 정확도 98~99%, 구독 이탈 징조 60% 조기 탐지로 손실 예방",
+      "body": "Audiobooks.com의 AI 이탈 예측 모델은 구독 취소 전 행동 패턴(앱 사용 빈도 감소, 로그인 간격 증가 등)을 포착해 이탈 징조를 조기에 탐지한다. 탐지 정확도 98~99%를 달성하며, AI가 이탈 예측 결과를 설명해 마케팅팀이 맞춤 리텐션 전략을 수립할 수 있도록 지원한다.",
+      "metrics": [
+        { "value": "98~99%", "label": "이탈 예측 정확도", "trend": "pos" },
+        { "value": "60%", "label": "조기 탐지율", "trend": "pos" },
+        { "value": "설명가능", "label": "AI 예측 결과", "trend": "neu" },
+        { "value": "맞춤", "label": "리텐션 전략 수립", "trend": "pos" }
+      ],
+      "tags": ["churn_prediction", "subscription_risk", "ML_model"],
+      "source": "Provectus Case Study, 2024",
+      "url": "https://provectus.com/case-studies/user-churn-prediction-with-ai/",
+      "added_date": "2026-05-05", "verified": true
+    },
+    {
+      "id": "PNG-003", "category": "2-5", "company": "P&G", "short": "P&G",
+      "color_bg": "#EEEDFE", "color_text": "#3C3489",
+      "kpi_value": "선제", "kpi_label": "브랜드 대응",
+      "title": "AI 브랜드 리스크 모니터링",
+      "description": "AI 소셜 리스닝으로 부정 여론 48~72시간 전 탐지, 브랜드 위기 선제 대응",
+      "body": "P&G는 AI 기반 브랜드 모니터링 시스템으로 소셜미디어의 부정적 캠페인 반응을 선제적으로 파악하고 대응한다. 업계 전반적으로 AI 소셜 리스닝을 통해 브랜드 위기를 48~72시간 전에 탐지할 수 있다.",
+      "metrics": [
+        { "value": "48~72h", "label": "브랜드 위기 조기 탐지", "trend": "pos" },
+        { "value": "선제", "label": "부정 여론 대응", "trend": "pos" },
+        { "value": "AI", "label": "소셜 리스닝", "trend": "neu" },
+        { "value": "수정", "label": "크리에이티브 즉시", "trend": "pos" }
+      ],
+      "tags": ["brand_risk", "social_listening", "crisis", "FMCG"],
+      "source": "Marketing Week / Brandwatch, 2024",
+      "url": "https://www.marketingweek.com/pg-ai-best-possible-value-ad/",
+      "added_date": "2026-05-05", "verified": true
+    }
+  ]
+}
