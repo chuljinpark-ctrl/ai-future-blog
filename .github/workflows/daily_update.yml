@@ -53,6 +53,7 @@ jobs:
           mkdir -p docs/data
           cp data/cases.json docs/data/cases.json
           cp dashboard/index.html docs/index.html
+          cp dashboard/blog.html docs/blog.html
 
       # ── Commit if anything changed ───────────────────────────────────────────
       - name: Commit changes
@@ -60,7 +61,7 @@ jobs:
         run: |
           git config user.name  "LGE Benchmark Bot"
           git config user.email "benchmark-bot@lge-ax.internal"
-          git add data/cases.json docs/data/cases.json docs/index.html
+          git add data/cases.json docs/data/cases.json docs/index.html docs/blog.html
           COUNT=$(python3 -c "import json; d=json.load(open('data/cases.json')); print(len(d['cases']))")
           if git diff --cached --quiet; then
             echo "No changes to commit."
