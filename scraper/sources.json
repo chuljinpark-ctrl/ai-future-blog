@@ -1,8 +1,8 @@
 {
   "meta": {
-    "version": "1.0",
+    "version": "1.1",
     "description": "LGE AX Benchmark — Daily scraping sources",
-    "last_updated": "2026-05-05"
+    "last_updated": "2026-05-06"
   },
   "sources": [
     {
@@ -11,7 +11,7 @@
       "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights",
       "rss": "https://www.mckinsey.com/rss/insights.xml",
       "type": "research",
-      "tags": ["research", "GenAI", "productivity"],
+      "expected_tags": ["GenAI", "productivity", "strategy", "transformation"],
       "priority": "high",
       "active": true
     },
@@ -21,7 +21,7 @@
       "url": "https://www.bcg.com/publications",
       "rss": "https://www.bcg.com/rss/articles.xml",
       "type": "research",
-      "tags": ["research", "marketing", "personalization"],
+      "expected_tags": ["marketing", "personalization", "GenAI", "strategy"],
       "priority": "high",
       "active": true
     },
@@ -31,7 +31,7 @@
       "url": "https://www.salesforce.com/blog/category/artificial-intelligence/",
       "rss": "https://www.salesforce.com/blog/feed/",
       "type": "vendor",
-      "tags": ["sales_agent", "CRM", "automation"],
+      "expected_tags": ["sales_agent", "CRM", "automation", "B2B"],
       "priority": "high",
       "active": true
     },
@@ -41,7 +41,7 @@
       "url": "https://blogs.microsoft.com/blog/category/ai/",
       "rss": "https://blogs.microsoft.com/feed/",
       "type": "vendor",
-      "tags": ["copilot", "sales_productivity", "B2B"],
+      "expected_tags": ["copilot", "sales_productivity", "B2B", "automation"],
       "priority": "high",
       "active": true
     },
@@ -51,7 +51,7 @@
       "url": "https://www.thinkwithgoogle.com/",
       "rss": null,
       "type": "research",
-      "tags": ["media", "search", "ROAS"],
+      "expected_tags": ["media", "search", "ROAS", "marketing"],
       "priority": "high",
       "active": true,
       "scrape_method": "html"
@@ -62,7 +62,7 @@
       "url": "https://hbr.org/topic/subject/artificial-intelligence",
       "rss": "https://hbr.org/rss",
       "type": "research",
-      "tags": ["strategy", "leadership", "transformation"],
+      "expected_tags": ["strategy", "leadership", "transformation"],
       "priority": "medium",
       "active": true
     },
@@ -72,7 +72,7 @@
       "url": "https://www.marketingweek.com/category/technology/artificial-intelligence/",
       "rss": "https://www.marketingweek.com/feed/",
       "type": "trade",
-      "tags": ["marketing", "media", "FMCG"],
+      "expected_tags": ["marketing", "media", "FMCG", "personalization"],
       "priority": "high",
       "active": true
     },
@@ -82,7 +82,7 @@
       "url": "https://www.marketingdive.com/topic/artificial-intelligence/",
       "rss": "https://www.marketingdive.com/feeds/news/",
       "type": "trade",
-      "tags": ["marketing", "media", "automation"],
+      "expected_tags": ["marketing", "media", "automation", "personalization"],
       "priority": "medium",
       "active": true
     },
@@ -92,7 +92,7 @@
       "url": "https://www.supplychaindive.com/topic/artificial-intelligence/",
       "rss": "https://www.supplychaindive.com/feeds/news/",
       "type": "trade",
-      "tags": ["supply_chain", "demand_forecasting", "inventory"],
+      "expected_tags": ["supply_chain", "demand_forecasting", "inventory"],
       "priority": "medium",
       "active": true
     },
@@ -102,7 +102,7 @@
       "url": "https://www.bain.com/insights/topics/technology/",
       "rss": null,
       "type": "research",
-      "tags": ["sales", "productivity", "B2B"],
+      "expected_tags": ["sales", "productivity", "B2B"],
       "priority": "medium",
       "active": true,
       "scrape_method": "html"
@@ -113,7 +113,7 @@
       "url": "https://www.gartner.com/en/topics/artificial-intelligence",
       "rss": null,
       "type": "research",
-      "tags": ["research", "enterprise", "strategy"],
+      "expected_tags": ["research", "enterprise", "strategy", "GenAI"],
       "priority": "medium",
       "active": true,
       "scrape_method": "html"
@@ -124,7 +124,7 @@
       "url": "https://www.cognigy.com/blog",
       "rss": "https://www.cognigy.com/blog/rss.xml",
       "type": "vendor",
-      "tags": ["CS_automation", "agent_copilot", "AHT"],
+      "expected_tags": ["CS_automation", "agent_copilot", "AHT", "chatbot"],
       "priority": "low",
       "active": true
     },
@@ -134,12 +134,15 @@
       "url": "https://www.klarna.com/international/press/",
       "rss": null,
       "type": "company",
-      "tags": ["fintech", "chatbot", "marketing_ops"],
+      "expected_tags": ["fintech", "chatbot", "marketing_ops"],
       "priority": "medium",
       "active": true,
       "scrape_method": "html"
     }
   ],
+  "excluded_sources": {
+    "domains": []
+  },
   "category_keywords": {
     "1-1": ["new customer acquisition", "신규 고객", "foot traffic", "media mix", "targeting", "customer acquisition"],
     "1-2": ["conversion rate", "전환율", "sales consultation", "recommendation", "promotion response"],

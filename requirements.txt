@@ -1,0 +1,7 @@
+# HTTP & HTML parsing
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+
+# LLM — GitHub Models uses OpenAI-compatible API
+openai>=1.30.0

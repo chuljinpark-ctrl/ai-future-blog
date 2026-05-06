@@ -7,19 +7,21 @@ on:
   workflow_dispatch:
     inputs:
       dry_run:
-        description: 'Dry run (no DB write)'
-        required: false
-        default: 'false'
+        description: 'Dry run (fetch & extract but do NOT write DB)'
         type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
 
 jobs:
-  update-benchmarks:
+  update-and-deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Set up Python 3.11
@@ -31,9 +33,10 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run pipeline
+      # ── Run scrape + LLM extraction pipeline ────────────────────────────────
+      - name: Run daily pipeline
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd scraper
           if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
@@ -42,21 +45,30 @@ jobs:
             python run_pipeline.py
           fi
 
-      - name: Check for changes
-        id: git_status
+      # ── Sync cases.json → docs/data/ for GitHub Pages ───────────────────────
+      - name: Sync DB to docs
+        if: github.event.inputs.dry_run != 'true'
         run: |
-          git diff --exit-code data/cases.json || echo "changed=true" >> $GITHUB_OUTPUT
+          mkdir -p docs/data
+          cp data/cases.json docs/data/cases.json
+          cp dashboard/index.html docs/index.html
 
-      - name: Commit and push updated cases.json
-        if: steps.git_status.outputs.changed == 'true'
+      # ── Commit if anything changed ───────────────────────────────────────────
+      - name: Commit changes
+        if: github.event.inputs.dry_run != 'true'
         run: |
-          git config --global user.name "LGE Benchmark Bot"
-          git config --global user.email "benchmark-bot@lge-ax.internal"
-          git add data/cases.json
-          CASE_COUNT=$(python3 -c "import json; d=json.load(open('data/cases.json')); print(len(d['cases']))")
-          git commit -m "chore: daily benchmark update — ${CASE_COUNT} cases [$(date +'%Y-%m-%d KST')]"
-          git push
+          git config user.name  "LGE Benchmark Bot"
+          git config user.email "benchmark-bot@lge-ax.internal"
+          git add data/cases.json docs/data/cases.json docs/index.html
+          COUNT=$(python3 -c "import json; d=json.load(open('data/cases.json')); print(len(d['cases']))")
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: daily update — ${COUNT} cases [$(date +'%Y-%m-%d KST')]"
+            git push
+          fi
 
+      # ── Upload pipeline log ──────────────────────────────────────────────────
       - name: Upload pipeline log
         if: always()
         uses: actions/upload-artifact@v4

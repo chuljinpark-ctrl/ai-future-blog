@@ -68,7 +68,7 @@ def merge_new_cases(new_cases: list[dict]) -> dict:
         log.info(f"Added: [{case['category']}] {case['company']} — {case['title']}")
 
     # Update meta
-    db["meta"]["last_updated"] = datetime.now(timezone(datetime.now().astimezone().utcoffset())).isoformat()
+    db["meta"]["last_updated"] = datetime.now(timezone.utc).isoformat()
     db["meta"]["total_cases"] = len(db["cases"])
 
     if added > 0:

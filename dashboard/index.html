@@ -136,7 +136,7 @@ let activeCard = null;
 // ── Load data ──────────────────────────────────────────────────────────────────
 async function loadData() {
   try {
-    const res = await fetch('../data/cases.json');
+    const res = await fetch('./data/cases.json');
     DB = await res.json();
     document.getElementById('last-updated').textContent =
       'Updated: ' + new Date(DB.meta.last_updated).toLocaleDateString('ko-KR') +

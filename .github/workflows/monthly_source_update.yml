@@ -1,0 +1,127 @@
+name: Monthly Source Update
+
+on:
+  schedule:
+    # 1st of every month at KST 09:00 (UTC 00:00)
+    - cron: '0 0 1 * *'
+  workflow_dispatch:
+    inputs:
+      analyze_only:
+        description: 'Gap analysis only — skip discovery & validation'
+        type: boolean
+        default: false
+      no_auto_approve:
+        description: 'Generate candidates but do NOT write to sources.json'
+        type: boolean
+        default: false
+      max_gaps:
+        description: 'Max gaps to discover sources for (default: 10)'
+        type: string
+        default: '10'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-sources:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # ── Run source update pipeline ───────────────────────────────────────────
+      - name: Run source update
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd scraper
+          ARGS=""
+          [ "${{ github.event.inputs.analyze_only }}"    = "true" ] && ARGS="$ARGS --analyze-only"
+          [ "${{ github.event.inputs.no_auto_approve }}" = "true" ] && ARGS="$ARGS --no-auto-approve"
+          MAX="${{ github.event.inputs.max_gaps }}"
+          [ -n "$MAX" ] && ARGS="$ARGS --max-gaps $MAX"
+          python run_source_update.py $ARGS
+
+      # ── Detect what changed ──────────────────────────────────────────────────
+      - name: Detect changes
+        id: diff
+        run: |
+          git diff --quiet scraper/sources.json \
+            && echo "sources_changed=false" >> $GITHUB_OUTPUT \
+            || echo "sources_changed=true"  >> $GITHUB_OUTPUT
+
+          if [ -f data/source_candidates.json ]; then
+            echo "candidates_exist=true" >> $GITHUB_OUTPUT
+            python3 - << 'PY'
+          import json, os
+          d = json.load(open("data/source_candidates.json"))
+          s = d.get("summary", {})
+          with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+              f.write(f"approved_count={s.get('approved',0)}\n")
+              f.write(f"review_count={s.get('review',0)}\n")
+          PY
+          fi
+
+      # ── Upload candidates as artifact ────────────────────────────────────────
+      - name: Upload candidates artifact
+        if: steps.diff.outputs.candidates_exist == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: source-candidates-${{ github.run_id }}
+          path: |
+            data/source_candidates.json
+            scraper/source_update.log
+          retention-days: 90
+
+      # ── Open a PR when sources.json changed ──────────────────────────────────
+      - name: Create PR for source updates
+        if: steps.diff.outputs.sources_changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BRANCH="source-update/$(date +'%Y-%m')"
+          git config user.name  "LGE Benchmark Bot"
+          git config user.email "benchmark-bot@lge-ax.internal"
+          git checkout -b "$BRANCH"
+          git add scraper/sources.json data/source_candidates.json
+          APPROVED="${{ steps.diff.outputs.approved_count }}"
+          REVIEW="${{ steps.diff.outputs.review_count }}"
+          git commit -m "chore(sources): monthly update — +${APPROVED} approved, ${REVIEW} for review [$(date +'%Y-%m')]"
+          git push origin "$BRANCH"
+
+          gh pr create \
+            --title "chore(sources): monthly source update $(date +'%Y-%m')" \
+            --body "## Monthly Source Update — $(date +'%Y-%m')
+
+          ### Auto-approved (+${APPROVED})
+          Score ≥ 75: RSS confirmed + monthly frequency + keyword match.
+          Already added to \`scraper/sources.json\`.
+
+          ### Needs review (${REVIEW})
+          Score 50–74. See \`data/source_candidates.json\` → status: \`review\`.
+          To approve: change status to \`approved\` and re-run locally:
+          \`\`\`
+          python scraper/run_source_update.py --apply-reviewed
+          \`\`\`
+
+          ### Artifact
+          Full validation log attached: **source-candidates-${{ github.run_id }}**" \
+            --base main \
+            --head "$BRANCH" \
+            --label "automated,sources"
+
+      # ── Nothing changed ──────────────────────────────────────────────────────
+      - name: No changes summary
+        if: steps.diff.outputs.sources_changed == 'false'
+        run: echo "No new sources auto-approved. Check the artifact for review candidates."

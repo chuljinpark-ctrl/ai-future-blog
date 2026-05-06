@@ -1,9 +1,11 @@
 """
 llm_summarizer.py
 LGE AX Benchmark — LLM-based case extractor
-Takes a raw article, returns a structured benchmark case (or None if not suitable)
+Uses GitHub Models API (OpenAI-compatible) — no extra secrets needed,
+GITHUB_TOKEN is automatically injected by GitHub Actions.
 """
 
+import hashlib
 import json
 import os
 import logging
@@ -12,14 +14,17 @@ from datetime import date
 from typing import Optional
 from pathlib import Path
 
-import google.generativeai as genai
+from openai import OpenAI
 
 log = logging.getLogger(__name__)
 
 ROOT = Path(__file__).parent.parent
 SOURCES_FILE = Path(__file__).parent / "sources.json"
 
-# ── Load category metadata ─────────────────────────────────────────────────────
+# GitHub Models endpoint & model
+GITHUB_MODELS_ENDPOINT = "https://models.inference.ai.azure.com"
+MODEL = "gpt-4o-mini"          # cost-efficient; upgrade to gpt-4o for higher precision
+
 with open(SOURCES_FILE) as f:
     _src_data = json.load(f)
 CATEGORY_KEYWORDS = _src_data.get("category_keywords", {})
@@ -37,8 +42,7 @@ CATEGORIES = {
     "2-5": "리스크·품질 비용 절감 (VOC 탐지, 구독 리스크, 브랜드 리스크)",
 }
 
-EXTRACTION_PROMPT = """
-당신은 LG전자 AX(AI Transformation) 전략팀의 글로벌 벤치마킹 분석가입니다.
+EXTRACTION_PROMPT = """당신은 LG전자 AX(AI Transformation) 전략팀의 글로벌 벤치마킹 분석가입니다.
 아래 기사를 읽고, AI를 영업/마케팅에 적용한 구체적인 기업 사례가 있다면 추출하세요.
 
 ## 분류 기준 (카테고리):
@@ -78,40 +82,38 @@ URL: {url}
 {{"has_case": false}}
 
 중요:
-- trend는 "pos"(긍정적 변화), "neg"(부정적), "neu"(중립) 중 하나
+- trend는 "pos"(긍정), "neg"(부정), "neu"(중립) 중 하나
 - metrics는 정확히 4개
 - 수치는 구체적인 숫자/퍼센트가 있을 때만 포함
 - JSON 외 다른 텍스트 절대 포함 금지
 """
 
 
+def _get_client() -> OpenAI:
+    token = os.environ.get("GITHUB_TOKEN")
+    if not token:
+        raise RuntimeError("GITHUB_TOKEN not set — required for GitHub Models API")
+    return OpenAI(base_url=GITHUB_MODELS_ENDPOINT, api_key=token)
+
+
 def get_color_for_company(company: str) -> tuple[str, str]:
-    """Assign a consistent color pair based on company name hash."""
     colors = [
-        ("#E1F5EE", "#085041"),  # green
-        ("#FAEEDA", "#633806"),  # amber
-        ("#E6F1FB", "#0C447C"),  # blue
-        ("#EEEDFE", "#3C3489"),  # purple
-        ("#FBEAF0", "#72243E"),  # pink
-        ("#FEF3E2", "#6B3A00"),  # orange
+        ("#E1F5EE", "#085041"),
+        ("#FAEEDA", "#633806"),
+        ("#E6F1FB", "#0C447C"),
+        ("#EEEDFE", "#3C3489"),
+        ("#FBEAF0", "#72243E"),
+        ("#FEF3E2", "#6B3A00"),
     ]
     idx = hash(company.lower()) % len(colors)
     return colors[idx]
 
 
-def extract_case_gemini(article: dict) -> Optional[dict]:
+def extract_case_github_models(article: dict) -> Optional[dict]:
     """
-    Call Gemini Flash to extract a structured benchmark case from an article.
-    Returns a case dict ready to append to cases.json, or None.
+    Call GitHub Models (gpt-4o-mini) to extract a structured benchmark case.
+    Returns a case dict ready for cases.json, or None.
     """
-    api_key = os.environ.get("GEMINI_API_KEY")
-    if not api_key:
-        log.error("GEMINI_API_KEY not set")
-        return None
-
-    genai.configure(api_key=api_key)
-    model = genai.GenerativeModel("gemini-2.0-flash")
-
     categories_text = "\n".join(f"- {k}: {v}" for k, v in CATEGORIES.items())
     prompt = EXTRACTION_PROMPT.format(
         categories=categories_text,
@@ -122,61 +124,63 @@ def extract_case_gemini(article: dict) -> Optional[dict]:
     )
 
     try:
-        response = model.generate_content(prompt)
-        raw = response.text.strip()
+        client = _get_client()
+        response = client.chat.completions.create(
+            model=MODEL,
+            messages=[{"role": "user", "content": prompt}],
+            max_tokens=1000,
+            temperature=0.2,
+        )
+        raw = response.choices[0].message.content.strip()
 
-        # Strip markdown fences if present
+        # Strip markdown fences
         raw = re.sub(r"^```json\s*", "", raw)
         raw = re.sub(r"\s*```$", "", raw)
 
         data = json.loads(raw)
-
         if not data.get("has_case"):
             return None
 
-        # Build case ID: SHORT-NNN
         short = data.get("short", "UNK").upper().replace(" ", "")[:4]
-        case_id = f"{short}-{date.today().strftime('%Y%m%d')}"
-
+        url_hash = hashlib.md5(article.get("url", "").encode()).hexdigest()[:6]
+        case_id = f"{short}-{date.today().strftime('%Y%m%d')}-{url_hash}"
         bg, tc = get_color_for_company(data.get("company", ""))
 
-        case = {
-            "id": case_id,
-            "category": data["category"],
-            "company": data["company"],
-            "short": short,
-            "color_bg": bg,
-            "color_text": tc,
-            "kpi_value": data.get("kpi_value", ""),
-            "kpi_label": data.get("kpi_label", ""),
-            "title": data.get("title", ""),
+        return {
+            "id":          case_id,
+            "category":    data["category"],
+            "company":     data["company"],
+            "short":       short,
+            "color_bg":    bg,
+            "color_text":  tc,
+            "kpi_value":   data.get("kpi_value", ""),
+            "kpi_label":   data.get("kpi_label", ""),
+            "title":       data.get("title", ""),
             "description": data.get("description", ""),
-            "body": data.get("body", ""),
-            "metrics": data.get("metrics", []),
-            "tags": data.get("tags", []),
-            "source": data.get("source", article.get("source_name", "")),
-            "url": data.get("url", article.get("url", "")),
-            "added_date": date.today().isoformat(),
-            "verified": False,  # auto-added cases are unverified until reviewed
+            "body":        data.get("body", ""),
+            "metrics":     data.get("metrics", []),
+            "tags":        data.get("tags", []),
+            "source":      data.get("source", article.get("source_name", "")),
+            "url":         data.get("url", article.get("url", "")),
+            "added_date":  date.today().isoformat(),
+            "verified":    False,
         }
-        return case
 
     except json.JSONDecodeError as e:
         log.warning(f"JSON parse error for {article.get('url', '')}: {e}")
         return None
     except Exception as e:
-        log.error(f"Gemini API error: {e}")
+        log.error(f"GitHub Models API error: {e}")
         return None
 
 
 def extract_cases_from_articles(articles: list[dict]) -> list[dict]:
-    """Process a list of raw articles and return extracted cases."""
     cases = []
     for i, article in enumerate(articles):
         log.info(f"[{i+1}/{len(articles)}] Extracting: {article.get('title', '')[:60]}")
-        case = extract_case_gemini(article)
+        case = extract_case_github_models(article)
         if case:
-            log.info(f"  → Case found: {case['company']} / {case['category']} / {case['kpi_value']}")
+            log.info(f"  → Case: {case['company']} / {case['category']} / {case['kpi_value']}")
             cases.append(case)
         else:
             log.info("  → No relevant case")
@@ -184,19 +188,15 @@ def extract_cases_from_articles(articles: list[dict]) -> list[dict]:
 
 
 if __name__ == "__main__":
-    # Quick smoke test with a mock article
     mock = {
         "title": "Walmart cuts inventory costs by $4.9B using AI demand forecasting",
         "url": "https://example.com/walmart-ai",
         "source_name": "Supply Chain Dive",
         "body_text": """
         Walmart deployed AI-powered demand forecasting across its supply chain,
-        achieving 90% inventory accuracy and reducing excess inventory by $4.9 billion
-        between Q1 2023 and Q1 2024. The system analyzes over 100 data points
-        including weather, social trends, and local events, updating every 4 hours.
-        The company also saved 30 million unnecessary driving miles through AI
-        logistics optimization.
+        achieving 90% inventory accuracy and reducing excess inventory by $4.9 billion.
+        The system analyzes over 100 data points updating every 4 hours.
         """,
     }
-    case = extract_case_gemini(mock)
+    case = extract_case_github_models(mock)
     print(json.dumps(case, indent=2, ensure_ascii=False))
