@@ -6,26 +6,6 @@
   },
   "sources": [
     {
-      "id": "mckinsey-insights",
-      "name": "McKinsey & Company — AI Insights",
-      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights",
-      "rss": "https://www.mckinsey.com/rss/insights.xml",
-      "type": "research",
-      "expected_tags": ["GenAI", "productivity", "strategy", "transformation"],
-      "priority": "high",
-      "active": true
-    },
-    {
-      "id": "bcg-publications",
-      "name": "BCG — GenAI & Marketing",
-      "url": "https://www.bcg.com/publications",
-      "rss": "https://www.bcg.com/rss/articles.xml",
-      "type": "research",
-      "expected_tags": ["marketing", "personalization", "GenAI", "strategy"],
-      "priority": "high",
-      "active": true
-    },
-    {
       "id": "salesforce-blog",
       "name": "Salesforce Blog — AI",
       "url": "https://www.salesforce.com/blog/category/artificial-intelligence/",
@@ -57,26 +37,6 @@
       "scrape_method": "html"
     },
     {
-      "id": "hbr-ai",
-      "name": "Harvard Business Review — AI",
-      "url": "https://hbr.org/topic/subject/artificial-intelligence",
-      "rss": "https://hbr.org/rss",
-      "type": "research",
-      "expected_tags": ["strategy", "leadership", "transformation"],
-      "priority": "medium",
-      "active": true
-    },
-    {
-      "id": "marketing-week",
-      "name": "Marketing Week",
-      "url": "https://www.marketingweek.com/category/technology/artificial-intelligence/",
-      "rss": "https://www.marketingweek.com/feed/",
-      "type": "trade",
-      "expected_tags": ["marketing", "media", "FMCG", "personalization"],
-      "priority": "high",
-      "active": true
-    },
-    {
       "id": "marketing-dive",
       "name": "Marketing Dive — AI",
       "url": "https://www.marketingdive.com/topic/artificial-intelligence/",
@@ -95,28 +55,6 @@
       "expected_tags": ["supply_chain", "demand_forecasting", "inventory"],
       "priority": "medium",
       "active": true
-    },
-    {
-      "id": "bain-insights",
-      "name": "Bain & Company — Technology",
-      "url": "https://www.bain.com/insights/topics/technology/",
-      "rss": null,
-      "type": "research",
-      "expected_tags": ["sales", "productivity", "B2B"],
-      "priority": "medium",
-      "active": true,
-      "scrape_method": "html"
-    },
-    {
-      "id": "gartner-ai",
-      "name": "Gartner — AI Research",
-      "url": "https://www.gartner.com/en/topics/artificial-intelligence",
-      "rss": null,
-      "type": "research",
-      "expected_tags": ["research", "enterprise", "strategy", "GenAI"],
-      "priority": "medium",
-      "active": true,
-      "scrape_method": "html"
     },
     {
       "id": "cognigy-blog",
@@ -141,7 +79,14 @@
     }
   ],
   "excluded_sources": {
-    "domains": []
+    "domains": [
+      {"domain": "www.mckinsey.com",      "reason": "blocks bots — connection closed"},
+      {"domain": "www.bcg.com",           "reason": "403 Forbidden — blocks scrapers"},
+      {"domain": "hbr.org",              "reason": "RSS 404 — feed URL removed"},
+      {"domain": "www.marketingweek.com", "reason": "403 Forbidden — blocks scrapers"},
+      {"domain": "www.bain.com",          "reason": "404 — section URL no longer valid, no public RSS"},
+      {"domain": "www.gartner.com",       "reason": "403 Forbidden — blocks scrapers"}
+    ]
   },
   "category_keywords": {
     "1-1": ["new customer acquisition", "신규 고객", "foot traffic", "media mix", "targeting", "customer acquisition"],

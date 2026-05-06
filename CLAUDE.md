@@ -25,7 +25,7 @@ lge-benchmark/
 │   └── source_candidates.json          ← 월별 소스 발굴 결과
 │
 ├── scraper/
-│   ├── sources.json                    ← 모니터링 소스 13개
+│   ├── sources.json                    ← 모니터링 소스 7개 (활성)
 │   ├── core_scraper.py                 ← RSS/HTML 스크래퍼
 │   ├── llm_summarizer.py               ← GitHub Models로 케이스 추출
 │   ├── updater.py                      ← cases.json 병합
@@ -104,7 +104,7 @@ client = OpenAI(
 ```
 UTC 01:00 (KST 10:00)
   ↓
-core_scraper.py    — sources.json의 13개 소스 RSS/HTML 스크래핑
+core_scraper.py    — sources.json의 7개 소스 RSS/HTML 스크래핑
   ↓
 llm_summarizer.py  — GitHub Models gpt-4o-mini로 케이스 추출
   ↓
@@ -129,23 +129,19 @@ score < 50  → 기각
 ```
 
 ## 소스 목록 (scraper/sources.json)
-현재 13개 소스 | RSS 8개 + HTML 5개
+현재 7개 소스 | RSS 5개 + HTML 2개
 
 | 우선순위 | 소스 | 방식 | 주요 커버 |
 |---------|------|------|---------|
-| high | mckinsey-insights | RSS | GenAI, 전략 |
-| high | bcg-publications | RSS | 마케팅, 개인화 |
 | high | salesforce-blog | RSS | B2B 영업 AI, CRM |
 | high | microsoft-blog | RSS | Copilot, 생산성 |
 | high | think-with-google | HTML | 미디어, ROAS |
-| high | marketing-week | RSS | 마케팅, FMCG |
-| medium | hbr-ai | RSS | 전략, 리더십 |
 | medium | marketing-dive | RSS | 마케팅 자동화 |
 | medium | supply-chain-dive | RSS | 수요예측·재고 |
-| medium | bain-insights | HTML | 영업 생산성, B2B |
-| medium | gartner-ai | HTML | 리서치, 엔터프라이즈 |
 | medium | klarna-newsroom | HTML | 핀테크, CS 자동화 |
 | low | cognigy-blog | RSS | CS 자동화, AHT |
+
+excluded_sources (bot 차단으로 비활성): mckinsey, bcg, hbr, marketingweek, bain, gartner
 
 ## GitHub 설정 체크리스트 (최초 1회)
 - [ ] GitHub Pages 활성화 (Settings → Pages → main/docs)
