@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-05-06T04:34:56.937877+00:00",
-    "total_cases": 46,
+    "last_updated": "2026-05-08T04:17:00.534664+00:00",
+    "total_cases": 47,
     "version": "1.2",
     "description": "LGE AX Strategy — Global AI Sales & Marketing Benchmark DB"
   },
@@ -2113,6 +2113,50 @@
       "source": "Klarna Newsroom, 2022",
       "url": "https://www.klarna.com/international/press/airbank-chooses-klarna-kosmas-open-banking-platform-for-international-expansion/",
       "added_date": "2026-05-06",
+      "verified": false
+    },
+    {
+      "id": "AMZ-20260508-ca22d7",
+      "category": "1-1",
+      "company": "Amazon",
+      "short": "AMZ",
+      "color_bg": "#FAEEDA",
+      "color_text": "#633806",
+      "kpi_value": "22%",
+      "kpi_label": "광고 수익 증가",
+      "title": "Amazon과 LinkedIn의 협업",
+      "description": "B2B 광고주를 위한 새로운 광고 솔루션",
+      "body": "Amazon Ads와 LinkedIn의 협업으로 광고주들은 LinkedIn의 데이터로 B2B 고객을 타겟팅할 수 있게 되었다. 이를 통해 광고주들은 스트리밍 TV 환경에서 의사결정자를 효과적으로 도달할 수 있으며, Amazon DSP를 통해 광고 캠페인을 통합적으로 관리할 수 있다. 이 협업은 광고 수익을 22% 증가시키는 성과를 거두었다.",
+      "metrics": [
+        {
+          "value": "22%",
+          "label": "광고 수익 증가",
+          "trend": "pos"
+        },
+        {
+          "value": "1 billion+",
+          "label": "LinkedIn 사용자 수",
+          "trend": "pos"
+        },
+        {
+          "value": "$17.2 billion",
+          "label": "Q1 광고 수익",
+          "trend": "pos"
+        },
+        {
+          "value": "22%",
+          "label": "연간 성장률",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "B2B",
+        "광고",
+        "협업"
+      ],
+      "source": "Marketing Dive, 2026",
+      "url": "https://www.marketingdive.com/news/amazon-linkedin-help-advertisers-reach-professionals-via-ctv-ads/819372/",
+      "added_date": "2026-05-08",
       "verified": false
     }
   ]
