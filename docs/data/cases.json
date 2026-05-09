@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-05-08T04:17:00.534664+00:00",
-    "total_cases": 47,
+    "last_updated": "2026-05-09T04:23:52.936235+00:00",
+    "total_cases": 49,
     "version": "1.2",
     "description": "LGE AX Strategy — Global AI Sales & Marketing Benchmark DB"
   },
@@ -2157,6 +2157,94 @@
       "source": "Marketing Dive, 2026",
       "url": "https://www.marketingdive.com/news/amazon-linkedin-help-advertisers-reach-professionals-via-ctv-ads/819372/",
       "added_date": "2026-05-08",
+      "verified": false
+    },
+    {
+      "id": "TDK-20260509-f9d9ab",
+      "category": "1-1",
+      "company": "Trade Desk",
+      "short": "TDK",
+      "color_bg": "#FAEEDA",
+      "color_text": "#633806",
+      "kpi_value": "12%",
+      "kpi_label": "매출 성장률",
+      "title": "AI 챗봇 광고 기회",
+      "description": "AI 챗봇에서 광고 기회를 모색하는 Trade Desk",
+      "body": "Trade Desk는 AI 챗봇에서의 광고 기회를 강조하며, 오픈 웹 광고에 대한 수요가 증가할 것으로 전망하고 있습니다. CEO는 챗봇 광고의 출현을 Netflix의 광고 통합 과정과 비교하며, 데이터 기반의 마케팅 전략을 통해 광고 수익을 극대화할 수 있다고 언급했습니다.",
+      "metrics": [
+        {
+          "value": "12%",
+          "label": "매출 성장률",
+          "trend": "pos"
+        },
+        {
+          "value": "82%",
+          "label": "미국 매출 비중",
+          "trend": "neu"
+        },
+        {
+          "value": "10%",
+          "label": "성장률 감소폭",
+          "trend": "neg"
+        },
+        {
+          "value": "N/A",
+          "label": "AI 광고 시장 성장",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI",
+        "광고",
+        "마케팅"
+      ],
+      "source": "Marketing Dive, 2026",
+      "url": "https://www.marketingdive.com/news/where-trade-desk-sees-advertising-opportunity-following-bruising-q1/819692/",
+      "added_date": "2026-05-09",
+      "verified": false
+    },
+    {
+      "id": "P&G-20260509-0df3f8",
+      "category": "2-1",
+      "company": "Procter & Gamble",
+      "short": "P&G",
+      "color_bg": "#E6F1FB",
+      "color_text": "#0C447C",
+      "kpi_value": "$1.5B",
+      "kpi_label": "비용 절감",
+      "title": "P&G 공급망 혁신",
+      "description": "P&G가 공급망 자동화로 비용 절감 목표.",
+      "body": "P&G는 Supply Chain 3.0 이니셔티브를 통해 전 세계적으로 자동화를 도입하여 연간 최대 15억 달러의 비용 절감을 목표로 하고 있습니다. 이 프로젝트는 고객 주문부터 생산 계획, 자재 주문까지의 시스템 통합을 강화하며, 자동화된 창고 기술을 통해 물류 효율성을 높이고 있습니다.",
+      "metrics": [
+        {
+          "value": "$1.5B",
+          "label": "비용 절감 목표",
+          "trend": "pos"
+        },
+        {
+          "value": "98%",
+          "label": "재고 가용성",
+          "trend": "pos"
+        },
+        {
+          "value": "50%",
+          "label": "창고 밀도 증가",
+          "trend": "pos"
+        },
+        {
+          "value": "2-3배",
+          "label": "처리량 증가",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "공급망",
+        "자동화",
+        "비용절감"
+      ],
+      "source": "Supply Chain Dive, 2026",
+      "url": "https://www.supplychaindive.com/news/pg-shifts-supply-chain-30-other-platforms-into-large-scale-rollout/819256/",
+      "added_date": "2026-05-09",
       "verified": false
     }
   ]
