@@ -64,10 +64,19 @@
   inset: 0;
 }
 
-.hero-video__video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+/* YouTube iframe — full-cover background */
+.hero-video__yt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* maintain 16:9, always fill viewport */
+  width: 100vw;
+  height: 56.25vw;
+  min-height: 100vh;
+  min-width: 177.78vh;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border: none;
   opacity: .75;
 }
 
@@ -335,9 +344,10 @@
 <!-- ── Hero (video background) ────────────────────────────────────────────── -->
 <section class="hero-video">
   <div class="hero-video__bg">
-    <video class="hero-video__video" autoplay muted loop playsinline>
-      <source src="./src/assets/hero_axblog.mp4" type="video/mp4">
-    </video>
+    <iframe class="hero-video__yt"
+      src="https://www.youtube.com/embed/NuXEyGM3KiM?autoplay=1&mute=1&loop=1&playlist=NuXEyGM3KiM&controls=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1"
+      allow="autoplay; encrypted-media"
+      title="hero background"></iframe>
     <div class="hero-video__overlay"></div>
   </div>
 
