@@ -1,6 +1,6 @@
 """
 updater.py
-LGE AX Benchmark — DB updater
+Life After AI — DB updater
 Merges new extracted cases into cases.json, deduplicates, updates meta
 """
 
