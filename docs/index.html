@@ -254,13 +254,17 @@
   margin-bottom: 28px;
 }
 
-.thumb-grad {
+/* Clearbit logo (replaces SVG when loaded) */
+.cb-logo {
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 32px;
+  object-fit: contain;
+  padding: 20px 32px;
+  background: #fff;
+  animation: fadeIn .28s ease both;
+}
+@media (prefers-color-scheme: dark) {
+  .cb-logo { background: #F0EDE5; }
 }
 
 /* Tooltip */
@@ -508,61 +512,119 @@ async function loadCases() {
   }
 }
 
+/* ── Thumb helpers ──────────────────────────────────────── */
+function lightenHex(hex, amt) {
+  const n = parseInt(hex.replace('#',''), 16);
+  const r = Math.min(255, (n >> 16) + amt);
+  const g = Math.min(255, ((n >> 8) & 0xFF) + amt);
+  const b = Math.min(255, (n & 0xFF) + amt);
+  return '#' + [r,g,b].map(v => v.toString(16).padStart(2,'0')).join('');
+}
+
+function companyDomain(name) {
+  return name.toLowerCase()
+    .normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .replace(/['‘’ʼ]/g, '')
+    .replace(/\bthe\s+/g, '')
+    .replace(/[^a-z0-9]/g, '')
+    + '.com';
+}
+
+function svgThumb(c) {
+  const uid = 'g' + c.id.replace(/[^a-z0-9]/gi, '');
+  const bg2 = lightenHex(c.color_bg, 24);
+  const tc  = c.color_text;
+  const kv  = (c.kpi_value  || '').replace(/&/g,'&amp;').replace(/</g,'&lt;');
+  const kl  = (c.kpi_label  || '').replace(/&/g,'&amp;').replace(/</g,'&lt;');
+  const sh  = (c.short      || '').replace(/&/g,'&amp;');
+  const cat = (c.category   || '');
+  const fs  = kv.length > 7 ? 34 : kv.length > 5 ? 42 : 50;
+  const ky  = fs < 42 ? 92 : 96;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" width="100%" height="100%" style="display:block">
+  <defs>
+    <linearGradient id="${uid}" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="${c.color_bg}"/>
+      <stop offset="100%" stop-color="${bg2}"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="180" fill="url(#${uid})"/>
+  <circle cx="290" cy="22"  r="58" fill="${tc}" opacity=".05"/>
+  <circle cx="30"  cy="158" r="42" fill="${tc}" opacity=".05"/>
+  <rect x="13" y="13" width="36" height="17" rx="4" fill="${tc}" opacity=".13"/>
+  <text x="31" y="25.5" font-family="system-ui,sans-serif" font-size="9" font-weight="700"
+    fill="${tc}" opacity=".72" text-anchor="middle" letter-spacing=".5">${cat}</text>
+  <text x="160" y="${ky}" font-family="system-ui,sans-serif" font-size="${fs}" font-weight="700"
+    fill="${tc}" text-anchor="middle" letter-spacing="-1.5">${kv}</text>
+  <text x="160" y="122" font-family="system-ui,sans-serif" font-size="11"
+    fill="${tc}" opacity=".58" text-anchor="middle">${kl}</text>
+  <rect x="13" y="149" width="30" height="17" rx="4" fill="${tc}" opacity=".14"/>
+  <text x="28" y="161.5" font-family="system-ui,sans-serif" font-size="9" font-weight="700"
+    fill="${tc}" opacity=".75" text-anchor="middle">${sh}</text>
+</svg>`;
+}
+
+function buildThumb(c) {
+  const wrap = document.createElement('div');
+  wrap.className = 'post-card__thumb';
+  wrap.innerHTML = svgThumb(c);               // SVG shows immediately
+
+  const img = new Image();
+  img.onload = () => {                         // swap to logo if Clearbit responds
+    wrap.innerHTML = '';
+    img.className = 'cb-logo';
+    wrap.appendChild(img);
+  };
+  img.src = `https://logo.clearbit.com/${companyDomain(c.company)}?size=256`;
+  return wrap;
+}
+
+/* ── Card builder ───────────────────────────────────────── */
 function buildCard(c, categories) {
-  const cat    = categories?.[c.category] || {};
-  const isTop  = cat.type === 'top';
-  const date   = c.added_date
+  const cat   = categories?.[c.category] || {};
+  const isTop = cat.type === 'top';
+  const date  = c.added_date
     ? new Date(c.added_date).toLocaleDateString('ko-KR', { month:'short', day:'numeric' })
     : '';
-  const tags   = (c.tags || []).slice(0, 2).map(t =>
-    `<span class="post-card__tag">${t}</span>`).join('');
-  const grads  = [
-    'linear-gradient(135deg,#E1F5EE,#C8EDE0)',
-    'linear-gradient(135deg,#FAEEDA,#F5DDB0)',
-    'linear-gradient(135deg,#E6F1FB,#C8DCEF)',
-    'linear-gradient(135deg,#EEEDFE,#DDD8FC)',
-    'linear-gradient(135deg,#FBEAF0,#F5C8D8)',
-    'linear-gradient(135deg,#FEF3E2,#FAD8A0)',
-  ];
-  const emoji  = {'1-1':'🎯','1-2':'📈','1-3':'💎','1-4':'🔄','1-5':'🚀',
-                  '2-1':'💰','2-2':'⚡','2-3':'🤝','2-4':'🧠','2-5':'🛡️'};
-  const grad   = grads[Math.abs(hash(c.company)) % grads.length];
+  const tags  = (c.tags || []).slice(0, 2)
+    .map(t => `<span class="post-card__tag">${t}</span>`).join('');
 
   const a = document.createElement('a');
   a.className = 'post-card';
   a.href = c.url;
   a.target = '_blank';
   a.rel = 'noopener noreferrer';
-  a.innerHTML = `
-    <div class="post-card__thumb">
-      <div class="thumb-grad" style="background:${grad}">
-        <span style="opacity:.45">${emoji[c.category] || '✦'}</span>
+
+  a.appendChild(buildThumb(c));               // thumb first (Clearbit or SVG)
+
+  const body = document.createElement('div');
+  body.className = 'post-card__body';
+  body.innerHTML = `
+    <div class="post-card__header">
+      <div class="post-card__company">
+        <div class="post-card__badge" style="background:${c.color_bg};color:${c.color_text}">${c.short}</div>
+        <span class="post-card__co-name">${c.company}</span>
+      </div>
+      <div class="post-card__kpi" style="color:${c.color_text}">
+        <div class="post-card__kpi-val">${c.kpi_value}</div>
+        <div class="post-card__kpi-label">${c.kpi_label}</div>
       </div>
     </div>
-    <div class="post-card__body">
-      <div class="post-card__header">
-        <div class="post-card__company">
-          <div class="post-card__badge" style="background:${c.color_bg};color:${c.color_text}">${c.short}</div>
-          <span class="post-card__co-name">${c.company}</span>
-        </div>
-        <div class="post-card__kpi" style="color:${c.color_text}">
-          <div class="post-card__kpi-val">${c.kpi_value}</div>
-          <div class="post-card__kpi-label">${c.kpi_label}</div>
-        </div>
-      </div>
-      <div class="post-card__title">${c.title}</div>
-      <div class="post-card__desc">${c.description}</div>
+    <div class="post-card__title">${c.title}</div>
+    <div class="post-card__desc">${c.description}</div>`;
+  a.appendChild(body);
+
+  const foot = document.createElement('div');
+  foot.className = 'post-card__foot';
+  foot.innerHTML = `
+    <div class="post-card__foot-left">
+      <span class="cat-badge ${isTop ? 'top' : 'bot'}">${c.category}</span>
+      ${tags}
     </div>
-    <div class="post-card__foot">
-      <div class="post-card__foot-left">
-        <span class="cat-badge ${isTop ? 'top' : 'bot'}">${c.category}</span>
-        ${tags}
-      </div>
-      <div style="display:flex;align-items:center;gap:8px">
-        <span class="post-card__date">${date}</span>
-        <span class="post-card__link-arrow">↗</span>
-      </div>
+    <div style="display:flex;align-items:center;gap:8px">
+      <span class="post-card__date">${date}</span>
+      <span class="post-card__link-arrow">↗</span>
     </div>`;
+  a.appendChild(foot);
 
   if (c.body) {
     a.addEventListener('mouseenter', () => showTip(c.body));

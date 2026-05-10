@@ -135,6 +135,18 @@ body{background:var(--bg);font-family:var(--font);color:var(--text);padding-bott
 .tag-pill{font-size:10px;padding:2px 6px;border-radius:4px;background:var(--bg3);color:var(--text3);white-space:nowrap}
 .card-src{font-size:10px;color:var(--text3);white-space:nowrap;flex-shrink:0}
 .card-ext{font-size:11px;font-weight:500;color:var(--blue);flex-shrink:0;white-space:nowrap}
+/* ── Thumbnail ─────────────────────────────────────────────── */
+.card-thumb{
+  aspect-ratio:16/9;overflow:hidden;
+  background:var(--bg2);flex-shrink:0;position:relative
+}
+.cb-logo{
+  width:100%;height:100%;object-fit:contain;
+  padding:18px 28px;background:#fff;
+  animation:cbFadeIn .28s ease both
+}
+@keyframes cbFadeIn{from{opacity:0}to{opacity:1}}
+@media(prefers-color-scheme:dark){.cb-logo{background:#F0EDE5}}
 
 /* ── Tooltip ──────────────────────────────────────────────────────────────── */
 .tt{
@@ -290,10 +302,75 @@ function render(catId) {
   list.forEach(c => grid.appendChild(makeCard(c)));
 }
 
-// ── Make card ─────────────────────────────────────────────────────────────────
+// ── Thumb helpers ──────────────────────────────────────────────────────────────
+function lightenHex(hex, amt) {
+  const n = parseInt(hex.replace('#',''), 16);
+  const r = Math.min(255, (n >> 16) + amt);
+  const g = Math.min(255, ((n >> 8) & 0xFF) + amt);
+  const b = Math.min(255, (n & 0xFF) + amt);
+  return '#' + [r,g,b].map(v => v.toString(16).padStart(2,'0')).join('');
+}
+
+function companyDomain(name) {
+  return name.toLowerCase()
+    .normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .replace(/['''ʼ]/g, '')
+    .replace(/\bthe\s+/g, '')
+    .replace(/[^a-z0-9]/g, '')
+    + '.com';
+}
+
+function svgThumb(c) {
+  const uid = 'g' + c.id.replace(/[^a-z0-9]/gi, '');
+  const bg2 = lightenHex(c.color_bg, 24);
+  const tc  = c.color_text;
+  const kv  = (c.kpi_value || '').replace(/&/g,'&amp;').replace(/</g,'&lt;');
+  const kl  = (c.kpi_label || '').replace(/&/g,'&amp;').replace(/</g,'&lt;');
+  const sh  = (c.short     || '').replace(/&/g,'&amp;');
+  const fs  = kv.length > 7 ? 34 : kv.length > 5 ? 42 : 50;
+  const ky  = fs < 42 ? 92 : 96;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" width="100%" height="100%" style="display:block">
+  <defs>
+    <linearGradient id="${uid}" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="${c.color_bg}"/>
+      <stop offset="100%" stop-color="${bg2}"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="180" fill="url(#${uid})"/>
+  <circle cx="290" cy="22"  r="58" fill="${tc}" opacity=".05"/>
+  <circle cx="30"  cy="158" r="42" fill="${tc}" opacity=".05"/>
+  <rect x="13" y="13" width="36" height="17" rx="4" fill="${tc}" opacity=".13"/>
+  <text x="31" y="25.5" font-family="system-ui,sans-serif" font-size="9" font-weight="700"
+    fill="${tc}" opacity=".72" text-anchor="middle" letter-spacing=".5">${c.category}</text>
+  <text x="160" y="${ky}" font-family="system-ui,sans-serif" font-size="${fs}" font-weight="700"
+    fill="${tc}" text-anchor="middle" letter-spacing="-1.5">${kv}</text>
+  <text x="160" y="122" font-family="system-ui,sans-serif" font-size="11"
+    fill="${tc}" opacity=".58" text-anchor="middle">${kl}</text>
+  <rect x="13" y="149" width="30" height="17" rx="4" fill="${tc}" opacity=".14"/>
+  <text x="28" y="161.5" font-family="system-ui,sans-serif" font-size="9" font-weight="700"
+    fill="${tc}" opacity=".75" text-anchor="middle">${sh}</text>
+</svg>`;
+}
+
+function buildThumb(c) {
+  const wrap = document.createElement('div');
+  wrap.className = 'card-thumb';
+  wrap.innerHTML = svgThumb(c);                // SVG 즉시 표시
+
+  const img = new Image();
+  img.onload = () => {                         // Clearbit 성공 시 교체
+    wrap.innerHTML = '';
+    img.className = 'cb-logo';
+    wrap.appendChild(img);
+  };
+  img.src = `https://logo.clearbit.com/${companyDomain(c.company)}?size=256`;
+  return wrap;
+}
+
+// ── Make card ──────────────────────────────────────────────────────────────────
 function makeCard(c) {
-  const cat   = DB.categories[c.category] || {};
-  const isTop = cat.type === 'top';
+  const cat    = DB.categories[c.category] || {};
+  const isTop  = cat.type === 'top';
   const tt_cls = isTop ? 't' : 'b';
   const dateStr = c.added_date
     ? new Date(c.added_date).toLocaleDateString('ko-KR', {month:'short', day:'numeric'})
@@ -307,26 +384,26 @@ function makeCard(c) {
   a.href      = c.url;
   a.target    = '_blank';
   a.rel       = 'noopener noreferrer';
-  a.innerHTML = `
-    <div class="card-hd" style="background:${c.color_bg}1a">
-      <div class="co-badge" style="background:${c.color_bg};color:${c.color_text}">${c.short}</div>
-      <div class="kpi-wrap" style="color:${c.color_text}">
-        <div class="kpi-v">${c.kpi_value}</div>
-        <div class="kpi-l">${c.kpi_label}</div>
-      </div>
+
+  a.appendChild(buildThumb(c));               // thumb (Clearbit or SVG)
+
+  const body = document.createElement('div');
+  body.className = 'card-body';
+  body.innerHTML = `
+    <div class="card-co">${c.company}</div>
+    <div class="card-title">${c.title}</div>
+    <div class="card-desc">${c.description}</div>`;
+  a.appendChild(body);
+
+  const ft = document.createElement('div');
+  ft.className = 'card-ft';
+  ft.innerHTML = `
+    <div class="ft-left">
+      <span class="cat-badge ${tt_cls}">${c.category}</span>
+      ${tags}
     </div>
-    <div class="card-body">
-      <div class="card-co">${c.company}</div>
-      <div class="card-title">${c.title}</div>
-      <div class="card-desc">${c.description}</div>
-    </div>
-    <div class="card-ft">
-      <div class="ft-left">
-        <span class="cat-badge ${tt_cls}">${c.category}</span>
-        ${tags}
-      </div>
-      <span class="card-src">${srcShort} · ${dateStr}</span>
-    </div>`;
+    <span class="card-src">${srcShort} · ${dateStr}</span>`;
+  a.appendChild(ft);
 
   if (c.body) {
     a.addEventListener('mouseenter', () => showTip(c.body));
