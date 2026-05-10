@@ -11,7 +11,5 @@ __pycache__/
 pipeline.log
 scraper/source_update.log
 
-# Large media (143MB — exceeds GitHub 100MB limit; place manually in docs/src/assets/)
-docs/src/assets/*.mp4
-docs/src/assets/*.mov
-docs/src/assets/*.webm
+# Large media (add back if file exceeds 100MB)
+# docs/src/assets/*.mp4
