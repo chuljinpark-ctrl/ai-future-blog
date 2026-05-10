@@ -198,10 +198,10 @@
   55%      { transform: translateX(-50%) translateY(7px); }
 }
 
-/* ── Message cards (Section 1) — feature-card style ──────── */
+/* ── Message cards (Section 1) — 4-area feature cards ────── */
 .message-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
   margin-top: 40px;
 }
@@ -210,40 +210,67 @@
   background: var(--surface-card);
   border: none;
   border-radius: 12px;
-  padding: 32px 28px;
+  padding: 28px 26px 26px;
   transition: background var(--t-base);
+  border-left: 3px solid transparent;
 }
-.message-card:hover {
-  background: var(--surface-cream-strong);
-}
+.message-card:hover { background: var(--surface-cream-strong); }
 
-.message-card__num {
-  width: 28px; height: 28px;
-  border-radius: 50%;
-  background: var(--surface-cream-strong);
+/* per-area accent border */
+.message-card:nth-child(1) { border-left-color: var(--g1-b); }
+.message-card:nth-child(2) { border-left-color: var(--g2-b); }
+.message-card:nth-child(3) { border-left-color: var(--g3-b); }
+.message-card:nth-child(4) { border-left-color: var(--g4-b); }
+
+.message-card__label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
   color: var(--muted);
-  font-size: 11px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
+.message-card:nth-child(1) .message-card__label { color: var(--g1); }
+.message-card:nth-child(2) .message-card__label { color: var(--g2); }
+.message-card:nth-child(3) .message-card__label { color: var(--g3); }
+.message-card:nth-child(4) .message-card__label { color: var(--g4); }
 
 .message-card__title {
   font-family: var(--font-display);
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.3;
-  letter-spacing: -0.01em;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
   color: var(--ink);
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
-.message-card__body {
+.message-card__items {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.message-card__item {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
   font-size: 13px;
   color: var(--body);
-  line-height: 1.75;
+  line-height: 1.45;
+}
+
+.message-card__item-num {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--muted-soft);
+  flex-shrink: 0;
+  width: 28px;
+}
+
+.message-card__item-name {
+  font-weight: 500;
+  color: var(--ink);
 }
 
 /* ── Section 2 case cards ─────────────────────────────────── */
@@ -295,7 +322,7 @@
 }
 
 /* ── Responsive ───────────────────────────────────────────── */
-@media (max-width: 900px) {
+@media (max-width: 700px) {
   .message-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) {
@@ -354,8 +381,8 @@
       이 블로그는 5년 뒤 고객 생활 변화와 그 안의 사업 기회를 추적합니다.
     </p>
     <div class="hero-video__actions anim-fade-up anim-delay-3">
-      <a href="./archive.html"   class="btn btn-lg btn-hero-primary">아티클 보기</a>
-      <a href="./dashboard.html" class="btn btn-lg btn-hero-outline">리서치 맵</a>
+      <a href="./dashboard.html" class="btn btn-lg btn-hero-primary">리서치 맵</a>
+      <a href="./trinity.html"   class="btn btn-lg btn-hero-outline">Trinity Eye</a>
     </div>
   </div>
 
@@ -382,21 +409,87 @@
     </div>
 
     <div class="message-grid">
+
+      <!-- 1. 생활 공간 변화 -->
       <div class="message-card scroll-anim">
-        <div class="message-card__num">01</div>
-        <div class="message-card__title">집은 얼마나 AI가 대신 운영하게 되는가</div>
-        <p class="message-card__body">AI Home, Wellness Home, Energy Optimization — AI가 환경·건강·에너지를 자동으로 조율하는 공간으로 집이 진화하는 방식을 분석합니다.</p>
+        <div class="message-card__label">Area 1</div>
+        <div class="message-card__title">생활 공간 변화</div>
+        <div class="message-card__items">
+          <div class="message-card__item">
+            <span class="message-card__item-num">1-1</span>
+            <span class="message-card__item-name">AI Home</span>
+          </div>
+          <div class="message-card__item">
+            <span class="message-card__item-num">1-2</span>
+            <span class="message-card__item-name">Wellness Home</span>
+          </div>
+          <div class="message-card__item">
+            <span class="message-card__item-num">1-3</span>
+            <span class="message-card__item-name">Energy Optimization</span>
+          </div>
+        </div>
       </div>
+
+      <!-- 2. 소비 행동 변화 -->
       <div class="message-card scroll-anim">
-        <div class="message-card__num">02</div>
-        <div class="message-card__title">소비자는 AI에게 구매를 얼마나 위임하는가</div>
-        <p class="message-card__body">Agentic Commerce, AI Shopping, Subscription AI — 검색과 비교를 넘어 AI가 구매까지 실행하게 될 때, 소비 행동과 브랜드 접점이 어떻게 바뀌는지 추적합니다.</p>
+        <div class="message-card__label">Area 2</div>
+        <div class="message-card__title">소비 행동 변화</div>
+        <div class="message-card__items">
+          <div class="message-card__item">
+            <span class="message-card__item-num">2-1</span>
+            <span class="message-card__item-name">Agentic Commerce</span>
+          </div>
+          <div class="message-card__item">
+            <span class="message-card__item-num">2-2</span>
+            <span class="message-card__item-name">AI Shopping</span>
+          </div>
+          <div class="message-card__item">
+            <span class="message-card__item-num">2-3</span>
+            <span class="message-card__item-name">Subscription AI</span>
+          </div>
+        </div>
       </div>
+
+      <!-- 3. 개인 행동 변화 -->
       <div class="message-card scroll-anim">
-        <div class="message-card__num">03</div>
-        <div class="message-card__title">AI는 사람과 사람 사이의 관계를 어떻게 바꾸는가</div>
-        <p class="message-card__body">Emotional AI, Companion, Aging Society — AI가 돌봄·정서·동반자 역할로 확장될 때, 고령화와 1인 가구 사회에서 어떤 새로운 생활 시장이 열리는지 살펴봅니다.</p>
+        <div class="message-card__label">Area 3</div>
+        <div class="message-card__title">개인 행동 변화</div>
+        <div class="message-card__items">
+          <div class="message-card__item">
+            <span class="message-card__item-num">3-1</span>
+            <span class="message-card__item-name">AI Assistant</span>
+          </div>
+          <div class="message-card__item">
+            <span class="message-card__item-num">3-2</span>
+            <span class="message-card__item-name">Productivity Life</span>
+          </div>
+          <div class="message-card__item">
+            <span class="message-card__item-num">3-3</span>
+            <span class="message-card__item-name">Capability Divide</span>
+          </div>
+        </div>
       </div>
+
+      <!-- 4. 인간 관계 변화 -->
+      <div class="message-card scroll-anim">
+        <div class="message-card__label">Area 4</div>
+        <div class="message-card__title">인간 관계 변화</div>
+        <div class="message-card__items">
+          <div class="message-card__item">
+            <span class="message-card__item-num">4-1</span>
+            <span class="message-card__item-name">Emotional AI</span>
+          </div>
+          <div class="message-card__item">
+            <span class="message-card__item-num">4-2</span>
+            <span class="message-card__item-name">Companion</span>
+          </div>
+          <div class="message-card__item">
+            <span class="message-card__item-num">4-3</span>
+            <span class="message-card__item-name">Aging Society</span>
+          </div>
+        </div>
+      </div>
+
     </div>
 
   </div>
