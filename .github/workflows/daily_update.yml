@@ -46,16 +46,13 @@ jobs:
             python run_pipeline.py
           fi
 
-      # ── Sync cases.json → docs/data/ for GitHub Pages ───────────────────────
-      - name: Sync DB to docs
+      # ── Sync data files → docs/data/ for GitHub Pages ──────────────────────
+      - name: Sync data to docs
         if: github.event.inputs.dry_run != 'true'
         run: |
           mkdir -p docs/data
           cp data/cases.json docs/data/cases.json
           cp scraper/sources.json docs/data/sources.json
-          cp dashboard/dashboard.html docs/dashboard.html
-          cp dashboard/archive.html docs/archive.html
-          cp dashboard/admin.html docs/admin.html
 
       # ── Commit if anything changed ───────────────────────────────────────────
       - name: Commit changes
@@ -63,7 +60,7 @@ jobs:
         run: |
           git config user.name  "LGE Benchmark Bot"
           git config user.email "benchmark-bot@lge-ax.internal"
-          git add data/cases.json docs/data/cases.json docs/data/sources.json docs/dashboard.html docs/archive.html docs/admin.html
+          git add data/cases.json docs/data/cases.json docs/data/sources.json
           COUNT=$(python3 -c "import json; d=json.load(open('data/cases.json')); print(len(d['cases']))")
           if git diff --cached --quiet; then
             echo "No changes to commit."

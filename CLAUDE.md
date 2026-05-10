@@ -12,13 +12,15 @@ lge-benchmark/
 ├── README.md
 ├── requirements.txt                    ← openai, requests, bs4, lxml
 │
-├── dashboard/
-│   └── dashboard.html         ← 대시보드 소스 (Actions가 docs/로 배포)
-│
-├── docs/                               ← GitHub Pages 서빙 루트 (Actions가 생성·유지)
-│   ├── dashboard.html        ← dashboard/dashboard.html 복사본
+├── docs/                               ← GitHub Pages 서빙 루트 (소스 + 배포 일원화)
+│   ├── index.html                      ← Hero 페이지 (랜딩)
+│   ├── dashboard.html                  ← 벤치마크 대시보드
+│   ├── archive.html                    ← 케이스 피드 (블로그형)
+│   ├── admin.html                      ← 소스 관리 어드민
+│   ├── hero.css                        ← 공통 디자인 시스템 CSS
 │   └── data/
-│       └── cases.json                  ← DB 사본 (Actions가 동기화)
+│       ├── cases.json                  ← DB 사본 (Actions가 동기화)
+│       └── sources.json                ← 소스 목록 사본 (Actions가 동기화)
 │
 ├── data/
 │   ├── cases.json                      ← 메인 DB (소스 오브 트루스)
@@ -163,17 +165,13 @@ python scraper/run_pipeline.py --dry-run
 python scraper/run_source_update.py --no-auto-approve --max-gaps 3
 ```
 
-## 로컬 대시보드 확인
+## 로컬 확인
 ```bash
-# dashboard/ 소스를 직접 서빙 (data/cases.json 경로 주의: 브라우저에서 ./data/cases.json 요청)
-mkdir -p /tmp/lge-preview/data
-cp data/cases.json /tmp/lge-preview/data/
-cp dashboard/dashboard.html /tmp/lge-preview/index.html
-cd /tmp/lge-preview && python -m http.server 8080
-# → http://localhost:8080
-
-# 또는 Actions 실행 후 docs/ 폴더가 생기면
+# docs/가 소스이자 서빙 폴더이므로 바로 실행
+cp data/cases.json docs/data/cases.json
+cp scraper/sources.json docs/data/sources.json
 cd docs && python -m http.server 8080
+# → http://localhost:8080/dashboard.html
 ```
 
 ## TODO
