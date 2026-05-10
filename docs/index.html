@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The AX Fieldbook — LGE AX Strategy</title>
+<meta name="description" content="글로벌 기업의 영업·마케팅 AX 사례를 수집하고, 실무 적용 관점으로 해석하는 인사이트 블로그">
+<link rel="stylesheet" href="./hero.css">
+<style>
+
+/* ── Nav: fixed + transparent over hero ──────────────────── */
+.nav {
+  position: fixed;
+  width: 100%;
+  background: transparent;
+  border-bottom-color: rgba(255,255,255,.12);
+  transition: background var(--t-base), border-color var(--t-base);
+}
+.nav__logo    { color: #fff; }
+.nav__logo-mark { background: rgba(255,255,255,.15); border: 0.5px solid rgba(255,255,255,.3); }
+.nav__link    { color: rgba(255,255,255,.65); }
+.nav__link:hover { color: #fff; background: rgba(255,255,255,.10); }
+.nav.scrolled {
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  border-bottom-color: var(--border);
+}
+.nav.scrolled .nav__logo    { color: var(--text); }
+.nav.scrolled .nav__logo-mark { background: var(--text); border-color: transparent; }
+.nav.scrolled .nav__link    { color: var(--text-2); }
+.nav.scrolled .nav__link:hover { color: var(--text); background: var(--bg-alt); }
+
+/* Logo icon color flip */
+.nav__logo-mark svg path { fill: #fff; }
+.nav.scrolled .nav__logo-mark svg path { fill: var(--bg); }
+
+/* Nav CTA */
+#nav-cta {
+  background: rgba(255,255,255,.12);
+  color: #fff;
+  border-color: rgba(255,255,255,.30);
+  backdrop-filter: blur(4px);
+}
+#nav-cta:hover { background: rgba(255,255,255,.22); border-color: rgba(255,255,255,.50); }
+.nav.scrolled #nav-cta {
+  background: var(--text);
+  color: var(--text-inv);
+  border-color: var(--text);
+  backdrop-filter: none;
+}
+.nav.scrolled #nav-cta:hover { opacity: .84; }
+
+/* ── Hero video section ───────────────────────────────────── */
+.hero-video {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  background: #0B0906;
+  overflow: hidden;
+}
+
+.hero-video__bg {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-video__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .5;
+}
+
+.hero-video__overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(10,8,6,.5) 0%, rgba(10,8,6,.1) 50%, rgba(10,8,6,.65) 100%),
+    radial-gradient(ellipse at 60% 40%, rgba(201,110,53,.12) 0%, transparent 65%);
+}
+
+/* Content over video */
+.hero-video__content {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px var(--gutter) 80px;
+  color: #fff;
+}
+
+.hero-video__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semi);
+  letter-spacing: .10em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.60);
+  border: 0.5px solid rgba(255,255,255,.20);
+  padding: 5px 14px;
+  border-radius: var(--r-full);
+  margin-bottom: 32px;
+}
+
+.hero-video__eyebrow span {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: inline-block;
+}
+
+.hero-video__title {
+  font-size: clamp(var(--fs-3xl), 7.5vw, 96px);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  letter-spacing: -.04em;
+  color: #fff;
+  margin-bottom: 18px;
+}
+
+.hero-video__subtitle {
+  font-size: clamp(var(--fs-base), 2.2vw, var(--fs-xl));
+  font-weight: var(--fw-light);
+  color: rgba(255,255,255,.70);
+  letter-spacing: -.01em;
+  line-height: var(--lh-snug);
+  margin-bottom: 14px;
+}
+
+.hero-video__desc {
+  font-size: var(--fs-base);
+  color: rgba(255,255,255,.48);
+  line-height: var(--lh-base);
+  max-width: 480px;
+  margin: 0 auto 40px;
+}
+
+.hero-video__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Hero buttons */
+.btn-hero-primary {
+  background: #fff;
+  color: #0D0D0B;
+  border-color: #fff;
+  font-weight: var(--fw-semi);
+}
+.btn-hero-primary:hover { background: rgba(255,255,255,.88); }
+
+.btn-hero-outline {
+  background: rgba(255,255,255,.08);
+  color: rgba(255,255,255,.82);
+  border-color: rgba(255,255,255,.25);
+  backdrop-filter: blur(4px);
+}
+.btn-hero-outline:hover { background: rgba(255,255,255,.16); border-color: rgba(255,255,255,.45); color: #fff; }
+
+/* Scroll hint */
+.scroll-hint {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255,255,255,.35);
+  font-size: var(--fs-2xs);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  animation: bounce 2.4s var(--ease) infinite;
+}
+@keyframes bounce {
+  0%,100% { transform: translateX(-50%) translateY(0); }
+  55%      { transform: translateX(-50%) translateY(7px); }
+}
+
+/* ── Message cards (Section 1) ────────────────────────────── */
+.message-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.message-card {
+  background: var(--bg-card);
+  border: 0.5px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 28px 24px;
+  transition: transform var(--t-base), box-shadow var(--t-base), border-color var(--t-fast);
+}
+.message-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-md);
+}
+
+.message-card__num {
+  width: 30px; height: 30px;
+  border-radius: var(--r-sm);
+  background: var(--accent-lt);
+  color: var(--accent);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.message-card__title {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-semi);
+  line-height: var(--lh-snug);
+  letter-spacing: -.01em;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.message-card__body {
+  font-size: var(--fs-sm);
+  color: var(--text-2);
+  line-height: var(--lh-loose);
+}
+
+/* ── Section 2 case cards ─────────────────────────────────── */
+.cases-hd {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.thumb-grad {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+}
+
+/* Tooltip */
+.tt {
+  position: fixed;
+  z-index: 999;
+  max-width: 290px;
+  background: rgba(13,13,11,.93);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #EDECEA;
+  font-size: var(--fs-sm);
+  line-height: var(--lh-base);
+  padding: 12px 16px;
+  border-radius: var(--r-md);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--t-fast);
+  box-shadow: var(--shadow-xl);
+  border: 0.5px solid rgba(255,255,255,.08);
+}
+.tt.show { opacity: 1; }
+.tt__label {
+  font-size: var(--fs-2xs);
+  font-weight: var(--fw-semi);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #D98048;
+  margin-bottom: 6px;
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .message-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .hero-video__title { letter-spacing: -.03em; }
+  .cases-hd { flex-direction: column; align-items: flex-start; gap: 6px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── Navigation ─────────────────────────────────────────────────────────── -->
+<nav class="nav" id="nav">
+  <div class="container">
+    <div class="nav__inner">
+      <a href="./index.html" class="nav__logo">
+        <div class="nav__logo-mark">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M7 1L13 4.5V9.5L7 13L1 9.5V4.5L7 1Z" fill="currentColor"/>
+          </svg>
+        </div>
+        The AX Fieldbook
+      </a>
+      <div class="nav__links">
+        <a href="./dashboard.html" class="nav__link">대시보드</a>
+        <a href="./archive.html"   class="nav__link">아카이브</a>
+        <a href="./admin.html"     class="nav__link">소스 관리</a>
+      </div>
+      <div class="nav__actions">
+        <a href="./dashboard.html" class="btn btn-sm" id="nav-cta">대시보드 →</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Hero (video background) ────────────────────────────────────────────── -->
+<section class="hero-video">
+  <div class="hero-video__bg">
+    <video class="hero-video__video" autoplay muted loop playsinline>
+      <source src="./src/assets/hero_axblog.mp4" type="video/mp4">
+    </video>
+    <div class="hero-video__overlay"></div>
+  </div>
+
+  <div class="hero-video__content">
+    <div class="hero-video__eyebrow anim-fade-in">
+      <span></span>LGE AX Strategy
+    </div>
+    <h1 class="hero-video__title anim-fade-up">The AX Fieldbook</h1>
+    <p class="hero-video__subtitle anim-fade-up anim-delay-1">
+      Global Sales &amp; Marketing AX Cases,<br>Curated for Action
+    </p>
+    <p class="hero-video__desc anim-fade-up anim-delay-2">
+      글로벌 기업의 영업·마케팅 AX 사례를 수집하고,<br>
+      실무 적용 관점으로 해석하는 인사이트 블로그
+    </p>
+    <div class="hero-video__actions anim-fade-up anim-delay-3">
+      <a href="./dashboard.html" class="btn btn-lg btn-hero-primary">대시보드</a>
+      <a href="./archive.html"   class="btn btn-lg btn-hero-outline">아카이브</a>
+      <a href="./admin.html"     class="btn btn-lg btn-hero-outline">소스 관리</a>
+    </div>
+  </div>
+
+  <div class="scroll-hint" aria-hidden="true">
+    <svg width="14" height="20" viewBox="0 0 14 20" fill="none">
+      <rect x=".75" y=".75" width="12.5" height="18.5" rx="6.25" stroke="currentColor" stroke-width="1"/>
+      <rect x="6" y="4" width="2" height="5" rx="1" fill="currentColor"/>
+    </svg>
+    Scroll
+  </div>
+</section>
+
+<!-- ── Section 1: AI는 영업과 마케팅을 어떻게 바꾸고 있는가 ─────────────── -->
+<section class="section">
+  <div class="container">
+
+    <div style="max-width: var(--max-w-text)">
+      <div class="hero__eyebrow scroll-anim" style="margin-bottom:18px">AX 인사이트</div>
+      <h2 class="section__title scroll-anim">AI는 영업과 마케팅을<br>어떻게 바꾸고 있는가</h2>
+      <p class="section__sub scroll-anim" style="margin-top:14px">
+        글로벌 선도 기업의 AX 사례를 카드형으로 큐레이션하고, Featured Article을 통해
+        실제 적용 방식과 비즈니스 시사점을 분석합니다.
+      </p>
+    </div>
+
+    <div class="message-grid">
+      <div class="message-card scroll-anim">
+        <div class="message-card__num">01</div>
+        <div class="message-card__title">AI가 바꾸는 것은 '업무'가 아니라 '운영 방식'입니다</div>
+        <p class="message-card__body">영업·마케팅 AX는 단순 자동화가 아니라 고객 이해, 캠페인 실행, 영업 의사결정, 콘텐츠 생산, 성과 최적화의 방식을 바꾸고 있습니다.</p>
+      </div>
+      <div class="message-card scroll-anim">
+        <div class="message-card__num">02</div>
+        <div class="message-card__title">글로벌 사례를 실무 언어로 번역합니다</div>
+        <p class="message-card__body">해외 기업의 AI 사례를 기술 중심으로 나열하지 않고, 비즈니스 문제 · 적용 방식 · 성과 · 시사점 중심으로 재구성합니다.</p>
+      </div>
+      <div class="message-card scroll-anim">
+        <div class="message-card__num">03</div>
+        <div class="message-card__title">우리 조직에 적용 가능한 패턴을 찾습니다</div>
+        <p class="message-card__body">각 사례는 단순 벤치마킹이 아니라, 영업·마케팅 현장에서 재사용 가능한 AX 패턴과 적용 아이디어를 찾는 데 목적이 있습니다.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ── Section 2: 최신 케이스 ────────────────────────────────────────────── -->
+<section class="section">
+  <div class="container">
+
+    <div class="cases-hd">
+      <div>
+        <h2 class="section__title scroll-anim">최신 AX 케이스</h2>
+        <p class="section__sub scroll-anim" id="cases-sub" style="margin-top:8px">불러오는 중...</p>
+      </div>
+      <a href="./archive.html" class="section__more">전체 보기</a>
+    </div>
+
+    <div class="card-grid" id="card-grid">
+      <div class="post-card" style="min-height:240px;opacity:.15;pointer-events:none" aria-hidden="true"></div>
+      <div class="post-card" style="min-height:240px;opacity:.09;pointer-events:none" aria-hidden="true"></div>
+      <div class="post-card" style="min-height:240px;opacity:.05;pointer-events:none" aria-hidden="true"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Footer ─────────────────────────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__logo">The AX Fieldbook</div>
+      <nav class="footer__links">
+        <a href="./dashboard.html">대시보드</a>
+        <a href="./archive.html">아카이브</a>
+        <a href="./admin.html">소스 관리</a>
+      </nav>
+      <span class="footer__copy">LGE AX Strategy · <span id="footer-count">–</span>개 사례</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ── Tooltip ────────────────────────────────────────────────────────────── -->
+<div class="tt" id="tt">
+  <div class="tt__label">LLM 요약</div>
+  <div id="tt-text"></div>
+</div>
+
+<script>
+/* ══════════════════════════════════════════════════════
+   Nav: transparent → opaque on scroll
+══════════════════════════════════════════════════════ */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+/* ══════════════════════════════════════════════════════
+   Scroll animations (elements below the fold)
+══════════════════════════════════════════════════════ */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add('anim-fade-up');
+    io.unobserve(e.target);
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.scroll-anim').forEach(el => io.observe(el));
+
+/* ══════════════════════════════════════════════════════
+   Tooltip
+══════════════════════════════════════════════════════ */
+const ttEl   = document.getElementById('tt');
+const ttText = document.getElementById('tt-text');
+
+document.addEventListener('mousemove', e => {
+  const x = e.clientX + 14, y = e.clientY - 10;
+  const tw = 306, th = 128;
+  ttEl.style.left = (x + tw > window.innerWidth  ? e.clientX - tw - 10 : x) + 'px';
+  ttEl.style.top  = (y + th > window.innerHeight ? e.clientY - th - 10 : y) + 'px';
+}, { passive: true });
+
+const showTip = t => { ttText.textContent = t; ttEl.classList.add('show'); };
+const hideTip = ()  => ttEl.classList.remove('show');
+
+/* ══════════════════════════════════════════════════════
+   Load cases.json and render cards
+══════════════════════════════════════════════════════ */
+async function loadCases() {
+  try {
+    const res = await fetch('./data/cases.json');
+    if (!res.ok) throw new Error();
+    const db = await res.json();
+
+    const cases = [...db.cases]
+      .sort((a, b) => b.added_date.localeCompare(a.added_date))
+      .slice(0, 6);
+
+    document.getElementById('cases-sub').textContent =
+      `글로벌 기업 ${db.meta.total_cases}개 사례 수록 · 매일 자동 업데이트`;
+    document.getElementById('footer-count').textContent = db.meta.total_cases;
+
+    const grid = document.getElementById('card-grid');
+    grid.innerHTML = '';
+    cases.forEach(c => grid.appendChild(buildCard(c, db.categories)));
+  } catch {
+    document.getElementById('cases-sub').textContent = '데이터를 불러올 수 없습니다.';
+    document.getElementById('card-grid').innerHTML =
+      '<p style="grid-column:1/-1;padding:32px 0;color:var(--text-3);font-size:var(--fs-sm)">HTTP 서버를 통해 접근하세요 (file:// 미지원)</p>';
+  }
+}
+
+function buildCard(c, categories) {
+  const cat    = categories?.[c.category] || {};
+  const isTop  = cat.type === 'top';
+  const date   = c.added_date
+    ? new Date(c.added_date).toLocaleDateString('ko-KR', { month:'short', day:'numeric' })
+    : '';
+  const tags   = (c.tags || []).slice(0, 2).map(t =>
+    `<span class="post-card__tag">${t}</span>`).join('');
+  const grads  = [
+    'linear-gradient(135deg,#E1F5EE,#C8EDE0)',
+    'linear-gradient(135deg,#FAEEDA,#F5DDB0)',
+    'linear-gradient(135deg,#E6F1FB,#C8DCEF)',
+    'linear-gradient(135deg,#EEEDFE,#DDD8FC)',
+    'linear-gradient(135deg,#FBEAF0,#F5C8D8)',
+    'linear-gradient(135deg,#FEF3E2,#FAD8A0)',
+  ];
+  const emoji  = {'1-1':'🎯','1-2':'📈','1-3':'💎','1-4':'🔄','1-5':'🚀',
+                  '2-1':'💰','2-2':'⚡','2-3':'🤝','2-4':'🧠','2-5':'🛡️'};
+  const grad   = grads[Math.abs(hash(c.company)) % grads.length];
+
+  const a = document.createElement('a');
+  a.className = 'post-card';
+  a.href = c.url;
+  a.target = '_blank';
+  a.rel = 'noopener noreferrer';
+  a.innerHTML = `
+    <div class="post-card__thumb">
+      <div class="thumb-grad" style="background:${grad}">
+        <span style="opacity:.45">${emoji[c.category] || '✦'}</span>
+      </div>
+    </div>
+    <div class="post-card__body">
+      <div class="post-card__header">
+        <div class="post-card__company">
+          <div class="post-card__badge" style="background:${c.color_bg};color:${c.color_text}">${c.short}</div>
+          <span class="post-card__co-name">${c.company}</span>
+        </div>
+        <div class="post-card__kpi" style="color:${c.color_text}">
+          <div class="post-card__kpi-val">${c.kpi_value}</div>
+          <div class="post-card__kpi-label">${c.kpi_label}</div>
+        </div>
+      </div>
+      <div class="post-card__title">${c.title}</div>
+      <div class="post-card__desc">${c.description}</div>
+    </div>
+    <div class="post-card__foot">
+      <div class="post-card__foot-left">
+        <span class="cat-badge ${isTop ? 'top' : 'bot'}">${c.category}</span>
+        ${tags}
+      </div>
+      <div style="display:flex;align-items:center;gap:8px">
+        <span class="post-card__date">${date}</span>
+        <span class="post-card__link-arrow">↗</span>
+      </div>
+    </div>`;
+
+  if (c.body) {
+    a.addEventListener('mouseenter', () => showTip(c.body));
+    a.addEventListener('mouseleave', hideTip);
+  }
+  return a;
+}
+
+function hash(s) {
+  let h = 0;
+  for (let i = 0; i < s.length; i++) h = (Math.imul(31, h) + s.charCodeAt(i)) | 0;
+  return h;
+}
+
+loadCases();
+</script>
+</body>
+</html>
