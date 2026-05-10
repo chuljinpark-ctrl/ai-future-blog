@@ -9,62 +9,74 @@
     "1-1": {
       "name": "AI Home",
       "sub": "집이 스스로 운영되는 공간",
-      "type": "living_space"
+      "type": "living_space",
+      "insight": "Gemini for Home **2025년 10월** 출시, Alexa+ **$19.99/월** 구독 모델로 진입 — 하지만 정작 고객이 원하는 것은 대화가 아니라 **실패하지 않는 자동화**다"
     },
     "1-2": {
       "name": "Wellness Home",
       "sub": "집이 건강·회복·예방 관리 공간",
-      "type": "living_space"
+      "type": "living_space",
+      "insight": "Ambient Assisted Living 시장 **$132B → $645B** (2024→2030, CAGR **30.8%**) — 측정에서 자동 조치까지 연결되는 케어 서비스가 집의 다음 역할이다"
     },
     "1-3": {
       "name": "Energy Optimization",
       "sub": "에너지·생활비 자동 최적화",
-      "type": "living_space"
+      "type": "living_space",
+      "insight": "EcoFlow Oasis가 **CES 2025에서 AI HEMS 제품화** — AI가 전기 부하·충전 시점을 자동 조율해 전기요금 절감과 정전 대응을 동시에 해결한다"
     },
     "2-1": {
       "name": "Agentic Commerce",
       "sub": "AI가 탐색·비교·구매를 대행",
-      "type": "consumption"
+      "type": "consumption",
+      "insight": "McKinsey는 **2030년 $3~5T** 규모를 전망하지만, Bain은 소비자 **50%**가 완전 자율 구매에 신중하다고 경고 — **신뢰 설계**가 시장 진입의 관건이다"
     },
     "2-2": {
       "name": "AI Shopping",
       "sub": "검색에서 대화형 상담 쇼핑으로",
-      "type": "consumption"
+      "type": "consumption",
+      "insight": "알리바바 **40억 개** 상품에 Qwen AI 통합, Zalando AI 스타일리스트, Ace Hardware 직원 AI 상담 — AI 쇼핑이 **온·오프라인 전방위**로 확산 중이다"
     },
     "2-3": {
       "name": "Subscription AI",
       "sub": "소유보다 사용·관리 위임",
-      "type": "consumption"
+      "type": "consumption",
+      "insight": "Zuora 구독 경제 지수에서 **신규 가입 68%** 유지 — LG전자 싱가포르 구독 서비스는 사용·관리·케어를 묶은 **하이브리드 구독**의 실증 사례다"
     },
     "3-1": {
       "name": "AI Assistant",
       "sub": "개인·가족 생활 운영 비서",
-      "type": "personal_life"
+      "type": "personal_life",
+      "insight": "Zendesk 조사에서 소비자 **52%**가 개인 AI 비서 활용에 긍정적 — Google Gemini **24/7 생활 에이전트** 전략이 보여주듯, 경쟁력은 모델 성능보다 **개인 맥락 통합**이다"
     },
     "3-2": {
       "name": "Productivity Life",
       "sub": "AI가 개인 생산성과 업무 방식을 확장",
-      "type": "personal_life"
+      "type": "personal_life",
+      "insight": "Gallup 조사에서 AI 업무 활용이 1년 만에 **21% → 40%**로 두 배 성장 — Microsoft는 사람의 역할이 실행자에서 **판단자·감독자**로 이동한다고 분석한다"
     },
     "3-3": {
       "name": "Capability Divide",
       "sub": "AI 활용 능력이 만드는 생활 격차",
-      "type": "personal_life"
+      "type": "personal_life",
+      "insight": "OECD·UNESCO·KAIST 연구가 공통으로 경고 — 고령층 AI 배제는 기술 거부가 아니라 **접근·지원 부족**의 구조적 결과이며, 새로운 **AI 온보딩 서비스** 시장이 열린다"
     },
     "4-1": {
       "name": "Emotional AI",
       "sub": "정서적 대화와 감정 관리",
-      "type": "relationship"
+      "type": "relationship",
+      "insight": "Reuters 조사에서 유럽 청년 **51%**가 AI에 정서 문제를 더 편하게 논의 — MDPI 연구에서 AI 개입 **9건 중 6건**에서 외로움 감소 효과가 입증됐다"
     },
     "4-2": {
       "name": "Companion",
       "sub": "생활 속 AI 동반자",
-      "type": "relationship"
+      "type": "relationship",
+      "insight": "Sentai **£29.50/월** 구독, Familiar Machines 정서 연결 로봇 — AI Companion의 핵심은 기능이 아니라 **정서적 존재감과 기억**이며, 수익화는 **월 구독형 서비스**로 이루어진다"
     },
     "4-3": {
       "name": "Aging Society",
       "sub": "AI와 방문서비스 기반 재택 돌봄",
-      "type": "relationship"
+      "type": "relationship",
+      "insight": "중국 60세 이상 **3.1억 명**, 한국 초고령 사회 진입 — MDPI·동국대 연구는 AI 재택 돌봄이 선택이 아니라 **돌봄 인력 부족**에 대응하는 구조적 필요임을 보여준다"
     }
   },
   "cases": [

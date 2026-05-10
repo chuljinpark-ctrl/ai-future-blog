@@ -176,6 +176,41 @@ body { padding: 20px 20px 48px; }
 .det-tags    { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 12px; }
 .det-tag-pill { font-size: 11px; padding: 3px 8px; border-radius: 9999px; background: var(--surface-dark-el); color: var(--on-dark-soft); }
 
+/* ── Category insight block ────────────────────────────────── */
+.cat-insight {
+  position: relative;
+  background: var(--surface-dark);
+  border-radius: 10px;
+  padding: 14px 16px 14px 20px;
+  margin: 10px 0 20px;
+  overflow: hidden;
+}
+.cat-insight::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: var(--accent-teal);
+  border-radius: 3px 0 0 3px;
+}
+.cat-insight p {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--on-dark-soft);
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+.cat-insight p strong {
+  font-family: var(--font);
+  font-size: 12px;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--accent-teal);
+  letter-spacing: 0;
+}
+
 .loading { display: flex; align-items: center; justify-content: center; height: 400px; font-size: 14px; color: var(--text3); }
 
 @media (max-width: 800px) {
@@ -272,11 +307,15 @@ function selCat(id) {
 
   const cases = DB.cases.filter(c => c.category === id);
 
+  const insightHtml = cat.insight
+    ? `<div class="cat-insight"><p>${cat.insight.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')}</p></div>`
+    : `<div style="font-size:13px;color:var(--muted-soft);margin-top:6px;margin-bottom:16px">${cat.sub || ''}</div>`;
+
   let h = `<div class="ch">
     <span class="ch-title">${cat.name}</span>
     <span class="ch-count ${g}">${id} · ${cases.length}개 아티클</span>
   </div>
-  <div style="font-size:13px;color:var(--text3);margin-top:3px">${cat.sub || ''}</div>
+  ${insightHtml}
   <div class="cards">`;
 
   cases.forEach((c, i) => {
