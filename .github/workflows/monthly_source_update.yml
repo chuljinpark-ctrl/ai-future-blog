@@ -92,8 +92,8 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           BRANCH="source-update/$(date +'%Y-%m')"
-          git config user.name  "LGE Benchmark Bot"
-          git config user.email "benchmark-bot@lge-ax.internal"
+          git config user.name  "Life After AI Bot"
+          git config user.email "bot@life-after-ai.internal"
           git checkout -b "$BRANCH"
           git add scraper/sources.json data/source_candidates.json
           APPROVED="${{ steps.diff.outputs.approved_count }}"
@@ -111,13 +111,9 @@ jobs:
 
           ### Needs review (${REVIEW})
           Score 50–74. See \`data/source_candidates.json\` → status: \`review\`.
-          To approve: change status to \`approved\` and re-run locally:
-          \`\`\`
-          python scraper/run_source_update.py --apply-reviewed
-          \`\`\`
 
           ### Artifact
-          Full validation log attached: **source-candidates-${{ github.run_id }}**" \
+          Full validation log: **source-candidates-${{ github.run_id }}**" \
             --base main \
             --head "$BRANCH" \
             --label "automated,sources"
