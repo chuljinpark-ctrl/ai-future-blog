@@ -1,0 +1,195 @@
+/* ============================================================
+   shared.css — The AX Fieldbook
+   Unified design tokens + site-wide nav component
+   Loaded by all pages (index, dashboard, archive, admin)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ── Tokens ───────────────────────────────────────────────── */
+:root {
+  /* Palette — warm off-white canvas (matches hero.css) */
+  --bg:          #F8F6F1;
+  --bg-alt:      #F0EDE5;
+  --bg2:         #F0EDE5;   /* compat alias for dashboard/archive/admin */
+  --bg3:         #E8E5DC;
+  --bg-card:     #FFFFFF;
+
+  --text:        #0D0D0B;
+  --text-inv:    #F8F6F1;
+  --text2:       #4B4B44;
+  --text3:       #8A8A7E;
+
+  --accent:      #C96E35;
+  --accent-lt:   #F4E6D8;
+  --accent-dk:   #A4561F;
+
+  --green:       #085041;  --green-bg:  #E1F5EE;  --green-b: #5DCAA5;
+  --amber:       #633806;  --amber-bg:  #FAEEDA;  --amber-b: #EF9F27;
+  --blue:        #0C447C;  --blue-bg:   #E6F1FB;  --blue-b:  #85B7EB;
+  --red:         #991B1B;  --red-bg:    #FEE2E2;
+
+  --border:      rgba(13,13,11,.09);
+  --border2:     rgba(13,13,11,.20);
+
+  --radius:      12px;
+  --radius-sm:   8px;
+
+  --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+
+  --ease:    cubic-bezier(.22, 1, .36, 1);
+  --t-fast:  120ms var(--ease);
+  --t-base:  220ms var(--ease);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:       #0E0E0C;  --bg-alt:  #181816;
+    --bg2:      #181816;  --bg3:     #222220;
+    --bg-card:  #171715;
+    --text:     #EDECEA;  --text-inv: #0E0E0C;
+    --text2:    #A8A79E;  --text3:    #676660;
+    --accent:   #D98048;  --accent-lt:#2A1A0A;  --accent-dk:#F09050;
+    --green:    #9FE1CB;  --green-bg: #085041;  --green-b: #1D9E75;
+    --amber:    #FAC775;  --amber-bg: #633806;  --amber-b: #BA7517;
+    --blue:     #85B7EB;  --blue-bg:  #042C53;  --blue-b:  #185FA5;
+    --red:      #FCA5A5;  --red-bg:   #450a0a;
+    --border:   rgba(255,255,250,.08);
+    --border2:  rgba(255,255,250,.18);
+  }
+}
+
+/* ── Base reset ───────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a { color: inherit; text-decoration: none; }
+button { font-family: var(--font); cursor: pointer; }
+img, video { display: block; max-width: 100%; }
+ul, ol { list-style: none; }
+
+/* ── Container ────────────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: clamp(20px, 4vw, 48px);
+}
+
+/* ── Site nav (injected by nav.js, or hand-coded in index) ── */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 0.5px solid var(--border);
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  height: 60px;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  color: var(--text);
+  flex-shrink: 0;
+}
+
+.nav__logo-mark {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.nav__logo-mark svg { display: block; }
+.nav__logo-mark path { fill: var(--bg); }
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav__link {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text2);
+  padding: 6px 14px;
+  border-radius: 999px;
+  transition: color var(--t-fast), background var(--t-fast);
+}
+.nav__link:hover,
+.nav__link.active { color: var(--text); background: var(--bg-alt); }
+
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* ── Shared buttons ───────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-family: var(--font);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: 0.5px solid transparent;
+  transition: all var(--t-fast);
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn:active { transform: scale(.98); }
+.btn-primary  { background: var(--text);    color: var(--text-inv); border-color: var(--text); }
+.btn-primary:hover { opacity: .84; }
+.btn-outline  { background: transparent;    color: var(--text2);    border-color: var(--border2); }
+.btn-outline:hover { background: var(--bg-alt); color: var(--text); }
+.btn-ghost    { background: transparent;    color: var(--text2);    border-color: transparent; }
+.btn-ghost:hover  { background: var(--bg-alt); color: var(--text); }
+.btn-danger   { background: var(--red-bg);  color: var(--red);      border-color: var(--red); }
+.btn-sm  { font-size: 11px; padding: 6px 13px; }
+.btn-lg  { font-size: 15px; padding: 12px 26px; }
+
+/* ── Responsive nav ───────────────────────────────────────── */
+@media (max-width: 768px) {
+  .nav__links  { display: none; }
+  .nav__actions .btn span { display: none; }
+}

@@ -3,82 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>소스 관리 — LGE AX Admin</title>
+<title>소스 관리 — The AX Fieldbook</title>
+<link rel="stylesheet" href="./shared.css">
 <style>
-:root{
-  --bg:#fff;--bg2:#f5f4f0;--bg3:#eceae3;
-  --text:#1a1a18;--text2:#4a4a46;--text3:#888780;
-  --border:rgba(0,0,0,0.10);--border2:rgba(0,0,0,0.22);
-  --green-bg:#E1F5EE;--green:#085041;--green-b:#5DCAA5;
-  --amber-bg:#FAEEDA;--amber:#633806;--amber-b:#EF9F27;
-  --blue-bg:#E6F1FB;--blue:#0C447C;--blue-b:#85B7EB;
-  --red-bg:#FEE2E2;--red:#991B1B;
-  --radius:10px;--radius-sm:6px;
-  --font:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Noto Sans KR",sans-serif;
-}
-@media(prefers-color-scheme:dark){:root{
-  --bg:#1a1a18;--bg2:#242420;--bg3:#2c2c28;
-  --text:#e8e6df;--text2:#b0aea6;--text3:#6a6860;
-  --border:rgba(255,255,255,.08);--border2:rgba(255,255,255,.20);
-  --green-bg:#085041;--green:#9FE1CB;--green-b:#1D9E75;
-  --amber-bg:#633806;--amber:#FAC775;--amber-b:#BA7517;
-  --blue-bg:#042C53;--blue:#85B7EB;--blue-b:#185FA5;
-  --red-bg:#450a0a;--red:#FCA5A5;
-}}
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);font-family:var(--font);color:var(--text);padding-bottom:80px;font-size:13px}
+body { padding-bottom: 80px; font-size: 14px; }
 
-/* ── Header ───────────────────────────────────────────────────────────────── */
+/* ── Admin header (sub-header below site nav) ─────────────── */
 .hd{
   padding:13px 24px;border-bottom:0.5px solid var(--border);
   display:flex;align-items:center;justify-content:space-between;gap:12px;
-  position:sticky;top:0;background:var(--bg);z-index:30;
+  position:sticky;top:60px;background:var(--bg);z-index:30;
   backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)
 }
 .hd-left{display:flex;align-items:center;gap:12px;min-width:0}
-.hd-title{font-size:14px;font-weight:600;letter-spacing:-.02em;white-space:nowrap}
-.dirty-dot{
-  width:7px;height:7px;border-radius:50%;background:#EF9F27;
-  flex-shrink:0;display:none
-}
+.hd-title{font-size:16px;font-weight:600;letter-spacing:-.02em;white-space:nowrap}
+.dirty-dot{width:7px;height:7px;border-radius:50%;background:#EF9F27;flex-shrink:0;display:none}
 .dirty-dot.on{display:block}
-.dirty-label{font-size:10px;color:var(--amber);display:none}
+.dirty-label{font-size:11px;color:var(--amber);display:none}
 .dirty-dot.on + .dirty-label{display:block}
 .hd-right{display:flex;align-items:center;gap:7px;flex-shrink:0}
-.btn{
-  font-size:12px;font-weight:500;padding:5px 12px;border-radius:7px;
-  cursor:pointer;border:0.5px solid transparent;transition:all .1s;
-  white-space:nowrap;display:inline-flex;align-items:center;gap:5px
-}
-.btn-ghost{border-color:var(--border2);color:var(--text2);background:transparent}
-.btn-ghost:hover{background:var(--bg2)}
-.btn-primary{background:var(--text);color:var(--bg);border-color:var(--text)}
-.btn-primary:hover{opacity:.85}
+
+/* Admin-specific button overrides (radius matches admin compact UI) */
 .btn-green{background:var(--green-bg);color:var(--green);border-color:var(--green-b)}
 .btn-green:hover{opacity:.8}
-.btn-blue{background:var(--blue-bg);color:var(--blue);border-color:var(--blue-b)}
-.btn-blue:hover{opacity:.8}
-.btn-danger{background:var(--red-bg);color:var(--red);border-color:currentColor}
-.btn-danger:hover{opacity:.8}
-.btn-sm{font-size:11px;padding:3px 9px;border-radius:5px}
+.btn-sm{font-size:12px;padding:5px 11px;border-radius:6px}
 
-/* ── Stats bar ────────────────────────────────────────────────────────────── */
+/* ── Stats bar ────────────────────────────────────────────── */
 .stats{
-  padding:9px 24px;border-bottom:0.5px solid var(--border);
+  padding:10px 24px;border-bottom:0.5px solid var(--border);
   display:flex;align-items:center;gap:18px;background:var(--bg2);
-  font-size:11px;color:var(--text3);flex-wrap:wrap
+  font-size:13px;color:var(--text3);flex-wrap:wrap
 }
 .stat{display:flex;align-items:center;gap:5px}
-.stat-n{font-weight:700;color:var(--text);font-size:13px}
+.stat-n{font-weight:700;color:var(--text);font-size:15px}
 .stat-sep{width:0.5px;height:14px;background:var(--border2)}
 
-/* ── Tabs ─────────────────────────────────────────────────────────────────── */
+/* ── Tabs ─────────────────────────────────────────────────── */
 .tabs{
   padding:0 24px;border-bottom:0.5px solid var(--border);
   display:flex;gap:0
 }
 .tab{
-  font-size:12px;font-weight:500;padding:10px 14px;cursor:pointer;
+  font-size:13px;font-weight:500;padding:11px 16px;cursor:pointer;
   border-bottom:2px solid transparent;color:var(--text3);
   transition:all .1s;user-select:none;white-space:nowrap
 }
@@ -89,19 +55,19 @@ body{background:var(--bg);font-family:var(--font);color:var(--text);padding-bott
 .tbl-wrap{padding:16px 24px 0;overflow-x:auto}
 table{width:100%;border-collapse:collapse;min-width:700px}
 th{
-  font-size:10px;font-weight:600;color:var(--text3);letter-spacing:.04em;
-  padding:0 10px 8px;text-align:left;border-bottom:0.5px solid var(--border2);
+  font-size:11px;font-weight:600;color:var(--text3);letter-spacing:.04em;
+  padding:0 10px 9px;text-align:left;border-bottom:0.5px solid var(--border2);
   white-space:nowrap
 }
 td{
-  padding:10px 10px;border-bottom:0.5px solid var(--border);
+  padding:11px 10px;border-bottom:0.5px solid var(--border);
   vertical-align:middle
 }
 tr:last-child td{border-bottom:none}
 tr:hover td{background:var(--bg2)}
-.td-id{font-family:monospace;font-size:11px;color:var(--text3)}
-.td-name{font-weight:500;line-height:1.3}
-.td-url{font-size:11px;color:var(--text3);margin-top:2px;
+.td-id{font-family:monospace;font-size:12px;color:var(--text3)}
+.td-name{font-weight:500;font-size:14px;line-height:1.3}
+.td-url{font-size:12px;color:var(--text3);margin-top:2px;
   max-width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .td-url a{color:var(--blue);text-decoration:none}
 .td-url a:hover{text-decoration:underline}
@@ -281,7 +247,6 @@ input.err{border-color:var(--red)!important}
     <button class="btn btn-ghost" id="copy-btn" onclick="copyJSON()">클립보드 복사</button>
     <button class="btn btn-green" id="export-btn" onclick="exportJSON()">⬇ JSON 내보내기</button>
     <button class="btn btn-primary" onclick="openModal(null)">+ 소스 추가</button>
-    <a class="btn btn-ghost" href="./dashboard.html">← 대시보드</a>
   </div>
 </header>
 
@@ -889,5 +854,6 @@ window.addEventListener('beforeunload', e => {
 
 load();
 </script>
+<script src="./nav.js"></script>
 </body>
 </html>
