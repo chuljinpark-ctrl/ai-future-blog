@@ -1,13 +1,13 @@
-/* nav.js — The AX Fieldbook
+/* nav.js — Life After AI
    Injects the shared site nav at the top of <body>.
-   Include in dashboard.html, archive.html, admin.html.
+   Include in dashboard.html, archive.html.
    index.html has its own hand-coded nav (scroll-transparent). */
 
 (function () {
   const pages = [
     { file: 'index.html',     label: '홈' },
-    { file: 'dashboard.html', label: '대시보드' },
-    { file: 'archive.html',   label: '아카이브' },
+    { file: 'dashboard.html', label: '리서치 맵' },
+    { file: 'archive.html',   label: '아티클' },
     { file: 'admin.html',     label: '소스 관리' },
   ];
 
@@ -30,11 +30,11 @@
               <path d="M7 1L13 4.5V9.5L7 13L1 9.5V4.5L7 1Z"/>
             </svg>
           </div>
-          The AX Fieldbook
+          Life After AI
         </a>
         <div class="nav__links">${links}</div>
         <div class="nav__actions">
-          <a href="./dashboard.html" class="btn btn-sm btn-primary">대시보드</a>
+          <a href="./archive.html" class="btn btn-sm btn-primary">아티클 보기</a>
         </div>
       </div>
     </div>`;

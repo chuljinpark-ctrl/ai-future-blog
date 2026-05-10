@@ -1,103 +1,843 @@
 {
   "meta": {
-    "version": "1.1",
-    "description": "LGE AX Benchmark — Daily scraping sources",
-    "last_updated": "2026-05-06"
+    "version": "1.2",
+    "description": "Life After AI — AI-driven Living, Commerce, Care & Relationship Research Sources",
+    "last_updated": "2026-05-10",
+    "total_sources": 30,
+    "review_basis": "Rebuilt from uploaded LGE AX Benchmark sources to match Life After AI article categories and case DB. Sources are intended for article discovery/search and periodic monitoring."
   },
   "sources": [
     {
-      "id": "salesforce-blog",
-      "name": "Salesforce Blog — AI",
-      "url": "https://www.salesforce.com/blog/category/artificial-intelligence/",
-      "rss": "https://www.salesforce.com/blog/feed/",
-      "type": "vendor",
-      "expected_tags": ["sales_agent", "CRM", "automation", "B2B"],
-      "priority": "high",
-      "active": true
-    },
-    {
-      "id": "microsoft-blog",
-      "name": "Microsoft Blog — AI & Copilot",
-      "url": "https://blogs.microsoft.com/blog/category/ai/",
-      "rss": "https://blogs.microsoft.com/feed/",
-      "type": "vendor",
-      "expected_tags": ["copilot", "sales_productivity", "B2B", "automation"],
-      "priority": "high",
-      "active": true
-    },
-    {
-      "id": "think-with-google",
-      "name": "Think with Google",
-      "url": "https://www.thinkwithgoogle.com/",
-      "rss": null,
-      "type": "research",
-      "expected_tags": ["media", "search", "ROAS", "marketing"],
-      "priority": "high",
-      "active": true,
-      "scrape_method": "html"
-    },
-    {
-      "id": "marketing-dive",
-      "name": "Marketing Dive — AI",
-      "url": "https://www.marketingdive.com/topic/artificial-intelligence/",
-      "rss": "https://www.marketingdive.com/feeds/news/",
-      "type": "trade",
-      "expected_tags": ["marketing", "media", "automation", "personalization"],
-      "priority": "medium",
-      "active": true
-    },
-    {
-      "id": "supply-chain-dive",
-      "name": "Supply Chain Dive — AI",
-      "url": "https://www.supplychaindive.com/topic/artificial-intelligence/",
-      "rss": "https://www.supplychaindive.com/feeds/news/",
-      "type": "trade",
-      "expected_tags": ["supply_chain", "demand_forecasting", "inventory"],
-      "priority": "medium",
-      "active": true
-    },
-    {
-      "id": "cognigy-blog",
-      "name": "Cognigy — AI Agents",
-      "url": "https://www.cognigy.com/blog",
-      "rss": "https://www.cognigy.com/blog/rss.xml",
-      "type": "vendor",
-      "expected_tags": ["CS_automation", "agent_copilot", "AHT", "chatbot"],
-      "priority": "low",
-      "active": true
-    },
-    {
-      "id": "klarna-newsroom",
-      "name": "Klarna Newsroom",
-      "url": "https://www.klarna.com/international/press/",
+      "id": "google-home-blog",
+      "name": "Google Home & Nest Blog",
+      "url": "https://blog.google/products/google-nest/",
       "rss": null,
       "type": "company",
-      "expected_tags": ["fintech", "chatbot", "marketing_ops"],
+      "expected_tags": [
+        "AI Home",
+        "Smart Home",
+        "Gemini",
+        "Home Assistant",
+        "Autonomous Home"
+      ],
+      "categories": [
+        "1-1",
+        "3-1"
+      ],
+      "priority": "high",
+      "active": true,
+      "scrape_method": "html",
+      "action": "added",
+      "reason": "Primary source for Gemini for Home and Google smart-home AI announcements."
+    },
+    {
+      "id": "google-nest-help",
+      "name": "Google Nest Help — Gemini for Home",
+      "url": "https://support.google.com/googlenest/answer/16618650?hl=en",
+      "rss": null,
+      "type": "company_docs",
+      "expected_tags": [
+        "AI Home",
+        "Gemini for Home",
+        "availability",
+        "voice assistant"
+      ],
+      "categories": [
+        "1-1"
+      ],
       "priority": "medium",
       "active": true,
-      "scrape_method": "html"
+      "scrape_method": "html",
+      "action": "added",
+      "reason": "Useful for availability, rollout, compatibility and feature verification beyond marketing copy."
+    },
+    {
+      "id": "amazon-devices-news",
+      "name": "Amazon News — Devices & Alexa",
+      "url": "https://www.aboutamazon.com/news/devices",
+      "rss": null,
+      "type": "company",
+      "expected_tags": [
+        "Alexa+",
+        "AI Assistant",
+        "Smart Home",
+        "Voice AI",
+        "Agentic AI"
+      ],
+      "categories": [
+        "1-1",
+        "3-1"
+      ],
+      "priority": "high",
+      "active": true,
+      "scrape_method": "html",
+      "action": "added",
+      "reason": "Primary source for Alexa+, Echo, Ring, Fire TV and Amazon home AI ecosystem updates."
+    },
+    {
+      "id": "the-verge-smart-home",
+      "name": "The Verge — Smart Home",
+      "url": "https://www.theverge.com/smart-home",
+      "rss": "https://www.theverge.com/rss/smart-home/index.xml",
+      "type": "trade",
+      "expected_tags": [
+        "AI Home",
+        "Smart Home",
+        "Matter",
+        "Home Automation",
+        "Energy"
+      ],
+      "categories": [
+        "1-1",
+        "1-2",
+        "1-3",
+        "4-2"
+      ],
+      "priority": "high",
+      "active": true,
+      "action": "added",
+      "reason": "Good for independent reviews and practical limitations of AI smart-home devices."
+    },
+    {
+      "id": "the-verge-ai",
+      "name": "The Verge — AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence",
+      "rss": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
+      "type": "trade",
+      "expected_tags": [
+        "AI Assistant",
+        "Agentic AI",
+        "Companion",
+        "Emotional AI",
+        "AI Commerce"
+      ],
+      "categories": [
+        "2-1",
+        "3-1",
+        "4-1",
+        "4-2"
+      ],
+      "priority": "high",
+      "active": true,
+      "action": "added",
+      "reason": "Useful for fast-moving consumer AI, AI companion and AI assistant product coverage."
+    },
+    {
+      "id": "reuters-technology-ai",
+      "name": "Reuters — Technology / AI",
+      "url": "https://www.reuters.com/technology/",
+      "rss": null,
+      "type": "news",
+      "expected_tags": [
+        "AI Shopping",
+        "Agentic Commerce",
+        "AI Assistant",
+        "Emotional AI",
+        "Big Tech"
+      ],
+      "categories": [
+        "2-1",
+        "2-2",
+        "3-1",
+        "4-1"
+      ],
+      "priority": "high",
+      "active": true,
+      "scrape_method": "html_search",
+      "action": "added",
+      "reason": "Reliable for dated news on Alibaba, AI commerce, youth AI use and global AI platform moves."
+    },
+    {
+      "id": "reuters-business-retail",
+      "name": "Reuters — Business / Retail & Consumer",
+      "url": "https://www.reuters.com/business/retail-consumer/",
+      "rss": null,
+      "type": "news",
+      "expected_tags": [
+        "AI Shopping",
+        "Retail AI",
+        "Personalization",
+        "Commerce"
+      ],
+      "categories": [
+        "2-1",
+        "2-2",
+        "2-3"
+      ],
+      "priority": "high",
+      "active": true,
+      "scrape_method": "html_search",
+      "action": "added",
+      "reason": "Useful for retailer AI adoption, Zalando, Alibaba, commerce and subscription-market news."
+    },
+    {
+      "id": "mckinsey-quantumblack-ai",
+      "name": "McKinsey QuantumBlack — AI Insights",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights",
+      "rss": null,
+      "type": "consulting_research",
+      "expected_tags": [
+        "Agentic Commerce",
+        "AI Agent",
+        "Automation Curve",
+        "AI Strategy"
+      ],
+      "categories": [
+        "2-1",
+        "3-1",
+        "3-2"
+      ],
+      "priority": "high",
+      "active": true,
+      "scrape_method": "html_search",
+      "action": "added",
+      "reason": "Core source for agentic commerce, automation curve and enterprise AI strategy framing."
+    },
+    {
+      "id": "deloitte-consumer-ai",
+      "name": "Deloitte — Consumer / Agentic Commerce",
+      "url": "https://www.deloitte.com/us/en/Industries/consumer.html",
+      "rss": null,
+      "type": "consulting_research",
+      "expected_tags": [
+        "Agentic Commerce",
+        "AI Shopping Agent",
+        "Retail Transformation",
+        "AI-ready Data"
+      ],
+      "categories": [
+        "2-1",
+        "2-2"
+      ],
+      "priority": "high",
+      "active": true,
+      "scrape_method": "html_search",
+      "action": "added",
+      "reason": "Strong source for retail economics, agent-ready data and AI shopping-agent operating model."
+    },
+    {
+      "id": "bain-retail-ai",
+      "name": "Bain & Company — Retail AI Insights",
+      "url": "https://www.bain.com/insights/topics/retail/",
+      "rss": null,
+      "type": "consulting_research",
+      "expected_tags": [
+        "Agentic AI",
+        "Retail",
+        "Consumer Trust",
+        "Autonomous Shopping"
+      ],
+      "categories": [
+        "2-1",
+        "2-2"
+      ],
+      "priority": "high",
+      "active": true,
+      "scrape_method": "html_search",
+      "action": "added",
+      "reason": "Useful counterweight to hype because it covers consumer trust and autonomous-purchase readiness."
+    },
+    {
+      "id": "grand-view-smart-home",
+      "name": "Grand View Research — Smart Home & Ambient Assisted Living",
+      "url": "https://www.grandviewresearch.com/industry-analysis/ambient-assisted-living-smart-home-market-report",
+      "rss": null,
+      "type": "market_research",
+      "expected_tags": [
+        "Wellness Home",
+        "Ambient Assisted Living",
+        "Senior Care",
+        "Smart Home",
+        "Market Size"
+      ],
+      "categories": [
+        "1-2",
+        "4-3"
+      ],
+      "priority": "medium",
+      "active": true,
+      "scrape_method": "html",
+      "action": "added",
+      "reason": "Provides market-size signals for wellness home, assisted living and smart-home convergence."
+    },
+    {
+      "id": "nature-scientific-reports-ai-energy",
+      "name": "Nature Scientific Reports — AI Energy & Smart Home",
+      "url": "https://www.nature.com/search?q=AI%20smart%20home%20energy%20management&journal=scientificreports",
+      "rss": null,
+      "type": "academic",
+      "expected_tags": [
+        "Energy Optimization",
+        "HEMS",
+        "Reinforcement Learning",
+        "Smart Home Energy"
+      ],
+      "categories": [
+        "1-3"
+      ],
+      "priority": "medium",
+      "active": true,
+      "scrape_method": "html_search",
+      "action": "added",
+      "reason": "Academic source for AI-based home energy optimization and algorithmic feasibility."
+    },
+    {
+      "id": "mdpi-smart-home-care",
+      "name": "MDPI — Smart Home, Healthcare, Electronics, Information",
+      "url": "https://www.mdpi.com/search?q=AI%20home%20elder%20care%20companion%20loneliness%20smart%20home",
+      "rss": null,
+      "type": "academic",
+      "expected_tags": [
+        "Wellness Home",
+        "Emotional AI",
+        "Companion",
+        "Aging Society",
+        "Home Care"
+      ],
+      "categories": [
+        "1-2",
+        "4-1",
+        "4-2",
+        "4-3"
+      ],
+      "priority": "medium",
+      "active": true,
+      "scrape_method": "html_search",
+      "action": "added",
+      "reason": "Good for systematic reviews on AI loneliness, companion robots and home-based elder care."
+    },
+    {
+      "id": "techradar-ai-assistants",
+      "name": "TechRadar — AI Platforms & Assistants",
+      "url": "https://www.techradar.com/ai-platforms-assistants",
+      "rss": null,
+      "type": "trade",
+      "expected_tags": [
+        "AI Assistant",
+        "Companion",
+        "Senior AI",
+        "Consumer AI"
+      ],
+      "categories": [
+        "3-1",
+        "4-2"
+      ],
+      "priority": "medium",
+      "active": true,
+      "scrape_method": "html",
+      "action": "added",
+      "reason": "Useful for consumer-facing AI assistant, companion and senior-care device coverage."
+    },
+    {
+      "id": "microsoft-worklab-wti",
+      "name": "Microsoft WorkLab — Work Trend Index",
+      "url": "https://www.microsoft.com/en-us/worklab/work-trend-index",
+      "rss": null,
+      "type": "vendor_research",
+      "expected_tags": [
+        "Productivity Life",
+        "AI at Work",
+        "AI Assistant",
+        "Frontier Firm",
+        "Copilot"
+      ],
+      "categories": [
+        "3-1",
+        "3-2",
+        "3-3"
+      ],
+      "priority": "high",
+      "active": true,
+      "scrape_method": "html",
+      "action": "kept_modified",
+      "reason": "Replaces generic Microsoft Blog as the better source for AI productivity and work/life behavior shifts."
+    },
+    {
+      "id": "gallup-workplace-ai",
+      "name": "Gallup — Workplace AI",
+      "url": "https://www.gallup.com/workplace/ai.aspx",
+      "rss": null,
+      "type": "research",
+      "expected_tags": [
+        "Productivity Life",
+        "AI Adoption",
+        "AI at Work",
+        "Capability Divide"
+      ],
+      "categories": [
+        "3-2",
+        "3-3"
+      ],
+      "priority": "high",
+      "active": true,
+      "scrape_method": "html_search",
+      "action": "added",
+      "reason": "Useful for quantitative AI-at-work adoption and capability-gap metrics."
+    },
+    {
+      "id": "oecd-ai-publications",
+      "name": "OECD — AI Publications",
+      "url": "https://www.oecd.org/en/topics/artificial-intelligence.html",
+      "rss": null,
+      "type": "public_research",
+      "expected_tags": [
+        "Capability Divide",
+        "AI Productivity",
+        "Digital Skills",
+        "Policy"
+      ],
+      "categories": [
+        "3-3"
+      ],
+      "priority": "high",
+      "active": true,
+      "scrape_method": "html_search",
+      "action": "added",
+      "reason": "Authoritative policy source for AI productivity divide and capability gap."
+    },
+    {
+      "id": "unesco-uil-digital-inclusion",
+      "name": "UNESCO UIL — Digital Inclusion & Older Adults",
+      "url": "https://www.uil.unesco.org/en",
+      "rss": null,
+      "type": "public_research",
+      "expected_tags": [
+        "Capability Divide",
+        "Senior AI",
+        "Digital Inclusion",
+        "Older Adults"
+      ],
+      "categories": [
+        "3-3",
+        "4-3"
+      ],
+      "priority": "medium",
+      "active": true,
+      "scrape_method": "html_search",
+      "action": "added",
+      "reason": "Useful for grey digital divide and senior AI onboarding/service-design argument."
+    },
+    {
+      "id": "kostat-household-aging",
+      "name": "KOSTAT — 1-person Household & Aging Statistics",
+      "url": "https://kostat.go.kr/",
+      "rss": null,
+      "type": "government_statistics",
+      "expected_tags": [
+        "1-person Household",
+        "Aging Society",
+        "Korea",
+        "Loneliness",
+        "Senior Care"
+      ],
+      "categories": [
+        "1-2",
+        "3-3",
+        "4-1",
+        "4-3"
+      ],
+      "priority": "high",
+      "active": true,
+      "scrape_method": "site_search",
+      "action": "added",
+      "reason": "Essential Korean-market baseline for 1-person households, aging, loneliness and care demand."
+    },
+    {
+      "id": "mohw-ai-care-korea",
+      "name": "Korea Ministry of Health and Welfare — Elder Care / Digital Health",
+      "url": "https://www.mohw.go.kr/",
+      "rss": null,
+      "type": "government_policy",
+      "expected_tags": [
+        "Aging Society",
+        "Elder Care",
+        "Digital Health",
+        "AI Care",
+        "Korea"
+      ],
+      "categories": [
+        "1-2",
+        "4-3"
+      ],
+      "priority": "high",
+      "active": true,
+      "scrape_method": "site_search",
+      "action": "added",
+      "reason": "Needed for Korean policy, care infrastructure and digital-health regulation signals."
+    },
+    {
+      "id": "zuora-subscription-economy",
+      "name": "Zuora — Subscription Economy Index",
+      "url": "https://www.zuora.com/resource/subscription-economy-index/",
+      "rss": null,
+      "type": "vendor_research",
+      "expected_tags": [
+        "Subscription AI",
+        "Recurring Revenue",
+        "Churn",
+        "Hybrid Monetization"
+      ],
+      "categories": [
+        "2-3"
+      ],
+      "priority": "medium",
+      "active": true,
+      "scrape_method": "html",
+      "action": "added",
+      "reason": "Useful for subscription-economy monetization and hybrid revenue-model evidence."
+    },
+    {
+      "id": "lg-newsroom-global",
+      "name": "LG Newsroom / LG.com Press Releases",
+      "url": "https://www.lgnewsroom.com/",
+      "rss": "https://www.lgnewsroom.com/feed/",
+      "type": "company",
+      "expected_tags": [
+        "LG Subscribe",
+        "ThinQ",
+        "Smart Home",
+        "Appliance Subscription",
+        "Care Service"
+      ],
+      "categories": [
+        "1-1",
+        "1-2",
+        "2-3",
+        "4-3"
+      ],
+      "priority": "high",
+      "active": true,
+      "action": "added",
+      "reason": "Primary source for LG subscription, ThinQ, care and smart-home business references."
+    },
+    {
+      "id": "zendesk-ai-cx",
+      "name": "Zendesk — AI & Customer Experience Research",
+      "url": "https://www.zendesk.com/newsroom/press-releases/",
+      "rss": null,
+      "type": "vendor_research",
+      "expected_tags": [
+        "AI Assistant",
+        "Consumer Trust",
+        "Customer Experience",
+        "Privacy"
+      ],
+      "categories": [
+        "3-1",
+        "2-2"
+      ],
+      "priority": "medium",
+      "active": true,
+      "scrape_method": "html",
+      "action": "added",
+      "reason": "Useful for consumer trust, personal AI assistant adoption and privacy-related acceptance."
+    },
+    {
+      "id": "kaist-research-ai-senior",
+      "name": "KAIST Research Portal — AI & Digital Divide",
+      "url": "https://pure.kaist.ac.kr/",
+      "rss": null,
+      "type": "academic",
+      "expected_tags": [
+        "Capability Divide",
+        "Older Adults",
+        "AI Accessibility",
+        "Korea"
+      ],
+      "categories": [
+        "3-3",
+        "4-3"
+      ],
+      "priority": "low",
+      "active": true,
+      "scrape_method": "site_search",
+      "action": "added",
+      "reason": "Korean academic source for digital divide and older adult AI adoption research."
+    },
+    {
+      "id": "asiae-ai-care-korea",
+      "name": "Asia Economy — Korea AI Care / Aging Society",
+      "url": "https://cm.asiae.co.kr/en/",
+      "rss": null,
+      "type": "news",
+      "expected_tags": [
+        "Aging Society",
+        "AI Care",
+        "Korea",
+        "Super-aged Society"
+      ],
+      "categories": [
+        "4-3"
+      ],
+      "priority": "low",
+      "active": true,
+      "scrape_method": "html_search",
+      "action": "added",
+      "reason": "Supplementary English-language coverage of Korea super-aged society and AI care policy."
+    },
+    {
+      "id": "science-direct-ai-companion",
+      "name": "ScienceDirect — AI Companions / Well-being",
+      "url": "https://www.sciencedirect.com/search?qs=AI%20companion%20subjective%20well-being%20loneliness",
+      "rss": null,
+      "type": "academic",
+      "expected_tags": [
+        "Emotional AI",
+        "Companion",
+        "Well-being",
+        "Loneliness"
+      ],
+      "categories": [
+        "4-1",
+        "4-2"
+      ],
+      "priority": "low",
+      "active": false,
+      "scrape_method": "manual_search",
+      "action": "added_inactive",
+      "reason": "Relevant academically, but scraping/access reliability is limited; use as manual validation source."
+    },
+    {
+      "id": "ace-hardware-news",
+      "name": "Ace Hardware Newsroom",
+      "url": "https://newsroom.acehardware.com/",
+      "rss": null,
+      "type": "company",
+      "expected_tags": [
+        "AI Shopping",
+        "Sales Assistant",
+        "Retail Associate",
+        "Store AI"
+      ],
+      "categories": [
+        "2-2"
+      ],
+      "priority": "low",
+      "active": true,
+      "scrape_method": "html_search",
+      "action": "added",
+      "reason": "Better primary source target than tabloid/trade syndication for Ace AI associate cases."
+    },
+    {
+      "id": "ecoflow-blog-news",
+      "name": "EcoFlow Blog / Newsroom",
+      "url": "https://www.ecoflow.com/us/blog",
+      "rss": null,
+      "type": "company",
+      "expected_tags": [
+        "Energy Optimization",
+        "HEMS",
+        "Home Battery",
+        "Solar",
+        "AI Energy"
+      ],
+      "categories": [
+        "1-3"
+      ],
+      "priority": "medium",
+      "active": true,
+      "scrape_method": "html",
+      "action": "added",
+      "reason": "Primary source for EcoFlow Oasis and consumer home-energy AI product updates."
+    },
+    {
+      "id": "matter-csa-news",
+      "name": "Connectivity Standards Alliance — Matter News",
+      "url": "https://csa-iot.org/newsroom/",
+      "rss": null,
+      "type": "industry_standard",
+      "expected_tags": [
+        "Smart Home",
+        "Matter",
+        "Interoperability",
+        "Home Automation"
+      ],
+      "categories": [
+        "1-1"
+      ],
+      "priority": "medium",
+      "active": true,
+      "scrape_method": "html",
+      "action": "added",
+      "reason": "Useful for smart-home interoperability signals that affect AI Home adoption."
+    },
+    {
+      "id": "the-sun-retail-ai",
+      "name": "The Sun — Retail AI Coverage",
+      "url": "https://www.the-sun.com/money/",
+      "rss": null,
+      "type": "news_tabloid",
+      "expected_tags": [
+        "AI Shopping",
+        "Retail AI",
+        "Store Assistant"
+      ],
+      "categories": [
+        "2-2"
+      ],
+      "priority": "low",
+      "active": false,
+      "scrape_method": "manual_validation_only",
+      "action": "downgraded",
+      "reason": "Used in earlier case discovery, but not ideal as a primary source; replace with company or reputable trade sources where possible."
     }
   ],
   "excluded_sources": {
     "domains": [
-      {"domain": "www.mckinsey.com",      "reason": "blocks bots — connection closed"},
-      {"domain": "www.bcg.com",           "reason": "403 Forbidden — blocks scrapers"},
-      {"domain": "hbr.org",              "reason": "RSS 404 — feed URL removed"},
-      {"domain": "www.marketingweek.com", "reason": "403 Forbidden — blocks scrapers"},
-      {"domain": "www.bain.com",          "reason": "404 — section URL no longer valid, no public RSS"},
-      {"domain": "www.gartner.com",       "reason": "403 Forbidden — blocks scrapers"}
+      {
+        "domain": "www.salesforce.com/blog/category/artificial-intelligence/",
+        "reason": "Deleted from this project: strong for AX sales/CRM benchmark, weak fit for Life After AI consumer living categories."
+      },
+      {
+        "domain": "www.thinkwithgoogle.com",
+        "reason": "Deleted from active list: useful for marketing/search but not central to current Life After AI category set; can be re-added for GEO-only research."
+      },
+      {
+        "domain": "www.marketingdive.com/topic/artificial-intelligence/",
+        "reason": "Deleted from this project: marketing operations focus, low relevance to residential/lifestyle AI."
+      },
+      {
+        "domain": "www.supplychaindive.com/topic/artificial-intelligence/",
+        "reason": "Deleted from this project: supply-chain operations focus, not consumer living."
+      },
+      {
+        "domain": "www.cognigy.com/blog",
+        "reason": "Deleted from this project: CS automation vendor source, not a primary source for AI living futures."
+      },
+      {
+        "domain": "www.klarna.com/international/press/",
+        "reason": "Deleted from this project: relevant to fintech/CS cases, but not core to AI living taxonomy; can be used ad hoc for commerce AI."
+      },
+      {
+        "domain": "www.gartner.com",
+        "reason": "Excluded for automated monitoring: access restrictions and paywall; use manual citation only when available."
+      },
+      {
+        "domain": "hbr.org",
+        "reason": "Excluded for automated monitoring: paywall/RSS instability; use manual citation only."
+      }
     ]
   },
   "category_keywords": {
-    "1-1": ["new customer acquisition", "신규 고객", "foot traffic", "media mix", "targeting", "customer acquisition"],
-    "1-2": ["conversion rate", "전환율", "sales consultation", "recommendation", "promotion response"],
-    "1-3": ["upsell", "cross-sell", "average order value", "premium mix", "dynamic pricing"],
-    "1-4": ["churn", "retention", "LTV", "re-purchase", "subscription lock-in"],
-    "1-5": ["new revenue", "platform", "service revenue", "SaaS", "total solution"],
-    "2-1": ["marketing cost", "agency cost", "content production", "media efficiency", "promotion efficiency"],
-    "2-2": ["sales productivity", "sales operations", "proposal", "coverage", "TM optimization"],
-    "2-3": ["customer service", "chatbot", "self-service", "AHT", "predictive care"],
-    "2-4": ["demand forecasting", "inventory", "pricing optimization", "decision support"],
-    "2-5": ["VOC", "brand risk", "churn risk", "quality cost"]
+    "1-1": [
+      "AI Home",
+      "smart home",
+      "autonomous home",
+      "Gemini for Home",
+      "Alexa+",
+      "Matter",
+      "home automation",
+      "ambient intelligence",
+      "가정 AI",
+      "스마트홈"
+    ],
+    "1-2": [
+      "wellness home",
+      "ambient assisted living",
+      "sleep tech",
+      "air quality",
+      "home health",
+      "preventive care",
+      "senior monitoring",
+      "홈 웰니스",
+      "건강관리"
+    ],
+    "1-3": [
+      "home energy management",
+      "HEMS",
+      "AI energy optimization",
+      "smart grid",
+      "dynamic electricity pricing",
+      "home battery",
+      "solar",
+      "EV charging",
+      "에너지 최적화"
+    ],
+    "2-1": [
+      "agentic commerce",
+      "AI shopping agent",
+      "autonomous shopping",
+      "zero-click shopping",
+      "agent-ready data",
+      "AI commerce",
+      "AI 구매대행"
+    ],
+    "2-2": [
+      "AI shopping",
+      "conversational commerce",
+      "AI stylist",
+      "AI sales assistant",
+      "guided shopping",
+      "product recommendation",
+      "virtual try-on",
+      "AI 쇼핑"
+    ],
+    "2-3": [
+      "subscription economy",
+      "appliance subscription",
+      "usage-based billing",
+      "predictive maintenance",
+      "consumable replenishment",
+      "subscription AI",
+      "구독"
+    ],
+    "3-1": [
+      "AI assistant",
+      "personal AI",
+      "family AI",
+      "home assistant",
+      "AI agent",
+      "task delegation",
+      "AI 비서"
+    ],
+    "3-2": [
+      "AI productivity",
+      "AI at work",
+      "home office",
+      "hybrid work",
+      "Work Trend Index",
+      "AI collaboration",
+      "productivity life",
+      "생산성"
+    ],
+    "3-3": [
+      "AI literacy",
+      "digital divide",
+      "capability divide",
+      "older adults",
+      "senior AI onboarding",
+      "AI skills",
+      "디지털 격차",
+      "AI 활용역량"
+    ],
+    "4-1": [
+      "emotional AI",
+      "AI chatbot emotional support",
+      "loneliness",
+      "mental health chatbot",
+      "AI companion",
+      "정서 AI",
+      "외로움"
+    ],
+    "4-2": [
+      "AI companion",
+      "companion robot",
+      "social robot",
+      "embodied AI",
+      "voice companion",
+      "senior companion",
+      "AI 동반자"
+    ],
+    "4-3": [
+      "aging society",
+      "home-based elder care",
+      "AI care",
+      "remote monitoring",
+      "fall detection",
+      "medication reminder",
+      "senior home care",
+      "고령화",
+      "재택 돌봄"
+    ]
   }
 }

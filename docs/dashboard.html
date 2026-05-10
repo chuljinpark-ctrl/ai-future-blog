@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>대시보드 — The AX Fieldbook</title>
+<title>리서치 맵 — Life After AI</title>
 <link rel="stylesheet" href="./shared.css">
 <style>
 body { padding: 20px 20px 48px; }
@@ -17,17 +17,17 @@ body { padding: 20px 20px 48px; }
   gap: 8px;
   margin-bottom: 4px;
 }
-.page-title   { font-size: 18px; font-weight: 600; letter-spacing: -.01em; }
-.last-updated { font-size: 12px; color: var(--text3); }
-.page-sub     { font-size: 13px; color: var(--text3); margin-bottom: 18px; }
+.page-title   { font-family: var(--font-display); font-size: 22px; font-weight: 400; letter-spacing: -0.02em; color: var(--ink); }
+.last-updated { font-size: 12px; color: var(--muted-soft); }
+.page-sub     { font-size: 13px; color: var(--muted-soft); margin-bottom: 18px; }
 
 /* ── DB panel ─────────────────────────────────────────────── */
 .db {
   display: flex;
-  border: 0.5px solid var(--border);
+  border: 0.5px solid var(--hairline);
   border-radius: var(--radius);
   overflow: hidden;
-  background: var(--bg);
+  background: var(--canvas);
   min-height: 640px;
 }
 
@@ -35,8 +35,8 @@ body { padding: 20px 20px 48px; }
 .db-nav {
   width: 186px;
   flex-shrink: 0;
-  background: var(--bg2);
-  border-right: 0.5px solid var(--border);
+  background: var(--surface-soft);
+  border-right: 0.5px solid var(--hairline);
   padding: 10px 0 16px;
   overflow-y: auto;
 }
@@ -57,8 +57,10 @@ body { padding: 20px 20px 48px; }
   transition: background var(--t-fast);
 }
 .db-nav-item:hover       { background: var(--bg3); }
-.db-nav-item.act-t       { background: var(--green-bg); }
-.db-nav-item.act-b       { background: var(--amber-bg); }
+.db-nav-item.act-g1 { background: var(--blue-bg); }
+.db-nav-item.act-g2 { background: var(--amber-bg); }
+.db-nav-item.act-g3 { background: var(--green-bg); }
+.db-nav-item.act-g4 { background: var(--accent-lt); }
 .db-nav-pill {
   font-size: 10px;
   font-weight: 600;
@@ -67,38 +69,46 @@ body { padding: 20px 20px 48px; }
   flex-shrink: 0;
   margin-top: 2px;
 }
-.db-nav-pill.t           { background: var(--green-bg);  color: var(--green); }
-.db-nav-pill.b           { background: var(--amber-bg);  color: var(--amber); }
-.act-t .db-nav-pill.t,
-.act-b .db-nav-pill.b    { background: rgba(255,255,255,.45); }
-.db-nav-lbl              { font-size: 13px; color: var(--text2); line-height: 1.35; }
-.act-t .db-nav-lbl       { color: var(--green);  font-weight: 600; }
-.act-b .db-nav-lbl       { color: var(--amber);  font-weight: 600; }
+.db-nav-pill.g1 { background: var(--blue-bg);   color: var(--blue); }
+.db-nav-pill.g2 { background: var(--amber-bg);  color: var(--amber); }
+.db-nav-pill.g3 { background: var(--green-bg);  color: var(--green); }
+.db-nav-pill.g4 { background: var(--accent-lt); color: var(--accent); }
+.act-g1 .db-nav-pill.g1,
+.act-g2 .db-nav-pill.g2,
+.act-g3 .db-nav-pill.g3,
+.act-g4 .db-nav-pill.g4 { background: rgba(255,255,255,.45); }
+.db-nav-lbl         { font-size: 13px; color: var(--text2); line-height: 1.35; }
+.act-g1 .db-nav-lbl { color: var(--blue);   font-weight: 600; }
+.act-g2 .db-nav-lbl { color: var(--amber);  font-weight: 600; }
+.act-g3 .db-nav-lbl { color: var(--green);  font-weight: 600; }
+.act-g4 .db-nav-lbl { color: var(--accent); font-weight: 600; }
 
 /* ── Center panel ─────────────────────────────────────────── */
 .center   { flex: 1; padding: 16px; min-width: 0; }
 .ch       { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; }
-.ch-title { font-size: 17px; font-weight: 600; letter-spacing: -.01em; }
+.ch-title { font-family: var(--font-display); font-size: 20px; font-weight: 400; letter-spacing: -0.02em; color: var(--ink); }
 .ch-count {
   font-size: 12px;
   padding: 2px 9px;
   border-radius: 10px;
   font-weight: 500;
 }
-.ch-count.t { background: var(--green-bg); color: var(--green); }
-.ch-count.b { background: var(--amber-bg); color: var(--amber); }
+.ch-count.g1 { background: var(--blue-bg);   color: var(--blue); }
+.ch-count.g2 { background: var(--amber-bg);  color: var(--amber); }
+.ch-count.g3 { background: var(--green-bg);  color: var(--green); }
+.ch-count.g4 { background: var(--accent-lt); color: var(--accent); }
 .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 14px; }
 
 /* ── Case card ────────────────────────────────────────────── */
 .card {
-  border: 0.5px solid var(--border);
+  border: 0.5px solid var(--hairline);
   border-radius: var(--radius);
   overflow: hidden;
   cursor: pointer;
-  background: var(--bg);
+  background: var(--surface-card);
   transition: border-color var(--t-fast), box-shadow var(--t-fast);
 }
-.card:hover   { border-color: var(--border2); box-shadow: 0 4px 12px rgba(0,0,0,.07); }
+.card:hover   { border-color: var(--hairline-soft); box-shadow: 0 4px 16px rgba(20,20,19,.08); }
 .card.sel     { border: 1.5px solid var(--blue-b); background: var(--blue-bg); }
 .card-top {
   padding: 13px 15px 9px;
@@ -123,52 +133,57 @@ body { padding: 20px 20px 48px; }
 .card-desc   { font-size: 13px; color: var(--text2); line-height: 1.55; }
 .card-ft {
   padding: 8px 15px;
-  border-top: 0.5px solid var(--border);
+  border-top: 0.5px solid var(--hairline);
   display: flex; align-items: center; justify-content: space-between;
-  background: var(--bg2);
+  background: var(--surface-cream-strong);
 }
 .card-tag    { font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 4px; }
-.card-tag.t  { background: var(--green-bg); color: var(--green); }
-.card-tag.b  { background: var(--amber-bg); color: var(--amber); }
+.card-tag.g1 { background: var(--blue-bg);   color: var(--blue); }
+.card-tag.g2 { background: var(--amber-bg);  color: var(--amber); }
+.card-tag.g3 { background: var(--green-bg);  color: var(--green); }
+.card-tag.g4 { background: var(--accent-lt); color: var(--accent); }
 .card-new    { font-size: 9px; font-weight: 600; padding: 1px 6px; border-radius: 3px; background: #FFF3CD; color: #856404; margin-left: 5px; }
 .card-see    { font-size: 12px; color: var(--blue); font-weight: 500; }
 
 /* ── Detail panel ─────────────────────────────────────────── */
-.det { width: 0; flex-shrink: 0; border-left: 0.5px solid var(--border); overflow: hidden; transition: width .22s; background: var(--bg); }
+.det { width: 0; flex-shrink: 0; border-left: 0.5px solid var(--hairline); overflow: hidden; transition: width .22s; background: var(--surface-dark); }
 .det.open   { width: clamp(260px, 33vw, 520px); }
 .det-in     { width: clamp(260px, 33vw, 520px); padding: 16px; }
-.det-hd     { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 14px; padding-bottom: 14px; border-bottom: 0.5px solid var(--border); }
+.det-hd     { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 14px; padding-bottom: 14px; border-bottom: 0.5px solid rgba(255,255,255,.10); }
 .det-co     { display: flex; align-items: center; gap: 10px; }
 .det-badge  { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; flex-shrink: 0; }
-.det-co-name { font-size: 15px; font-weight: 600; }
-.det-co-cat  { font-size: 12px; color: var(--text3); margin-top: 2px; }
-.det-close   { font-size: 20px; color: var(--text3); cursor: pointer; padding: 2px 4px; line-height: 1; user-select: none; }
-.det-close:hover { color: var(--text); }
-.det-tag     { display: inline-block; font-size: 11px; font-weight: 500; padding: 3px 9px; border-radius: 4px; margin-bottom: 12px; }
-.det-tag.t   { background: var(--green-bg); color: var(--green); }
-.det-tag.b   { background: var(--amber-bg); color: var(--amber); }
-.det-unverified { font-size: 11px; color: #856404; background: #FFF3CD; padding: 3px 9px; border-radius: 4px; display: inline-block; margin-bottom: 10px; }
-.det-ttl     { font-size: 15px; font-weight: 600; margin-bottom: 10px; line-height: 1.4; }
-.det-body    { font-size: 13px; color: var(--text2); line-height: 1.75; margin-bottom: 16px; }
+.det-co-name { font-size: 15px; font-weight: 600; color: var(--on-dark); }
+.det-co-cat  { font-size: 12px; color: var(--on-dark-soft); margin-top: 2px; }
+.det-close   { font-size: 20px; color: var(--on-dark-soft); cursor: pointer; padding: 2px 4px; line-height: 1; user-select: none; }
+.det-close:hover { color: var(--on-dark); }
+.det-tag     { display: inline-block; font-size: 11px; font-weight: 500; padding: 3px 9px; border-radius: 9999px; margin-bottom: 12px; }
+.det-tag.g1  { background: var(--blue-bg);   color: var(--blue); }
+.det-tag.g2  { background: var(--amber-bg);  color: var(--amber); }
+.det-tag.g3  { background: var(--green-bg);  color: var(--green); }
+.det-tag.g4  { background: var(--accent-lt); color: var(--accent); }
+.det-unverified { font-size: 11px; color: var(--accent-amber); background: rgba(232,165,90,.15); padding: 3px 9px; border-radius: 9999px; display: inline-block; margin-bottom: 10px; }
+.det-ttl     { font-size: 15px; font-weight: 600; margin-bottom: 10px; line-height: 1.4; color: var(--on-dark); }
+.det-body    { font-size: 13px; color: var(--on-dark-soft); line-height: 1.75; margin-bottom: 16px; }
 .det-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 16px; }
-.met         { background: var(--bg2); border-radius: var(--radius-sm); padding: 11px 11px 9px; }
+.met         { background: var(--surface-dark-el); border-radius: var(--radius-sm); padding: 11px 11px 9px; }
 .met-v       { font-size: 20px; font-weight: 600; }
-.met-v.pos   { color: var(--green); }
-.met-v.neg,.met-v.neu { color: var(--blue); }
-.met-l       { font-size: 11px; color: var(--text3); margin-top: 3px; line-height: 1.3; }
-.det-src a   { font-size: 12px; color: var(--blue); text-decoration: none; border-bottom: 0.5px solid var(--blue-b); }
+.met-v.pos   { color: var(--accent-teal); }
+.met-v.neg   { color: var(--error); }
+.met-v.neu   { color: var(--on-dark-soft); }
+.met-l       { font-size: 11px; color: var(--on-dark-soft); margin-top: 3px; line-height: 1.3; }
+.det-src a   { font-size: 12px; color: var(--accent-teal); text-decoration: none; border-bottom: 0.5px solid rgba(93,184,166,.4); }
 .det-src a:hover { opacity: .75; }
 .det-tags    { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 12px; }
-.det-tag-pill { font-size: 11px; padding: 3px 8px; border-radius: 4px; background: var(--bg2); color: var(--text3); }
+.det-tag-pill { font-size: 11px; padding: 3px 8px; border-radius: 9999px; background: var(--surface-dark-el); color: var(--on-dark-soft); }
 
 .loading { display: flex; align-items: center; justify-content: center; height: 400px; font-size: 14px; color: var(--text3); }
 
 @media (max-width: 800px) {
   .db             { flex-direction: column; }
-  .db-nav         { width: 100%; border-right: none; border-bottom: 0.5px solid var(--border); display: flex; overflow-x: auto; padding: 8px; gap: 4px; }
+  .db-nav         { width: 100%; border-right: none; border-bottom: 0.5px solid var(--hairline); display: flex; overflow-x: auto; padding: 8px; gap: 4px; }
   .db-nav-sec     { display: none; }
   .db-nav-item    { flex-shrink: 0; border-radius: 8px; padding: 6px 11px; }
-  .det.open       { width: 100%; border-left: none; border-top: 0.5px solid var(--border); }
+  .det.open       { width: 100%; border-left: none; border-top: 0.5px solid var(--hairline); }
   .det-in         { width: 100%; }
   .cards          { grid-template-columns: 1fr; }
 }
@@ -177,10 +192,10 @@ body { padding: 20px 20px 48px; }
 <body>
 
 <div class="page-hd">
-  <span class="page-title">글로벌 AI 벤치마킹 대시보드</span>
+  <span class="page-title">AI 생활 변화 리서치 맵</span>
   <span class="last-updated" id="last-updated">로딩 중...</span>
 </div>
-<div class="page-sub">LG전자 AX 전략 참고 | 카테고리 선택 → 카드 클릭 → 상세 출처 확인</div>
+<div class="page-sub">4개 영역 · 12개 카테고리 | 카테고리 선택 → 카드 클릭 → 상세 출처 확인</div>
 
 <div class="db">
   <div class="db-nav" id="db-nav"></div>
@@ -199,7 +214,7 @@ async function loadData() {
     DB = await res.json();
     document.getElementById('last-updated').textContent =
       'Updated: ' + new Date(DB.meta.last_updated).toLocaleDateString('ko-KR') +
-      ` (${DB.meta.total_cases}개 사례)`;
+      ` (${DB.meta.total_cases}개 아티클)`;
     buildNav();
     selCat(Object.keys(DB.categories)[0]);
   } catch(e) {
@@ -208,28 +223,35 @@ async function loadData() {
   }
 }
 
+const GROUPS = {
+  '1': '생활 공간 변화',
+  '2': '소비 행동 변화',
+  '3': '개인 행동 변화',
+  '4': '인간 관계 변화',
+};
+
+function catGroupNum(id) { return id.split('-')[0]; }
+function catGroupCls(id) { return 'g' + catGroupNum(id); }
+
 function buildNav() {
   const nav = document.getElementById('db-nav');
   const cats = DB.categories;
-  const topCats = Object.entries(cats).filter(([,v]) => v.type === 'top');
-  const botCats = Object.entries(cats).filter(([,v]) => v.type === 'bot');
+  let h = '';
+  let first = true;
 
-  let h = '<div class="db-nav-sec">TOP-LINE 향상</div>';
-  topCats.forEach(([id, cat]) => {
-    const count = DB.cases.filter(c => c.category === id).length;
-    h += `<div class="db-nav-item" id="nav-${id}" onclick="selCat('${id}')">
-      <span class="db-nav-pill t">${id}</span>
-      <span class="db-nav-lbl">${cat.name} <span style="font-size:11px;opacity:.55">${count}</span></span>
-    </div>`;
-  });
-  h += '<div style="height:0.5px;background:var(--border);margin:8px 0"></div>';
-  h += '<div class="db-nav-sec">BOTTOM-LINE 개선</div>';
-  botCats.forEach(([id, cat]) => {
-    const count = DB.cases.filter(c => c.category === id).length;
-    h += `<div class="db-nav-item" id="nav-${id}" onclick="selCat('${id}')">
-      <span class="db-nav-pill b">${id}</span>
-      <span class="db-nav-lbl">${cat.name} <span style="font-size:11px;opacity:.55">${count}</span></span>
-    </div>`;
+  Object.entries(GROUPS).forEach(([prefix, label]) => {
+    const groupCats = Object.entries(cats).filter(([id]) => id.startsWith(prefix + '-'));
+    if (!groupCats.length) return;
+    if (!first) h += '<div style="height:0.5px;background:var(--border);margin:8px 0"></div>';
+    first = false;
+    h += `<div class="db-nav-sec">${label}</div>`;
+    groupCats.forEach(([id, cat]) => {
+      const count = DB.cases.filter(c => c.category === id).length;
+      h += `<div class="db-nav-item" id="nav-${id}" onclick="selCat('${id}')">
+        <span class="db-nav-pill g${prefix}">${id}</span>
+        <span class="db-nav-lbl">${cat.name} <span style="font-size:11px;opacity:.55">${count}</span></span>
+      </div>`;
+    });
   });
   nav.innerHTML = h;
 }
@@ -237,24 +259,24 @@ function buildNav() {
 function selCat(id) {
   if (activeCat) {
     const p = document.getElementById('nav-' + activeCat);
-    if (p) p.classList.remove('act-t', 'act-b');
+    if (p) p.classList.remove('act-g1', 'act-g2', 'act-g3', 'act-g4');
   }
   activeCat = id;
   const cat = DB.categories[id];
+  const g = catGroupCls(id);
   const el = document.getElementById('nav-' + id);
-  if (el) el.classList.add(cat.type === 'top' ? 'act-t' : 'act-b');
+  if (el) el.classList.add('act-' + g);
 
   activeCard = null;
   document.getElementById('det').classList.remove('open');
 
   const cases = DB.cases.filter(c => c.category === id);
-  const tt = cat.type === 'top' ? 't' : 'b';
 
   let h = `<div class="ch">
     <span class="ch-title">${cat.name}</span>
-    <span class="ch-count ${tt}">${id} · ${cases.length}개 사례</span>
+    <span class="ch-count ${g}">${id} · ${cases.length}개 아티클</span>
   </div>
-  <div style="font-size:13px;color:var(--text3);margin-top:3px">${cat.sub}</div>
+  <div style="font-size:13px;color:var(--text3);margin-top:3px">${cat.sub || ''}</div>
   <div class="cards">`;
 
   cases.forEach((c, i) => {
@@ -274,7 +296,7 @@ function selCat(id) {
       </div>
       <div class="card-ft">
         <span>
-          <span class="card-tag ${tt}">${id}</span>
+          <span class="card-tag ${g}">${id}</span>
           ${isNew ? '<span class="card-new">NEW</span>' : ''}
         </span>
         <span class="card-see">자세히 보기 →</span>
@@ -297,7 +319,7 @@ function selCard(catId, idx) {
   const cat = DB.categories[catId];
   const cases = DB.cases.filter(c => c.category === catId);
   const c = cases[idx];
-  const tt = cat.type === 'top' ? 't' : 'b';
+  const g = catGroupCls(catId);
 
   const mh = (c.metrics || []).map(m => `
     <div class="met">
@@ -318,8 +340,8 @@ function selCard(catId, idx) {
       </div>
       <span class="det-close" onclick="closeDet()">×</span>
     </div>
-    <span class="det-tag ${tt}">${cat.sub}</span>
-    ${!c.verified ? '<div><span class="det-unverified">자동 수집 (미검증)</span></div>' : ''}
+    <span class="det-tag ${g}">${cat.sub || cat.name}</span>
+    ${!c.verified ? '<div><span class="det-unverified">초안 (미검증)</span></div>' : ''}
     <div class="det-ttl">${c.title}</div>
     <div class="det-body">${c.body}</div>
     <div class="det-metrics">${mh}</div>

@@ -1,62 +1,113 @@
 /* ============================================================
-   shared.css — The AX Fieldbook
-   Unified design tokens + site-wide nav component
-   Loaded by all pages (index, dashboard, archive, admin)
+   shared.css — Life After AI
+   Design tokens: DESIGN.md (Claude / Anthropic)
+   Loaded by all pages. index.html also loads hero.css.
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
 
 /* ── Tokens ───────────────────────────────────────────────── */
 :root {
-  /* Palette — warm off-white canvas (matches hero.css) */
-  --bg:          #F8F6F1;
-  --bg-alt:      #F0EDE5;
-  --bg2:         #F0EDE5;   /* compat alias for dashboard/archive/admin */
-  --bg3:         #E8E5DC;
-  --bg-card:     #FFFFFF;
+  /* Palette — DESIGN.md */
+  --canvas:               #faf9f5;
+  --surface-soft:         #f5f0e8;
+  --surface-card:         #efe9de;
+  --surface-cream-strong: #e8e0d2;
+  --surface-dark:         #181715;
+  --surface-dark-el:      #252320;
+  --surface-dark-soft:    #1f1e1b;
 
-  --text:        #0D0D0B;
-  --text-inv:    #F8F6F1;
-  --text2:       #4B4B44;
-  --text3:       #8A8A7E;
+  --ink:          #141413;
+  --body-strong:  #252523;
+  --body:         #3d3d3a;
+  --muted:        #6c6a64;
+  --muted-soft:   #8e8b82;
+  --on-dark:      #faf9f5;
+  --on-dark-soft: #a09d96;
 
-  --accent:      #C96E35;
-  --accent-lt:   #F4E6D8;
-  --accent-dk:   #A4561F;
+  --primary:          #cc785c;
+  --primary-active:   #a9583e;
+  --primary-disabled: #e6dfd8;
+  --on-primary:       #ffffff;
 
-  --green:       #085041;  --green-bg:  #E1F5EE;  --green-b: #5DCAA5;
-  --amber:       #633806;  --amber-bg:  #FAEEDA;  --amber-b: #EF9F27;
-  --blue:        #0C447C;  --blue-bg:   #E6F1FB;  --blue-b:  #85B7EB;
-  --red:         #991B1B;  --red-bg:    #FEE2E2;
+  --accent-teal:  #5db8a6;
+  --accent-amber: #e8a55a;
+  --success:      #5db872;
+  --error:        #c64545;
 
-  --border:      rgba(13,13,11,.09);
-  --border2:     rgba(13,13,11,.20);
+  --hairline:      #e6dfd8;
+  --hairline-soft: #ebe6df;
 
-  --radius:      12px;
-  --radius-sm:   8px;
+  /* ── Compat aliases (used by JS-generated HTML) ── */
+  --bg:        var(--canvas);
+  --bg-alt:    var(--surface-soft);
+  --bg2:       var(--surface-soft);
+  --bg3:       var(--surface-cream-strong);
+  --bg-card:   var(--surface-card);
+  --text:      var(--ink);
+  --text-inv:  var(--on-dark);
+  --text2:     var(--body);
+  --text3:     var(--muted-soft);
+  --accent:    var(--primary);
+  --accent-lt: #fdf0eb;
+  --accent-dk: var(--primary-active);
+  --border:    rgba(20,20,19,.08);
+  --border2:   rgba(20,20,19,.16);
 
-  --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
-          "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  /* ── Category colors (4-group system: g1–g4) ── */
+  --g1:    #3a8f7d;  --g1-bg:  #eaf5f3;  --g1-b:  #5db8a6;  /* teal  — 생활 공간 */
+  --g2:    #b5711b;  --g2-bg:  #fdf3e7;  --g2-b:  #e8a55a;  /* amber — 소비 행동 */
+  --g3:    #2e7d4f;  --g3-bg:  #eaf7ec;  --g3-b:  #5db872;  /* green — 개인 행동 */
+  --g4:    #a9583e;  --g4-bg:  #fdf0eb;  --g4-b:  #cc785c;  /* coral — 인간 관계 */
 
-  --ease:    cubic-bezier(.22, 1, .36, 1);
-  --t-fast:  120ms var(--ease);
-  --t-base:  220ms var(--ease);
+  /* ── Legacy category aliases (dashboard/archive inline CSS) ── */
+  --green:    var(--g3);   --green-bg:  var(--g3-bg);  --green-b: var(--g3-b);
+  --amber:    var(--g2);   --amber-bg:  var(--g2-bg);  --amber-b: var(--g2-b);
+  --blue:     var(--g1);   --blue-bg:   var(--g1-bg);  --blue-b:  var(--g1-b);
+  --red:      var(--error);--red-bg:    #fee2e2;
+  --blue-b:   var(--g1-b);
+
+  /* ── Typography ── */
+  --font-display: "Cormorant Garamond", "Tiempos Headline", Georgia, serif;
+  --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* ── Radius — DESIGN.md ── */
+  --radius:    12px;   /* content cards */
+  --radius-sm: 8px;    /* buttons, inputs */
+
+  /* ── Transitions ── */
+  --ease:   cubic-bezier(.22, 1, .36, 1);
+  --t-fast: 120ms var(--ease);
+  --t-base: 220ms var(--ease);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg:       #0E0E0C;  --bg-alt:  #181816;
-    --bg2:      #181816;  --bg3:     #222220;
-    --bg-card:  #171715;
-    --text:     #EDECEA;  --text-inv: #0E0E0C;
-    --text2:    #A8A79E;  --text3:    #676660;
-    --accent:   #D98048;  --accent-lt:#2A1A0A;  --accent-dk:#F09050;
-    --green:    #9FE1CB;  --green-bg: #085041;  --green-b: #1D9E75;
-    --amber:    #FAC775;  --amber-bg: #633806;  --amber-b: #BA7517;
-    --blue:     #85B7EB;  --blue-bg:  #042C53;  --blue-b:  #185FA5;
-    --red:      #FCA5A5;  --red-bg:   #450a0a;
-    --border:   rgba(255,255,250,.08);
-    --border2:  rgba(255,255,250,.18);
+    --canvas:               #0e0e0c;
+    --surface-soft:         #181715;
+    --surface-card:         #1f1e1b;
+    --surface-cream-strong: #252320;
+    --surface-dark:         #0a0a09;
+
+    --ink:       #edecea;
+    --body:      #a8a79e;
+    --muted:     #8e8b82;
+    --muted-soft:#676660;
+    --on-dark:   #edecea;
+
+    --primary:        #d98048;
+    --primary-active: #f09050;
+    --accent-lt:      #2a1a0a;
+
+    --hairline:      rgba(255,255,250,.08);
+    --hairline-soft: rgba(255,255,250,.05);
+    --border:        rgba(255,255,250,.08);
+    --border2:       rgba(255,255,250,.16);
+
+    --g1:    #5db8a6;  --g1-bg: #0a2e28;
+    --g2:    #e8a55a;  --g2-bg: #2a1a00;
+    --g3:    #5db872;  --g3-bg: #0a2e18;
+    --g4:    #d98048;  --g4-bg: #2a1206;
   }
 }
 
@@ -70,8 +121,8 @@ html {
 }
 
 body {
-  background: var(--bg);
-  color: var(--text);
+  background: var(--canvas);
+  color: var(--ink);
   font-family: var(--font);
   font-size: 15px;
   line-height: 1.6;
@@ -92,15 +143,15 @@ ul, ol { list-style: none; }
   padding-inline: clamp(20px, 4vw, 48px);
 }
 
-/* ── Site nav (injected by nav.js, or hand-coded in index) ── */
+/* ── Site nav ─────────────────────────────────────────────── */
 .nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  background: color-mix(in srgb, var(--canvas) 92%, transparent);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 0.5px solid var(--border);
+  border-bottom: 0.5px solid var(--hairline);
 }
 
 .nav__inner {
@@ -108,7 +159,7 @@ ul, ol { list-style: none; }
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  height: 60px;
+  height: 64px;
 }
 
 .nav__logo {
@@ -118,7 +169,7 @@ ul, ol { list-style: none; }
   font-size: 13px;
   font-weight: 600;
   letter-spacing: -.01em;
-  color: var(--text);
+  color: var(--ink);
   flex-shrink: 0;
 }
 
@@ -126,31 +177,31 @@ ul, ol { list-style: none; }
   width: 28px;
   height: 28px;
   border-radius: 8px;
-  background: var(--text);
+  background: var(--ink);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
 .nav__logo-mark svg { display: block; }
-.nav__logo-mark path { fill: var(--bg); }
+.nav__logo-mark path { fill: var(--canvas); }
 
 .nav__links {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
 }
 
 .nav__link {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
-  color: var(--text2);
+  color: var(--muted);
   padding: 6px 14px;
-  border-radius: 999px;
+  border-radius: 8px;
   transition: color var(--t-fast), background var(--t-fast);
 }
 .nav__link:hover,
-.nav__link.active { color: var(--text); background: var(--bg-alt); }
+.nav__link.active { color: var(--ink); background: var(--surface-card); }
 
 .nav__actions {
   display: flex;
@@ -166,30 +217,29 @@ ul, ol { list-style: none; }
   justify-content: center;
   gap: 6px;
   font-family: var(--font);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 1;
-  padding: 9px 18px;
-  border-radius: 999px;
-  border: 0.5px solid transparent;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid transparent;
   transition: all var(--t-fast);
   white-space: nowrap;
   cursor: pointer;
   text-decoration: none;
 }
 .btn:active { transform: scale(.98); }
-.btn-primary  { background: var(--text);    color: var(--text-inv); border-color: var(--text); }
-.btn-primary:hover { opacity: .84; }
-.btn-outline  { background: transparent;    color: var(--text2);    border-color: var(--border2); }
-.btn-outline:hover { background: var(--bg-alt); color: var(--text); }
-.btn-ghost    { background: transparent;    color: var(--text2);    border-color: transparent; }
-.btn-ghost:hover  { background: var(--bg-alt); color: var(--text); }
-.btn-danger   { background: var(--red-bg);  color: var(--red);      border-color: var(--red); }
+.btn-primary  { background: var(--primary);  color: var(--on-primary); border-color: var(--primary); }
+.btn-primary:hover { background: var(--primary-active); border-color: var(--primary-active); }
+.btn-outline  { background: var(--canvas);   color: var(--ink);    border-color: var(--hairline); }
+.btn-outline:hover { background: var(--surface-soft); }
+.btn-ghost    { background: transparent;    color: var(--body);    border-color: transparent; }
+.btn-ghost:hover  { background: var(--surface-card); color: var(--ink); }
+.btn-danger   { background: #fee2e2; color: var(--error); border-color: var(--error); }
 .btn-sm  { font-size: 11px; padding: 6px 13px; }
 .btn-lg  { font-size: 15px; padding: 12px 26px; }
 
 /* ── Responsive nav ───────────────────────────────────────── */
 @media (max-width: 768px) {
   .nav__links  { display: none; }
-  .nav__actions .btn span { display: none; }
 }

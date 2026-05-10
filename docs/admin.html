@@ -3,109 +3,121 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>소스 관리 — The AX Fieldbook</title>
+<title>소스 관리 — Life After AI</title>
 <link rel="stylesheet" href="./shared.css">
 <style>
 body { padding-bottom: 80px; font-size: 14px; }
 
-/* ── Admin header (sub-header below site nav) ─────────────── */
+/* ── Admin sub-header ─────────────────────────────────────── */
 .hd{
-  padding:13px 24px;border-bottom:0.5px solid var(--border);
+  padding:13px 24px;
+  border-bottom:0.5px solid var(--hairline);
   display:flex;align-items:center;justify-content:space-between;gap:12px;
-  position:sticky;top:60px;background:var(--bg);z-index:30;
+  position:sticky;top:64px;background:var(--canvas);z-index:30;
   backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)
 }
 .hd-left{display:flex;align-items:center;gap:12px;min-width:0}
-.hd-title{font-size:16px;font-weight:600;letter-spacing:-.02em;white-space:nowrap}
-.dirty-dot{width:7px;height:7px;border-radius:50%;background:#EF9F27;flex-shrink:0;display:none}
+.hd-title{
+  font-family:var(--font-display);font-size:18px;font-weight:400;
+  letter-spacing:-0.02em;white-space:nowrap;color:var(--ink)
+}
+.dirty-dot{width:7px;height:7px;border-radius:50%;background:var(--accent-amber);flex-shrink:0;display:none}
 .dirty-dot.on{display:block}
-.dirty-label{font-size:11px;color:var(--amber);display:none}
+.dirty-label{font-size:11px;color:var(--accent-amber);display:none}
 .dirty-dot.on + .dirty-label{display:block}
 .hd-right{display:flex;align-items:center;gap:7px;flex-shrink:0}
 
-/* Admin-specific button overrides (radius matches admin compact UI) */
-.btn-green{background:var(--green-bg);color:var(--green);border-color:var(--green-b)}
-.btn-green:hover{opacity:.8}
+/* Admin-specific button overrides */
+.btn-green{background:var(--g3-bg);color:var(--g3);border-color:var(--g3-b)}
+.btn-green:hover{background:var(--success);color:#fff;border-color:var(--success)}
 .btn-sm{font-size:12px;padding:5px 11px;border-radius:6px}
 
 /* ── Stats bar ────────────────────────────────────────────── */
 .stats{
-  padding:10px 24px;border-bottom:0.5px solid var(--border);
-  display:flex;align-items:center;gap:18px;background:var(--bg2);
-  font-size:13px;color:var(--text3);flex-wrap:wrap
+  padding:10px 24px;border-bottom:0.5px solid var(--hairline);
+  display:flex;align-items:center;gap:18px;background:var(--surface-soft);
+  font-size:13px;color:var(--muted-soft);flex-wrap:wrap
 }
 .stat{display:flex;align-items:center;gap:5px}
-.stat-n{font-weight:700;color:var(--text);font-size:15px}
-.stat-sep{width:0.5px;height:14px;background:var(--border2)}
+.stat-n{font-weight:700;color:var(--ink);font-size:15px}
+.stat-sep{width:0.5px;height:14px;background:var(--hairline)}
 
 /* ── Tabs ─────────────────────────────────────────────────── */
 .tabs{
-  padding:0 24px;border-bottom:0.5px solid var(--border);
-  display:flex;gap:0
+  padding:0 24px;border-bottom:0.5px solid var(--hairline);
+  display:flex;gap:0;background:var(--canvas)
 }
 .tab{
   font-size:13px;font-weight:500;padding:11px 16px;cursor:pointer;
-  border-bottom:2px solid transparent;color:var(--text3);
-  transition:all .1s;user-select:none;white-space:nowrap
+  border-bottom:2px solid transparent;color:var(--muted);
+  transition:all .12s;user-select:none;white-space:nowrap
 }
-.tab:hover{color:var(--text)}
-.tab.on{color:var(--text);border-bottom-color:var(--text)}
+.tab:hover{color:var(--ink)}
+.tab.on{color:var(--ink);border-bottom-color:var(--primary)}
 
-/* ── Table ────────────────────────────────────────────────────────────────── */
+/* ── Table ────────────────────────────────────────────────── */
 .tbl-wrap{padding:16px 24px 0;overflow-x:auto}
 table{width:100%;border-collapse:collapse;min-width:700px}
 th{
-  font-size:11px;font-weight:600;color:var(--text3);letter-spacing:.04em;
-  padding:0 10px 9px;text-align:left;border-bottom:0.5px solid var(--border2);
+  font-size:11px;font-weight:600;color:var(--muted);letter-spacing:.06em;
+  text-transform:uppercase;
+  padding:0 10px 9px;text-align:left;border-bottom:0.5px solid var(--hairline);
   white-space:nowrap
 }
 td{
-  padding:11px 10px;border-bottom:0.5px solid var(--border);
+  padding:11px 10px;border-bottom:0.5px solid var(--hairline);
   vertical-align:middle
 }
 tr:last-child td{border-bottom:none}
-tr:hover td{background:var(--bg2)}
-.td-id{font-family:monospace;font-size:12px;color:var(--text3)}
-.td-name{font-weight:500;font-size:14px;line-height:1.3}
-.td-url{font-size:12px;color:var(--text3);margin-top:2px;
+tr:hover td{background:var(--surface-card)}
+.td-id{font-family:monospace;font-size:12px;color:var(--muted-soft)}
+.td-name{font-weight:500;font-size:14px;line-height:1.3;color:var(--ink)}
+.td-url{font-size:12px;color:var(--muted-soft);margin-top:2px;
   max-width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.td-url a{color:var(--blue);text-decoration:none}
-.td-url a:hover{text-decoration:underline}
+.td-url a{color:var(--primary);text-decoration:none}
+.td-url a:hover{color:var(--primary-active);text-decoration:underline}
 
-/* badges */
+/* badges — pill radius per DESIGN.md */
 .badge{
   display:inline-flex;align-items:center;font-size:10px;font-weight:600;
-  padding:2px 7px;border-radius:4px;white-space:nowrap
+  padding:2px 8px;border-radius:9999px;white-space:nowrap;letter-spacing:.03em
 }
-.badge-rss{background:var(--blue-bg);color:var(--blue)}
-.badge-html{background:var(--amber-bg);color:var(--amber)}
-.badge-high{background:var(--green-bg);color:var(--green)}
-.badge-medium{background:var(--blue-bg);color:var(--blue)}
-.badge-low{background:var(--bg3);color:var(--text3)}
-.badge-research{background:#EDE9FE;color:#4C1D95}
-.badge-vendor{background:var(--blue-bg);color:var(--blue)}
-.badge-trade{background:var(--amber-bg);color:var(--amber)}
-.badge-company{background:var(--green-bg);color:var(--green)}
-@media(prefers-color-scheme:dark){
-  .badge-research{background:#2e1065;color:#c4b5fd}
-}
+.badge-rss     {background:var(--g1-bg);color:var(--g1)}
+.badge-html    {background:var(--g2-bg);color:var(--g2)}
+.badge-high    {background:var(--g3-bg);color:var(--g3)}
+.badge-medium  {background:var(--g1-bg);color:var(--g1)}
+.badge-low     {background:var(--surface-cream-strong);color:var(--muted)}
+.badge-research{background:var(--g4-bg);color:var(--g4)}
+.badge-vendor  {background:var(--g1-bg);color:var(--g1)}
+.badge-trade   {background:var(--g2-bg);color:var(--g2)}
+.badge-company {background:var(--g3-bg);color:var(--g3)}
+.badge-consulting_research{background:var(--g4-bg);color:var(--g4)}
+.badge-market_research{background:var(--g2-bg);color:var(--g2)}
+.badge-academic{background:var(--surface-cream-strong);color:var(--muted)}
+.badge-news    {background:var(--surface-cream-strong);color:var(--muted)}
+.badge-government_statistics{background:var(--g3-bg);color:var(--g3)}
+.badge-government_policy{background:var(--g3-bg);color:var(--g3)}
+.badge-public_research{background:var(--g1-bg);color:var(--g1)}
+.badge-industry_standard{background:var(--g1-bg);color:var(--g1)}
+.badge-news_tabloid{background:var(--surface-cream-strong);color:var(--muted)}
+.badge-company_docs{background:var(--g3-bg);color:var(--g3)}
 
 /* tags */
 .tag-pills{display:flex;flex-wrap:wrap;gap:3px;max-width:180px}
-.tag-pill{font-size:10px;padding:1px 5px;border-radius:3px;background:var(--bg3);color:var(--text3)}
+.tag-pill{font-size:10px;padding:2px 7px;border-radius:9999px;background:var(--surface-cream-strong);color:var(--muted)}
 
 /* toggle */
 .toggle{position:relative;display:inline-block;width:32px;height:18px;cursor:pointer}
 .toggle input{opacity:0;width:0;height:0;position:absolute}
 .slider{
-  position:absolute;inset:0;border-radius:18px;background:var(--bg3);
-  transition:.2s;border:0.5px solid var(--border2)
+  position:absolute;inset:0;border-radius:18px;background:var(--surface-cream-strong);
+  transition:.2s;border:0.5px solid var(--hairline)
 }
 .slider:before{
   content:"";position:absolute;width:12px;height:12px;border-radius:50%;
-  background:#fff;left:2px;bottom:2px;transition:.2s;box-shadow:0 1px 3px rgba(0,0,0,.2)
+  background:#fff;left:2px;bottom:2px;transition:.2s;box-shadow:0 1px 3px rgba(20,20,19,.2)
 }
-input:checked + .slider{background:var(--green);border-color:var(--green-b)}
+input:checked + .slider{background:var(--primary);border-color:var(--primary-active)}
 input:checked + .slider:before{transform:translateX(14px)}
 
 /* row actions */
@@ -114,120 +126,134 @@ input:checked + .slider:before{transform:translateX(14px)}
 /* delete confirm inline */
 .del-confirm{
   display:flex;align-items:center;gap:6px;
-  background:var(--red-bg);padding:4px 8px;border-radius:6px;
-  font-size:11px;color:var(--red)
+  background:var(--red-bg);padding:4px 10px;border-radius:9999px;
+  font-size:11px;color:var(--error)
 }
 
-/* ── Empty ────────────────────────────────────────────────────────────────── */
+/* ── Empty ────────────────────────────────────────────────── */
 .empty-row td{
-  text-align:center;padding:40px;color:var(--text3);
-  font-size:13px
+  text-align:center;padding:48px;color:var(--muted-soft);font-size:13px
 }
 
-/* ── Modal ────────────────────────────────────────────────────────────────── */
+/* ── Modal — feature-card style ──────────────────────────── */
 .modal-bg{
-  position:fixed;inset:0;background:rgba(0,0,0,.45);
-  backdrop-filter:blur(4px);z-index:100;
+  position:fixed;inset:0;background:rgba(20,20,19,.5);
+  backdrop-filter:blur(6px);z-index:100;
   display:none;align-items:center;justify-content:center;padding:20px
 }
 .modal-bg.open{display:flex}
 .modal{
-  background:var(--bg);border-radius:14px;width:100%;max-width:520px;
-  max-height:90vh;overflow-y:auto;box-shadow:0 24px 60px rgba(0,0,0,.25);
-  border:0.5px solid var(--border2)
+  background:var(--surface-card);border-radius:16px;width:100%;max-width:520px;
+  max-height:90vh;overflow-y:auto;
+  box-shadow:0 24px 64px rgba(20,20,19,.18);
+  border:0.5px solid var(--hairline)
 }
 .modal-hd{
-  padding:16px 20px 14px;border-bottom:0.5px solid var(--border);
+  padding:18px 22px 14px;border-bottom:0.5px solid var(--hairline);
   display:flex;align-items:center;justify-content:space-between;
-  position:sticky;top:0;background:var(--bg);z-index:1;border-radius:14px 14px 0 0
+  position:sticky;top:0;background:var(--surface-card);z-index:1;
+  border-radius:16px 16px 0 0
 }
-.modal-title{font-size:14px;font-weight:600}
+.modal-title{
+  font-family:var(--font-display);font-size:16px;font-weight:400;
+  letter-spacing:-0.01em;color:var(--ink)
+}
 .modal-close{
-  font-size:20px;color:var(--text3);cursor:pointer;padding:0 4px;
+  font-size:20px;color:var(--muted-soft);cursor:pointer;padding:0 4px;
   line-height:1;user-select:none
 }
-.modal-close:hover{color:var(--text)}
-.modal-body{padding:18px 20px}
+.modal-close:hover{color:var(--ink)}
+.modal-body{padding:20px 22px;background:var(--canvas);border-radius:0}
 .modal-ft{
-  padding:12px 20px;border-top:0.5px solid var(--border);
+  padding:14px 22px;border-top:0.5px solid var(--hairline);
   display:flex;justify-content:flex-end;gap:8px;
-  position:sticky;bottom:0;background:var(--bg);border-radius:0 0 14px 14px
+  position:sticky;bottom:0;background:var(--surface-card);
+  border-radius:0 0 16px 16px
 }
 
 /* Form */
 .form-row{margin-bottom:14px}
 .form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
 label{
-  display:block;font-size:11px;font-weight:600;color:var(--text3);
-  margin-bottom:5px;letter-spacing:.02em
+  display:block;font-size:11px;font-weight:600;color:var(--muted);
+  margin-bottom:5px;letter-spacing:.04em;text-transform:uppercase
 }
 input[type=text],input[type=url],select,textarea{
-  width:100%;padding:7px 10px;border:0.5px solid var(--border2);
-  border-radius:7px;background:var(--bg2);color:var(--text);
-  font-family:var(--font);font-size:12px;transition:border-color .1s;
+  width:100%;padding:8px 12px;
+  border:1px solid var(--hairline);
+  border-radius:8px;background:var(--canvas);color:var(--ink);
+  font-family:var(--font);font-size:13px;transition:border-color .12s;
   outline:none
 }
 input[type=text]:focus,input[type=url]:focus,select:focus,textarea:focus{
-  border-color:var(--blue-b);background:var(--bg)
+  border-color:var(--primary);
+  box-shadow:0 0 0 3px rgba(204,120,92,.12)
 }
-input.err{border-color:var(--red)!important}
-.field-hint{font-size:10px;color:var(--text3);margin-top:3px}
-.field-err{font-size:10px;color:var(--red);margin-top:3px;display:none}
+input.err{border-color:var(--error)!important}
+.field-hint{font-size:10px;color:var(--muted-soft);margin-top:4px}
+.field-err{font-size:10px;color:var(--error);margin-top:4px;display:none}
 .field-err.on{display:block}
 
 /* Tag chip input */
 .tag-input-box{
-  border:0.5px solid var(--border2);border-radius:7px;
-  background:var(--bg2);padding:5px 8px;
+  border:1px solid var(--hairline);border-radius:8px;
+  background:var(--canvas);padding:5px 8px;
   display:flex;flex-wrap:wrap;gap:4px;align-items:center;cursor:text;
-  min-height:36px;transition:border-color .1s
+  min-height:38px;transition:border-color .12s
 }
-.tag-input-box:focus-within{border-color:var(--blue-b);background:var(--bg)}
+.tag-input-box:focus-within{
+  border-color:var(--primary);
+  box-shadow:0 0 0 3px rgba(204,120,92,.12)
+}
 .tag-chip{
   display:inline-flex;align-items:center;gap:3px;
-  font-size:11px;padding:2px 7px;border-radius:4px;
-  background:var(--bg3);color:var(--text2)
+  font-size:11px;padding:3px 9px;border-radius:9999px;
+  background:var(--surface-cream-strong);color:var(--body)
 }
 .tag-chip button{
-  background:none;border:none;cursor:pointer;color:var(--text3);
+  background:none;border:none;cursor:pointer;color:var(--muted-soft);
   font-size:13px;line-height:1;padding:0 1px
 }
-.tag-chip button:hover{color:var(--red)}
+.tag-chip button:hover{color:var(--error)}
 #tag-input{
-  border:none;background:transparent;color:var(--text);
+  border:none;background:transparent;color:var(--ink);
   font-size:12px;padding:2px 4px;outline:none;min-width:80px;flex:1
 }
 
 /* Form toggle row */
 .form-toggle-row{
   display:flex;align-items:center;justify-content:space-between;
-  padding:10px 12px;background:var(--bg2);border-radius:8px;margin-bottom:14px
+  padding:12px 14px;background:var(--surface-card);
+  border-radius:8px;border:0.5px solid var(--hairline);margin-bottom:14px
 }
-.form-toggle-label{font-size:12px;font-weight:500}
-.form-toggle-sub{font-size:11px;color:var(--text3);margin-top:1px}
+.form-toggle-label{font-size:13px;font-weight:500;color:var(--ink)}
+.form-toggle-sub{font-size:11px;color:var(--muted-soft);margin-top:2px}
 
-/* ── Notice banner ────────────────────────────────────────────────────────── */
+/* ── Notice banner ────────────────────────────────────────── */
 .notice{
-  margin:14px 24px 0;padding:10px 14px;border-radius:8px;
-  background:var(--amber-bg);border:0.5px solid var(--amber-b);
-  font-size:11px;color:var(--amber);display:flex;align-items:center;gap:8px
+  margin:14px 24px 0;padding:12px 16px;border-radius:8px;
+  background:var(--g2-bg);border:0.5px solid var(--g2-b);
+  font-size:12px;color:var(--g2);display:flex;align-items:center;gap:8px
 }
 
-/* ── Export toast ─────────────────────────────────────────────────────────── */
+/* ── Toast — dark surface style ──────────────────────────── */
 .toast{
   position:fixed;bottom:24px;left:50%;transform:translateX(-50%);
-  background:#1a1a18;color:#e8e6df;font-size:12px;padding:9px 16px;
-  border-radius:8px;opacity:0;transition:opacity .2s;pointer-events:none;
-  white-space:nowrap;z-index:200;box-shadow:0 4px 16px rgba(0,0,0,.3)
+  background:var(--surface-dark);color:var(--on-dark);
+  font-size:12px;padding:10px 18px;
+  border-radius:9999px;opacity:0;transition:opacity .2s;pointer-events:none;
+  white-space:nowrap;z-index:200;
+  box-shadow:0 8px 24px rgba(20,20,19,.25);
+  border:0.5px solid rgba(255,255,255,.08)
 }
 .toast.show{opacity:1}
 
 @media(max-width:640px){
-  .hd{padding:11px 14px}
-  .stats{padding:8px 14px;gap:12px}
-  .tabs{padding:0 14px}
-  .tbl-wrap{padding:12px 14px 0}
-  .notice{margin:10px 14px 0}
+  .hd{padding:11px 16px}
+  .stats{padding:8px 16px;gap:12px}
+  .tabs{padding:0 16px}
+  .tbl-wrap{padding:12px 16px 0}
+  .notice{margin:10px 16px 0}
   .form-row-2{grid-template-columns:1fr}
 }
 </style>
@@ -261,7 +287,7 @@ input.err{border-color:var(--red)!important}
   <div class="stat-sep"></div>
   <span class="stat">제외 도메인 <span class="stat-n" id="st-excl">–</span></span>
   <div class="stat-sep"></div>
-  <span class="stat" id="st-updated" style="margin-left:auto;color:var(--text3)"></span>
+  <span class="stat" id="st-updated" style="margin-left:auto;color:var(--muted-soft)"></span>
 </div>
 
 <!-- ── Notice ────────────────────────────────────────────────────────────── -->
@@ -294,7 +320,7 @@ input.err{border-color:var(--red)!important}
     <div class="modal-body">
       <div class="form-row-2">
         <div>
-          <label>소스 ID <span style="font-weight:400;color:var(--text3)">(자동 생성)</span></label>
+          <label>소스 ID <span style="font-weight:400;color:var(--muted-soft)">(자동 생성)</span></label>
           <input type="text" id="f-id" placeholder="예: salesforce-blog">
           <div class="field-hint">URL 입력 시 자동 생성됩니다</div>
           <div class="field-err" id="err-id">이미 존재하는 ID입니다</div>
@@ -311,7 +337,7 @@ input.err{border-color:var(--red)!important}
         <div class="field-err" id="err-url">유효한 URL을 입력하세요</div>
       </div>
       <div class="form-row">
-        <label>RSS 피드 URL <span style="font-weight:400;color:var(--text3)">(없으면 HTML 스크래핑)</span></label>
+        <label>RSS 피드 URL <span style="font-weight:400;color:var(--muted-soft)">(없으면 HTML 스크래핑)</span></label>
         <input type="url" id="f-rss" placeholder="https://example.com/feed/ (없으면 비워두세요)">
       </div>
       <div class="form-row-2">
@@ -504,7 +530,7 @@ function sourceRow(s) {
            </div>`
         : `<div class="row-actions">
              <button class="btn btn-ghost btn-sm" onclick="openModal('${s.id}')">편집</button>
-             <button class="btn btn-ghost btn-sm" style="color:var(--red)" onclick="askDelete('${s.id}')">삭제</button>
+             <button class="btn btn-ghost btn-sm" style="color:var(--error)" onclick="askDelete('${s.id}')">삭제</button>
            </div>`
       }
     </td>
@@ -529,7 +555,7 @@ function renderExcluded() {
   document.getElementById('tbl-body').innerHTML = list.map((d, i) => `
     <tr>
       <td class="td-id">${esc(d.domain)}</td>
-      <td style="font-size:12px;color:var(--text2)">${esc(d.reason||'')}</td>
+      <td style="font-size:12px;color:var(--body)">${esc(d.reason||'')}</td>
       <td>
         <button class="btn btn-ghost btn-sm" onclick="removeExcluded(${i})">제외 해제</button>
       </td>

@@ -1,2251 +1,1165 @@
 {
   "meta": {
-    "last_updated": "2026-05-09T04:23:52.936235+00:00",
-    "total_cases": 49,
-    "version": "1.2",
-    "description": "LGE AX Strategy — Global AI Sales & Marketing Benchmark DB"
+    "last_updated": "2026-05-10T00:00:00+00:00",
+    "total_cases": 30,
+    "version": "1.0",
+    "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
   "categories": {
     "1-1": {
-      "name": "신규 고객 획득",
-      "sub": "더 많이 데려오기",
-      "type": "top"
+      "name": "AI Home",
+      "sub": "집이 스스로 운영되는 공간",
+      "type": "living_space"
     },
     "1-2": {
-      "name": "전환율 상승",
-      "sub": "더 잘 사게 만들기",
-      "type": "top"
+      "name": "Wellness Home",
+      "sub": "집이 건강·회복·예방 관리 공간",
+      "type": "living_space"
     },
     "1-3": {
-      "name": "객단가·Mix 개선",
-      "sub": "더 비싸고 좋게 팔기",
-      "type": "top"
-    },
-    "1-4": {
-      "name": "재구매·LTV 확대",
-      "sub": "더 오래 유지하기",
-      "type": "top"
-    },
-    "1-5": {
-      "name": "신규 수익모델",
-      "sub": "새로운 매출원 만들기",
-      "type": "top"
+      "name": "Energy Optimization",
+      "sub": "에너지·생활비 자동 최적화",
+      "type": "living_space"
     },
     "2-1": {
-      "name": "마케팅 운영비 절감",
-      "sub": "만드는 비용 줄이기",
-      "type": "bot"
+      "name": "Agentic Commerce",
+      "sub": "AI가 탐색·비교·구매를 대행",
+      "type": "consumption"
     },
     "2-2": {
-      "name": "영업 운영비 절감",
-      "sub": "파는 비용 줄이기",
-      "type": "bot"
+      "name": "AI Shopping",
+      "sub": "검색에서 대화형 상담 쇼핑으로",
+      "type": "consumption"
     },
     "2-3": {
-      "name": "CS·케어 비용 절감",
-      "sub": "응대 비용 줄이기",
-      "type": "bot"
+      "name": "Subscription AI",
+      "sub": "소유보다 사용·관리 위임",
+      "type": "consumption"
     },
-    "2-4": {
-      "name": "운영 판단력·실행력",
-      "sub": "더 빠르고 정교하게",
-      "type": "bot"
+    "3-1": {
+      "name": "AI Assistant",
+      "sub": "개인·가족 생활 운영 비서",
+      "type": "personal_life"
     },
-    "2-5": {
-      "name": "리스크·품질 비용",
-      "sub": "손실 줄이기",
-      "type": "bot"
+    "3-2": {
+      "name": "Productivity Life",
+      "sub": "AI가 개인 생산성과 업무 방식을 확장",
+      "type": "personal_life"
+    },
+    "3-3": {
+      "name": "Capability Divide",
+      "sub": "AI 활용 능력이 만드는 생활 격차",
+      "type": "personal_life"
+    },
+    "4-1": {
+      "name": "Emotional AI",
+      "sub": "정서적 대화와 감정 관리",
+      "type": "relationship"
+    },
+    "4-2": {
+      "name": "Companion",
+      "sub": "생활 속 AI 동반자",
+      "type": "relationship"
+    },
+    "4-3": {
+      "name": "Aging Society",
+      "sub": "AI와 방문서비스 기반 재택 돌봄",
+      "type": "relationship"
     }
   },
   "cases": [
     {
-      "id": "SEP-001",
+      "id": "GOO-001",
       "category": "1-1",
-      "company": "Sephora",
-      "short": "SEP",
-      "color_bg": "#FBEAF0",
-      "color_text": "#72243E",
-      "kpi_value": "+11%",
-      "kpi_label": "신규 고객 유입",
-      "title": "AI 버추얼 아티스트 — 체험형 고객 획득",
-      "description": "AR 가상 메이크업 체험 + AI 개인화 추천으로 디지털 신규 고객 대폭 확보, 전환율 크게 향상",
-      "body": "세포라의 Virtual Artist는 AR 기술과 AI를 결합해 앱에서 립스틱·아이섀도 등을 가상 체험할 수 있게 했다. 8.5백만 명 이상이 이 기능을 사용했으며, 체험 후 구매 전환율이 일반 방문 대비 크게 높았다. AI Color IQ는 3,600만 가지 피부톤 데이터를 분석해 개인 맞춤 제품을 추천한다. 개인화 추천을 받은 고객의 전환율은 80% 이상 높고, 온라인 신규 고객 획득의 핵심 채널이 됐다.",
-      "metrics": [
-        {
-          "value": "8.5M+",
-          "label": "AR 가상체험 사용자",
-          "trend": "pos"
-        },
-        {
-          "value": "+80%",
-          "label": "개인화 추천 전환율",
-          "trend": "pos"
-        },
-        {
-          "value": "3,600만",
-          "label": "Color IQ 피부톤 분석",
-          "trend": "pos"
-        },
-        {
-          "value": "+11%",
-          "label": "디지털 신규 고객",
-          "trend": "pos"
-        }
-      ],
-      "tags": [
-        "retail",
-        "AR",
-        "personalization",
-        "beauty"
-      ],
-      "source": "Pragmatic Digital AI Marketing Case Studies, 2024",
-      "url": "https://www.pragmatic.digital/blog/ai-marketing-case-study-successful-campaigns",
-      "added_date": "2026-05-05",
-      "verified": true
-    },
-    {
-      "id": "LOR-001",
-      "category": "1-1",
-      "company": "로레알",
-      "short": "LOR",
-      "color_bg": "#EEEDFE",
-      "color_text": "#3C3489",
-      "kpi_value": "+67%",
-      "kpi_label": "CTR 향상",
-      "title": "Google AI Max 검색 마케팅",
-      "description": "AI Max for Search로 클릭률·전환·ROAS 동시 개선, 20개+ 시장 적용",
-      "body": "로레알은 Google AI Max for Search를 칠레 헤어·스킨케어 캠페인에 파일럿 적용했다. AI가 검색 의도를 분석해 최적 광고 문구와 입찰가를 실시간으로 결정한다. CTR 67% 향상, 전환당 비용 31% 절감, ROAS 20% 개선의 성과를 냈으며 현재 20개 이상 EMEA 시장으로 확대했다.",
-      "metrics": [
-        {
-          "value": "+67%",
-          "label": "CTR (클릭률)",
-          "trend": "pos"
-        },
-        {
-          "value": "-31%",
-          "label": "전환당 비용(CPC)",
-          "trend": "pos"
-        },
-        {
-          "value": "+20%",
-          "label": "ROAS",
-          "trend": "pos"
-        },
-        {
-          "value": "+28%",
-          "label": "북유럽 전환 수",
-          "trend": "pos"
-        }
-      ],
-      "tags": [
-        "search",
-        "media",
-        "ROAS",
-        "beauty"
-      ],
-      "source": "Think with Google, 2025",
-      "url": "https://business.google.com/us/think/ai-excellence/loreal-ai-max-search-marketing-strategy/",
-      "added_date": "2026-05-05",
-      "verified": true
-    },
-    {
-      "id": "UNI-001",
-      "category": "1-1",
-      "company": "유니레버",
-      "short": "UNI",
-      "color_bg": "#E1F5EE",
-      "color_text": "#085041",
-      "kpi_value": "52%",
-      "kpi_label": "신규 고객 비율",
-      "title": "AI 타겟팅·소비자 인사이트",
-      "description": "AI 소비자 인사이트 플랫폼으로 신규 고객 비율 52%, 연 €3,000만 리서치 절감",
-      "body": "유니레버의 People Data Centre(PDC)는 수백만 건의 소비자 데이터를 AI로 분석해 실시간 타겟팅에 활용한다. 특정 캠페인에서 AI 타겟팅으로 35억 소셜미디어 노출을 달성하고 신규 고객 비율 52%를 기록했다. 동시에 소비자 리서치 비용을 연간 €3,000만 절감했다.",
-      "metrics": [
-        {
-          "value": "52%",
-          "label": "신규 고객 비율",
-          "trend": "pos"
-        },
-        {
-          "value": "€3,000만",
-          "label": "리서치 비용 절감/년",
-          "trend": "pos"
-        },
-        {
-          "value": "35억",
-          "label": "소셜미디어 노출",
-          "trend": "pos"
-        },
-        {
-          "value": "+30%",
-          "label": "스마트 리테일 매출",
-          "trend": "pos"
-        }
-      ],
-      "tags": [
-        "targeting",
-        "consumer_insights",
-        "FMCG"
-      ],
-      "source": "Unilever Annual Report / InfotechLead, 2024",
-      "url": "https://infotechlead.com/cio/unilever-drives-digital-ai-and-e-commerce-growth-with-2x-faster-marketing-and-e800-mn-cost-savings-94832",
-      "added_date": "2026-05-05",
-      "verified": true
-    },
-    {
-      "id": "CCO-001",
-      "category": "1-1",
-      "company": "코카콜라",
-      "short": "CCO",
-      "color_bg": "#FAEEDA",
-      "color_text": "#633806",
-      "kpi_value": "×10",
-      "kpi_label": "콘텐츠 속도",
-      "title": "Project Fizzion — AI 캠페인 자동화",
-      "description": "Adobe AI와 협력, 브랜드 가이드를 AI 에셋으로 자동 변환해 100개+ 시장에 즉시 배포",
-      "body": "코카콜라는 Adobe와 Project Fizzion을 통해 브랜드 가이드라인을 AI 에셋으로 자동 변환하는 크리에이티브 인텔리전스 시스템을 구축했다. 수백 개의 현지화 캠페인 변형을 자동 생성하고, 100개 이상 시장의 다국어 텍스트를 자동화한다. 콘텐츠 제작 속도가 최대 10배 빨라지고 Microsoft와 $11억 규모의 AI 파트너십도 체결했다.",
-      "metrics": [
-        {
-          "value": "×10",
-          "label": "콘텐츠 제작 속도",
-          "trend": "pos"
-        },
-        {
-          "value": "100+",
-          "label": "적용 시장 수",
-          "trend": "pos"
-        },
-        {
-          "value": "$11억",
-          "label": "MS AI 파트너십",
-          "trend": "pos"
-        },
-        {
-          "value": "자동화",
-          "label": "다국어 텍스트",
-          "trend": "neu"
-        }
-      ],
-      "tags": [
-        "content",
-        "localization",
-        "creative_AI",
-        "FMCG"
-      ],
-      "source": "Coca-Cola Media Center, 2025",
-      "url": "https://www.coca-colacompany.com/media-center/the-coca-cola-company-introduces-fizzion",
-      "added_date": "2026-05-05",
-      "verified": true
-    },
-    {
-      "id": "WAY-001",
-      "category": "1-2",
-      "company": "Wayfair",
-      "short": "WAY",
+      "company": "Google",
+      "short": "GOO",
       "color_bg": "#E6F1FB",
       "color_text": "#0C447C",
-      "kpi_value": "+40%",
-      "kpi_label": "전환율",
-      "title": "AI 고객 여정 개인화",
-      "description": "ML로 구매 의향·선호도 분석, 전환율 +40%, 반품률 -18% 동시 달성",
-      "body": "Wayfair는 머신러닝을 활용해 계절 트렌드, 스타일 선호도, 방 크기까지 분석하는 개인화 추천 엔진을 구축했다. 과거 구매, 주택 소유 여부, 브라우징 습관을 결합해 맞춤형 제품 카탈로그를 생성한다. 고객 여정 매핑으로 전환율이 40% 향상되고 반품률이 18% 감소했다.",
+      "kpi_value": "2025-10",
+      "kpi_label": "Early access",
+      "title": "Gemini for Home — 대화형 AI 홈 운영",
+      "description": "기존 스마트홈의 다음 단계가 단순 연결이 아니라 대화형·맥락형 홈 운영으로 이동한다는 근거.",
+      "body": "Google은 Gemini for Home을 통해 기존 Google Assistant를 고도화된 AI 홈 어시스턴트로 전환하고 있다. 복잡한 자연어 명령, 스마트홈 기기 제어, 요리·문제 해결·가정 내 도움을 강조한다. 스마트홈이 앱 제어 중심에서 가족 구성원과 집 안 상황을 이해하는 AI 기반 생활 인터페이스로 진화하고 있음을 보여준다.",
       "metrics": [
         {
-          "value": "+40%",
-          "label": "전환율 최적화",
-          "trend": "pos"
-        },
-        {
-          "value": "-18%",
-          "label": "반품률",
-          "trend": "pos"
-        },
-        {
-          "value": "AI",
-          "label": "실시간 카탈로그",
-          "trend": "neu"
-        },
-        {
-          "value": "ML",
-          "label": "구매 의향 예측",
+          "value": "2025-10",
+          "label": "Gemini for Home early access 시작 예정",
           "trend": "neu"
         }
       ],
       "tags": [
-        "personalization",
-        "conversion",
-        "e-commerce"
+        "AI Home",
+        "smart_home",
+        "Gemini",
+        "home_assistant",
+        "autonomous_home"
       ],
-      "source": "EComposer Research, 2024",
-      "url": "https://ecomposer.io/blogs/ecommerce/ai-personalization-ecommerce",
-      "added_date": "2026-05-05",
+      "source": "Google Blog, 2025",
+      "url": "https://blog.google/products-and-platforms/devices/google-nest/gemini-for-home/",
+      "added_date": "2026-05-10",
       "verified": true
     },
     {
-      "id": "MSF-001",
-      "category": "1-2",
-      "company": "Microsoft",
-      "short": "MSF",
-      "color_bg": "#E6F1FB",
-      "color_text": "#0C447C",
-      "kpi_value": "+9.4%",
-      "kpi_label": "셀러당 매출",
-      "title": "Copilot for Sales — 영업 코파일럿",
-      "description": "자사 영업 조직에 Copilot 도입, 셀러당 매출 9.4%↑, 딜 성사율 20%↑",
-      "body": "Microsoft는 자사 영업 조직(687명)에 Copilot for Sales를 도입하고 6개월간 A/B 테스트를 진행했다. Copilot을 매일 사용하는 셀러는 비사용 셀러 대비 셀러당 매출이 9.4% 증가하고 딜 성사율이 20% 향상되었다. 고객 케이스 해결 속도도 약 12% 개선됐다(95% 신뢰구간).",
-      "metrics": [
-        {
-          "value": "+9.4%",
-          "label": "셀러당 매출",
-          "trend": "pos"
-        },
-        {
-          "value": "+20%",
-          "label": "딜 성사율",
-          "trend": "pos"
-        },
-        {
-          "value": "+12%",
-          "label": "케이스 해결 속도",
-          "trend": "pos"
-        },
-        {
-          "value": "687명",
-          "label": "추적 셀러 수",
-          "trend": "neu"
-        }
-      ],
-      "tags": [
-        "sales_copilot",
-        "CRM",
-        "B2B",
-        "productivity"
-      ],
-      "source": "Microsoft Blog, 2024",
-      "url": "https://blogs.microsoft.com/blog/2024/10/21/new-autonomous-agents-scale-your-team-like-never-before/",
-      "added_date": "2026-05-05",
-      "verified": true
-    },
-    {
-      "id": "SIE-001",
-      "category": "1-2",
-      "company": "지멘스",
-      "short": "SIE",
-      "color_bg": "#E1F5EE",
-      "color_text": "#085041",
-      "kpi_value": "2,800건",
-      "kpi_label": "주간 리드 심사",
-      "title": "Salesforce Agentforce — 인바운드 자동화",
-      "description": "18,000명 영업 조직에 AI 에이전트 도입, 주 2,800건 리드 자동 심사",
-      "body": "지멘스는 Salesforce Agentforce를 18,000명 영업 조직에 도입했다. AI가 인바운드 리드의 BANT(예산·권한·필요·타이밍)를 자동 분석하고 우선순위를 정한다. 주당 2,800건의 비적격 인바운드 리드가 자동 처리되고, 기존에 방치되던 SMB 시장 커버리지가 확대됐다.",
-      "metrics": [
-        {
-          "value": "2,800건",
-          "label": "주간 자동 리드 심사",
-          "trend": "pos"
-        },
-        {
-          "value": "자동화",
-          "label": "BANT 분석",
-          "trend": "neu"
-        },
-        {
-          "value": "확대",
-          "label": "SMB 커버리지",
-          "trend": "pos"
-        },
-        {
-          "value": "100%",
-          "label": "방문 해결률↑",
-          "trend": "pos"
-        }
-      ],
-      "tags": [
-        "sales_agent",
-        "lead_qualification",
-        "B2B"
-      ],
-      "source": "Salesforce Customer Stories, 2024",
-      "url": "https://www.salesforce.com/customer-stories/siemens/",
-      "added_date": "2026-05-05",
-      "verified": true
-    },
-    {
-      "id": "AMZ-001",
-      "category": "1-2",
+      "id": "AMA-001",
+      "category": "1-1",
       "company": "Amazon",
-      "short": "AMZ",
-      "color_bg": "#FAEEDA",
-      "color_text": "#633806",
-      "kpi_value": "35%",
-      "kpi_label": "매출 기여",
-      "title": "AI 추천 엔진 — 크로스셀",
-      "description": "AI 추천 엔진이 연간 전체 매출의 35% 창출, 상품 발견부터 구매까지 AI 연결",
-      "body": "Amazon의 AI 추천 엔진은 사용자의 브라우징, 구매 이력, 장바구니 행동, 포기된 결제 흐름까지 학습한다. '이 상품을 구매한 고객은 이것도 샀습니다' 섹션부터 검색 결과 순위까지 AI가 개인화한다. 추천을 클릭한 고객은 클릭하지 않은 고객 대비 구매 확률이 4.5배 높다.",
+      "short": "AMA",
+      "color_bg": "#E6F1FB",
+      "color_text": "#0C447C",
+      "kpi_value": "$19.99",
+      "kpi_label": "월 구독 가격",
+      "title": "Alexa+ — 생성형 AI 홈 어시스턴트",
+      "description": "AI Home이 스피커 단일 기능이 아니라 가정 내 디바이스 생태계 전체를 연결하는 생활 인터페이스로 확장된다는 사례.",
+      "body": "Amazon은 Alexa+를 생성형 AI 기반 개인 AI assistant로 소개했다. 스마트홈 제어뿐 아니라 일정, 취향, 문서, 예약, 콘텐츠 탐색, 가정 내 서비스 실행을 지원한다. Alexa+는 Echo, Ring, Fire TV 등 Amazon 디바이스 생태계를 연결하며 실제 행동을 수행하는 방향으로 진화하고 있다.",
       "metrics": [
         {
-          "value": "35%",
-          "label": "전체 매출 기여",
-          "trend": "pos"
-        },
-        {
-          "value": "4.5배",
-          "label": "추천 클릭 구매 확률",
-          "trend": "pos"
-        },
-        {
-          "value": "AI",
-          "label": "실시간 개인화",
-          "trend": "neu"
-        },
-        {
-          "value": "24/7",
-          "label": "자동 최적화",
+          "value": "$19.99/month",
+          "label": "Prime 비회원 기준 Alexa+ 월 구독 가격",
           "trend": "neu"
         }
       ],
       "tags": [
-        "recommendation",
-        "cross-sell",
-        "e-commerce",
-        "personalization"
+        "Alexa+",
+        "AI_assistant",
+        "smart_home",
+        "voice_AI",
+        "agentic_AI"
       ],
-      "source": "Netguru / McKinsey Analysis, 2024",
-      "url": "https://www.netguru.com/blog/machine-learning-sales-cross-sell-upsell-campaigns",
-      "added_date": "2026-05-05",
+      "source": "Amazon News, 2025",
+      "url": "https://www.aboutamazon.com/news/devices/new-alexa-generative-artificial-intelligence",
+      "added_date": "2026-05-10",
       "verified": true
     },
     {
-      "id": "RYN-001",
+      "id": "VRG-001",
+      "category": "1-1",
+      "company": "The Verge",
+      "short": "VRG",
+      "color_bg": "#E6F1FB",
+      "color_text": "#0C447C",
+      "kpi_value": "신뢰성",
+      "kpi_label": "실행 품질",
+      "title": "How AI broke the smart home in 2025",
+      "description": "AI Home의 미래를 과장하지 않고, 고객이 돈을 낼 AI Home은 멋진 대화보다 실패하지 않는 자동화라는 관점을 제공.",
+      "body": "생성형 AI가 스마트홈을 더 자연스럽게 만들 수 있지만, 조명 켜기나 타이머 설정처럼 반복적이고 정확해야 하는 기능에서는 불안정성을 만들 수 있다는 비판이다. 홈 자동화에서는 자연어 이해와 실행 신뢰성 사이의 균형이 중요하다.",
+      "metrics": [
+        {
+          "value": "N/A",
+          "label": "정량 KPI보다 실행 신뢰성 리스크를 다룬 비판 기사",
+          "trend": "neg"
+        }
+      ],
+      "tags": [
+        "AI_home",
+        "smart_home",
+        "reliability",
+        "automation",
+        "UX"
+      ],
+      "source": "The Verge, 2025",
+      "url": "https://www.theverge.com/tech/845958/ai-smart-home-broken",
+      "added_date": "2026-05-10",
+      "verified": true
+    },
+    {
+      "id": "GVR-001",
+      "category": "1-2",
+      "company": "Grand View Research",
+      "short": "GVR",
+      "color_bg": "#E6F1FB",
+      "color_text": "#0C447C",
+      "kpi_value": "30.8%",
+      "kpi_label": "CAGR",
+      "title": "Ambient Assisted Living & Smart Home Market",
+      "description": "Wellness Home을 고령자 보조, 생활 안전, 건강 모니터링이 결합된 집 안 생활 인프라로 설명할 때 활용 가능.",
+      "body": "Ambient Assisted Living과 Smart Home 시장은 고령화, 에너지 절감, 저탄소 솔루션, 원격 건강관리 수요와 결합해 성장할 것으로 전망된다. 스마트홈은 편의 기능을 넘어 고령자 돌봄, 생활 안전, 원격 건강 모니터링, 설치·수리·개인화 서비스까지 포함하는 영역으로 확장되고 있다.",
+      "metrics": [
+        {
+          "value": "$132.12B",
+          "label": "2024년 글로벌 시장 규모",
+          "trend": "pos"
+        },
+        {
+          "value": "$645.19B",
+          "label": "2030년 글로벌 시장 전망",
+          "trend": "pos"
+        },
+        {
+          "value": "30.8%",
+          "label": "2025~2030년 CAGR",
+          "trend": "pos"
+        },
+        {
+          "value": "북미·아태",
+          "label": "2025~2030년 고성장 주요 지역",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "wellness_home",
+        "ambient_assisted_living",
+        "smart_home",
+        "senior_care",
+        "health_monitoring"
+      ],
+      "source": "Grand View Research, 2024",
+      "url": "https://www.grandviewresearch.com/industry-analysis/ambient-assisted-living-smart-home-market-report",
+      "added_date": "2026-05-10",
+      "verified": true
+    },
+    {
+      "id": "ULH-001",
+      "category": "1-2",
+      "company": "Ultrahuman",
+      "short": "ULH",
+      "color_bg": "#E6F1FB",
+      "color_text": "#0C447C",
+      "kpi_value": "측정→조치",
+      "kpi_label": "가치 전환",
+      "title": "Ultrahuman Home Monitor",
+      "description": "Wellness Home의 핵심은 센서 판매가 아니라 측정, 해석, 자동 조치까지 연결되는 서비스라는 점을 보여줌.",
+      "body": "Ultrahuman Home은 공기질, 온도, 습도, 소음, 빛 등을 측정하고 웨어러블 데이터와 연결해 수면·호흡·건강 맥락을 분석하려는 제품이다. 다만 능동적 제어 기능이 부족하다는 평가도 있어 Wellness Home 시장은 단순 모니터링을 넘어 실제 조정 서비스로 확장되어야 함을 시사한다.",
+      "metrics": [
+        {
+          "value": "N/A",
+          "label": "환경 센서와 웨어러블 데이터 결합 사례",
+          "trend": "neu"
+        }
+      ],
+      "tags": [
+        "wellness_home",
+        "air_quality",
+        "sleep",
+        "wearable",
+        "home_monitoring"
+      ],
+      "source": "The Verge, 2025",
+      "url": "https://www.theverge.com/news/682618/ultrahuman-home-air-quality-light-noise-tracker-price",
+      "added_date": "2026-05-10",
+      "verified": true
+    },
+    {
+      "id": "ECO-001",
       "category": "1-3",
-      "company": "Ryanair",
-      "short": "RYN",
-      "color_bg": "#FAEEDA",
-      "color_text": "#633806",
-      "kpi_value": "+25%",
-      "kpi_label": "업셀 매출",
-      "title": "AI 부가 서비스 업셀링",
-      "description": "AI가 최적 타이밍에 좌석 업그레이드·수하물·보험 오퍼 자동 제안, 매출 25% 증가",
-      "body": "Ryanair는 AI를 활용해 항공권 구매 여정 중 가장 전환율이 높은 순간에 좌석 업그레이드, 수하물, 여행 보험 등 부가 서비스를 제안한다. AI가 고객 데이터를 분석해 개인별 맞춤 오퍼를 생성하고, Black Friday/Cyber Monday 기간에는 42.1%의 업셀 수락률을 기록했다.",
+      "company": "EcoFlow",
+      "short": "ECO",
+      "color_bg": "#E6F1FB",
+      "color_text": "#0C447C",
+      "kpi_value": "AI HEMS",
+      "kpi_label": "제품화",
+      "title": "EcoFlow Oasis — AI Home Energy Management",
+      "description": "Energy Optimization이 이미 제품화 단계에 들어갔으며 고객 가치는 전기요금 절감, 정전 대응, 사용 편의성에 있다는 점을 보여줌.",
+      "body": "EcoFlow Oasis는 AI 기반 Home Energy Management System이다. 배터리, 태양광, 전력 사용량을 실시간 모니터링하고 과거 사용량과 날씨 데이터를 바탕으로 에너지 운영을 제안한다. AI assistant가 사용자 질문에 답하고 백업 전환, 에너지 최적화 등 실행형 관리 기능을 제공한다.",
       "metrics": [
         {
-          "value": "+25%",
-          "label": "부가 서비스 매출",
-          "trend": "pos"
-        },
-        {
-          "value": "42%",
-          "label": "성수기 업셀 수락률",
-          "trend": "pos"
-        },
-        {
-          "value": "AI",
-          "label": "실시간 오퍼 생성",
-          "trend": "neu"
-        },
-        {
-          "value": "개인화",
-          "label": "고객별 맞춤 제안",
+          "value": "CES 2025",
+          "label": "제품 공개 시점",
           "trend": "neu"
         }
       ],
       "tags": [
-        "upsell",
-        "ancillary",
-        "travel",
-        "dynamic_pricing"
+        "energy_optimization",
+        "HEMS",
+        "AI_energy",
+        "smart_grid",
+        "home_battery"
       ],
-      "source": "SuperAGI Report, 2025",
-      "url": "https://superagi.com/case-study-how-companies-are-using-ai-to-identify-upsell-and-cross-sell-opportunities-in-2025/",
-      "added_date": "2026-05-05",
+      "source": "The Verge, 2025",
+      "url": "https://www.theverge.com/2025/1/5/24335856/ecoflow-oasis-smart-home-energy-management-system",
+      "added_date": "2026-05-10",
       "verified": true
     },
     {
-      "id": "PNG-001",
+      "id": "NAT-001",
       "category": "1-3",
-      "company": "P&G",
-      "short": "P&G",
-      "color_bg": "#E1F5EE",
-      "color_text": "#085041",
-      "kpi_value": "4배",
-      "kpi_label": "리테일 미디어 ROI",
-      "title": "AI 알고리즘 미디어 바잉",
-      "description": "AI 자동 입찰기로 리테일 미디어 수익률 4배, 광고 효율화 연간 $5~7억 여력",
-      "body": "P&G는 AI 기반 리테일 미디어 자동 입찰기(Auto-bidder)를 구축해 15분 간격으로 광고 입찰을 최적화한다. 인하우스 전환으로 에이전시 비용 $6,500만을 절감했으며, 알고리즘 TV 광고 바잉에서 추가 $4,000만 절감을 기대하고 있다.",
-      "metrics": [
-        {
-          "value": "4배",
-          "label": "리테일 미디어 수익률",
-          "trend": "pos"
-        },
-        {
-          "value": "$6,500만",
-          "label": "에이전시 비용 절감",
-          "trend": "pos"
-        },
-        {
-          "value": "1/10",
-          "label": "광고 테스트 비용",
-          "trend": "pos"
-        },
-        {
-          "value": "$5~7억",
-          "label": "연간 효율화 여력",
-          "trend": "pos"
-        }
-      ],
-      "tags": [
-        "media_buying",
-        "retail_media",
-        "FMCG",
-        "programmatic"
-      ],
-      "source": "Marketing Week / Marketing Dive, 2024",
-      "url": "https://www.marketingweek.com/pg-ai-best-possible-value-ad/",
-      "added_date": "2026-05-05",
-      "verified": true
-    },
-    {
-      "id": "BCG-001",
-      "category": "1-3",
-      "company": "BCG",
-      "short": "BCG",
-      "color_bg": "#EEEDFE",
-      "color_text": "#3C3489",
-      "kpi_value": "+6~10%",
-      "kpi_label": "매출 uplift",
-      "title": "AI 개인화 번들 — 소비재 벤치마크",
-      "description": "BCG 분석: AI 개인화 번들 전략 도입 시 소비재 기업 매출 6~10% uplift",
-      "body": "BCG 연구에 따르면 AI 기반 개인화를 실행하는 소비재 기업은 경쟁사 대비 5~10% 빠른 성장을 기록한다. 특히 번들·세트 제안을 AI로 최적화하면 AOV(평균 주문 금액)가 10% 이상 향상된다. 비워킹 마케팅 지출에서 25~50% 절감이 가능하며 ROAS는 50~100% 개선된다.",
-      "metrics": [
-        {
-          "value": "+6~10%",
-          "label": "소비재 매출 uplift",
-          "trend": "pos"
-        },
-        {
-          "value": "+10%",
-          "label": "AOV 향상",
-          "trend": "pos"
-        },
-        {
-          "value": "5~10%",
-          "label": "경쟁사 대비 성장",
-          "trend": "pos"
-        },
-        {
-          "value": "+50~100%",
-          "label": "ROAS 개선",
-          "trend": "pos"
-        }
-      ],
-      "tags": [
-        "bundle",
-        "personalization",
-        "FMCG",
-        "research"
-      ],
-      "source": "BCG GenAI Marketing Report, 2025",
-      "url": "https://www.bcg.com/publications/2025/are-you-generating-value-from-ai-the-widening-gap",
-      "added_date": "2026-05-05",
-      "verified": true
-    },
-    {
-      "id": "IKE-001",
-      "category": "1-3",
-      "company": "이케아",
-      "short": "IKE",
-      "color_bg": "#FAEEDA",
-      "color_text": "#633806",
-      "kpi_value": "+3~5%p",
-      "kpi_label": "마진율",
-      "title": "AI 동적 프라이싱",
-      "description": "재고·경쟁사·수요를 실시간 분석해 가격 자동 최적화, 마진 2~5%p 개선",
-      "body": "이케아는 AI 프라이싱 시스템을 도입해 재고 수준, 경쟁사 가격, 수요 탄력성을 실시간 분석하고 최적 가격을 자동으로 결정한다. 업계 전반적으로 AI 동적 가격 도입 시 마진율이 2~5%p 개선되는 것으로 나타났다.",
-      "metrics": [
-        {
-          "value": "+2~5%p",
-          "label": "마진율 개선",
-          "trend": "pos"
-        },
-        {
-          "value": "실시간",
-          "label": "수요·재고 분석",
-          "trend": "neu"
-        },
-        {
-          "value": "자동화",
-          "label": "경쟁사 가격 추적",
-          "trend": "neu"
-        },
-        {
-          "value": "최적화",
-          "label": "재고 소진율 향상",
-          "trend": "pos"
-        }
-      ],
-      "tags": [
-        "dynamic_pricing",
-        "retail",
-        "margin"
-      ],
-      "source": "ArticleSledge ML Retail Case Studies, 2024",
-      "url": "https://www.articsledge.com/post/machine-learning-retail-case-studies",
-      "added_date": "2026-05-05",
-      "verified": true
-    },
-    {
-      "id": "NFX-001",
-      "category": "1-4",
-      "company": "Netflix",
-      "short": "NFX",
+      "company": "Scientific Reports",
+      "short": "NAT",
       "color_bg": "#E6F1FB",
       "color_text": "#0C447C",
-      "kpi_value": "2.3%",
-      "kpi_label": "이탈률",
-      "title": "AI 개인화 추천으로 최저 이탈률",
-      "description": "AI 추천이 구독 유지의 핵심, 월간 이탈률 2.3%로 경쟁사(4.1%) 대비 압도적",
-      "body": "Netflix의 AI 추천 알고리즘은 시청 이력, 시간대, 중단 패턴까지 분석해 이탈 위험 고객을 사전에 탐지한다. 개인화 추천으로 사용자 참여도를 유지하며 월간 이탈률 2.3%를 달성했다(경쟁사 Hulu 4.1%). AI가 제공하는 개인화 경험이 구독 Lock-in의 핵심 동력이다.",
+      "kpi_value": "AI 최적화",
+      "kpi_label": "에너지 절감",
+      "title": "Adaptive Energy Management in Smart Homes",
+      "description": "Energy Optimization을 절약 팁이 아니라 AI가 가전 사용 시점과 에너지 부하를 자동 조율하는 시장으로 설명 가능.",
+      "body": "스마트홈에서 퍼지 강화학습과 최적화 알고리즘을 활용해 에너지 비용을 줄이는 연구다. AI가 냉난방, 가전, 저장장치, 사용 패턴을 고려해 에너지 소비를 자동 조정할 수 있음을 보여준다.",
       "metrics": [
         {
-          "value": "2.3%",
-          "label": "월간 이탈률",
-          "trend": "neu"
-        },
-        {
-          "value": "4.1%",
-          "label": "경쟁사(Hulu) 이탈률",
-          "trend": "neu"
-        },
-        {
-          "value": "AI",
-          "label": "이탈 위험 사전 탐지",
-          "trend": "neu"
-        },
-        {
-          "value": "개인화",
-          "label": "구독 Lock-in 강화",
-          "trend": "neu"
-        }
-      ],
-      "tags": [
-        "churn",
-        "subscription",
-        "recommendation",
-        "streaming"
-      ],
-      "source": "Prose Media Analysis, 2024",
-      "url": "https://www.prosemedia.com/blog/predicting-customer-churn-before-it-happens-how-ai-driven-insights-help-retain-high-value-clients",
-      "added_date": "2026-05-05",
-      "verified": true
-    },
-    {
-      "id": "TMO-001",
-      "category": "1-4",
-      "company": "T-Mobile",
-      "short": "TMO",
-      "color_bg": "#E1F5EE",
-      "color_text": "#085041",
-      "kpi_value": "-20%",
-      "kpi_label": "이탈 감소",
-      "title": "AI 이탈 예측 CRM",
-      "description": "AI 이탈 예측 모델로 고위험 고객을 선제 파악, 맞춤 오퍼 자동 발송해 이탈 20% 감소",
-      "body": "T-Mobile은 AI 기반 이탈 예측 모델을 CRM에 통합해 고위험 고객을 사전에 식별한다. AI가 통화 패턴, 불만 이력, 결제 행동, 경쟁사 접촉 신호를 분석해 이탈 확률을 산출하고, 선제적으로 맞춤 리텐션 오퍼를 자동 발송한다.",
-      "metrics": [
-        {
-          "value": "-20%",
-          "label": "고객 이탈 감소",
-          "trend": "pos"
-        },
-        {
-          "value": "선제적",
-          "label": "리텐션 오퍼 자동 발송",
-          "trend": "neu"
-        },
-        {
-          "value": "AI",
-          "label": "고위험 고객 식별",
-          "trend": "neu"
-        },
-        {
-          "value": "통합",
-          "label": "CRM AI 연동",
-          "trend": "neu"
-        }
-      ],
-      "tags": [
-        "churn_prediction",
-        "CRM",
-        "telecom",
-        "retention"
-      ],
-      "source": "Prose Media Research, 2024",
-      "url": "https://www.prosemedia.com/blog/predicting-customer-churn-before-it-happens-how-ai-driven-insights-help-retain-high-value-clients",
-      "added_date": "2026-05-05",
-      "verified": true
-    },
-    {
-      "id": "NKE-001",
-      "category": "1-4",
-      "company": "나이키",
-      "short": "NKE",
-      "color_bg": "#FAEEDA",
-      "color_text": "#633806",
-      "kpi_value": "+30%",
-      "kpi_label": "재구매율",
-      "title": "AI CRM 개인화 — D2C 재구매",
-      "description": "앱 사용·구매 이력·소셜 데이터 결합, AI 개인화로 재구매율 최대 30% 향상",
-      "body": "나이키는 앱 사용 데이터, 구매 이력, 소셜 시그널을 결합한 예측형 AI 개인화를 구현했다. AI 챗봇 기반 개인화 콘텐츠는 전통적 배너 광고 대비 CTR 20% 상승을 기록했다. D2C 채널 강화와 AI CRM 결합으로 재구매율이 최대 30% 향상됐으며 고객 LTV가 크게 증가했다.",
-      "metrics": [
-        {
-          "value": "+30%",
-          "label": "재구매율 향상",
-          "trend": "pos"
-        },
-        {
-          "value": "+20%",
-          "label": "AI 챗봇 CTR",
-          "trend": "pos"
-        },
-        {
-          "value": "D2C",
-          "label": "직판 채널 강화",
-          "trend": "neu"
-        },
-        {
-          "value": "AI",
-          "label": "소셜 신호 분석",
-          "trend": "neu"
-        }
-      ],
-      "tags": [
-        "CRM",
-        "D2C",
-        "repurchase",
-        "LTV",
-        "sportswear"
-      ],
-      "source": "DigitalDefynd, 2024",
-      "url": "https://digitaldefynd.com/IQ/ways-nike-use-ai/",
-      "added_date": "2026-05-05",
-      "verified": true
-    },
-    {
-      "id": "ADB-001",
-      "category": "1-4",
-      "company": "Audiobooks.com",
-      "short": "ADB",
-      "color_bg": "#E6F1FB",
-      "color_text": "#0C447C",
-      "kpi_value": "95%+",
-      "kpi_label": "이탈 예측 정확도",
-      "title": "AI 구독 이탈 예측 모델",
-      "description": "Random Forest 기반 AI로 이탈 예측 정확도 98~99%, 월간 이탈률 유의미 감소",
-      "body": "Audiobooks.com은 Provectus와 함께 구독 이탈 예측 AI 모델을 구축했다. Decision Tree, Random Forest, CatBoost 앙상블 모델이 이탈 고객을 사전 탐지하며 95% 이상의 정밀도와 재현율을 달성했다.",
-      "metrics": [
-        {
-          "value": "98~99%",
-          "label": "모델 예측 정확도",
-          "trend": "pos"
-        },
-        {
-          "value": "감소",
-          "label": "월간 이탈률",
-          "trend": "pos"
-        },
-        {
-          "value": "개선",
-          "label": "LTV·CPC 즉각 향상",
-          "trend": "pos"
-        },
-        {
-          "value": "AI",
-          "label": "이탈 패턴 학습",
-          "trend": "neu"
-        }
-      ],
-      "tags": [
-        "churn_prediction",
-        "subscription",
-        "ML_model"
-      ],
-      "source": "Provectus Case Study, 2024",
-      "url": "https://provectus.com/case-studies/user-churn-prediction-with-ai/",
-      "added_date": "2026-05-05",
-      "verified": true
-    },
-    {
-      "id": "BOA-001",
-      "category": "1-5",
-      "company": "뱅크오브아메리카",
-      "short": "BOA",
-      "color_bg": "#E6F1FB",
-      "color_text": "#0C447C",
-      "kpi_value": "30억건",
-      "kpi_label": "AI 인터랙션",
-      "title": "Erica AI — 금융 서비스 신수익",
-      "description": "AI 가상비서 Erica로 5,000만 사용자 확보, 크로스셀 매출 19% 증가",
-      "body": "뱅크오브아메리카의 AI 가상비서 Erica는 10년간 30억 건 이상의 고객 인터랙션을 처리하며 5,000만 사용자를 확보했다. 사용자의 98%가 필요한 정보를 찾아 콜센터 통화량을 대폭 감소시켰다. 디지털 채널을 통한 AI 크로스셀링으로 매출이 19% 증가했다.",
-      "metrics": [
-        {
-          "value": "30억건",
-          "label": "누적 AI 인터랙션",
-          "trend": "pos"
-        },
-        {
-          "value": "5,000만",
-          "label": "사용자 수",
-          "trend": "pos"
-        },
-        {
-          "value": "+19%",
-          "label": "크로스셀 매출",
-          "trend": "pos"
-        },
-        {
-          "value": "98%",
-          "label": "정보 탐색 성공률",
+          "value": "N/A",
+          "label": "AI 기반 스마트홈 에너지 관리 알고리즘 연구",
           "trend": "pos"
         }
       ],
       "tags": [
-        "virtual_assistant",
-        "cross-sell",
-        "fintech",
-        "platform"
+        "energy_optimization",
+        "reinforcement_learning",
+        "smart_home",
+        "energy_management"
       ],
-      "source": "BofA Newsroom, 2025",
-      "url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2025/08/a-decade-of-ai-innovation--bofa-s-virtual-assistant-erica-surpas.html",
-      "added_date": "2026-05-05",
-      "verified": true
-    },
-    {
-      "id": "LMN-001",
-      "category": "1-5",
-      "company": "루멘 테크놀로지스",
-      "short": "LMN",
-      "color_bg": "#EEEDFE",
-      "color_text": "#3C3489",
-      "kpi_value": "$5,000만",
-      "kpi_label": "연간 효율화",
-      "title": "MS Copilot — B2B 영업 신시장",
-      "description": "Copilot 도입으로 연 $5,000만 영업 운영 효율화, 미커버 신규 시장 자동 커버",
-      "body": "루멘 테크놀로지스(통신)는 Microsoft Copilot을 수천 명 영업·CS 인력에 배포했다. 영업 담당자는 주당 평균 4시간을 절약하고, 고객 리서치 시간이 4시간에서 15분으로 단축됐다. 기존에 방치하던 SMB 시장 공략도 가능해졌으며 Copilot 활용률은 93%에 달한다.",
-      "metrics": [
-        {
-          "value": "$5,000만",
-          "label": "연간 효율화 효과",
-          "trend": "pos"
-        },
-        {
-          "value": "93%",
-          "label": "Copilot 활용률",
-          "trend": "pos"
-        },
-        {
-          "value": "4h→15분",
-          "label": "고객 리서치 단축",
-          "trend": "pos"
-        },
-        {
-          "value": "주 4시간",
-          "label": "1인당 절약",
-          "trend": "pos"
-        }
-      ],
-      "tags": [
-        "sales_productivity",
-        "B2B",
-        "telecom",
-        "copilot"
-      ],
-      "source": "Microsoft News Source, 2024",
-      "url": "https://news.microsoft.com/source/features/digital-transformation/the-only-way-how-copilot-is-helping-propel-an-evolution-at-lumen-technologies/",
-      "added_date": "2026-05-05",
-      "verified": true
-    },
-    {
-      "id": "SFO-001",
-      "category": "1-5",
-      "company": "Salesforce",
-      "short": "SFO",
-      "color_bg": "#E1F5EE",
-      "color_text": "#085041",
-      "kpi_value": "+15%",
-      "kpi_label": "파이프라인 확대",
-      "title": "Agentforce — AI 영업 에이전트",
-      "description": "자사 Agentforce 도입으로 마케팅 파이프라인 15%↑, 리드 전환율 80%↑",
-      "body": "Salesforce는 자사 영업에 Agentforce(Einstein SDR Agent)를 도입해 인바운드 마케팅 파이프라인을 15% 확대하고 리드 전환율을 80% 향상시켰다. AI 에이전트가 인바운드 리드를 24시간 자동 응대하고, 영업 담당자는 AI가 준비한 고객 인사이트를 바탕으로 미팅에만 집중한다.",
-      "metrics": [
-        {
-          "value": "+15%",
-          "label": "마케팅 파이프라인",
-          "trend": "pos"
-        },
-        {
-          "value": "+80%",
-          "label": "리드 전환율",
-          "trend": "pos"
-        },
-        {
-          "value": "24/7",
-          "label": "AI 자동 응대",
-          "trend": "neu"
-        },
-        {
-          "value": "자동화",
-          "label": "인바운드 처리",
-          "trend": "neu"
-        }
-      ],
-      "tags": [
-        "sales_agent",
-        "pipeline",
-        "SDR",
-        "automation"
-      ],
-      "source": "Salesforce on Salesforce, 2024",
-      "url": "https://www.salesforce.com/salesforce-on-salesforce-stories/",
-      "added_date": "2026-05-05",
-      "verified": true
-    },
-    {
-      "id": "GE-001",
-      "category": "1-5",
-      "company": "GE (산업)",
-      "short": "GE",
-      "color_bg": "#FAEEDA",
-      "color_text": "#633806",
-      "kpi_value": "+30%",
-      "kpi_label": "서비스 매출 비중",
-      "title": "AI 예측 정비 서비스 SaaS화",
-      "description": "산업용 장비 AI 예측 정비를 구독 SaaS로 전환, 서비스 매출 비중 대폭 확대",
-      "body": "GE는 산업 장비의 AI 예측 정비 서비스를 구독형 SaaS로 전환해 하드웨어 일회성 매출에서 반복 수익 구조로 변화했다. AI가 센서 데이터를 분석해 고장 전에 정비를 예측하는 Predix 플랫폼은 고객의 다운타임을 40~50% 줄이고 정비 비용을 25~30% 절감한다.",
-      "metrics": [
-        {
-          "value": "-40~50%",
-          "label": "설비 다운타임",
-          "trend": "pos"
-        },
-        {
-          "value": "-25~30%",
-          "label": "정비 비용",
-          "trend": "pos"
-        },
-        {
-          "value": "구독형",
-          "label": "SaaS 수익 구조",
-          "trend": "neu"
-        },
-        {
-          "value": "확대",
-          "label": "서비스 매출 비중",
-          "trend": "pos"
-        }
-      ],
-      "tags": [
-        "predictive_maintenance",
-        "SaaS",
-        "industrial",
-        "IoT"
-      ],
-      "source": "McKinsey Industry 4.0, 2024",
-      "url": "https://www.mckinsey.com/capabilities/operations/our-insights/capturing-the-true-value-of-industry-4-0",
-      "added_date": "2026-05-05",
-      "verified": true
-    },
-    {
-      "id": "KLA-001",
-      "category": "2-1",
-      "company": "클라르나",
-      "short": "KLA",
-      "color_bg": "#FAEEDA",
-      "color_text": "#633806",
-      "kpi_value": "-25%",
-      "kpi_label": "에이전시 비용",
-      "title": "GenAI 인하우스 콘텐츠 팩토리",
-      "description": "Midjourney·DALL-E로 인하우스 전환, 에이전시 비용 25%↓, 연 $400만 절감",
-      "body": "클라르나는 Midjourney, DALL-E, Adobe Firefly로 인하우스 AI 콘텐츠 팩토리를 구축했다. 이미지 제작 비용 연간 $600만을 절감하고, AI 카피 어시스턴트가 전체 카피라이팅의 80%를 처리한다. 이미지 개발 주기가 6주에서 7일로 단축됐으며, 마케팅 팀 인력은 200명에서 100명으로 줄었다.",
-      "metrics": [
-        {
-          "value": "-25%",
-          "label": "에이전시 비용",
-          "trend": "pos"
-        },
-        {
-          "value": "$600만",
-          "label": "연간 이미지 비용 절감",
-          "trend": "pos"
-        },
-        {
-          "value": "6주→7일",
-          "label": "이미지 개발 주기",
-          "trend": "pos"
-        },
-        {
-          "value": "200→100명",
-          "label": "마케팅 인력",
-          "trend": "pos"
-        }
-      ],
-      "tags": [
-        "content_AI",
-        "inhouse",
-        "agency",
-        "fintech"
-      ],
-      "source": "Klarna Press Release, 2024",
-      "url": "https://www.klarna.com/international/press/ai-helps-klarna-cut-marketing-agency-spend-by-25-and-run-more-campaigns/",
-      "added_date": "2026-05-05",
-      "verified": true
-    },
-    {
-      "id": "UNI-002",
-      "category": "2-1",
-      "company": "유니레버",
-      "short": "UNI",
-      "color_bg": "#E1F5EE",
-      "color_text": "#085041",
-      "kpi_value": "-50%",
-      "kpi_label": "제작비",
-      "title": "NVIDIA Omniverse 디지털 트윈",
-      "description": "3D 디지털 트윈으로 제품 이미지 자동 생성, 제작비 50%↓ 속도 2배",
-      "body": "유니레버는 NVIDIA Omniverse 기반 디지털 트윈으로 4,000개 3D 마스터 제품을 구축했다. AI가 제품 이미지를 자동 생성해 이커머스·디지털 미디어 콘텐츠를 즉시 공급한다. TRESemmé 태국 캠페인에서 87% 비용 절감과 구매 의향 5%p 상승을 동시에 달성했다.",
-      "metrics": [
-        {
-          "value": "-50%",
-          "label": "콘텐츠 제작비",
-          "trend": "pos"
-        },
-        {
-          "value": "×2",
-          "label": "제작 속도",
-          "trend": "pos"
-        },
-        {
-          "value": "-87%",
-          "label": "태국 캠페인 비용",
-          "trend": "pos"
-        },
-        {
-          "value": "€800만",
-          "label": "연간 절감 목표",
-          "trend": "pos"
-        }
-      ],
-      "tags": [
-        "digital_twin",
-        "content_production",
-        "3D",
-        "FMCG"
-      ],
-      "source": "NVIDIA GTC / Technology Magazine, 2025",
-      "url": "https://technologymagazine.com/articles/how-unilever-is-reinventing-product-marketing-with-ai",
-      "added_date": "2026-05-05",
-      "verified": true
-    },
-    {
-      "id": "NES-001",
-      "category": "2-1",
-      "company": "네슬레",
-      "short": "NES",
-      "color_bg": "#FAEEDA",
-      "color_text": "#633806",
-      "kpi_value": "6개월→6주",
-      "kpi_label": "아이디어 프로세스",
-      "title": "NesGPT — 마케팅 인사이트 AI",
-      "description": "내부 GPT로 제품 아이디어 프로세스를 6개월에서 6주로 단축, 리서치 대폭 절감",
-      "body": "네슬레는 내부 AI 도구 NesGPT를 통해 제품 아이디어 프로세스를 6개월에서 6주로 단축했다. 브랜드 디지털 트윈 구축으로 Purina, Nescafé, Nespresso 등 주요 브랜드 마케팅 에셋을 AI로 자동 생성한다. 2027년까지 CHF 30억의 비용 절감을 목표로 하는 Fuel for Growth 프로그램의 핵심 도구다.",
-      "metrics": [
-        {
-          "value": "6개월→6주",
-          "label": "아이디어 프로세스",
-          "trend": "pos"
-        },
-        {
-          "value": "CHF 30억",
-          "label": "절감 목표 (2027)",
-          "trend": "pos"
-        },
-        {
-          "value": "자동화",
-          "label": "브랜드 에셋 생성",
-          "trend": "neu"
-        },
-        {
-          "value": "AI",
-          "label": "마케팅 인사이트",
-          "trend": "neu"
-        }
-      ],
-      "tags": [
-        "GenAI",
-        "product_development",
-        "marketing_ops",
-        "FMCG"
-      ],
-      "source": "Nestlé Media, 2024",
-      "url": "https://www.nestle.com/media/news/brands-ai-digital-twins-content-service",
-      "added_date": "2026-05-05",
-      "verified": true
-    },
-    {
-      "id": "PNG-002",
-      "category": "2-1",
-      "company": "P&G",
-      "short": "P&G",
-      "color_bg": "#E6F1FB",
-      "color_text": "#0C447C",
-      "kpi_value": "$6,500만",
-      "kpi_label": "에이전시 절감",
-      "title": "에이전시 통합 + AI 인하우스 전환",
-      "description": "3,000개+ 에이전시를 통합, AI 인하우스 모델 전환으로 $6,500만 절감",
-      "body": "P&G는 수천 개에 달하던 외부 에이전시를 통합하고 인하우스 AI 마케팅 모델로 전환하고 있다. AI 광고 테스트가 기존 대비 비용 1/10, 기간 수주→수일로 단축됐다. 패브릭 케어 부문 인하우스 전환으로 $6,500만을 절감했으며 전체 광고 효율화 여력을 $5~7억으로 추산한다.",
-      "metrics": [
-        {
-          "value": "$6,500만",
-          "label": "패브릭케어 절감",
-          "trend": "pos"
-        },
-        {
-          "value": "1/10",
-          "label": "AI 광고 테스트 비용",
-          "trend": "pos"
-        },
-        {
-          "value": "$5~7억",
-          "label": "연간 효율화 여력",
-          "trend": "pos"
-        },
-        {
-          "value": "축소",
-          "label": "외부 에이전시 의존도",
-          "trend": "pos"
-        }
-      ],
-      "tags": [
-        "inhouse",
-        "agency",
-        "marketing_ops",
-        "FMCG"
-      ],
-      "source": "Marketing Week, 2024",
-      "url": "https://www.marketingweek.com/pg-ai-best-possible-value-ad/",
-      "added_date": "2026-05-05",
-      "verified": true
-    },
-    {
-      "id": "LMN-002",
-      "category": "2-2",
-      "company": "루멘 테크놀로지스",
-      "short": "LMN",
-      "color_bg": "#EEEDFE",
-      "color_text": "#3C3489",
-      "kpi_value": "4h→15분",
-      "kpi_label": "고객 리서치",
-      "title": "MS Copilot — 영업 생산성 혁신",
-      "description": "영업 담당자 고객 리서치 4시간→15분, 연 $5,000만 효율화, 활용률 93%",
-      "body": "루멘 테크놀로지스는 Microsoft Copilot for Sales를 배포해 영업 생산성을 혁신했다. AI가 전날 밤 고객 분석과 제안서 초안을 완성하고, 영업 담당자는 30분 검토 후 미팅에 집중한다. 고객 아웃리치 리서치 시간이 4시간에서 15분으로 단축됐으며 주당 4시간의 시간을 절약한다.",
-      "metrics": [
-        {
-          "value": "4h→15분",
-          "label": "고객 리서치",
-          "trend": "pos"
-        },
-        {
-          "value": "주 4시간",
-          "label": "1인당 절약",
-          "trend": "pos"
-        },
-        {
-          "value": "93%",
-          "label": "Copilot 활용률",
-          "trend": "pos"
-        },
-        {
-          "value": "$5,000만",
-          "label": "연간 효율화",
-          "trend": "pos"
-        }
-      ],
-      "tags": [
-        "sales_productivity",
-        "copilot",
-        "B2B",
-        "telecom"
-      ],
-      "source": "Microsoft News Source, 2024",
-      "url": "https://news.microsoft.com/source/features/digital-transformation/the-only-way-how-copilot-is-helping-propel-an-evolution-at-lumen-technologies/",
-      "added_date": "2026-05-05",
-      "verified": true
-    },
-    {
-      "id": "BAI-001",
-      "category": "2-2",
-      "company": "Bain & Company",
-      "short": "BAI",
-      "color_bg": "#E1F5EE",
-      "color_text": "#085041",
-      "kpi_value": "25%→50%",
-      "kpi_label": "영업 활동 비중",
-      "title": "AI로 영업 활동 시간 2배",
-      "description": "Bain 분석: AI 도입 시 영업 담당자의 실제 판매 활동 비중 25%→50%로 확대 가능",
-      "body": "Bain & Company 2025년 보고서에 따르면 영업 담당자가 실제 판매 활동에 쓰는 시간은 전체의 25%에 불과하다. AI 도입 시 이를 50%로 2배 늘릴 수 있다. AI 조기 도입 기업에서 수주율이 30% 이상 개선됐으며, AI가 영업 통화 비용을 40~60% 줄이고 리드·미팅 수를 50% 늘릴 수 있다.",
-      "metrics": [
-        {
-          "value": "25%→50%",
-          "label": "영업 활동 비중",
-          "trend": "pos"
-        },
-        {
-          "value": "+30%",
-          "label": "수주율 개선",
-          "trend": "pos"
-        },
-        {
-          "value": "-40~60%",
-          "label": "영업 통화 비용",
-          "trend": "pos"
-        },
-        {
-          "value": "+50%",
-          "label": "리드·미팅 수",
-          "trend": "pos"
-        }
-      ],
-      "tags": [
-        "sales_productivity",
-        "research",
-        "B2B"
-      ],
-      "source": "Bain Technology Report, 2025",
-      "url": "https://www.bain.com/insights/ai-transforming-productivity-sales-remains-new-frontier-technology-report-2025/",
-      "added_date": "2026-05-05",
-      "verified": true
-    },
-    {
-      "id": "CRC-001",
-      "category": "2-2",
-      "company": "CRC Industries",
-      "short": "CRC",
-      "color_bg": "#FAEEDA",
-      "color_text": "#633806",
-      "kpi_value": "-90%",
-      "kpi_label": "견적 처리 시간",
-      "title": "Copilot Studio 견적 자동화",
-      "description": "특수화학 B2B 기업, AI 견적 자동화로 처리 시간 90%↓, 비용 89%↓",
-      "body": "B2B 특수화학 기업 CRC Industries는 Microsoft Copilot Studio로 기술 데이터 시트(TDS) 처리와 견적 생성을 자동화했다. AI가 제품 사양, 고객 요구사항, 재고 상황을 분석해 견적서를 자동 생성한다. 처리 시간이 90% 단축되고 비용이 89% 절감됐다.",
-      "metrics": [
-        {
-          "value": "-90%",
-          "label": "견적 처리 시간",
-          "trend": "pos"
-        },
-        {
-          "value": "-89%",
-          "label": "처리 비용",
-          "trend": "pos"
-        },
-        {
-          "value": "자동화",
-          "label": "TDS 처리",
-          "trend": "neu"
-        },
-        {
-          "value": "AI",
-          "label": "견적 자동 생성",
-          "trend": "neu"
-        }
-      ],
-      "tags": [
-        "quote_automation",
-        "B2B",
-        "copilot",
-        "chemical"
-      ],
-      "source": "C5 Insight Case Study, 2025",
-      "url": "https://c5insight.com/3-microsoft-365-copilot-case-studies/",
-      "added_date": "2026-05-05",
-      "verified": true
-    },
-    {
-      "id": "FOR-001",
-      "category": "2-2",
-      "company": "Forrester",
-      "short": "FOR",
-      "color_bg": "#E6F1FB",
-      "color_text": "#0C447C",
-      "kpi_value": "112~457%",
-      "kpi_label": "3년 ROI",
-      "title": "MS 365 Copilot TEI 연구",
-      "description": "Forrester TEI: MS 365 Copilot 도입 시 3년 ROI 112~457%, 딜 클로징 33% 단축",
-      "body": "Forrester Total Economic Impact(TEI) 연구에 따르면 Microsoft 365 Copilot 도입 시 3년 ROI가 112~457%에 달한다. 월간 영업 제안서 완성 수가 10% 증가하고, 딜 클로징 기간이 30일에서 20일로 단축된다.",
-      "metrics": [
-        {
-          "value": "112~457%",
-          "label": "3년 ROI",
-          "trend": "pos"
-        },
-        {
-          "value": "30→20일",
-          "label": "딜 클로징 기간",
-          "trend": "pos"
-        },
-        {
-          "value": "+10%",
-          "label": "월간 제안서 완성 수",
-          "trend": "pos"
-        },
-        {
-          "value": "절감",
-          "label": "관리 업무 시간",
-          "trend": "pos"
-        }
-      ],
-      "tags": [
-        "ROI",
-        "copilot",
-        "research",
-        "sales"
-      ],
-      "source": "Forrester TEI Study, 2024",
-      "url": "https://www.gestisoft.com/en/blog/copilot-roi",
-      "added_date": "2026-05-05",
-      "verified": true
-    },
-    {
-      "id": "KLA-002",
-      "category": "2-3",
-      "company": "클라르나",
-      "short": "KLA",
-      "color_bg": "#FAEEDA",
-      "color_text": "#633806",
-      "kpi_value": "700명",
-      "kpi_label": "FTE 대체 효과",
-      "title": "AI CS 챗봇 — 서비스 자동화",
-      "description": "OpenAI 기반 챗봇 출시 첫 달 230만 건 처리, FTE 700명 상당, $4,000만 이익↑",
-      "body": "클라르나의 OpenAI 기반 AI 어시스턴트는 출시 첫 달 230만 건의 대화를 처리했다. 상담 해결 시간이 11분에서 2분으로 82% 단축됐으며 반복 문의가 25% 감소했다. 고객 만족도는 인간 상담원과 동등 수준을 유지하면서 연간 $4,000만의 이익 개선을 전망했다.",
-      "metrics": [
-        {
-          "value": "700명",
-          "label": "FTE 대체 효과",
-          "trend": "pos"
-        },
-        {
-          "value": "11분→2분",
-          "label": "해결 시간 단축",
-          "trend": "pos"
-        },
-        {
-          "value": "$4,000만",
-          "label": "연간 이익 개선",
-          "trend": "pos"
-        },
-        {
-          "value": "2/3",
-          "label": "문의 자동 처리율",
-          "trend": "pos"
-        }
-      ],
-      "tags": [
-        "chatbot",
-        "CS_automation",
-        "fintech",
-        "LLM"
-      ],
-      "source": "Klarna AI Assistant PR, 2024",
-      "url": "https://www.klarna.com/international/press/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month/",
-      "added_date": "2026-05-05",
-      "verified": true
-    },
-    {
-      "id": "VOD-001",
-      "category": "2-3",
-      "company": "보다폰",
-      "short": "VOD",
-      "color_bg": "#E6F1FB",
-      "color_text": "#0C447C",
-      "kpi_value": "-70%",
-      "kpi_label": "채팅 비용",
-      "title": "TOBi AI — 15개국 CS 자동화",
-      "description": "IBM watsonx 기반 TOBi, 15개국 14개 언어, 채팅 비용 70%↓, 일 100만 건 처리",
-      "body": "보다폰의 TOBi 챗봇은 IBM watsonx를 기반으로 15개 이상 시장, 14개 언어로 운영된다. 이탈리아의 GenAI 업그레이드 버전 SuperTOBi는 950만 고객 대상 90% 정확도, 82% 해결률을 달성했다. NPS는 약 80에 도달하며 기존 AI 대비 만족도가 50% 향상됐다.",
-      "metrics": [
-        {
-          "value": "-70%",
-          "label": "채팅 비용",
-          "trend": "pos"
-        },
-        {
-          "value": "일 100만건",
-          "label": "처리량",
-          "trend": "pos"
-        },
-        {
-          "value": "82%",
-          "label": "자동 해결률",
-          "trend": "pos"
-        },
-        {
-          "value": "NPS 80",
-          "label": "고객 만족도",
-          "trend": "pos"
-        }
-      ],
-      "tags": [
-        "chatbot",
-        "CS_automation",
-        "telecom",
-        "multilingual"
-      ],
-      "source": "IBM Case Study, 2024",
-      "url": "https://www.ibm.com/case-studies/vodafone-tobi",
-      "added_date": "2026-05-05",
-      "verified": true
-    },
-    {
-      "id": "BSC-001",
-      "category": "2-3",
-      "company": "보쉬",
-      "short": "BSC",
-      "color_bg": "#E1F5EE",
-      "color_text": "#085041",
-      "kpi_value": "90+",
-      "kpi_label": "챗봇 유즈케이스",
-      "title": "Cognigy Agent Copilot",
-      "description": "90개+ 유즈케이스 AI 적용, 실시간 감성 분석·지식 추천으로 AHT 30~40% 단축",
-      "body": "보쉬는 Cognigy.AI 기반으로 90개 이상의 CS 유즈케이스에 챗봇을 적용했다. Bosch Power Tools 컨택센터에 Agent Copilot을 도입해 통화 중 실시간 감성 분석, 차선 행동 제안, 자동 요약을 수행한다. 상담원이 복잡한 케어에 집중할 수 있어 AHT(평균 처리 시간)가 30~40% 단축됐다.",
-      "metrics": [
-        {
-          "value": "90+",
-          "label": "AI 유즈케이스",
-          "trend": "pos"
-        },
-        {
-          "value": "-30~40%",
-          "label": "AHT 단축",
-          "trend": "pos"
-        },
-        {
-          "value": "실시간",
-          "label": "감성 분석",
-          "trend": "neu"
-        },
-        {
-          "value": "자동",
-          "label": "통화 요약",
-          "trend": "neu"
-        }
-      ],
-      "tags": [
-        "agent_copilot",
-        "AHT",
-        "CS",
-        "manufacturing"
-      ],
-      "source": "Cognigy AI Agents, 2024",
-      "url": "https://www.cognigy.com/ai-agents/examples-ai-agents",
-      "added_date": "2026-05-05",
-      "verified": true
-    },
-    {
-      "id": "PAN-001",
-      "category": "2-3",
-      "company": "파나소닉 CE",
-      "short": "PAN",
-      "color_bg": "#FAEEDA",
-      "color_text": "#633806",
-      "kpi_value": "80%",
-      "kpi_label": "채팅 자동화",
-      "title": "Freshworks Freddy AI",
-      "description": "소비자 가전 CS에 Freddy AI 도입, 채팅 80% 자동화, 상담원 생산성 대폭 향상",
-      "body": "파나소닉 소비자 가전(CE)은 Freshworks의 Freddy AI를 도입해 채팅 상호작용의 80%를 AI가 처리한다. 상담원 생산성이 크게 개선됐으며, 간단한 문의를 AI가 처리하면서 상담원은 복잡한 케이스에 집중할 수 있게 됐다. 향후 사전 예측형 이슈 감지를 위한 Agentic AI 배포를 계획 중이다.",
-      "metrics": [
-        {
-          "value": "80%",
-          "label": "채팅 자동화율",
-          "trend": "pos"
-        },
-        {
-          "value": "향상",
-          "label": "상담원 생산성",
-          "trend": "pos"
-        },
-        {
-          "value": "계획",
-          "label": "Agentic AI 도입",
-          "trend": "neu"
-        },
-        {
-          "value": "AI",
-          "label": "복잡 케이스 집중",
-          "trend": "neu"
-        }
-      ],
-      "tags": [
-        "chatbot",
-        "CS_automation",
-        "consumer_electronics"
-      ],
-      "source": "Diginomica, 2024",
-      "url": "https://diginomica.com/customer-voice-panasonic-consumer-electronics-and-ringcentral-execs-talk-about-their-ai-journeys",
-      "added_date": "2026-05-05",
-      "verified": true
-    },
-    {
-      "id": "WMT-001",
-      "category": "2-4",
-      "company": "Walmart",
-      "short": "WMT",
-      "color_bg": "#E1F5EE",
-      "color_text": "#085041",
-      "kpi_value": "90%",
-      "kpi_label": "재고 정확도",
-      "title": "AI 수요 예측 & 공급망 최적화",
-      "description": "AI 수요예측으로 재고 정확도 90%, 과잉재고 $49억 감소, 운전 3,000만 마일 절감",
-      "body": "Walmart은 AI·ML 기반 수요 예측을 전사 공급망에 통합했다. 매장·날씨·소셜·이벤트 등 100개+ 데이터를 4시간 주기로 업데이트해 재고를 자동 최적화한다. 2023~2024년 과잉재고를 $49억 감소시키고 AI 물류 최적화로 불필요 운전 3,000만 마일을 절감했다.",
-      "metrics": [
-        {
-          "value": "90%",
-          "label": "재고 예측 정확도",
-          "trend": "pos"
-        },
-        {
-          "value": "$49억",
-          "label": "과잉재고 감소",
-          "trend": "pos"
-        },
-        {
-          "value": "3,000만",
-          "label": "절감 운전 마일",
-          "trend": "pos"
-        },
-        {
-          "value": "100+",
-          "label": "분석 데이터 포인트",
-          "trend": "pos"
-        }
-      ],
-      "tags": [
-        "demand_forecasting",
-        "supply_chain",
-        "retail",
-        "inventory"
-      ],
-      "source": "Supply Chain Dive, 2024",
-      "url": "https://www.supplychaindive.com/news/4-walmart-supply-chain-ai-uses/760891/",
-      "added_date": "2026-05-05",
-      "verified": true
-    },
-    {
-      "id": "ZAR-001",
-      "category": "2-4",
-      "company": "자라 (Inditex)",
-      "short": "ZAR",
-      "color_bg": "#FAEEDA",
-      "color_text": "#633806",
-      "kpi_value": "실시간",
-      "kpi_label": "재고 조정",
-      "title": "AI 실시간 재고·수요 관리",
-      "description": "매장 판매 데이터를 AI가 실시간 분석해 2주 단위 생산 조정, 미판매 재고 최소화",
-      "body": "자라(Inditex)는 매장 판매 데이터를 AI로 실시간 분석해 2주 단위 생산 계획을 자동 조정한다. 소셜 트렌드, 날씨, 지역 이벤트를 반영한 수요 예측으로 미판매 재고를 업계 최저 수준으로 유지한다. AI 기반 모델로 경쟁사 대비 재고 회전율이 2~3배 높다.",
-      "metrics": [
-        {
-          "value": "최소화",
-          "label": "미판매 재고",
-          "trend": "pos"
-        },
-        {
-          "value": "2주",
-          "label": "생산 조정 주기",
-          "trend": "pos"
-        },
-        {
-          "value": "2~3배",
-          "label": "재고 회전율",
-          "trend": "pos"
-        },
-        {
-          "value": "실시간",
-          "label": "수요 트렌드 반영",
-          "trend": "neu"
-        }
-      ],
-      "tags": [
-        "inventory",
-        "demand_forecasting",
-        "fashion",
-        "fast_fashion"
-      ],
-      "source": "World J. Advanced Research, 2024",
-      "url": "https://wjarr.com/sites/default/files/WJARR-2024-2173.pdf",
-      "added_date": "2026-05-05",
+      "source": "Scientific Reports, 2025",
+      "url": "https://www.nature.com/articles/s41598-025-26377-3",
+      "added_date": "2026-05-10",
       "verified": true
     },
     {
       "id": "MCK-001",
-      "category": "2-4",
+      "category": "2-1",
       "company": "McKinsey",
       "short": "MCK",
-      "color_bg": "#E6F1FB",
-      "color_text": "#0C447C",
-      "kpi_value": "-70~80%",
-      "kpi_label": "보고서 작성 시간",
-      "title": "GenAI 의사결정 보조",
-      "description": "McKinsey: GenAI로 보고서 작성 70~80% 단축, 영업·마케팅 생산성 5~15% 향상",
-      "body": "McKinsey 연구에 따르면 GenAI를 활용한 보고서 작성은 기존 대비 70~80% 시간이 단축된다. 영업·마케팅 기능에서만 연간 $0.8~1.2조의 생산성 향상 잠재력이 있다. AI 도입 기업은 마케팅 생산성이 5~15%, 고객 서비스 생산성은 30~45% 개선된다.",
-      "metrics": [
-        {
-          "value": "-70~80%",
-          "label": "보고서 작성 시간",
-          "trend": "pos"
-        },
-        {
-          "value": "5~15%",
-          "label": "마케팅 생산성",
-          "trend": "pos"
-        },
-        {
-          "value": "+30~45%",
-          "label": "CS 생산성",
-          "trend": "pos"
-        },
-        {
-          "value": "$0.8~1.2조",
-          "label": "연간 잠재 가치",
-          "trend": "pos"
-        }
-      ],
-      "tags": [
-        "research",
-        "GenAI",
-        "decision_support",
-        "productivity"
-      ],
-      "source": "McKinsey State of AI, 2024",
-      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
-      "added_date": "2026-05-05",
-      "verified": true
-    },
-    {
-      "id": "SAM-001",
-      "category": "2-4",
-      "company": "삼성전자",
-      "short": "SAM",
-      "color_bg": "#E1F5EE",
-      "color_text": "#085041",
-      "kpi_value": "6시간",
-      "kpi_label": "재고 재배분",
-      "title": "AI SCM — 글로벌 재고 자동 재배분",
-      "description": "S24 사전 주문 28% 초과 시 AI가 74개국 재고를 6시간 내 자동 재배분",
-      "body": "삼성전자의 AI 공급망 시스템은 Galaxy S24 사전 주문이 예측보다 28% 초과했을 때, 부품 주문 조정과 타 시장 재고 재배분을 6시간 내에 완료했다. AI 시스템이 74개국 유통 데이터와 이동통신사 계약 데이터, 경쟁사 출시 일정까지 통합 분석한다.",
-      "metrics": [
-        {
-          "value": "6시간",
-          "label": "재고 재배분 완료",
-          "trend": "pos"
-        },
-        {
-          "value": "74개국",
-          "label": "AI 재고 관리",
-          "trend": "pos"
-        },
-        {
-          "value": "+28%",
-          "label": "S24 초과 수요 대응",
-          "trend": "pos"
-        },
-        {
-          "value": "통합",
-          "label": "이통사·경쟁사 분석",
-          "trend": "neu"
-        }
-      ],
-      "tags": [
-        "SCM",
-        "inventory",
-        "consumer_electronics",
-        "global"
-      ],
-      "source": "ProInsightsPortal, 2024",
-      "url": "https://proinsightsportal.com/ai/ai-powered-inventory-forecasting-how-retailers-cut-overstock-costs-by-60-using-demand-prediction-models/",
-      "added_date": "2026-05-05",
-      "verified": true
-    },
-    {
-      "id": "UNI-003",
-      "category": "2-5",
-      "company": "유니레버",
-      "short": "UNI",
-      "color_bg": "#E1F5EE",
-      "color_text": "#085041",
-      "kpi_value": "조기",
-      "kpi_label": "불만 탐지",
-      "title": "AI 소비자 인사이트 — VOC 조기 탐지",
-      "description": "AI가 수백만 건 소셜·리뷰 데이터 실시간 분석, 제품 불만 패턴 조기 포착",
-      "body": "유니레버의 AI 소비자 인사이트 플랫폼은 소셜미디어, 리뷰 사이트, 고객 피드백을 실시간으로 분석해 제품 불만 패턴을 조기에 탐지한다. 이를 통해 잠재적 클레임을 사전에 차단하고 제품 개선 사이클을 단축한다.",
-      "metrics": [
-        {
-          "value": "조기",
-          "label": "불만 패턴 탐지",
-          "trend": "pos"
-        },
-        {
-          "value": "€3,000만",
-          "label": "리서치 비용 절감",
-          "trend": "pos"
-        },
-        {
-          "value": "실시간",
-          "label": "소셜·리뷰 분석",
-          "trend": "neu"
-        },
-        {
-          "value": "단축",
-          "label": "제품 개선 사이클",
-          "trend": "pos"
-        }
-      ],
-      "tags": [
-        "VOC",
-        "social_listening",
-        "risk",
-        "FMCG"
-      ],
-      "source": "Unilever Annual Report, 2024",
-      "url": "https://infotechlead.com/cio/unilever-drives-digital-ai-and-e-commerce-growth-with-2x-faster-marketing-and-e800-mn-cost-savings-94832",
-      "added_date": "2026-05-05",
-      "verified": true
-    },
-    {
-      "id": "ZND-001",
-      "category": "2-5",
-      "company": "Zendesk",
-      "short": "ZND",
       "color_bg": "#FAEEDA",
       "color_text": "#633806",
-      "kpi_value": "자동",
-      "kpi_label": "위험 케이스 탐지",
-      "title": "AI Spotlight — 위험 케이스 자동 감지",
-      "description": "AI가 CS 상호작용에서 위험 신호 자동 감지, 담당자에게 우선 대응 알림",
-      "body": "Zendesk의 AI Spotlight 기능은 고객 상호작용을 분석해 감정 악화, 이탈 위험, 클레임 확대 가능성을 자동으로 탐지한다. 위험 케이스를 우선순위화해 담당자에게 알리고, AI가 최적 대응 방안을 제안한다.",
+      "kpi_value": "$3~5T",
+      "kpi_label": "2030 시장",
+      "title": "The Agentic Commerce Opportunity",
+      "description": "Agentic Commerce가 단순 AI 쇼핑 챗봇이 아니라 검색·광고·브랜드 사이트 중심 커머스의 구조 변화를 의미한다는 핵심 논거.",
+      "body": "McKinsey는 Agentic Commerce를 AI agent가 소비자를 대신해 상품 탐색, 비교, 협상, 구매 실행을 수행하는 새로운 쇼핑 구조로 설명한다. 쇼핑 여정은 플랫폼·서비스·채널 경계를 넘어 의도 기반 흐름으로 전환되며, 기업은 AI agent가 읽고 실행할 수 있는 데이터, API, 결제, 신뢰 인프라를 준비해야 한다.",
       "metrics": [
         {
-          "value": "자동",
-          "label": "위험 케이스 탐지",
+          "value": "$3T~$5T",
+          "label": "2030년 AI agent 매개 글로벌 소비자 커머스 규모 추정",
           "trend": "pos"
         },
         {
-          "value": "AI",
-          "label": "감성 악화 감지",
+          "value": "5.6B",
+          "label": "2025년 전 세계 인터넷 사용자 수 언급",
           "trend": "neu"
         },
         {
-          "value": "선제",
-          "label": "클레임 확대 방지",
+          "value": "Agent-first",
+          "label": "McKinsey 제시 차세대 커머스 전략 방향",
           "trend": "pos"
         },
         {
-          "value": "우선",
-          "label": "대응 큐 자동 정렬",
+          "value": "2025~2030",
+          "label": "Agentic Commerce 주류화 전환기 예측",
           "trend": "neu"
         }
       ],
       "tags": [
-        "risk_detection",
-        "CS",
-        "sentiment",
-        "SaaS"
+        "agentic_commerce",
+        "AI_agent",
+        "commerce",
+        "zero_click",
+        "machine_mediated_purchase"
       ],
-      "source": "Prose Media / Zendesk Research, 2024",
-      "url": "https://www.prosemedia.com/blog/predicting-customer-churn-before-it-happens-how-ai-driven-insights-help-retain-high-value-clients",
-      "added_date": "2026-05-05",
+      "source": "McKinsey, 2025",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-agentic-commerce-opportunity-how-ai-agents-are-ushering-in-a-new-era-for-consumers-and-merchants",
+      "added_date": "2026-05-10",
       "verified": true
     },
     {
-      "id": "ADB-002",
-      "category": "2-5",
-      "company": "Audiobooks.com",
-      "short": "ADB",
-      "color_bg": "#E6F1FB",
-      "color_text": "#0C447C",
-      "kpi_value": "98~99%",
-      "kpi_label": "탐지 정확도",
-      "title": "AI 구독 리스크 조기 대응",
-      "description": "AI 이탈 모델 정확도 98~99%, 구독 이탈 징조 60% 조기 탐지로 손실 예방",
-      "body": "Audiobooks.com의 AI 이탈 예측 모델은 구독 취소 전 행동 패턴(앱 사용 빈도 감소, 로그인 간격 증가 등)을 포착해 이탈 징조를 조기에 탐지한다. 탐지 정확도 98~99%를 달성하며, AI가 이탈 예측 결과를 설명해 마케팅팀이 맞춤 리텐션 전략을 수립할 수 있도록 지원한다.",
-      "metrics": [
-        {
-          "value": "98~99%",
-          "label": "이탈 예측 정확도",
-          "trend": "pos"
-        },
-        {
-          "value": "60%",
-          "label": "조기 탐지율",
-          "trend": "pos"
-        },
-        {
-          "value": "설명가능",
-          "label": "AI 예측 결과",
-          "trend": "neu"
-        },
-        {
-          "value": "맞춤",
-          "label": "리텐션 전략 수립",
-          "trend": "pos"
-        }
-      ],
-      "tags": [
-        "churn_prediction",
-        "subscription_risk",
-        "ML_model"
-      ],
-      "source": "Provectus Case Study, 2024",
-      "url": "https://provectus.com/case-studies/user-churn-prediction-with-ai/",
-      "added_date": "2026-05-05",
-      "verified": true
-    },
-    {
-      "id": "PNG-003",
-      "category": "2-5",
-      "company": "P&G",
-      "short": "P&G",
-      "color_bg": "#EEEDFE",
-      "color_text": "#3C3489",
-      "kpi_value": "선제",
-      "kpi_label": "브랜드 대응",
-      "title": "AI 브랜드 리스크 모니터링",
-      "description": "AI 소셜 리스닝으로 부정 여론 48~72시간 전 탐지, 브랜드 위기 선제 대응",
-      "body": "P&G는 AI 기반 브랜드 모니터링 시스템으로 소셜미디어의 부정적 캠페인 반응을 선제적으로 파악하고 대응한다. 업계 전반적으로 AI 소셜 리스닝을 통해 브랜드 위기를 48~72시간 전에 탐지할 수 있다.",
-      "metrics": [
-        {
-          "value": "48~72h",
-          "label": "브랜드 위기 조기 탐지",
-          "trend": "pos"
-        },
-        {
-          "value": "선제",
-          "label": "부정 여론 대응",
-          "trend": "pos"
-        },
-        {
-          "value": "AI",
-          "label": "소셜 리스닝",
-          "trend": "neu"
-        },
-        {
-          "value": "수정",
-          "label": "크리에이티브 즉시",
-          "trend": "pos"
-        }
-      ],
-      "tags": [
-        "brand_risk",
-        "social_listening",
-        "crisis",
-        "FMCG"
-      ],
-      "source": "Marketing Week / Brandwatch, 2024",
-      "url": "https://www.marketingweek.com/pg-ai-best-possible-value-ad/",
-      "added_date": "2026-05-05",
-      "verified": true
-    },
-    {
-      "id": "DG-20260506-9c71e4",
-      "category": "1-1",
-      "company": "Dollar General",
-      "short": "DG",
-      "color_bg": "#E6F1FB",
-      "color_text": "#0C447C",
-      "kpi_value": "N/A",
-      "kpi_label": "광고 성과",
-      "title": "온사이트·오프사이트 광고 통합",
-      "description": "Dollar General의 광고 통합 솔루션 사례",
-      "body": "Dollar General은 The Trade Desk와 Kevel의 지원을 받아 온사이트와 오프사이트 광고를 통합하는 새로운 솔루션을 도입했다. 이로 인해 광고주들은 소비자 여정을 보다 완벽하게 파악할 수 있으며, 향후 셀프 서비스 광고 구매 기능도 제공될 예정이다.",
-      "metrics": [
-        {
-          "value": "N/A",
-          "label": "광고 성과",
-          "trend": "neu"
-        },
-        {
-          "value": "N/A",
-          "label": "소비자 행동 분석",
-          "trend": "neu"
-        },
-        {
-          "value": "N/A",
-          "label": "캠페인 보고",
-          "trend": "neu"
-        },
-        {
-          "value": "N/A",
-          "label": "광고 통합",
-          "trend": "neu"
-        }
-      ],
-      "tags": [
-        "광고",
-        "AI",
-        "소비자 행동"
-      ],
-      "source": "Marketing Dive, 2026",
-      "url": "https://www.marketingdive.com/news/dollar-general-bridges-onsite-offsite-retail-media-with-new-solution/819190/",
-      "added_date": "2026-05-06",
-      "verified": false
-    },
-    {
-      "id": "OPA-20260506-aad487",
-      "category": "2-4",
-      "company": "Opal",
-      "short": "OPA",
-      "color_bg": "#FBEAF0",
-      "color_text": "#72243E",
-      "kpi_value": "수백만 달러",
-      "kpi_label": "비용 절감",
-      "title": "캠페인 정렬 비용 절감",
-      "description": "AI를 활용한 캠페인 정렬 효율화",
-      "body": "Opal의 AI 코파일럿 Gem은 캠페인 데이터를 브랜드 전략과 정렬시켜, 마케팅 팀이 결과를 더 빠르게 이해하도록 돕습니다. 이를 통해 팀 간의 불일치를 줄이고, 캠페인 결과 설명에 소요되는 시간을 절감하여 수백만 달러의 비용을 절감할 수 있습니다.",
-      "metrics": [
-        {
-          "value": "수백만 달러",
-          "label": "비용 절감",
-          "trend": "pos"
-        },
-        {
-          "value": "5배",
-          "label": "콘텐츠 생성량 증가",
-          "trend": "pos"
-        },
-        {
-          "value": "100%",
-          "label": "정렬된 캠페인 비율",
-          "trend": "pos"
-        },
-        {
-          "value": "시간 절약",
-          "label": "회의 시간 감소",
-          "trend": "pos"
-        }
-      ],
-      "tags": [
-        "AI",
-        "마케팅",
-        "효율화"
-      ],
-      "source": "Marketing Dive, 2026",
-      "url": "https://www.marketingdive.com/news/inside-opals-attempt-to-reduce-ais-alignment-tax-for-marketers/818388/",
-      "added_date": "2026-05-06",
-      "verified": false
-    },
-    {
-      "id": "OMC-20260506-6d0cab",
-      "category": "1-1",
-      "company": "Omnicom",
-      "short": "OMC",
+      "id": "DEL-001",
+      "category": "2-1",
+      "company": "Deloitte",
+      "short": "DEL",
       "color_bg": "#FAEEDA",
       "color_text": "#633806",
-      "kpi_value": "$5.6B",
-      "kpi_label": "매출",
-      "title": "신규 고객 확보 사례",
-      "description": "IBM, GSK 등 신규 고객을 확보한 사례",
-      "body": "Omnicom은 2026년 1분기 동안 IBM, GSK, John Deere 등 여러 신규 고객을 확보하며 매출이 증가했다. 이는 통합된 클라이언트 리더와 새로운 전략 및 성장 팀의 노력 덕분이다.",
+      "kpi_value": "25%",
+      "kpi_label": "2030 e-commerce",
+      "title": "Agentic Commerce — Redefining Retail Economics",
+      "description": "고객이 브랜드 사이트에 직접 오지 않는 시대를 전제로 제품 데이터 구조화, GEO, AI 플랫폼 대응 전략의 필요성을 설명.",
+      "body": "Deloitte는 Agentic Commerce를 AI assistant가 소비자를 대신해 상품 조사, 비교, 구매, 배송 조율까지 수행하는 구조적 변화로 설명한다. 이는 챗봇이나 추천엔진이 아니라 수요가 생성되고 관리되고 이행되는 방식 자체의 변화다.",
       "metrics": [
         {
-          "value": "$5.6B",
-          "label": "1분기 매출",
+          "value": "25%",
+          "label": "2030년 AI agent가 enable할 것으로 전망되는 글로벌 e-commerce 비중",
           "trend": "pos"
         },
         {
-          "value": "6.7%",
-          "label": "전년 대비 매출 성장률",
+          "value": "55%",
+          "label": "LLM 플랫폼에서 제품 탐색을 시작할 것으로 전망되는 디지털 소비자 비중",
           "trend": "pos"
         },
         {
-          "value": "3.9%",
-          "label": "유기적 매출 성장률",
+          "value": "Agent-ready",
+          "label": "Deloitte 권고 소매업체 핵심 준비 과제",
           "trend": "pos"
         },
         {
-          "value": "$900M",
-          "label": "비용 절감 목표",
-          "trend": "pos"
+          "value": "2025",
+          "label": "보고서 기준 연도",
+          "trend": "neu"
         }
       ],
       "tags": [
-        "신규고객",
-        "매출증가",
-        "AI활용"
+        "agentic_commerce",
+        "retail_transformation",
+        "AI_shopping_agent",
+        "GEO",
+        "AI_ready_data"
       ],
-      "source": "Marketing Dive, 2026",
-      "url": "https://www.marketingdive.com/news/omnicom-credits-q1-wins-to-core-operations-reaffirms-ongoing-cost-cuts/819157/",
-      "added_date": "2026-05-06",
-      "verified": false
+      "source": "Deloitte, 2025",
+      "url": "https://www.deloitte.com/us/en/Industries/consumer/articles/agentic-commerce-ai-shopping-agents-guide.html",
+      "added_date": "2026-05-10",
+      "verified": true
     },
     {
-      "id": "CGY-20260506-b5a316",
-      "category": "2-3",
-      "company": "Cognigy",
-      "short": "CGY",
-      "color_bg": "#FBEAF0",
-      "color_text": "#72243E",
-      "kpi_value": "-70%",
-      "kpi_label": "CS 처리비",
-      "title": "AI로 CS 비용 절감",
-      "description": "Generative AI로 고객 서비스 비용을 절감.",
-      "body": "Generative AI는 고객 서비스 팀이 언어, 감정, 의도를 해석하고 유용한 응답을 생성하는 데 도움을 줍니다. 이를 통해 고객 서비스의 효율성을 높이고, CS 처리비를 70% 절감할 수 있습니다. AI는 반복적인 작업을 자동화하여 인력을 복잡한 문제에 집중시킬 수 있도록 합니다.",
+      "id": "BAI-001",
+      "category": "2-1",
+      "company": "Bain & Company",
+      "short": "BAI",
+      "color_bg": "#FAEEDA",
+      "color_text": "#633806",
+      "kpi_value": "50%",
+      "kpi_label": "완전 자율 구매 신중",
+      "title": "Agentic AI in Retail",
+      "description": "소비자 신뢰와 위임 수준이 단계적으로 확산된다는 현실적 관점을 제시.",
+      "body": "Bain은 생성형 AI가 제품 탐색과 비교에 이미 활용되고 있지만, 소비자 상당수는 완전 자율 구매에 아직 신중하다고 분석한다. AI는 리테일 discovery와 loyalty 구조를 바꾸고 있으며, retailer-owned agent에 대한 신뢰가 상대적으로 높다고 설명한다.",
       "metrics": [
         {
-          "value": "-70%",
-          "label": "CS 처리비 절감",
+          "value": "30~45%",
+          "label": "미국 소비자 중 GenAI를 제품 조사와 비교에 사용하는 비중",
+          "trend": "pos"
+        },
+        {
+          "value": "50%",
+          "label": "end-to-end 자율 구매에 신중한 소비자 비중",
           "trend": "neg"
         },
+        {
+          "value": "3x",
+          "label": "third-party agent보다 retailer on-site agent를 더 신뢰하는 배수",
+          "trend": "pos"
+        },
+        {
+          "value": "<$50",
+          "label": "소비자가 AI 자율 결제를 허용하는 일반적 소액 임계치 (소모재 중심)",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "agentic_AI",
+        "retail",
+        "autonomous_shopping",
+        "consumer_trust",
+        "AI_referral_traffic"
+      ],
+      "source": "Bain & Company, 2025",
+      "url": "https://www.bain.com/insights/agentic-ai-in-retail-how-autonomous-shopping-redefining-customer-journey/",
+      "added_date": "2026-05-10",
+      "verified": true
+    },
+    {
+      "id": "ALI-001",
+      "category": "2-2",
+      "company": "Alibaba",
+      "short": "ALI",
+      "color_bg": "#FAEEDA",
+      "color_text": "#633806",
+      "kpi_value": "4B+",
+      "kpi_label": "상품 카탈로그",
+      "title": "Qwen AI integrated with Taobao",
+      "description": "AI Shopping이 상품 카탈로그, 주문 이력, 물류, CS가 결합된 대화형 쇼핑 운영체계로 진화한다는 사례.",
+      "body": "Alibaba는 Qwen AI를 Taobao에 통합해 사용자가 키워드 검색이 아니라 AI와 대화하며 상품을 탐색·비교·구매할 수 있는 agentic shopping 모델을 추진하고 있다. 대규모 상품 카탈로그와 개인화 추천, 구매 실행, 사후관리 기능이 결합되는 구조다.",
+      "metrics": [
+        {
+          "value": "4B+",
+          "label": "Taobao 상품 카탈로그 규모로 언급된 수치",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI_shopping",
+        "Alibaba",
+        "Qwen",
+        "Taobao",
+        "conversational_commerce"
+      ],
+      "source": "Reuters, 2026",
+      "url": "https://www.reuters.com/world/asia-pacific/alibaba-integrate-qwen-ai-with-taobao-launch-agentic-shopping-source-says-2026-05-10/",
+      "added_date": "2026-05-10",
+      "verified": true
+    },
+    {
+      "id": "ZAL-001",
+      "category": "2-2",
+      "company": "Zalando",
+      "short": "ZAL",
+      "color_bg": "#FAEEDA",
+      "color_text": "#633806",
+      "kpi_value": "AI 효율화",
+      "kpi_label": "성장 지원",
+      "title": "Zalando AI-driven Efficiency Gains",
+      "description": "AI Shopping을 고객 응대용 챗봇으로 좁히지 않고 상품 콘텐츠, 스타일 추천, 파트너 온보딩, 판매 효율화로 확장 가능.",
+      "body": "Zalando는 AI stylist와 AI 생성 이미지를 활용해 고객 추천과 상품 콘텐츠 운영 효율을 높이고 있다. AI는 고객에게 스타일을 추천하는 역할뿐 아니라 상품 등록, 콘텐츠 제작, 파트너 지원 등 리테일 운영 전반의 효율화에도 활용된다.",
+      "metrics": [
+        {
+          "value": "N/A",
+          "label": "AI 스타일리스트와 생성 이미지 기반 운영 효율화 사례",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI_shopping",
+        "fashion_AI",
+        "AI_stylist",
+        "retail_efficiency",
+        "personalization"
+      ],
+      "source": "Reuters, 2026",
+      "url": "https://www.reuters.com/business/zalando-posts-first-quarter-growth-above-last-years-level-2026-05-06/",
+      "added_date": "2026-05-10",
+      "verified": true
+    },
+    {
+      "id": "ACE-001",
+      "category": "2-2",
+      "company": "Ace Hardware",
+      "short": "ACE",
+      "color_bg": "#FAEEDA",
+      "color_text": "#633806",
+      "kpi_value": "직원 AI",
+      "kpi_label": "상담 품질",
+      "title": "Hey ARMA AI Assistant",
+      "description": "AI Shopping이 온라인뿐 아니라 오프라인 직원의 상담 품질을 높이는 Sales AI Assistant로 확장된다는 사례.",
+      "body": "Ace Hardware는 매장 직원용 AI 도구를 도입해 제품 비교, 고객 질문 답변, 프로젝트 상담을 지원하고 있다. 오프라인 매장에서도 AI가 직원의 제품 지식과 상담 품질을 높이는 도구가 될 수 있음을 보여준다.",
+      "metrics": [
+        {
+          "value": "N/A",
+          "label": "매장 직원용 AI 상담 지원 사례",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI_shopping",
+        "sales_assistant",
+        "offline_retail",
+        "employee_copilot"
+      ],
+      "source": "The Sun, 2025",
+      "url": "https://www.the-sun.com/money/16328844/ace-hardware-hey-arma-ai-technology/",
+      "added_date": "2026-05-10",
+      "verified": true
+    },
+    {
+      "id": "ZUO-001",
+      "category": "2-3",
+      "company": "Zuora",
+      "short": "ZUO",
+      "color_bg": "#FAEEDA",
+      "color_text": "#633806",
+      "kpi_value": "68%",
+      "kpi_label": "신규 구독 가입",
+      "title": "2025 Subscription Economy Index",
+      "description": "Subscription AI는 제품 사용, 관리, 소모품, 케어, 업그레이드, 보험성 서비스가 결합된 하이브리드 모델로 설계해야 함.",
+      "body": "Zuora의 2025 Subscription Economy Index는 구독 기업이 단일 구독 모델보다 구독, 사용량 기반 과금, 일회성 구매가 결합된 하이브리드 수익모델에서 더 강한 성과를 보인다고 설명한다. 소비자는 구독 가치를 인정하지만 가격 인상에는 민감하다.",
+      "metrics": [
+        {
+          "value": "600+",
+          "label": "분석 대상 subscription 기업 수",
+          "trend": "neu"
+        },
+        {
+          "value": "3,000+",
+          "label": "소비자 조사 표본 수",
+          "trend": "neu"
+        },
+        {
+          "value": "68%",
+          "label": "2024년 처음으로 새로운 구독 서비스에 가입한 소비자 비중",
+          "trend": "pos"
+        },
+        {
+          "value": "47%",
+          "label": "구독 해지 이유로 가격 인상을 언급한 비중",
+          "trend": "neg"
+        }
+      ],
+      "tags": [
+        "subscription_AI",
+        "subscription_economy",
+        "hybrid_monetization",
+        "recurring_revenue",
+        "retention"
+      ],
+      "source": "Zuora, 2025",
+      "url": "https://www.zuora.com/press-release/zuora-subscription-economy-index-2025/",
+      "added_date": "2026-05-10",
+      "verified": true
+    },
+    {
+      "id": "LGE-001",
+      "category": "2-3",
+      "company": "LG Electronics",
+      "short": "LGE",
+      "color_bg": "#FAEEDA",
+      "color_text": "#633806",
+      "kpi_value": "구독형",
+      "kpi_label": "가전 관리",
+      "title": "LG Subscribe in Singapore",
+      "description": "LG전자 기존 렌탈·구독을 AI 기반 사용 최적화, 예측 유지보수, 소모품 자동 보충, 업그레이드 추천으로 확장할 수 있는 사례.",
+      "body": "LG는 싱가포르에서 LG Subscribe를 출시하며 초기 구매 부담, 제한적 보증, 유지보수 스트레스를 줄이는 가전 구독 서비스를 제시했다. 월정액 기반으로 제품 접근성과 관리 편의성을 높이며, 향후 AI 기반 제품 생애주기 관리와 결합할 수 있는 기반 사례다.",
+      "metrics": [
+        {
+          "value": "N/A",
+          "label": "LG 가전 구독 서비스 출시 사례",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "LG_Subscribe",
+        "appliance_subscription",
+        "rental",
+        "care_service",
+        "subscription_AI"
+      ],
+      "source": "LG Singapore, 2025",
+      "url": "https://www.lg.com/sg/about-lg/press-and-media/reimagining-home-living-at-your-convenience-lg-launches-all-inclusive-appliance-subscription-service//",
+      "added_date": "2026-05-10",
+      "verified": true
+    },
+    {
+      "id": "ZEN-001",
+      "category": "3-1",
+      "company": "Zendesk",
+      "short": "ZEN",
+      "color_bg": "#E1F5EE",
+      "color_text": "#085041",
+      "kpi_value": "52%",
+      "kpi_label": "AI 비서 수용",
+      "title": "Consumer Trust in Personal AI Assistants",
+      "description": "AI Assistant를 만능 비서로 과장하기보다 일정·할 일·반복 업무 위임 중심으로 확산된다는 현실적 근거.",
+      "body": "Zendesk와 YouGov의 글로벌 조사에 따르면 소비자의 절반 이상이 일상 업무에서 개인 AI assistant 사용에 편안함을 느낀다. 다만 금융 의사결정, 긴급 상황 등 고위험 영역에서는 인간 지원을 선호한다. 수용성은 데이터 보안, 투명성, 인간 감독 가능성에 좌우된다.",
+      "metrics": [
+        {
+          "value": "52%",
+          "label": "개인 AI assistant에 일상 업무를 맡기는 데 편안함을 느끼는 응답자 비중",
+          "trend": "pos"
+        },
+        {
+          "value": "64%",
+          "label": "할 일 목록과 일정 관리를 AI에게 맡길 의향",
+          "trend": "pos"
+        },
+        {
+          "value": "67%",
+          "label": "강력한 개인정보 보호가 있을 때만 개인 데이터를 공유하겠다는 응답",
+          "trend": "neu"
+        },
+        {
+          "value": "10,000",
+          "label": "조사 대상 글로벌 응답자 수",
+          "trend": "neu"
+        }
+      ],
+      "tags": [
+        "AI_assistant",
+        "consumer_trust",
+        "personal_AI",
+        "delegation",
+        "privacy"
+      ],
+      "source": "Zendesk / YouGov, 2025",
+      "url": "https://www.zendesk.com/newsroom/press-releases/global-survey-reveals-growing-consumer-trust-in-personal-ai-assistants/",
+      "added_date": "2026-05-10",
+      "verified": true
+    },
+    {
+      "id": "GOO-002",
+      "category": "3-1",
+      "company": "Google",
+      "short": "GOO",
+      "color_bg": "#E1F5EE",
+      "color_text": "#085041",
+      "kpi_value": "24/7",
+      "kpi_label": "생활 에이전트",
+      "title": "Gemini as a 24/7 AI Agent",
+      "description": "AI Assistant의 경쟁력은 모델 성능보다 개인 맥락 데이터, 신뢰, 권한 위임, 생태계 통합이라는 점을 설명.",
+      "body": "Google은 Gemini를 단순 챗봇에서 지속적으로 사용자의 업무·생활을 추적하고 실행하는 AI agent 방향으로 확장하고 있다. Gmail, Photos 등 개인 맥락 데이터를 활용해 메시지, 문서, 쇼핑, 심부름 등을 처리하는 구조가 언급된다.",
+      "metrics": [
         {
           "value": "24/7",
-          "label": "고객 지원 시간",
-          "trend": "pos"
-        },
-        {
-          "value": "multilingual",
-          "label": "다국어 지원",
-          "trend": "neu"
-        },
-        {
-          "value": "real-time",
-          "label": "실시간 지원",
+          "label": "상시형 AI 에이전트 방향성",
           "trend": "pos"
         }
       ],
       "tags": [
-        "Generative AI",
-        "고객 서비스",
-        "비용 절감"
+        "AI_assistant",
+        "Gemini",
+        "personal_context",
+        "life_agent",
+        "automation"
       ],
-      "source": "Cognigy, 2025",
-      "url": "https://www.cognigy.com/blog/generative-ai-customer-service",
-      "added_date": "2026-05-06",
-      "verified": false
+      "source": "TechRadar, 2026",
+      "url": "https://www.techradar.com/ai-platforms-assistants/google-is-turning-gemini-into-a-24-7-ai-agent-that-plans-your-life-for-you",
+      "added_date": "2026-05-10",
+      "verified": true
     },
     {
-      "id": "CGI-20260506-0bd9cc",
-      "category": "2-3",
-      "company": "CGI",
-      "short": "CGI",
-      "color_bg": "#FAEEDA",
-      "color_text": "#633806",
-      "kpi_value": "-70%",
-      "kpi_label": "CS 처리비",
-      "title": "AI로 고객 서비스 혁신",
-      "description": "AI를 활용해 고객 서비스 비용을 절감함.",
-      "body": "CGI는 Cogny와 협력하여 Conversational AI를 도입, 고객 서비스의 효율성을 높이고 CS 처리 비용을 70% 절감하는 성과를 거두었다. 이 AI 시스템은 고객의 요구를 이해하고, 자동으로 대응하여 인건비를 줄이는 데 기여했다.",
+      "id": "GAL-001",
+      "category": "3-2",
+      "company": "Gallup",
+      "short": "GAL",
+      "color_bg": "#E1F5EE",
+      "color_text": "#085041",
+      "kpi_value": "21→40%",
+      "kpi_label": "AI 업무 사용",
+      "title": "AI Use at Work Has Nearly Doubled",
+      "description": "Productivity Life를 재택근무·하이브리드 근무·개인 생산성·가정 내 업무환경 변화와 연결 가능.",
+      "body": "Gallup은 미국 직장인의 AI 사용이 2년 사이 크게 증가했다고 분석한다. 특히 사무직, 전문직, 리더 계층에서 AI 사용이 빠르게 확산되고 있으며, 생산직과 현장직은 상대적으로 낮은 사용률을 보인다. 이는 생산성 향상과 직무·계층별 역량 격차를 동시에 시사한다.",
       "metrics": [
         {
-          "value": "-70%",
-          "label": "CS 처리비 절감",
+          "value": "21%→40%",
+          "label": "미국 근로자 중 연 1회 이상 AI 사용 비중 변화",
           "trend": "pos"
         },
         {
-          "value": "2배",
-          "label": "고객 응답 속도 향상",
+          "value": "11%→19%",
+          "label": "주 몇 회 이상 AI를 사용하는 frequent user 비중 변화",
           "trend": "pos"
         },
         {
-          "value": "30%",
-          "label": "고객 만족도 증가",
+          "value": "4%→8%",
+          "label": "일상적으로 AI를 사용하는 daily user 비중 변화",
           "trend": "pos"
         },
         {
           "value": "50%",
-          "label": "운영 효율성 향상",
+          "label": "기술 업종 frequent AI user 비중",
           "trend": "pos"
         }
       ],
       "tags": [
-        "AI",
-        "고객 서비스",
-        "비용 절감"
+        "productivity_life",
+        "AI_at_work",
+        "knowledge_worker",
+        "hybrid_work",
+        "AI_adoption"
       ],
-      "source": "Cognigy, 2025",
-      "url": "https://www.cognigy.com/blog/shaping-the-future-of-ai-service-how-cgi-and-cognigy-deliver-real-world-results-with-agentic-ai",
-      "added_date": "2026-05-06",
-      "verified": false
+      "source": "Gallup, 2025",
+      "url": "https://www.gallup.com/workplace/691643/work-nearly-doubled-two-years.aspx",
+      "added_date": "2026-05-10",
+      "verified": true
     },
     {
-      "id": "ABK-20260506-6b8d8f",
-      "category": "1-1",
-      "company": "Airbank",
-      "short": "ABK",
-      "color_bg": "#EEEDFE",
-      "color_text": "#3C3489",
-      "kpi_value": "50개",
-      "kpi_label": "서비스 국가 수",
-      "title": "Airbank의 글로벌 확장",
-      "description": "Airbank가 Klarna Kosma와 협력하여 국제 시장으로 확장.",
-      "body": "Airbank는 Klarna Kosma의 오픈 뱅킹 플랫폼을 통해 50개국 이상으로 서비스를 확장하고 있으며, 이를 통해 SME 고객의 금융 관리가 간소화되고 있습니다. Klarna Kosma의 API를 통해 15,000개 은행의 계좌 정보에 쉽게 접근할 수 있어, 다양한 시장에 대한 기술적 장벽을 낮추고 있습니다.",
+      "id": "MSF-001",
+      "category": "3-2",
+      "company": "Microsoft",
+      "short": "MSF",
+      "color_bg": "#E1F5EE",
+      "color_text": "#085041",
+      "kpi_value": "감독자",
+      "kpi_label": "역할 변화",
+      "title": "Work Trend Index — Frontier Firms",
+      "description": "Productivity Life의 핵심이 도구 사용이 아니라 사람의 역할이 실행자에서 판단자·감독자로 이동한다는 점을 설명.",
+      "body": "Microsoft Work Trend Index는 AI가 실행을 담당하고 인간은 감독·판단 역할로 이동하는 흐름을 강조한다. AI를 적극 수용한 조직은 더 큰 성과를 내지만, 조직 구조와 업무 방식이 바뀌지 않으면 효과가 제한된다.",
       "metrics": [
-        {
-          "value": "50개",
-          "label": "서비스 국가 수",
-          "trend": "pos"
-        },
-        {
-          "value": "$20M",
-          "label": "확장 자금 조달",
-          "trend": "pos"
-        },
-        {
-          "value": "15,000",
-          "label": "연결된 은행 수",
-          "trend": "pos"
-        },
-        {
-          "value": "26개",
-          "label": "서비스 제공 국가 수",
-          "trend": "pos"
-        }
-      ],
-      "tags": [
-        "오픈 뱅킹",
-        "글로벌 확장",
-        "SME 금융"
-      ],
-      "source": "Klarna Newsroom, 2022",
-      "url": "https://www.klarna.com/international/press/airbank-chooses-klarna-kosmas-open-banking-platform-for-international-expansion/",
-      "added_date": "2026-05-06",
-      "verified": false
-    },
-    {
-      "id": "AMZ-20260508-ca22d7",
-      "category": "1-1",
-      "company": "Amazon",
-      "short": "AMZ",
-      "color_bg": "#FAEEDA",
-      "color_text": "#633806",
-      "kpi_value": "22%",
-      "kpi_label": "광고 수익 증가",
-      "title": "Amazon과 LinkedIn의 협업",
-      "description": "B2B 광고주를 위한 새로운 광고 솔루션",
-      "body": "Amazon Ads와 LinkedIn의 협업으로 광고주들은 LinkedIn의 데이터로 B2B 고객을 타겟팅할 수 있게 되었다. 이를 통해 광고주들은 스트리밍 TV 환경에서 의사결정자를 효과적으로 도달할 수 있으며, Amazon DSP를 통해 광고 캠페인을 통합적으로 관리할 수 있다. 이 협업은 광고 수익을 22% 증가시키는 성과를 거두었다.",
-      "metrics": [
-        {
-          "value": "22%",
-          "label": "광고 수익 증가",
-          "trend": "pos"
-        },
-        {
-          "value": "1 billion+",
-          "label": "LinkedIn 사용자 수",
-          "trend": "pos"
-        },
-        {
-          "value": "$17.2 billion",
-          "label": "Q1 광고 수익",
-          "trend": "pos"
-        },
-        {
-          "value": "22%",
-          "label": "연간 성장률",
-          "trend": "pos"
-        }
-      ],
-      "tags": [
-        "B2B",
-        "광고",
-        "협업"
-      ],
-      "source": "Marketing Dive, 2026",
-      "url": "https://www.marketingdive.com/news/amazon-linkedin-help-advertisers-reach-professionals-via-ctv-ads/819372/",
-      "added_date": "2026-05-08",
-      "verified": false
-    },
-    {
-      "id": "TDK-20260509-f9d9ab",
-      "category": "1-1",
-      "company": "Trade Desk",
-      "short": "TDK",
-      "color_bg": "#FAEEDA",
-      "color_text": "#633806",
-      "kpi_value": "12%",
-      "kpi_label": "매출 성장률",
-      "title": "AI 챗봇 광고 기회",
-      "description": "AI 챗봇에서 광고 기회를 모색하는 Trade Desk",
-      "body": "Trade Desk는 AI 챗봇에서의 광고 기회를 강조하며, 오픈 웹 광고에 대한 수요가 증가할 것으로 전망하고 있습니다. CEO는 챗봇 광고의 출현을 Netflix의 광고 통합 과정과 비교하며, 데이터 기반의 마케팅 전략을 통해 광고 수익을 극대화할 수 있다고 언급했습니다.",
-      "metrics": [
-        {
-          "value": "12%",
-          "label": "매출 성장률",
-          "trend": "pos"
-        },
-        {
-          "value": "82%",
-          "label": "미국 매출 비중",
-          "trend": "neu"
-        },
-        {
-          "value": "10%",
-          "label": "성장률 감소폭",
-          "trend": "neg"
-        },
         {
           "value": "N/A",
-          "label": "AI 광고 시장 성장",
+          "label": "AI 도입 조직의 업무 방식 변화 분석",
           "trend": "pos"
         }
       ],
       "tags": [
-        "AI",
-        "광고",
-        "마케팅"
+        "productivity_life",
+        "AI_at_work",
+        "frontier_firm",
+        "copilot",
+        "work_transformation"
       ],
-      "source": "Marketing Dive, 2026",
-      "url": "https://www.marketingdive.com/news/where-trade-desk-sees-advertising-opportunity-following-bruising-q1/819692/",
-      "added_date": "2026-05-09",
-      "verified": false
+      "source": "Microsoft Work Trend Index / TechRadar, 2026",
+      "url": "https://www.techradar.com/pro/every-business-leader-knows-the-world-is-changing-but-far-fewer-have-a-clear-picture-of-what-to-do-about-it-microsoft-flags-the-changing-world-of-ai-at-work-and-why-frontier-firms-are-leading-the-way",
+      "added_date": "2026-05-10",
+      "verified": true
     },
     {
-      "id": "P&G-20260509-0df3f8",
-      "category": "2-1",
-      "company": "Procter & Gamble",
-      "short": "P&G",
-      "color_bg": "#E6F1FB",
-      "color_text": "#0C447C",
-      "kpi_value": "$1.5B",
-      "kpi_label": "비용 절감",
-      "title": "P&G 공급망 혁신",
-      "description": "P&G가 공급망 자동화로 비용 절감 목표.",
-      "body": "P&G는 Supply Chain 3.0 이니셔티브를 통해 전 세계적으로 자동화를 도입하여 연간 최대 15억 달러의 비용 절감을 목표로 하고 있습니다. 이 프로젝트는 고객 주문부터 생산 계획, 자재 주문까지의 시스템 통합을 강화하며, 자동화된 창고 기술을 통해 물류 효율성을 높이고 있습니다.",
+      "id": "OEC-001",
+      "category": "3-3",
+      "company": "OECD",
+      "short": "OEC",
+      "color_bg": "#E1F5EE",
+      "color_text": "#085041",
+      "kpi_value": "43p",
+      "kpi_label": "AI 격차 분석",
+      "title": "AI and the Global Productivity Divide",
+      "description": "AI 활용 역량 격차가 새로운 생활 격차와 AI 온보딩·교육·방문 설정·고령층 UX 서비스 시장을 만든다는 근거.",
+      "body": "OECD는 AI가 생산성 성장의 기회가 될 수 있지만, 디지털 인프라, 교육 수준, AI 활용 역량이 낮은 국가와 집단은 혜택을 덜 받을 수 있다고 분석한다. AI 혜택은 도구 접근성만으로 결정되지 않고 활용 역량, 제도, 인프라에 좌우된다.",
       "metrics": [
         {
-          "value": "$1.5B",
-          "label": "비용 절감 목표",
+          "value": "43 pages",
+          "label": "보고서 분량",
+          "trend": "neu"
+        }
+      ],
+      "tags": [
+        "capability_divide",
+        "AI_literacy",
+        "productivity_divide",
+        "digital_skills",
+        "AI_inequality"
+      ],
+      "source": "OECD Artificial Intelligence Papers No. 51, 2025",
+      "url": "https://www.oecd.org/en/publications/ai-and-the-global-productivity-divide_c315ea90-en.html",
+      "added_date": "2026-05-10",
+      "verified": true
+    },
+    {
+      "id": "UNE-001",
+      "category": "3-3",
+      "company": "UNESCO",
+      "short": "UNE",
+      "color_bg": "#E1F5EE",
+      "color_text": "#085041",
+      "kpi_value": "6개국",
+      "kpi_label": "사례 연구",
+      "title": "Bridging the Grey Digital Divide",
+      "description": "베스트샵, 케어매니저, 방문 서비스 조직을 활용한 시니어 AI 온보딩 서비스 필요성을 설명하는 근거.",
+      "body": "UNESCO는 고령층이 디지털 사회에 참여하려면 접근성뿐 아니라 지속적 학습, 사용자 친화적 설계, 지역 기반 지원이 필요하다고 분석한다. 고령층의 디지털 배제는 건강, 자율성, 사회 연결성에 영향을 미친다.",
+      "metrics": [
+        {
+          "value": "6 countries",
+          "label": "사례 연구 대상 국가 수",
+          "trend": "neu"
+        }
+      ],
+      "tags": [
+        "capability_divide",
+        "senior_AI",
+        "digital_inclusion",
+        "AI_onboarding",
+        "older_adults"
+      ],
+      "source": "UNESCO Institute for Lifelong Learning, 2025",
+      "url": "https://www.uil.unesco.org/en/articles/bridging-grey-digital-divide-enhancing-ict-learning-older-adults",
+      "added_date": "2026-05-10",
+      "verified": true
+    },
+    {
+      "id": "KAI-001",
+      "category": "3-3",
+      "company": "KAIST",
+      "short": "KAI",
+      "color_bg": "#E1F5EE",
+      "color_text": "#085041",
+      "kpi_value": "낮은 경험",
+      "kpi_label": "AI 접근성",
+      "title": "AI-Assisted Smartphone Trading and Digital Divide",
+      "description": "고령층은 기술을 거부하는 것이 아니라 인지·접근·사용 지원 부족으로 배제될 수 있다는 관점을 제공.",
+      "body": "한국 고령층은 AI 기반 무인 키오스크·중고폰 거래 서비스에 대한 사용 의향은 있지만, 인지도와 실제 사용 경험은 낮게 나타난다. 이는 설계와 안내가 부족하면 시장에서 배제될 수 있음을 보여준다.",
+      "metrics": [
+        {
+          "value": "N/A",
+          "label": "한국 고령층 AI 서비스 인지도·사용 경험 격차 연구",
+          "trend": "neg"
+        }
+      ],
+      "tags": [
+        "capability_divide",
+        "older_adults",
+        "AI_accessibility",
+        "digital_divide",
+        "Korea"
+      ],
+      "source": "KAIST / Personal and Ubiquitous Computing, 2025",
+      "url": "https://pure.kaist.ac.kr/en/publications/ai-assisted-smartphone-trading-and-the-digital-divide-among-older/",
+      "added_date": "2026-05-10",
+      "verified": true
+    },
+    {
+      "id": "REU-001",
+      "category": "4-1",
+      "company": "Reuters",
+      "short": "REU",
+      "color_bg": "#EEEDFE",
+      "color_text": "#3C3489",
+      "kpi_value": "51%",
+      "kpi_label": "정서 문제 논의 용이",
+      "title": "Young Europeans Turn to AI Chatbots for Emotional Support",
+      "description": "Emotional AI는 실제 수요가 생기고 있지만, 정서적 지지와 의료·상담 대체의 경계를 명확히 해야 한다는 근거.",
+      "body": "유럽 청소년과 청년층 상당수가 개인적·정서적 문제를 AI 챗봇과 논의하고 있다. AI는 접근하기 쉽고 판단하지 않는 조언자 또는 confidant로 인식되지만, 전문가들은 인간 관계와 전문 심리치료를 대체할 수 없으며 과도한 의존과 안전 리스크를 경계해야 한다고 지적한다.",
+      "metrics": [
+        {
+          "value": "3,800",
+          "label": "Ipsos BVA 조사 응답자 수",
+          "trend": "neu"
+        },
+        {
+          "value": "51%",
+          "label": "챗봇과 정신건강·개인 문제를 논의하기 쉽다고 응답한 비중",
           "trend": "pos"
         },
         {
-          "value": "98%",
-          "label": "재고 가용성",
+          "value": "90%",
+          "label": "AI 챗봇 사용 경험이 있는 응답자 비중",
           "trend": "pos"
         },
         {
-          "value": "50%",
-          "label": "창고 밀도 증가",
+          "value": "28%",
+          "label": "generalized anxiety disorder 기준에 해당한 응답자 비중",
+          "trend": "neg"
+        }
+      ],
+      "tags": [
+        "emotional_AI",
+        "AI_chatbot",
+        "mental_health",
+        "youth",
+        "AI_trust"
+      ],
+      "source": "Reuters, 2026",
+      "url": "https://www.reuters.com/technology/young-europeans-turn-ai-chatbots-emotional-support-survey-shows-2026-05-05/",
+      "added_date": "2026-05-10",
+      "verified": true
+    },
+    {
+      "id": "MDP-001",
+      "category": "4-1",
+      "company": "MDPI",
+      "short": "MDP",
+      "color_bg": "#EEEDFE",
+      "color_text": "#3C3489",
+      "kpi_value": "6/9",
+      "kpi_label": "외로움 감소 효과",
+      "title": "AI Applications to Reduce Loneliness Among Older Adults",
+      "description": "Emotional AI를 단순 재미있는 챗봇이 아니라 1인가구, 시니어, 사회적 고립과 연결되는 정서 케어 시장으로 볼 수 있게 함.",
+      "body": "고령층 외로움 완화를 위한 AI 애플리케이션의 효과와 기술을 체계적으로 검토한 연구다. AI 챗봇, 음성 기반 시스템, 소셜 로봇 등이 외로움 완화 가능성을 보였지만 장기 효과, 문화 적합성, 접근성, 윤리적 설계가 중요하다고 결론짓는다.",
+      "metrics": [
+        {
+          "value": "9 studies",
+          "label": "문헌고찰에 포함된 연구 수",
+          "trend": "neu"
+        },
+        {
+          "value": "6 RCTs",
+          "label": "포함 연구 중 randomized controlled trial 수",
+          "trend": "neu"
+        },
+        {
+          "value": "6 studies",
+          "label": "외로움 감소에 유의미한 효과를 보고한 연구 수",
           "trend": "pos"
         },
         {
-          "value": "2-3배",
-          "label": "처리량 증가",
+          "value": "20~34%",
+          "label": "미국·유럽 고령층의 외로움 보고 비중",
+          "trend": "neg"
+        }
+      ],
+      "tags": [
+        "emotional_AI",
+        "loneliness",
+        "older_adults",
+        "social_robot",
+        "mental_health"
+      ],
+      "source": "Healthcare, 2025",
+      "url": "https://www.mdpi.com/2227-9032/13/5/446",
+      "added_date": "2026-05-10",
+      "verified": true
+    },
+    {
+      "id": "SEN-001",
+      "category": "4-2",
+      "company": "Sentai",
+      "short": "SEN",
+      "color_bg": "#EEEDFE",
+      "color_text": "#3C3489",
+      "kpi_value": "£29.50",
+      "kpi_label": "월 구독 가격",
+      "title": "Sentai AI Voice Companion for Seniors",
+      "description": "AI Companion은 디바이스 판매보다 월 구독형 안심·대화·알림 서비스로 수익화될 가능성이 크다는 근거.",
+      "body": "Sentai는 독립 생활을 하는 고령층을 위한 AI voice companion이다. 대화, 리마인드, 안부 확인, 긴급 연락 기능을 제공하면서 감시 장치처럼 느껴지지 않도록 설계되었다. 보호자 앱과 연동되지만 프라이버시를 고려해 필요한 정보만 공유한다.",
+      "metrics": [
+        {
+          "value": "£29.50/month",
+          "label": "Sentai 월 구독 가격",
+          "trend": "neu"
+        },
+        {
+          "value": "£294/year",
+          "label": "Sentai 연간 구독 가격",
+          "trend": "neu"
+        },
+        {
+          "value": "영국",
+          "label": "Sentai 서비스 출시 국가",
+          "trend": "neu"
+        },
+        {
+          "value": "시니어 특화",
+          "label": "타겟 사용자 정의",
           "trend": "pos"
         }
       ],
       "tags": [
-        "공급망",
-        "자동화",
-        "비용절감"
+        "AI_companion",
+        "senior_care",
+        "voice_AI",
+        "subscription",
+        "independent_living"
       ],
-      "source": "Supply Chain Dive, 2026",
-      "url": "https://www.supplychaindive.com/news/pg-shifts-supply-chain-30-other-platforms-into-large-scale-rollout/819256/",
-      "added_date": "2026-05-09",
-      "verified": false
+      "source": "TechRadar, 2026",
+      "url": "https://www.techradar.com/ai-platforms-assistants/i-tested-sentai-the-ai-voice-companion-for-seniors-and-now-i-get-why-its-more-than-just-another-smart-speaker",
+      "added_date": "2026-05-10",
+      "verified": true
+    },
+    {
+      "id": "FAM-001",
+      "category": "4-2",
+      "company": "Familiar Machines",
+      "short": "FAM",
+      "color_bg": "#EEEDFE",
+      "color_text": "#3C3489",
+      "kpi_value": "정서 연결",
+      "kpi_label": "로봇 방향성",
+      "title": "Familiar AI Companion Robot",
+      "description": "Companion 시장의 중요한 방향은 유틸리티 로봇보다 정서적 존재감, 기억, 생활 속 물리적 접점이라는 점.",
+      "body": "Roomba 창업자 Colin Angle이 공개한 Familiar는 집안일을 수행하는 로봇이 아니라 정서적 연결을 목표로 한 AI companion robot이다. 움직임, 표정, 소리, 기억을 통해 반려동물 같은 존재감을 제공하는 방향을 지향한다.",
+      "metrics": [
+        {
+          "value": "N/A",
+          "label": "정서적 연결 중심 AI companion robot 사례",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI_companion",
+        "home_robot",
+        "emotional_AI",
+        "embodied_AI",
+        "Familiar"
+      ],
+      "source": "TechRadar, 2026",
+      "url": "https://www.techradar.com/ai-platforms-assistants/this-is-the-robot-i-wanted-to-build-forever-former-irobot-chief-on-his-extraordinary-familiar-ai-companion",
+      "added_date": "2026-05-10",
+      "verified": true
+    },
+    {
+      "id": "MDP-002",
+      "category": "4-2",
+      "company": "MDPI",
+      "short": "MDP",
+      "color_bg": "#EEEDFE",
+      "color_text": "#3C3489",
+      "kpi_value": "고령층",
+      "kpi_label": "정서 니즈",
+      "title": "Companion Robots Supporting Emotional Needs of Elderly",
+      "description": "Companion을 로봇 완구가 아니라 고령층 정서 케어와 가족 안심 서비스의 접점으로 정의 가능.",
+      "body": "고령층의 사회적 관계 축소와 외로움이 심리적 웰빙에 큰 영향을 주며, AI Companion Robot이 정서적 개입 수단으로 주목받고 있다는 연구다. 기능 수용성, 정서적 니즈, 디자인 방향을 함께 다룬다.",
+      "metrics": [
+        {
+          "value": "N/A",
+          "label": "고령층 정서 니즈와 companion robot 수용성 연구",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI_companion",
+        "companion_robot",
+        "elderly",
+        "emotional_needs",
+        "social_isolation"
+      ],
+      "source": "Information, 2025",
+      "url": "https://www.mdpi.com/2078-2489/16/11/948",
+      "added_date": "2026-05-10",
+      "verified": true
+    },
+    {
+      "id": "MDP-003",
+      "category": "4-3",
+      "company": "MDPI",
+      "short": "MDP",
+      "color_bg": "#EEEDFE",
+      "color_text": "#3C3489",
+      "kpi_value": "310M+",
+      "kpi_label": "60세 이상 인구",
+      "title": "Smart Technologies in Home-Based Elder Care",
+      "description": "Aging Society 시장을 재택 안전, 생활 패턴 감지, 복약·식사·수면 리마인드, 보호자 알림, 방문 케어 연결까지 포함하는 생활 서비스 시장으로 정의.",
+      "body": "이 연구는 재택 노인 돌봄에서 AI, 스마트홈, 센서, 로봇, 원격 모니터링 기술이 어떻게 활용되는지를 정리한다. 시설 중심 돌봄의 한계를 보완하고 고령자가 집에서 더 오래 독립적으로 생활하도록 돕는 것이 핵심이다. 기술 과제뿐 아니라 윤리, 프라이버시, 수용성 문제도 함께 제기한다.",
+      "metrics": [
+        {
+          "value": "310M+",
+          "label": "2024년 중국 60세 이상 인구로 언급된 수치",
+          "trend": "pos"
+        },
+        {
+          "value": "22.0%",
+          "label": "2024년 중국 60세 이상 인구 비중",
+          "trend": "pos"
+        },
+        {
+          "value": "220M+",
+          "label": "2024년 중국 65세 이상 인구로 언급된 수치",
+          "trend": "pos"
+        },
+        {
+          "value": "2050",
+          "label": "초고령사회 전환 완료 글로벌 예측 시점",
+          "trend": "neu"
+        }
+      ],
+      "tags": [
+        "aging_society",
+        "home_based_elder_care",
+        "smart_technologies",
+        "AI_care",
+        "remote_monitoring"
+      ],
+      "source": "Electronics, 2025",
+      "url": "https://www.mdpi.com/2079-9292/14/12/2463",
+      "added_date": "2026-05-10",
+      "verified": true
+    },
+    {
+      "id": "ASA-001",
+      "category": "4-3",
+      "company": "Asia Economy",
+      "short": "ASA",
+      "color_bg": "#EEEDFE",
+      "color_text": "#3C3489",
+      "kpi_value": "초고령",
+      "kpi_label": "AI 돌봄",
+      "title": "AI to Lead Elderly Care in Super-Aged Society",
+      "description": "Aging Society에서 AI 돌봄은 선택이 아니라 돌봄 인력 부족과 수요 증가에 대응하기 위한 구조적 필요라는 논거.",
+      "body": "한국이 초고령사회에 진입하면서 정부가 AI, IoT, 로봇 기반 돌봄 기술 상용화 로드맵을 추진하고 있다는 내용이다. AI는 인간 돌봄을 대체하기보다 반복 모니터링과 안전 확인을 맡고, 사람은 정서 케어에 집중하는 구조로 제시된다.",
+      "metrics": [
+        {
+          "value": "N/A",
+          "label": "한국 초고령사회 AI·IoT·로봇 돌봄 로드맵 보도",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "aging_society",
+        "AI_care",
+        "Korea",
+        "senior_care",
+        "care_workforce"
+      ],
+      "source": "Asia Economy, 2025",
+      "url": "https://cm.asiae.co.kr/en/article/2025101707364381249",
+      "added_date": "2026-05-10",
+      "verified": true
+    },
+    {
+      "id": "DGU-001",
+      "category": "4-3",
+      "company": "Dongguk University",
+      "short": "DGU",
+      "color_bg": "#EEEDFE",
+      "color_text": "#3C3489",
+      "kpi_value": "신뢰",
+      "kpi_label": "인간중심 설계",
+      "title": "Human-Centred Perspectives on AI in Older Adult Care",
+      "description": "시니어 AI 케어에서는 기술 기능보다 보호자·케어매니저·시니어가 모두 신뢰할 수 있는 서비스 설계가 중요하다는 근거.",
+      "body": "한국 초고령사회 맥락에서 AI 기반 가상 인간·AI 기기의 노인 돌봄 수용성을 연구한 자료다. 단순 기능보다 돌봄 제공자와 사용자 관점의 신뢰, 정서적 커뮤니케이션, 인간 중심 설계가 중요하다는 시사점을 제공한다.",
+      "metrics": [
+        {
+          "value": "N/A",
+          "label": "한국 맥락의 AI 노인 돌봄 수용성 연구",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "aging_society",
+        "human_centered_AI",
+        "elder_care",
+        "trust",
+        "Korea"
+      ],
+      "source": "Behavioral Sciences, 2025",
+      "url": "https://www.mdpi.com/2076-328X/15/11/1541",
+      "added_date": "2026-05-10",
+      "verified": true
     }
   ]
 }

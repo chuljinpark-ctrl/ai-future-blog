@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The AX Fieldbook — LGE AX Strategy</title>
-<meta name="description" content="글로벌 기업의 영업·마케팅 AX 사례를 수집하고, 실무 적용 관점으로 해석하는 인사이트 블로그">
+<title>Life After AI — AI 생활 변화 리서치</title>
+<meta name="description" content="AI가 고객의 집, 소비, 개인 생활, 관계를 어떻게 다시 설계하는지 추적하는 리서치 블로그. 5년 뒤 고객 생활 변화와 그 안의 사업 기회를 발굴합니다.">
 <link rel="stylesheet" href="./shared.css">
 <link rel="stylesheet" href="./hero.css">
 <style>
@@ -22,13 +22,13 @@
 .nav__link    { color: rgba(255,255,255,.65); }
 .nav__link:hover { color: #fff; background: rgba(255,255,255,.10); }
 .nav.scrolled {
-  background: color-mix(in srgb, var(--bg) 92%, transparent);
-  border-bottom-color: var(--border);
+  background: color-mix(in srgb, var(--canvas) 92%, transparent);
+  border-bottom-color: var(--hairline);
 }
-.nav.scrolled .nav__logo    { color: var(--text); }
-.nav.scrolled .nav__logo-mark { background: var(--text); border-color: transparent; }
-.nav.scrolled .nav__link    { color: var(--text-2); }
-.nav.scrolled .nav__link:hover { color: var(--text); background: var(--bg-alt); }
+.nav.scrolled .nav__logo    { color: var(--ink); }
+.nav.scrolled .nav__logo-mark { background: var(--ink); border-color: transparent; }
+.nav.scrolled .nav__link    { color: var(--muted); }
+.nav.scrolled .nav__link:hover { color: var(--ink); background: var(--surface-card); }
 
 /* Logo icon color flip */
 .nav__logo-mark svg path { fill: #fff; }
@@ -43,12 +43,12 @@
 }
 #nav-cta:hover { background: rgba(255,255,255,.22); border-color: rgba(255,255,255,.50); }
 .nav.scrolled #nav-cta {
-  background: var(--text);
-  color: var(--text-inv);
-  border-color: var(--text);
+  background: var(--primary);
+  color: var(--on-primary);
+  border-color: var(--primary);
   backdrop-filter: none;
 }
-.nav.scrolled #nav-cta:hover { opacity: .84; }
+.nav.scrolled #nav-cta:hover { background: var(--primary-active); border-color: var(--primary-active); }
 
 /* ── Hero video section ───────────────────────────────────── */
 .hero-video {
@@ -84,8 +84,8 @@
       rgba(5,4,3,.48) 65%,   /* lower-mid: 콘텐츠 영역 */
       rgba(5,4,3,.62) 100%   /* bottom: CTA 가독성 */
     ),
-    /* 브랜드 copper 글로우 */
-    radial-gradient(ellipse at 58% 38%, rgba(201,110,53,.10) 0%, transparent 60%);
+    /* 브랜드 coral 글로우 — DESIGN.md primary */
+    radial-gradient(ellipse at 58% 38%, rgba(204,120,92,.12) 0%, transparent 60%);
 }
 
 /* Content over video */
@@ -125,10 +125,11 @@
 }
 
 .hero-video__title {
-  font-size: clamp(var(--fs-3xl), 7.5vw, 96px);
-  font-weight: var(--fw-bold);
-  line-height: var(--lh-tight);
-  letter-spacing: -.04em;
+  font-family: var(--font-display);
+  font-size: clamp(56px, 8vw, 96px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
   color: #fff;
   margin-bottom: 18px;
 }
@@ -197,53 +198,52 @@
   55%      { transform: translateX(-50%) translateY(7px); }
 }
 
-/* ── Message cards (Section 1) ────────────────────────────── */
+/* ── Message cards (Section 1) — feature-card style ──────── */
 .message-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  margin-top: 36px;
+  margin-top: 40px;
 }
 
 .message-card {
-  background: var(--bg-card);
-  border: 0.5px solid var(--border);
-  border-radius: var(--r-lg);
-  padding: 28px 24px;
-  transition: transform var(--t-base), box-shadow var(--t-base), border-color var(--t-fast);
+  background: var(--surface-card);
+  border: none;
+  border-radius: 12px;
+  padding: 32px 28px;
+  transition: background var(--t-base);
 }
 .message-card:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--border-md);
+  background: var(--surface-cream-strong);
 }
 
 .message-card__num {
-  width: 30px; height: 30px;
-  border-radius: var(--r-sm);
-  background: var(--accent-lt);
-  color: var(--accent);
-  font-size: var(--fs-xs);
-  font-weight: var(--fw-bold);
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: var(--surface-cream-strong);
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .message-card__title {
-  font-size: var(--fs-base);
-  font-weight: var(--fw-semi);
-  line-height: var(--lh-snug);
-  letter-spacing: -.01em;
-  color: var(--text);
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: var(--ink);
   margin-bottom: 12px;
 }
 
 .message-card__body {
-  font-size: var(--fs-sm);
-  color: var(--text-2);
-  line-height: var(--lh-loose);
+  font-size: 13px;
+  color: var(--body);
+  line-height: 1.75;
 }
 
 /* ── Section 2 case cards ─────────────────────────────────── */
@@ -255,45 +255,42 @@
   margin-bottom: 28px;
 }
 
-/* Clearbit logo (replaces SVG when loaded) */
+/* Clearbit logo */
 .cb-logo {
   width: 100%;
   height: 100%;
   object-fit: contain;
   padding: 20px 32px;
-  background: #fff;
+  background: var(--surface-card);
   animation: fadeIn .28s ease both;
 }
-@media (prefers-color-scheme: dark) {
-  .cb-logo { background: #F0EDE5; }
-}
 
-/* Tooltip */
+/* Tooltip — dark surface card style */
 .tt {
   position: fixed;
   z-index: 999;
   max-width: 290px;
-  background: rgba(13,13,11,.93);
+  background: var(--surface-dark);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  color: #EDECEA;
-  font-size: var(--fs-sm);
-  line-height: var(--lh-base);
+  color: var(--on-dark);
+  font-size: 13px;
+  line-height: 1.6;
   padding: 12px 16px;
-  border-radius: var(--r-md);
+  border-radius: 12px;
   pointer-events: none;
   opacity: 0;
   transition: opacity var(--t-fast);
-  box-shadow: var(--shadow-xl);
+  box-shadow: 0 16px 40px rgba(20,20,19,.18);
   border: 0.5px solid rgba(255,255,255,.08);
 }
 .tt.show { opacity: 1; }
 .tt__label {
-  font-size: var(--fs-2xs);
-  font-weight: var(--fw-semi);
-  letter-spacing: .06em;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .08em;
   text-transform: uppercase;
-  color: #D98048;
+  color: var(--accent-teal);
   margin-bottom: 6px;
 }
 
@@ -319,16 +316,15 @@
             <path d="M7 1L13 4.5V9.5L7 13L1 9.5V4.5L7 1Z" fill="currentColor"/>
           </svg>
         </div>
-        The AX Fieldbook
+        Life After AI
       </a>
       <div class="nav__links">
         <a href="./index.html"     class="nav__link active">홈</a>
-        <a href="./dashboard.html" class="nav__link">대시보드</a>
-        <a href="./archive.html"   class="nav__link">아카이브</a>
-        <a href="./admin.html"     class="nav__link">소스 관리</a>
+        <a href="./dashboard.html" class="nav__link">리서치 맵</a>
+        <a href="./archive.html"   class="nav__link">아티클</a>
       </div>
       <div class="nav__actions">
-        <a href="./dashboard.html" class="btn btn-sm" id="nav-cta">대시보드 →</a>
+        <a href="./archive.html" class="btn btn-sm" id="nav-cta">아티클 보기 →</a>
       </div>
     </div>
   </div>
@@ -345,20 +341,20 @@
 
   <div class="hero-video__content">
     <div class="hero-video__eyebrow anim-fade-in">
-      <span></span>LGE AX Strategy
+      <span></span>AI 생활 변화 리서치 블로그
     </div>
-    <h1 class="hero-video__title anim-fade-up">The AX Fieldbook</h1>
+    <h1 class="hero-video__title anim-fade-up">Life After AI</h1>
     <p class="hero-video__subtitle anim-fade-up anim-delay-1">
-      Global Sales &amp; Marketing AX Cases,<br>Curated for Action
+      AI 이후, 고객의 생활 방식은 다시 설계된다
     </p>
     <p class="hero-video__desc anim-fade-up anim-delay-2">
-      글로벌 기업의 영업·마케팅 AX 사례를 수집하고,<br>
-      실무 적용 관점으로 해석하는 인사이트 블로그
+      AI는 스마트홈의 편의 기능을 넘어 구매, 건강, 에너지,<br>
+      가족 돌봄, 정서적 관계까지 확장됩니다.<br>
+      이 블로그는 5년 뒤 고객 생활 변화와 그 안의 사업 기회를 추적합니다.
     </p>
     <div class="hero-video__actions anim-fade-up anim-delay-3">
-      <a href="./dashboard.html" class="btn btn-lg btn-hero-primary">대시보드</a>
-      <a href="./archive.html"   class="btn btn-lg btn-hero-outline">아카이브</a>
-      <a href="./admin.html"     class="btn btn-lg btn-hero-outline">소스 관리</a>
+      <a href="./archive.html"   class="btn btn-lg btn-hero-primary">아티클 보기</a>
+      <a href="./dashboard.html" class="btn btn-lg btn-hero-outline">리서치 맵</a>
     </div>
   </div>
 
@@ -376,29 +372,29 @@
   <div class="container">
 
     <div style="max-width: var(--max-w-text)">
-      <div class="hero__eyebrow scroll-anim" style="margin-bottom:18px">AX 인사이트</div>
-      <h2 class="section__title scroll-anim">AI는 영업과 마케팅을<br>어떻게 바꾸고 있는가</h2>
+      <div class="hero__eyebrow scroll-anim" style="margin-bottom:18px">핵심 관점</div>
+      <h2 class="section__title scroll-anim">AI는 기능이 아니라<br>생활 운영 방식의 변화다</h2>
       <p class="section__sub scroll-anim" style="margin-top:14px">
-        글로벌 선도 기업의 AX 사례를 카드형으로 큐레이션하고, Featured Article을 통해
-        실제 적용 방식과 비즈니스 시사점을 분석합니다.
+        AI가 고객의 생활에서 무엇을 대신 판단하고, 무엇을 자동화하며, 무엇을 위임받게 되는가.
+        생활 공간, 소비 행동, 개인 행동, 인간 관계 — 4개 영역에서 변화를 추적합니다.
       </p>
     </div>
 
     <div class="message-grid">
       <div class="message-card scroll-anim">
         <div class="message-card__num">01</div>
-        <div class="message-card__title">AI가 바꾸는 것은 '업무'가 아니라 '운영 방식'입니다</div>
-        <p class="message-card__body">영업·마케팅 AX는 단순 자동화가 아니라 고객 이해, 캠페인 실행, 영업 의사결정, 콘텐츠 생산, 성과 최적화의 방식을 바꾸고 있습니다.</p>
+        <div class="message-card__title">집은 얼마나 AI가 대신 운영하게 되는가</div>
+        <p class="message-card__body">AI Home, Wellness Home, Energy Optimization — AI가 환경·건강·에너지를 자동으로 조율하는 공간으로 집이 진화하는 방식을 분석합니다.</p>
       </div>
       <div class="message-card scroll-anim">
         <div class="message-card__num">02</div>
-        <div class="message-card__title">글로벌 사례를 실무 언어로 번역합니다</div>
-        <p class="message-card__body">해외 기업의 AI 사례를 기술 중심으로 나열하지 않고, 비즈니스 문제 · 적용 방식 · 성과 · 시사점 중심으로 재구성합니다.</p>
+        <div class="message-card__title">소비자는 AI에게 구매를 얼마나 위임하는가</div>
+        <p class="message-card__body">Agentic Commerce, AI Shopping, Subscription AI — 검색과 비교를 넘어 AI가 구매까지 실행하게 될 때, 소비 행동과 브랜드 접점이 어떻게 바뀌는지 추적합니다.</p>
       </div>
       <div class="message-card scroll-anim">
         <div class="message-card__num">03</div>
-        <div class="message-card__title">우리 조직에 적용 가능한 패턴을 찾습니다</div>
-        <p class="message-card__body">각 사례는 단순 벤치마킹이 아니라, 영업·마케팅 현장에서 재사용 가능한 AX 패턴과 적용 아이디어를 찾는 데 목적이 있습니다.</p>
+        <div class="message-card__title">AI는 사람과 사람 사이의 관계를 어떻게 바꾸는가</div>
+        <p class="message-card__body">Emotional AI, Companion, Aging Society — AI가 돌봄·정서·동반자 역할로 확장될 때, 고령화와 1인 가구 사회에서 어떤 새로운 생활 시장이 열리는지 살펴봅니다.</p>
       </div>
     </div>
 
@@ -413,7 +409,7 @@
 
     <div class="cases-hd">
       <div>
-        <h2 class="section__title scroll-anim">최신 AX 케이스</h2>
+        <h2 class="section__title scroll-anim">최신 리서치 아티클</h2>
         <p class="section__sub scroll-anim" id="cases-sub" style="margin-top:8px">불러오는 중...</p>
       </div>
       <a href="./archive.html" class="section__more">전체 보기</a>
@@ -432,13 +428,12 @@
 <footer class="footer">
   <div class="container">
     <div class="footer__inner">
-      <div class="footer__logo">The AX Fieldbook</div>
+      <div class="footer__logo">Life After AI</div>
       <nav class="footer__links">
-        <a href="./dashboard.html">대시보드</a>
-        <a href="./archive.html">아카이브</a>
-        <a href="./admin.html">소스 관리</a>
+        <a href="./dashboard.html">리서치 맵</a>
+        <a href="./archive.html">아티클</a>
       </nav>
-      <span class="footer__copy">LGE AX Strategy · <span id="footer-count">–</span>개 사례</span>
+      <span class="footer__copy">AI 생활 변화 리서치 · <span id="footer-count">–</span>개 아티클</span>
     </div>
   </div>
 </footer>

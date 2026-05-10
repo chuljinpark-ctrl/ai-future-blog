@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>아카이브 — The AX Fieldbook</title>
+<title>아티클 — Life After AI</title>
 <link rel="stylesheet" href="./shared.css">
 <style>
 body { padding-bottom: 64px; }
@@ -11,48 +11,53 @@ body { padding-bottom: 64px; }
 /* ── Page sub-header ──────────────────────────────────────── */
 .hd {
   padding: 14px 24px;
-  border-bottom: 0.5px solid var(--border);
+  border-bottom: 0.5px solid var(--hairline);
   display: flex; align-items: center; justify-content: space-between; gap: 12px;
-  background: var(--bg);
+  background: var(--canvas);
 }
 .hd-left  { display: flex; align-items: baseline; gap: 10px; min-width: 0; }
-.hd-title { font-size: 17px; font-weight: 600; letter-spacing: -.02em; white-space: nowrap; }
-.hd-sub   { font-size: 13px; color: var(--text3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.hd-title { font-family: var(--font-display); font-size: 20px; font-weight: 400; letter-spacing: -0.02em; white-space: nowrap; color: var(--ink); }
+.hd-sub   { font-size: 13px; color: var(--muted-soft); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 /* ── Filter bar ────────────────────────────────────────────── */
 .filters{
-  padding:10px 24px;border-bottom:0.5px solid var(--border);
+  padding:10px 24px;border-bottom:0.5px solid var(--hairline);
   display:flex;align-items:center;gap:6px;overflow-x:auto;
-  background:var(--bg);position:sticky;top:60px;z-index:19;
+  background:var(--canvas);position:sticky;top:64px;z-index:19;
   scrollbar-width:none
 }
 .filters::-webkit-scrollbar{display:none}
-.f-sep{width:0.5px;height:16px;background:var(--border2);flex-shrink:0;margin:0 2px}
-.f-label{font-size:10px;font-weight:600;color:var(--text3);letter-spacing:.04em;flex-shrink:0}
+.f-sep{width:0.5px;height:16px;background:var(--hairline);flex-shrink:0;margin:0 2px}
+.f-label{font-size:10px;font-weight:600;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;flex-shrink:0}
 .chip{
-  font-size:12px;font-weight:500;padding:5px 12px;border-radius:20px;
+  font-size:12px;font-weight:500;padding:5px 14px;border-radius:9999px;
   cursor:pointer;flex-shrink:0;border:0.5px solid transparent;
   transition:all .12s;user-select:none;white-space:nowrap
 }
 /* all chip */
-.chip-all{background:var(--text);color:var(--bg);border-color:var(--text)}
-.chip-all.off{background:transparent;color:var(--text2);border-color:var(--border2)}
-.chip-all.off:hover{border-color:var(--text2)}
-/* top chips */
-.chip-t{background:var(--green-bg);color:var(--green);border-color:var(--green-b)}
-.chip-t.off{background:transparent;color:var(--text3);border-color:var(--border)}
-.chip-t.off:hover{background:var(--green-bg);color:var(--green);border-color:var(--green-b)}
-/* bot chips */
-.chip-b{background:var(--amber-bg);color:var(--amber);border-color:var(--amber-b)}
-.chip-b.off{background:transparent;color:var(--text3);border-color:var(--border)}
-.chip-b.off:hover{background:var(--amber-bg);color:var(--amber);border-color:var(--amber-b)}
+.chip-all{background:var(--ink);color:var(--canvas);border-color:var(--ink)}
+.chip-all.off{background:transparent;color:var(--muted);border-color:var(--hairline)}
+.chip-all.off:hover{background:var(--surface-card);color:var(--ink);border-color:var(--hairline-soft)}
+/* group chips */
+.chip-g1{background:var(--blue-bg);color:var(--blue);border-color:var(--blue-b)}
+.chip-g1.off{background:transparent;color:var(--text3);border-color:var(--border)}
+.chip-g1.off:hover{background:var(--blue-bg);color:var(--blue);border-color:var(--blue-b)}
+.chip-g2{background:var(--amber-bg);color:var(--amber);border-color:var(--amber-b)}
+.chip-g2.off{background:transparent;color:var(--text3);border-color:var(--border)}
+.chip-g2.off:hover{background:var(--amber-bg);color:var(--amber);border-color:var(--amber-b)}
+.chip-g3{background:var(--green-bg);color:var(--green);border-color:var(--green-b)}
+.chip-g3.off{background:transparent;color:var(--text3);border-color:var(--border)}
+.chip-g3.off:hover{background:var(--green-bg);color:var(--green);border-color:var(--green-b)}
+.chip-g4{background:var(--accent-lt);color:var(--accent);border-color:var(--accent)}
+.chip-g4.off{background:transparent;color:var(--text3);border-color:var(--border)}
+.chip-g4.off:hover{background:var(--accent-lt);color:var(--accent);border-color:var(--accent)}
 
 /* ── Meta row ─────────────────────────────────────────────────────────────── */
 .meta{
   padding:9px 24px;display:flex;align-items:center;gap:6px;
-  font-size:13px;color:var(--text3);border-bottom:0.5px solid var(--border)
+  font-size:13px;color:var(--muted-soft);border-bottom:0.5px solid var(--hairline)
 }
-.meta-n{font-weight:600;color:var(--text2)}
+.meta-n{font-weight:600;color:var(--body)}
 .meta-updated{margin-left:auto;font-size:12px}
 
 /* ── Grid ─────────────────────────────────────────────────────────────────── */
@@ -67,15 +72,15 @@ body { padding-bottom: 64px; }
 .card{
   display:flex;flex-direction:column;
   text-decoration:none;color:inherit;
-  border:0.5px solid var(--border);border-radius:var(--radius);
-  overflow:hidden;background:var(--bg);
+  border:0.5px solid var(--hairline);border-radius:var(--radius);
+  overflow:hidden;background:var(--surface-card);
   transition:transform .14s,box-shadow .14s,border-color .12s;
   position:relative;cursor:pointer
 }
 .card:hover{
-  transform:translateY(-3px);
-  box-shadow:0 10px 28px rgba(0,0,0,.10);
-  border-color:var(--border2)
+  transform:translateY(-2px);
+  box-shadow:0 8px 24px rgba(20,20,19,.09);
+  border-color:var(--hairline-soft)
 }
 /* colored header */
 .card-hd{
@@ -100,15 +105,17 @@ body { padding-bottom: 64px; }
 }
 /* footer */
 .card-ft{
-  padding:8px 16px;border-top:0.5px solid var(--border);
+  padding:8px 16px;border-top:0.5px solid var(--hairline);
   display:flex;align-items:center;justify-content:space-between;gap:6px;
-  background:var(--bg2);flex-shrink:0
+  background:var(--surface-cream-strong);flex-shrink:0
 }
 .ft-left{display:flex;align-items:center;gap:4px;flex-wrap:wrap;min-width:0}
 .cat-badge{font-size:10px;font-weight:700;padding:2px 7px;border-radius:4px;flex-shrink:0}
-.cat-badge.t{background:var(--green-bg);color:var(--green)}
-.cat-badge.b{background:var(--amber-bg);color:var(--amber)}
-.tag-pill{font-size:10px;padding:2px 6px;border-radius:4px;background:var(--bg3);color:var(--text3);white-space:nowrap}
+.cat-badge.g1{background:var(--blue-bg);color:var(--blue)}
+.cat-badge.g2{background:var(--amber-bg);color:var(--amber)}
+.cat-badge.g3{background:var(--green-bg);color:var(--green)}
+.cat-badge.g4{background:var(--accent-lt);color:var(--accent)}
+.tag-pill{font-size:10px;padding:2px 8px;border-radius:9999px;background:var(--surface-cream-strong);color:var(--muted);white-space:nowrap}
 .card-src{font-size:12px;color:var(--text3);white-space:nowrap;flex-shrink:0}
 .card-ext{font-size:11px;font-weight:500;color:var(--blue);flex-shrink:0;white-space:nowrap}
 /* ── Thumbnail ─────────────────────────────────────────────── */
@@ -127,19 +134,19 @@ body { padding-bottom: 64px; }
 /* ── Tooltip ──────────────────────────────────────────────────────────────── */
 .tt{
   position:fixed;z-index:999;width:284px;
-  background:rgba(22,22,20,.93);
+  background:var(--surface-dark);
   backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
-  color:#e8e6df;font-size:12px;line-height:1.7;
-  padding:11px 14px 13px;border-radius:11px;
+  color:var(--on-dark);font-size:12px;line-height:1.7;
+  padding:11px 14px 13px;border-radius:12px;
   pointer-events:none;opacity:0;
   transition:opacity .14s;
-  box-shadow:0 8px 24px rgba(0,0,0,.30);
-  border:0.5px solid rgba(255,255,255,.10)
+  box-shadow:0 12px 32px rgba(20,20,19,.25);
+  border:0.5px solid rgba(255,255,255,.08)
 }
 .tt.show{opacity:1}
 .tt-label{
-  font-size:9px;font-weight:700;letter-spacing:.06em;
-  color:#5DCAA5;margin-bottom:6px;text-transform:uppercase
+  font-size:9px;font-weight:700;letter-spacing:.08em;
+  color:var(--accent-teal);margin-bottom:6px;text-transform:uppercase
 }
 
 /* ── Empty / Loading ──────────────────────────────────────────────────────── */
@@ -166,7 +173,7 @@ body { padding-bottom: 64px; }
 <!-- ── Page sub-header ───────────────────────────────────────────────────── -->
 <header class="hd">
   <div class="hd-left">
-    <span class="hd-title">AI 케이스 피드</span>
+    <span class="hd-title">AI 생활 변화 아티클</span>
     <span class="hd-sub" id="hd-sub">로딩 중...</span>
   </div>
 </header>
@@ -179,7 +186,7 @@ body { padding-bottom: 64px; }
 <!-- ── Meta row ──────────────────────────────────────────────────────────── -->
 <div class="meta">
   <span class="meta-n" id="meta-n">–</span>
-  <span>개 사례 표시 중</span>
+  <span>개 아티클 표시 중</span>
   <span class="meta-updated" id="meta-updated"></span>
 </div>
 
@@ -190,7 +197,7 @@ body { padding-bottom: 64px; }
 
 <!-- ── Tooltip ────────────────────────────────────────────────────────────── -->
 <div class="tt" id="tt">
-  <div class="tt-label">LLM 요약</div>
+  <div class="tt-label">아티클 요약</div>
   <div id="tt-text"></div>
 </div>
 
@@ -221,32 +228,38 @@ async function load() {
     buildFilters();
     render('all');
     document.getElementById('hd-sub').textContent =
-      `LGE AX 전략 · ${DB.meta.total_cases}개 사례`;
+      `Life After AI · ${DB.meta.total_cases}개 아티클`;
     document.getElementById('meta-updated').textContent =
       '최종 갱신 ' + new Date(DB.meta.last_updated).toLocaleDateString('ko-KR');
   } catch(e) {
     document.getElementById('grid').innerHTML =
-      '<div class="empty">데이터 로드 실패. cases.json을 확인하세요.</div>';
+      '<div class="empty">데이터 로드 실패. articles.json을 확인하세요.</div>';
   }
 }
 
 // ── Build filter chips ────────────────────────────────────────────────────────
+const GROUPS = {
+  '1': { label: '생활 공간 변화', cls: 'g1' },
+  '2': { label: '소비 행동 변화', cls: 'g2' },
+  '3': { label: '개인 행동 변화', cls: 'g3' },
+  '4': { label: '인간 관계 변화', cls: 'g4' },
+};
+
 function buildFilters() {
   const cats = DB.categories;
-  const tops = Object.entries(cats).filter(([,v]) => v.type === 'top');
-  const bots = Object.entries(cats).filter(([,v]) => v.type === 'bot');
 
   let h = `<span class="chip chip-all" id="chip-all" onclick="selFilter('all')">전체 ${DB.cases.length}</span>`;
-  h += '<div class="f-sep"></div><span class="f-label">TOP-LINE</span>';
-  tops.forEach(([id, cat]) => {
-    const n = DB.cases.filter(c => c.category === id).length;
-    h += `<span class="chip chip-t off" id="chip-${id}" onclick="selFilter('${id}')">${id} · ${cat.name} <strong>${n}</strong></span>`;
+
+  Object.entries(GROUPS).forEach(([prefix, g]) => {
+    const groupCats = Object.entries(cats).filter(([id]) => id.startsWith(prefix + '-'));
+    if (!groupCats.length) return;
+    h += `<div class="f-sep"></div><span class="f-label">${g.label}</span>`;
+    groupCats.forEach(([id, cat]) => {
+      const n = DB.cases.filter(c => c.category === id).length;
+      h += `<span class="chip chip-${g.cls} off" id="chip-${id}" onclick="selFilter('${id}')">${id} · ${cat.name} <strong>${n}</strong></span>`;
+    });
   });
-  h += '<div class="f-sep"></div><span class="f-label">BOTTOM-LINE</span>';
-  bots.forEach(([id, cat]) => {
-    const n = DB.cases.filter(c => c.category === id).length;
-    h += `<span class="chip chip-b off" id="chip-${id}" onclick="selFilter('${id}')">${id} · ${cat.name} <strong>${n}</strong></span>`;
-  });
+
   document.getElementById('filters').innerHTML = h;
 }
 
@@ -270,7 +283,7 @@ function render(catId) {
 
   const grid = document.getElementById('grid');
   if (!list.length) {
-    grid.innerHTML = '<div class="empty">해당 카테고리에 사례가 없습니다.</div>';
+    grid.innerHTML = '<div class="empty">해당 카테고리에 아티클이 없습니다.</div>';
     return;
   }
   grid.innerHTML = '';
@@ -345,8 +358,7 @@ function buildThumb(c) {
 // ── Make card ──────────────────────────────────────────────────────────────────
 function makeCard(c) {
   const cat    = DB.categories[c.category] || {};
-  const isTop  = cat.type === 'top';
-  const tt_cls = isTop ? 't' : 'b';
+  const g = 'g' + (c.category.split('-')[0] || '1');
   const dateStr = c.added_date
     ? new Date(c.added_date).toLocaleDateString('ko-KR', {month:'short', day:'numeric'})
     : '';
@@ -374,7 +386,7 @@ function makeCard(c) {
   ft.className = 'card-ft';
   ft.innerHTML = `
     <div class="ft-left">
-      <span class="cat-badge ${tt_cls}">${c.category}</span>
+      <span class="cat-badge ${g}">${c.category}</span>
       ${tags}
     </div>
     <span class="card-src">${srcShort} · ${dateStr}</span>`;
