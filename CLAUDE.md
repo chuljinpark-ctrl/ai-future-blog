@@ -13,10 +13,10 @@ lge-benchmark/
 ├── requirements.txt                    ← openai, requests, bs4, lxml
 │
 ├── dashboard/
-│   └── index.html                      ← 대시보드 소스 (Actions가 docs/로 배포)
+│   └── dashboard.html         ← 대시보드 소스 (Actions가 docs/로 배포)
 │
 ├── docs/                               ← GitHub Pages 서빙 루트 (Actions가 생성·유지)
-│   ├── index.html                      ← dashboard/index.html 복사본
+│   ├── dashboard.html        ← dashboard/dashboard.html 복사본
 │   └── data/
 │       └── cases.json                  ← DB 사본 (Actions가 동기화)
 │
@@ -168,7 +168,7 @@ python scraper/run_source_update.py --no-auto-approve --max-gaps 3
 # dashboard/ 소스를 직접 서빙 (data/cases.json 경로 주의: 브라우저에서 ./data/cases.json 요청)
 mkdir -p /tmp/lge-preview/data
 cp data/cases.json /tmp/lge-preview/data/
-cp dashboard/index.html /tmp/lge-preview/index.html
+cp dashboard/dashboard.html /tmp/lge-preview/index.html
 cd /tmp/lge-preview && python -m http.server 8080
 # → http://localhost:8080
 
