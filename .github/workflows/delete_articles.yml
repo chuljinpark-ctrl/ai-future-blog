@@ -1,0 +1,46 @@
+name: Delete Articles by ID
+
+on:
+  workflow_dispatch:
+    inputs:
+      ids:
+        description: 'Comma-separated article IDs to delete (e.g. GOO-001,AMA-001)'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  delete:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Delete articles
+        run: |
+          cd scraper
+          python delete_articles.py --ids "${{ github.event.inputs.ids }}"
+
+      - name: Sync to docs/data
+        run: cp data/cases.json docs/data/cases.json
+
+      - name: Commit
+        run: |
+          git config user.name  "Life After AI Bot"
+          git config user.email "bot@life-after-ai.internal"
+          git add data/cases.json docs/data/cases.json
+          if git diff --cached --quiet; then
+            echo "삭제할 아티클이 없습니다."
+          else
+            COUNT=$(python3 -c "import json; print(json.load(open('data/cases.json'))['meta']['total_cases'])")
+            git commit -m "chore(articles): delete [${{ github.event.inputs.ids }}] — 잔여 ${COUNT}개 [manual]"
+            git push
+          fi
