@@ -2,8 +2,8 @@
   "meta": {
     "version": "1.2",
     "description": "Life After AI — AI-driven Living, Commerce, Care & Relationship Research Sources",
-    "last_updated": "2026-05-10",
-    "total_sources": 30,
+    "last_updated": "2026-05-11",
+    "total_sources": 21,
     "review_basis": "Rebuilt from uploaded LGE AX Benchmark sources to match Life After AI article categories and case DB. Sources are intended for article discovery/search and periodic monitoring."
   },
   "sources": [
@@ -142,10 +142,11 @@
         "4-1"
       ],
       "priority": "high",
-      "active": true,
+      "active": false,
       "scrape_method": "html_search",
       "action": "added",
-      "reason": "Reliable for dated news on Alibaba, AI commerce, youth AI use and global AI platform moves."
+      "reason": "Reliable for dated news on Alibaba, AI commerce, youth AI use and global AI platform moves.",
+      "inactive_reason": "401 Forbidden — bot 차단"
     },
     {
       "id": "reuters-business-retail",
@@ -165,10 +166,11 @@
         "2-3"
       ],
       "priority": "high",
-      "active": true,
+      "active": false,
       "scrape_method": "html_search",
       "action": "added",
-      "reason": "Useful for retailer AI adoption, Zalando, Alibaba, commerce and subscription-market news."
+      "reason": "Useful for retailer AI adoption, Zalando, Alibaba, commerce and subscription-market news.",
+      "inactive_reason": "401 Forbidden — bot 차단"
     },
     {
       "id": "mckinsey-quantumblack-ai",
@@ -188,10 +190,11 @@
         "3-2"
       ],
       "priority": "high",
-      "active": true,
+      "active": false,
       "scrape_method": "html_search",
       "action": "added",
-      "reason": "Core source for agentic commerce, automation curve and enterprise AI strategy framing."
+      "reason": "Core source for agentic commerce, automation curve and enterprise AI strategy framing.",
+      "inactive_reason": "timeout — bot 차단"
     },
     {
       "id": "deloitte-consumer-ai",
@@ -232,10 +235,11 @@
         "2-2"
       ],
       "priority": "high",
-      "active": true,
+      "active": false,
       "scrape_method": "html_search",
       "action": "added",
-      "reason": "Useful counterweight to hype because it covers consumer trust and autonomous-purchase readiness."
+      "reason": "Useful counterweight to hype because it covers consumer trust and autonomous-purchase readiness.",
+      "inactive_reason": "404 — URL 변경됨"
     },
     {
       "id": "grand-view-smart-home",
@@ -301,10 +305,11 @@
         "4-3"
       ],
       "priority": "medium",
-      "active": true,
+      "active": false,
       "scrape_method": "html_search",
       "action": "added",
-      "reason": "Good for systematic reviews on AI loneliness, companion robots and home-based elder care."
+      "reason": "Good for systematic reviews on AI loneliness, companion robots and home-based elder care.",
+      "inactive_reason": "403 Forbidden — bot 차단"
     },
     {
       "id": "techradar-ai-assistants",
@@ -369,10 +374,11 @@
         "3-3"
       ],
       "priority": "high",
-      "active": true,
+      "active": false,
       "scrape_method": "html_search",
       "action": "added",
-      "reason": "Useful for quantitative AI-at-work adoption and capability-gap metrics."
+      "reason": "Useful for quantitative AI-at-work adoption and capability-gap metrics.",
+      "inactive_reason": "404 — URL 변경됨"
     },
     {
       "id": "oecd-ai-publications",
@@ -390,10 +396,11 @@
         "3-3"
       ],
       "priority": "high",
-      "active": true,
+      "active": false,
       "scrape_method": "html_search",
       "action": "added",
-      "reason": "Authoritative policy source for AI productivity divide and capability gap."
+      "reason": "Authoritative policy source for AI productivity divide and capability gap.",
+      "inactive_reason": "403 Forbidden — bot 차단"
     },
     {
       "id": "unesco-uil-digital-inclusion",
