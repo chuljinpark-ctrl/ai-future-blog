@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-05-10T00:00:00+00:00",
-    "total_cases": 30,
+    "last_updated": "2026-05-11T05:03:21.997723+00:00",
+    "total_cases": 49,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -1172,6 +1172,675 @@
       "url": "https://www.mdpi.com/2076-328X/15/11/1541",
       "added_date": "2026-05-10",
       "verified": true
+    },
+    {
+      "id": "GOO-20260511-667a20",
+      "category": "1-1",
+      "company": "구글",
+      "short": "GOO",
+      "color_bg": "#fdf3e7",
+      "color_text": "#b5711b",
+      "kpi_value": "N/A",
+      "kpi_label": "핵심 수치",
+      "title": "Gemini for Home 음성 비서 소개",
+      "description": "Gemini for Home은 스마트홈 제어를 위한 새로운 음성 비서입니다.",
+      "body": "Gemini for Home 음성 비서는 사용자가 집을 더 자연스럽고 유용하게 제어할 수 있도록 돕습니다. 초기 접근은 특정 언어와 국가에서 구글 스피커 및 디스플레이에 배포되고 있으며, 호환되는 모든 장치는 자동으로 Gemini로 전환됩니다. 기본 기능은 무료로 제공되며, 스마트홈 제어, 미디어 검색, 알람 설정 등의 기능을 포함합니다. Gemini Live와 같은 일부 기능은 구글 홈 프리미엄 구독이 필요합니다.",
+      "metrics": [
+        {
+          "value": "N/A",
+          "label": "기능 설명",
+          "trend": "neu"
+        }
+      ],
+      "tags": [
+        "스마트홈",
+        "음성비서"
+      ],
+      "source": "Google Nest Help, 2023",
+      "url": "https://support.google.com/googlenest/answer/16618650",
+      "added_date": "2026-05-11",
+      "verified": false
+    },
+    {
+      "id": "GOO-20260511-b1acca",
+      "category": "1-1",
+      "company": "구글",
+      "short": "GOO",
+      "color_bg": "#fdf3e7",
+      "color_text": "#b5711b",
+      "kpi_value": "N/A",
+      "kpi_label": "핵심 수치",
+      "title": "Gemini for Home 음성 비서 대화 기능",
+      "description": "Gemini for Home의 지속적인 대화 기능 소개",
+      "body": "Gemini for Home은 사용자가 '헤이 구글'이라고 반복하지 않고도 대화를 이어갈 수 있는 기능을 제공합니다. 이 기능을 통해 사용자는 질문을 하고, 후속 질문을 하며, 스마트홈 기기를 제어할 수 있습니다. 대화는 최대 15초 동안 이어지며, 사용자는 대화 중 언제든지 주제를 변경할 수 있습니다. 이로 인해 사용자 경험이 향상되고, 보다 자연스러운 상호작용이 가능해집니다.",
+      "metrics": [
+        {
+          "value": "15초",
+          "label": "후속 질문 대기 시간",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI",
+        "스마트홈",
+        "음성비서"
+      ],
+      "source": "Google Nest Help, 2023",
+      "url": "https://support.google.com/googlenest/answer/7685981#ccforGA",
+      "added_date": "2026-05-11",
+      "verified": false
+    },
+    {
+      "id": "GOO-20260511-5dc508",
+      "category": "1-1",
+      "company": "구글",
+      "short": "GOO",
+      "color_bg": "#fdf3e7",
+      "color_text": "#b5711b",
+      "kpi_value": "N/A",
+      "kpi_label": "서비스 통합",
+      "title": "Gemini for Home 음성 비서 서비스",
+      "description": "Gemini for Home은 스마트홈 기기를 제어하는 음성 비서 서비스입니다.",
+      "body": "Gemini for Home은 구글 홈과 연동되어 다양한 스마트홈 기기를 제어할 수 있는 음성 비서 서비스입니다. 사용자는 구글 캘린더, 구글 포토, 유튜브 등 여러 구글 서비스를 음성으로 이용할 수 있으며, 수천 개의 브랜드와 호환되는 스마트홈 기기를 지원합니다. 이 서비스는 지역에 따라 가용성이 다르며, 지속적으로 업데이트되고 있습니다.",
+      "metrics": [
+        {
+          "value": "수천 개",
+          "label": "호환 브랜드 수",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "스마트홈",
+        "음성비서"
+      ],
+      "source": "Google Nest Help, 2023",
+      "url": "https://support.google.com/googlenest/answer/16709732?hl=en&ref_topic=16607457",
+      "added_date": "2026-05-11",
+      "verified": false
+    },
+    {
+      "id": "AMA-20260511-7e1999",
+      "category": "1-1",
+      "company": "아마존",
+      "short": "AMA",
+      "color_bg": "#f3e8fb",
+      "color_text": "#7b3ab5",
+      "kpi_value": "N/A",
+      "kpi_label": "핵심 수치",
+      "title": "아마존의 차세대 AI 비서 Alexa+ 독일 출시",
+      "description": "Alexa+가 독일에서 출시되어 AI 비서의 진화를 보여줍니다.",
+      "body": "Alexa+는 독일에서 출시되어, 대화형이고 개인화된 AI 비서로 발전했습니다. 이 비서는 독일 문화에 맞춰 설계되어 있으며, 다양한 서비스와 기기에 연결할 수 있습니다. Alexa+는 항상 사용자의 곁에 있어 필요할 때 도움을 주며, 일상적인 대화도 가능하게 합니다. 이는 스마트홈 환경에서 AI의 역할을 더욱 강화하는 사례입니다.",
+      "metrics": [
+        {
+          "value": "1,000개",
+          "label": "지역 라디오 방송국 수",
+          "trend": "pos"
+        },
+        {
+          "value": "7개",
+          "label": "출시 국가 수",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI 비서",
+        "스마트홈",
+        "아마존"
+      ],
+      "source": "Amazon News, 2023",
+      "url": "https://www.aboutamazon.com/news/devices/alexa-plus-international-launch",
+      "added_date": "2026-05-11",
+      "verified": false
+    },
+    {
+      "id": "AMA-20260511-c1dea3",
+      "category": "1-1",
+      "company": "아마존",
+      "short": "AMA",
+      "color_bg": "#f3e8fb",
+      "color_text": "#7b3ab5",
+      "kpi_value": "N/A",
+      "kpi_label": "핵심 키워드",
+      "title": "문화 이해하는 글로벌 Alexa+ 구축",
+      "description": "아마존이 Alexa+를 통해 문화적 뉘앙스를 이해하는 AI 비서를 개발하고 있다.",
+      "body": "아마존의 Alexa+는 단순한 번역을 넘어, 멕시코에서 문화적 뉘앙스와 유머를 이해하는 AI 비서를 목표로 하고 있다. 이 AI는 지역의 속어와 대화의 리듬을 이해하여 자연스럽고 진정한 상호작용을 제공하며, 가족의 일원처럼 느껴지도록 설계되었다. Alexa+는 지속적으로 언어와 속어의 변화를 학습하며, 다양한 문화에 맞춰 진화할 예정이다.",
+      "metrics": [
+        {
+          "value": "130 million",
+          "label": "멕시코 인구",
+          "trend": "pos"
+        },
+        {
+          "value": "N/A",
+          "label": "문화적 뉘앙스 이해",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI",
+        "스마트홈",
+        "문화"
+      ],
+      "source": "Amazon News, 2023",
+      "url": "https://www.aboutamazon.com/stories/amazon-alexa-plus-ai-culture-language",
+      "added_date": "2026-05-11",
+      "verified": false
+    },
+    {
+      "id": "AMA-20260511-66cbf0",
+      "category": "1-1",
+      "company": "아마존",
+      "short": "AMA",
+      "color_bg": "#f3e8fb",
+      "color_text": "#7b3ab5",
+      "kpi_value": "40억",
+      "kpi_label": "상호작용 수",
+      "title": "아마존의 Alexa+ 이탈리아 출시",
+      "description": "Alexa+가 이탈리아에 출시되어 문화적 뉘앙스를 이해합니다.",
+      "body": "Alexa+는 이탈리아의 문화적 특성을 반영하여 자연스러운 대화를 가능하게 합니다. 고객은 4월 15일부터 Alexa+를 경험할 수 있으며, 이 서비스는 이탈리아의 지역적 표현과 언어적 다양성을 이해하도록 설계되었습니다. Alexa+는 3년간 이탈리아에서 40억 회 이상의 상호작용을 기록하며, 고객의 의도를 파악하고 실질적인 행동을 취할 수 있는 능력을 갖추고 있습니다.",
+      "metrics": [
+        {
+          "value": "40억",
+          "label": "상호작용 수",
+          "trend": "pos"
+        },
+        {
+          "value": "€22.99",
+          "label": "비용 (비프라임)",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI",
+        "스마트홈",
+        "Alexa"
+      ],
+      "source": "Amazon News, 2023",
+      "url": "https://www.aboutamazon.com/news/devices/alexa-plus-italy",
+      "added_date": "2026-05-11",
+      "verified": false
+    },
+    {
+      "id": "GOV-20260511-26d6f6",
+      "category": "1-1",
+      "company": "Govee",
+      "short": "GOV",
+      "color_bg": "#e8f0fb",
+      "color_text": "#2a5fc8",
+      "kpi_value": "$79.99",
+      "kpi_label": "판매가",
+      "title": "Govee의 새로운 태양광 스트링 조명 할인",
+      "description": "Govee의 태양광 스트링 조명이 20% 할인 중입니다.",
+      "body": "Govee는 최근 34피트 길이의 태양광 스트링 조명을 출시하였으며, 현재 아마존에서 20% 할인된 가격으로 판매되고 있습니다. 이 조명은 USB-C로 충전할 수 있으며, 완전 충전 시 최대 13시간 사용할 수 있습니다. Govee의 모바일 앱을 통해 16백만 가지 색상과 100개의 프리셋 장면을 설정할 수 있어 사용자 맞춤형 조명 경험을 제공합니다.",
+      "metrics": [
+        {
+          "value": "20%",
+          "label": "할인율",
+          "trend": "pos"
+        },
+        {
+          "value": "13시간",
+          "label": "최대 사용 시간",
+          "trend": "pos"
+        },
+        {
+          "value": "6W",
+          "label": "패널 출력",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "스마트홈",
+        "조명",
+        "태양광"
+      ],
+      "source": "The Verge, 2026",
+      "url": "https://www.theverge.com/gadgets/926434/govee-outdoor-solar-string-lights-star-fox-switch-2-deal-sale",
+      "added_date": "2026-05-11",
+      "verified": false
+    },
+    {
+      "id": "GOO-20260511-2c86cb",
+      "category": "1-1",
+      "company": "구글",
+      "short": "GOO",
+      "color_bg": "#fdf3e7",
+      "color_text": "#b5711b",
+      "kpi_value": "Gemini 3.1",
+      "kpi_label": "업그레이드 버전",
+      "title": "구글 홈의 제미니 AI, 복잡한 요청 처리 가능",
+      "description": "구글 홈의 제미니 AI가 복잡한 요청을 처리할 수 있는 기능을 추가했습니다.",
+      "body": "구글은 제미니 3.1로 업그레이드하여 구글 홈의 스마트 홈 어시스턴트가 여러 요청을 하나의 음성 명령으로 처리할 수 있도록 개선했습니다. 이 업데이트는 자연어 이해와 장치 식별 능력을 향상시키며, 사용자들이 반복적인 이벤트를 관리하는 데 도움을 줍니다. 또한, 웹에서 스마트 홈을 관리할 수 있는 기능도 추가되었습니다.",
+      "metrics": [
+        {
+          "value": "복잡한 요청 처리",
+          "label": "기능 개선",
+          "trend": "pos"
+        },
+        {
+          "value": "자연어 이해 향상",
+          "label": "기능 개선",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "스마트홈",
+        "AI",
+        "구글"
+      ],
+      "source": "The Verge, 2026",
+      "url": "https://www.theverge.com/tech/924755/google-home-gemini-3-1-upgrade",
+      "added_date": "2026-05-11",
+      "verified": false
+    },
+    {
+      "id": "GVR-20260511-5ffeff",
+      "category": "1-2",
+      "company": "Grand View Research",
+      "short": "GVR",
+      "color_bg": "#e8f0fb",
+      "color_text": "#2a5fc8",
+      "kpi_value": "537.27 billion",
+      "kpi_label": "2030년 시장 규모",
+      "title": "스마트 홈 시장 전망",
+      "description": "스마트 홈 기술의 성장과 AI의 역할을 분석합니다.",
+      "body": "스마트 홈 시장은 2024년 1278억 달러에서 2030년 5372억 달러로 성장할 것으로 예상되며, 연평균 성장률(CAGR)은 27.0%에 이를 것으로 보입니다. AI 기반 디지털 어시스턴트의 채택 증가가 소비자 선호도에 영향을 미치고 있으며, IoT 기술의 발전이 스마트 홈 산업의 확장을 가속화하고 있습니다. 이로 인해 에너지 효율성과 사용자 제어가 향상되고 있습니다.",
+      "metrics": [
+        {
+          "value": "127.80 billion",
+          "label": "2024년 시장 규모",
+          "trend": "pos"
+        },
+        {
+          "value": "27.0%",
+          "label": "CAGR (2025-2030)",
+          "trend": "pos"
+        },
+        {
+          "value": "25%",
+          "label": "북미 시장 점유율",
+          "trend": "pos"
+        },
+        {
+          "value": "72%",
+          "label": "미국 시장 점유율",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "스마트홈",
+        "AI",
+        "시장분석"
+      ],
+      "source": "Grand View Research, 2024",
+      "url": "https://www.grandviewresearch.com/industry-analysis/smart-homes-industry",
+      "added_date": "2026-05-11",
+      "verified": false
+    },
+    {
+      "id": "TRD-20260511-503fe2",
+      "category": "1-1",
+      "company": "TechRadar",
+      "short": "TRD",
+      "color_bg": "#f3e8fb",
+      "color_text": "#7b3ab5",
+      "kpi_value": "AI 기반 스마트홈",
+      "kpi_label": "핵심 키워드",
+      "title": "스마트 홈",
+      "description": "AI 기술을 활용한 스마트 홈의 발전과 기능 소개",
+      "body": "이 아티클은 AI 기술이 적용된 스마트 홈 제품과 서비스에 대해 다루고 있습니다. Philips Hue의 스포츠 라이브 기능, Blink Doorbell의 AI 비디오 설명, Willow의 식물 관리 기능 등 다양한 스마트 홈 솔루션이 소개됩니다. 이러한 기술들은 사용자에게 편리함과 효율성을 제공하며, 스마트 홈의 미래를 보여줍니다.",
+      "metrics": [
+        {
+          "value": "N/A",
+          "label": "구체적 수치 없음",
+          "trend": "neu"
+        }
+      ],
+      "tags": [
+        "스마트홈",
+        "AI",
+        "기술"
+      ],
+      "source": "TechRadar, 2023",
+      "url": "https://www.techradar.com/home/smart-home",
+      "added_date": "2026-05-11",
+      "verified": false
+    },
+    {
+      "id": "TRD-20260511-9660df",
+      "category": "3-1",
+      "company": "TechRadar",
+      "short": "TRD",
+      "color_bg": "#f3e8fb",
+      "color_text": "#7b3ab5",
+      "kpi_value": "4.5",
+      "kpi_label": "별점",
+      "title": "공기질 관리 기기 소개",
+      "description": "여름철 알레르기 예방을 위한 공기청정기 추천",
+      "body": "여름철 알레르기 증상을 완화하기 위해 효과적인 공기청정기를 소개하는 기사입니다. 다양한 크기와 예산에 맞춘 제품들이 추천되며, 특히 Shark FlexBreeze와 ChillPill 같은 소형 기기가 주목받고 있습니다. 이 기기들은 사용자의 편리함을 고려하여 디자인되었으며, 높은 사용자 평가를 받고 있습니다.",
+      "metrics": [
+        {
+          "value": "3",
+          "label": "추천 제품 수",
+          "trend": "pos"
+        },
+        {
+          "value": "29%",
+          "label": "할인율",
+          "trend": "pos"
+        },
+        {
+          "value": "4.5",
+          "label": "평균 별점",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "공기질",
+        "여름",
+        "건강"
+      ],
+      "source": "TechRadar, 2023",
+      "url": "https://www.techradar.com/home/small-appliances/air-quality",
+      "added_date": "2026-05-11",
+      "verified": false
+    },
+    {
+      "id": "AMA-20260511-006629",
+      "category": "2-1",
+      "company": "Amazon",
+      "short": "AMA",
+      "color_bg": "#eaf5f3",
+      "color_text": "#3a8f7d",
+      "kpi_value": "AI 에이전트",
+      "kpi_label": "AI 에이전트 수",
+      "title": "아마존 베드록, AI 에이전트 거래 지원",
+      "description": "아마존 베드록이 AI 에이전트의 거래를 지원하는 시스템을 출시합니다.",
+      "body": "아마존 베드록의 AgentCore Payments가 Coinbase 및 Stripe와 협력하여 AI 에이전트가 안정적인 코인을 사용해 거래를 수행할 수 있는 시스템을 출시합니다. 이 시스템은 웹 콘텐츠, API, MCP 서버 등 다양한 서비스에 대한 마이크로 결제를 지원하며, 향후 AI 에이전트가 인간을 대신해 더 큰 금액의 거래를 수행할 것으로 예상됩니다. 이러한 변화는 AI 에이전트가 경제적 행위자로 자리잡는 데 중요한 역할을 할 것입니다.",
+      "metrics": [
+        {
+          "value": "1센트 미만",
+          "label": "마이크로 결제",
+          "trend": "pos"
+        },
+        {
+          "value": "N/A",
+          "label": "파트너사",
+          "trend": "neu"
+        }
+      ],
+      "tags": [
+        "AI",
+        "결제",
+        "마이크로결제"
+      ],
+      "source": "TechRadar, 2023",
+      "url": "https://www.techradar.com/pro/the-stakes-are-high-a-misconfigured-payment-flow-doesnt-just-produce-a-bad-answer-it-moves-real-money-amazon-bedrock-teams-up-with-coinbase-and-stripe-to-let-ai-agents-carry-out-transactions-using-stablecoins",
+      "added_date": "2026-05-11",
+      "verified": false
+    },
+    {
+      "id": "MS-20260511-4af5f5",
+      "category": "3-2",
+      "company": "Microsoft",
+      "short": "MS",
+      "color_bg": "#f3e8fb",
+      "color_text": "#7b3ab5",
+      "kpi_value": "N/A",
+      "kpi_label": "핵심 수치",
+      "title": "AI가 일하는 방식을 변화시킨다",
+      "description": "AI가 조직의 미래를 어떻게 변화시키는지에 대한 통찰을 제공한다.",
+      "body": "Microsoft WorkLab의 'AI at Work' 아티클은 AI가 업무 환경을 어떻게 변화시키고 있는지를 다룬다. 여러 기능 리더들이 AI의 도입과 그로 인한 변화에 대한 데이터를 공유하며, AI가 조직의 미래를 어떻게 보장할 수 있는지에 대한 통찰을 제공한다. AI는 업무의 효율성을 높이고, 직원들의 생산성을 증대시키는 데 중요한 역할을 하고 있다.",
+      "metrics": [
+        {
+          "value": "N/A",
+          "label": "AI 도입 현황",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI",
+        "업무",
+        "생산성"
+      ],
+      "source": "Microsoft WorkLab, 2023",
+      "url": "https://www.microsoft.com/en-us/worklab/ai-at-work",
+      "added_date": "2026-05-11",
+      "verified": false
+    },
+    {
+      "id": "MSFT-20260511-2bd245",
+      "category": "3-2",
+      "company": "Microsoft",
+      "short": "MSFT",
+      "color_bg": "#f3e8fb",
+      "color_text": "#7b3ab5",
+      "kpi_value": "50%",
+      "kpi_label": "회의 비율",
+      "title": "무한한 근무일의 문제점",
+      "description": "AI와 함께하는 새로운 근무 방식의 필요성을 강조합니다.",
+      "body": "2025 Work Trend Index 보고서에 따르면, AI와 인간의 협업을 통해 '프론티어 기업'이 등장하고 있지만, 무한한 근무일이라는 장애물이 존재합니다. 많은 근로자들이 아침 일찍부터 이메일을 확인하고, 회의가 집중되는 시간대에 깊은 집중을 방해받고 있습니다. 이로 인해 생산성이 저하되고 있으며, AI를 활용한 새로운 근무 리듬이 필요하다는 점이 강조됩니다.",
+      "metrics": [
+        {
+          "value": "40%",
+          "label": "6시 이메일 확인 비율",
+          "trend": "neu"
+        },
+        {
+          "value": "50%",
+          "label": "회의 비율",
+          "trend": "neg"
+        },
+        {
+          "value": "117",
+          "label": "일일 이메일 수",
+          "trend": "neu"
+        },
+        {
+          "value": "153",
+          "label": "일일 Teams 메시지 수",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI",
+        "생산성",
+        "근무 방식"
+      ],
+      "source": "Microsoft WorkLab, 2025",
+      "url": "https://www.microsoft.com/en-us/worklab/work-trend-index/breaking-down-infinite-workday",
+      "added_date": "2026-05-11",
+      "verified": false
+    },
+    {
+      "id": "MSFT-20260511-6e94fa",
+      "category": "3-2",
+      "company": "Microsoft",
+      "short": "MSFT",
+      "color_bg": "#f3e8fb",
+      "color_text": "#7b3ab5",
+      "kpi_value": "75%",
+      "kpi_label": "AI 사용 비율",
+      "title": "2024년 AI가 일터에 미치는 영향",
+      "description": "직원들이 AI를 적극적으로 활용하고 있음을 보여주는 보고서",
+      "body": "2024년, AI의 사용이 급증하며 75%의 지식 근로자가 AI를 활용하고 있습니다. 직원들은 AI를 통해 업무 효율성을 높이고 있으며, 경영진은 AI 도입의 필요성을 인식하고 있지만 즉각적인 ROI를 요구받아 느리게 움직이고 있습니다. AI는 업무 방식과 노동 시장을 변화시키고 있으며, 기업들은 AI를 통해 성장과 비용 관리를 도모해야 합니다.",
+      "metrics": [
+        {
+          "value": "75%",
+          "label": "AI 사용 비율",
+          "trend": "pos"
+        },
+        {
+          "value": "90%",
+          "label": "시간 절약 비율",
+          "trend": "pos"
+        },
+        {
+          "value": "85%",
+          "label": "중요 업무 집중 비율",
+          "trend": "pos"
+        },
+        {
+          "value": "84%",
+          "label": "창의성 향상 비율",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI",
+        "업무",
+        "생산성"
+      ],
+      "source": "Microsoft WorkLab, 2024",
+      "url": "https://www.microsoft.com/en-us/worklab/work-trend-index/ai-at-work-is-here-now-comes-the-hard-part",
+      "added_date": "2026-05-11",
+      "verified": false
+    },
+    {
+      "id": "MSFT-20260511-7f0636",
+      "category": "3-2",
+      "company": "Microsoft",
+      "short": "MSFT",
+      "color_bg": "#f3e8fb",
+      "color_text": "#7b3ab5",
+      "kpi_value": "70%",
+      "kpi_label": "생산성 증가",
+      "title": "Copilot의 초기 사용자들이 전하는 이야기",
+      "description": "Generative AI가 업무에 미치는 영향에 대한 연구 결과",
+      "body": "Microsoft 365 Copilot의 초기 사용자들은 생산성과 창의성이 향상되었다고 보고하며, 70%가 더 생산적이라고 응답했습니다. Copilot은 이메일 처리 시간을 줄이고, 초안 작성을 더 빠르게 도와주는 등 업무 효율성을 높이고 있습니다. 이러한 변화는 개인의 생산성뿐만 아니라 조직 전체의 역량을 강화할 수 있는 기회를 제공합니다.",
+      "metrics": [
+        {
+          "value": "70%",
+          "label": "생산성 증가",
+          "trend": "pos"
+        },
+        {
+          "value": "68%",
+          "label": "작업 품질 향상",
+          "trend": "pos"
+        },
+        {
+          "value": "29%",
+          "label": "작업 속도 증가",
+          "trend": "pos"
+        },
+        {
+          "value": "77%",
+          "label": "사용 지속 의향",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "Generative AI",
+        "생산성",
+        "Microsoft"
+      ],
+      "source": "Microsoft WorkLab, 2023",
+      "url": "https://www.microsoft.com/en-us/worklab/work-trend-index/copilots-earliest-users-teach-us-about-generative-ai-at-work",
+      "added_date": "2026-05-11",
+      "verified": false
+    },
+    {
+      "id": "MSFT-20260511-f00fb9",
+      "category": "3-2",
+      "company": "Microsoft",
+      "short": "MSFT",
+      "color_bg": "#f3e8fb",
+      "color_text": "#7b3ab5",
+      "kpi_value": "N/A",
+      "kpi_label": "핵심 수치",
+      "title": "AI 시대의 새로운 성과 방정식",
+      "description": "직원 참여가 기업 성과에 미치는 영향 분석",
+      "body": "경제 불확실성과 유연한 근무 환경 속에서 직원 참여가 기업의 재무 성과에 중요한 역할을 한다는 연구 결과가 발표되었다. 300만 명 이상의 직원 설문조사를 분석한 결과, 직원 참여도가 높을수록 기업의 재무 성과가 개선되는 것으로 나타났다. 특히, 명확한 의사소통과 목표 설정이 직원 참여를 높이며, 지속적인 피드백을 통해 참여를 유지해야 한다는 점이 강조되었다.",
+      "metrics": [
+        {
+          "value": "S&P 500",
+          "label": "참여도 높은 기업 성과",
+          "trend": "pos"
+        },
+        {
+          "value": "+$46,511",
+          "label": "참여도 1점 증가 시 시장 가치 차이",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "직원 참여",
+        "AI",
+        "생산성"
+      ],
+      "source": "Microsoft WorkLab, 2023",
+      "url": "https://www.microsoft.com/en-us/worklab/work-trend-index/the-new-performance-equation-in-the-age-of-ai",
+      "added_date": "2026-05-11",
+      "verified": false
+    },
+    {
+      "id": "ZDK-20260511-38ae17",
+      "category": "3-1",
+      "company": "Zendesk",
+      "short": "ZDK",
+      "color_bg": "#f3e8fb",
+      "color_text": "#7b3ab5",
+      "kpi_value": "80%",
+      "kpi_label": "상호작용 해결 비율",
+      "title": "Zendesk, 자가 개선 AI 에이전트로 플랫폼 발전",
+      "description": "Zendesk가 Forethought 인수로 AI 고객 서비스 혁신을 예고합니다.",
+      "body": "Zendesk는 Forethought 인수를 통해 자가 개선 AI 에이전트를 도입하고, 고객 서비스의 구조적 변화를 예고했습니다. 이로 인해 AI 에이전트가 인간보다 더 많은 서비스 상호작용을 처리할 것으로 예상되며, 고객 경험의 혁신을 목표로 하고 있습니다. Zendesk의 AI 에이전트는 현재 80% 이상의 상호작용을 해결하고 있으며, Forethought의 기술을 통해 더욱 복잡한 워크플로우를 지원할 수 있게 됩니다.",
+      "metrics": [
+        {
+          "value": "80%",
+          "label": "AI 상호작용 해결 비율",
+          "trend": "pos"
+        },
+        {
+          "value": "2026",
+          "label": "AI 에이전트가 인간 초과 예상",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI",
+        "고객 서비스",
+        "Zendesk"
+      ],
+      "source": "Zendesk, 2026",
+      "url": "https://www.zendesk.com/newsroom/press-releases/zendesk-advances-resolution-platform-with-self-improving-ai-agents-from-proposed-forethought-acquisition/",
+      "added_date": "2026-05-11",
+      "verified": false
+    },
+    {
+      "id": "ACE-20260511-2e4869",
+      "category": "2-2",
+      "company": "Ace Hardware",
+      "short": "ACE",
+      "color_bg": "#f3e8fb",
+      "color_text": "#7b3ab5",
+      "kpi_value": "2,300",
+      "kpi_label": "매장 수",
+      "title": "에이스 하드웨어, AI 비서 도입",
+      "description": "에이스 하드웨어가 매장 서비스 강화를 위해 AI 비서를 도입했습니다.",
+      "body": "에이스 하드웨어는 'Hey ARMA'라는 AI 비서를 도입하여 매장 직원들에게 실시간 정보를 제공하고 고객 문제 해결에 집중할 수 있도록 지원합니다. 이 기술은 2,300개 이상의 매장에서 이미 사용되고 있으며, 고객 경험을 향상시키기 위한 지속적인 확장이 계획되고 있습니다. AI 비서는 직원들이 제품 비교 및 고객 질문에 신속하게 대응할 수 있도록 도와줍니다.",
+      "metrics": [
+        {
+          "value": "2,300",
+          "label": "활성 매장 수",
+          "trend": "pos"
+        },
+        {
+          "value": "78",
+          "label": "사업 연수",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI",
+        "소매",
+        "고객 서비스"
+      ],
+      "source": "Ace Hardware Newsroom, 2026",
+      "url": "https://newsroom.acehardware.com/ace-hardware-introduces-ai-assistant-to-strengthen-in-store-service/",
+      "added_date": "2026-05-11",
+      "verified": false
     }
   ]
 }
