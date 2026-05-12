@@ -162,7 +162,35 @@ body { padding-bottom: 64px; }
 }
 .card:hover .card-del{opacity:1}
 .card-del:hover{background:rgba(198,69,69,.85)}
-.card.deleted{opacity:.35;pointer-events:none;filter:grayscale(1)}
+.card.processing{
+  pointer-events:none;
+  position:relative;
+}
+.card.processing::after{
+  content:'';
+  position:absolute;inset:0;
+  background:rgba(250,249,245,.7);
+  backdrop-filter:blur(2px);
+  border-radius:var(--radius);
+  z-index:4
+}
+.card-spinner{
+  position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  width:22px;height:22px;
+  border:2.5px solid var(--hairline);
+  border-top-color:var(--primary);
+  border-radius:50%;
+  animation:spin .7s linear infinite;
+  z-index:5;display:none
+}
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.card.processing .card-spinner{display:block}
+.card.deleted{
+  opacity:0;transform:scale(.96);
+  transition:opacity .3s,transform .3s;
+  pointer-events:none
+}
 
 /* ── Confirm overlay ──────────────────────────────────────────────────────── */
 .confirm-bg{
@@ -438,6 +466,11 @@ function makeCard(c) {
   a.target    = '_blank';
   a.rel       = 'noopener noreferrer';
 
+  // 스피너 (처리 중 표시)
+  const spinner = document.createElement('div');
+  spinner.className = 'card-spinner';
+  a.appendChild(spinner);
+
   // X 삭제 버튼
   const delBtn = document.createElement('button');
   delBtn.className   = 'card-del';
@@ -525,65 +558,95 @@ async function confirmYes() {
     return;
   }
 
-  // Optimistic UI: 카드 즉시 숨김
-  const cardEl = document.getElementById('card-' + c.id);
-  if (cardEl) cardEl.classList.add('deleted');
-  arcToast('삭제 중...');
+  const cardEl    = document.getElementById('card-' + c.id);
+  const triggeredAt = new Date();
 
-  // Build updated DB (remove this case)
-  const updatedCases = DB.cases.filter(x => x.id !== c.id);
-  const updatedDB    = {
-    ...DB,
-    meta: { ...DB.meta, total_cases: updatedCases.length, last_updated: new Date().toISOString() },
-    cases: updatedCases,
-  };
-  const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(updatedDB, null, 2))));
+  // UI: processing 상태
+  if (cardEl) cardEl.classList.add('processing');
+  arcToast('⏳ 삭제 워크플로우 요청 중...');
 
   try {
-    // Update both data/ and docs/data/ in parallel via GitHub Contents API
-    const paths = ['data/cases.json', 'docs/data/cases.json'];
-    for (const path of paths) {
-      const metaRes = await fetch(
-        `https://api.github.com/repos/${REPO}/contents/${path}`,
-        { headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' } }
-      );
-      if (!metaRes.ok) throw new Error(`SHA 조회 실패: ${path} (${metaRes.status})`);
-      const { sha } = await metaRes.json();
-
-      const putRes = await fetch(
-        `https://api.github.com/repos/${REPO}/contents/${path}`,
-        {
-          method: 'PUT',
-          headers: {
-            Authorization: `Bearer ${token}`,
-            Accept: 'application/vnd.github+json',
-            'Content-Type': 'application/json',
-            'X-GitHub-Api-Version': '2022-11-28',
-          },
-          body: JSON.stringify({
-            message: `chore(articles): delete ${c.id} (${c.company} — ${c.title}) [manual]`,
-            content: encoded,
-            sha,
-            branch: 'main',
-          }),
-        }
-      );
-      if (!putRes.ok) {
-        const err = await putRes.json().catch(() => ({}));
-        throw new Error(err.message || `PUT 실패: ${putRes.status}`);
+    const resp = await fetch(
+      `https://api.github.com/repos/${REPO}/actions/workflows/delete_articles.yml/dispatches`,
+      {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Accept': 'application/vnd.github+json',
+          'Content-Type': 'application/json',
+          'X-GitHub-Api-Version': '2022-11-28',
+        },
+        body: JSON.stringify({ ref: 'main', inputs: { ids: c.id } }),
       }
+    );
+
+    if (resp.status === 204) {
+      arcToast('⏳ 워크플로우 실행 중... (약 30초 소요)');
+      pollWorkflow(triggeredAt, token, cardEl);
+    } else {
+      const err = await resp.json().catch(() => ({}));
+      const hint = resp.status === 422 ? ' (workflow scope 권한 필요)' : '';
+      arcToast(`❌ 트리거 실패 ${resp.status}${hint}: ${err.message||''}`);
+      if (cardEl) cardEl.classList.remove('processing');
+    }
+  } catch(e) {
+    arcToast(`❌ 네트워크 오류: ${e.message}`);
+    if (cardEl) cardEl.classList.remove('processing');
+  }
+}
+
+async function pollWorkflow(triggeredAt, token, cardEl) {
+  const MAX_ATTEMPTS = 24;  // 24 × 5s = 2분
+  let attempts = 0;
+
+  const check = async () => {
+    attempts++;
+    if (attempts > MAX_ATTEMPTS) {
+      arcToast('⚠ 타임아웃 — Actions 탭에서 직접 확인하세요');
+      if (cardEl) cardEl.classList.remove('processing');
+      return;
     }
 
-    // Commit successful — update local state
-    DB = updatedDB;
-    document.getElementById('meta-n').textContent = updatedCases.length;
-    arcToast(`✓ "${c.title}" 삭제됨 — Pages 배포가 시작됩니다`);
+    try {
+      const resp = await fetch(
+        `https://api.github.com/repos/${REPO}/actions/workflows/delete_articles.yml/runs?per_page=5`,
+        { headers: { 'Authorization': `Bearer ${token}`, 'Accept': 'application/vnd.github+json' } }
+      );
+      const data = await resp.json();
+      const run  = (data.workflow_runs || []).find(r => new Date(r.created_at) >= triggeredAt);
 
-  } catch (err) {
-    // Rollback optimistic UI
-    if (cardEl) cardEl.classList.remove('deleted');
-    arcToast(`❌ 삭제 실패: ${err.message}`);
-  }
+      if (!run) {
+        // 아직 실행이 시작 안 됨
+        setTimeout(check, 5000);
+        return;
+      }
+
+      if (run.status === 'completed') {
+        if (run.conclusion === 'success') {
+          // 카드 제거 애니메이션
+          if (cardEl) {
+            cardEl.classList.remove('processing');
+            cardEl.classList.add('deleted');
+            setTimeout(() => cardEl.remove(), 320);
+          }
+          // 카운트 업데이트
+          const metaEl = document.getElementById('meta-n');
+          if (metaEl) metaEl.textContent = Math.max(0, parseInt(metaEl.textContent || '0') - 1);
+          arcToast('✓ 삭제 완료 — DB에서 제거됐습니다');
+        } else {
+          if (cardEl) cardEl.classList.remove('processing');
+          arcToast(`❌ 워크플로우 실패 (${run.conclusion})`);
+        }
+      } else {
+        arcToast(`⏳ 워크플로우 실행 중... (${run.status})`);
+        setTimeout(check, 5000);
+      }
+    } catch {
+      setTimeout(check, 5000);
+    }
+  };
+
+  setTimeout(check, 5000);
 }
 </script>
 <script src="./nav.js"></script>
