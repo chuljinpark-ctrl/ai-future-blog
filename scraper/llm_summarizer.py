@@ -198,6 +198,20 @@ def extract_case(article: dict) -> Optional[dict]:
         return None
 
 
+def call_llm_json(prompt: str) -> str:
+    """
+    Adapter for quality_filter.evaluate_article (expects llm_call_fn(prompt) -> str).
+    JSON-mode response, low temperature for stable scoring.
+    """
+    resp = _client().chat.completions.create(
+        model=MODEL,
+        messages=[{"role": "user", "content": prompt}],
+        temperature=0.1,
+        response_format={"type": "json_object"},
+    )
+    return resp.choices[0].message.content
+
+
 def extract_cases_from_articles(articles: list[dict]) -> list[dict]:
     cases = []
     for i, article in enumerate(articles):
