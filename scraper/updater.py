@@ -14,6 +14,7 @@ from pathlib import Path
 log = logging.getLogger(__name__)
 ROOT = Path(__file__).parent.parent
 DATA_FILE = ROOT / "docs" / "data" / "cases.json"
+REJECTED_LOG = Path(__file__).parent / "rejected_log.jsonl"
 
 
 def load_db() -> dict:
@@ -43,12 +44,26 @@ def _quality_filter_enabled() -> bool:
     return os.environ.get("QUALITY_FILTER_ENABLED", "true").lower() in ("1", "true", "yes")
 
 
+def _append_rejected_log(case: dict, reason: str) -> None:
+    entry = {
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "id":        case.get("id"),
+        "title":     case.get("title"),
+        "reason":    reason,
+        "url":       case.get("url"),
+    }
+    with open(REJECTED_LOG, "a", encoding="utf-8") as f:
+        f.write(json.dumps(entry, ensure_ascii=False) + "\n")
+
+
 def log_quality_decision(case: dict, result: dict) -> None:
     decision = result["decision"]
     reason = result["reason"]
     title_snip = (case.get("title") or "")[:50]
     tag = {"accept": "[QF accept]", "hold": "[QF hold]  ", "reject": "[QF reject]"}[decision]
     log.info(f"  {tag} {case.get('company')} — {title_snip} ({reason})")
+    if decision == "reject":
+        _append_rejected_log(case, reason)
 
 
 def _run_quality_filter(new_cases: list[dict], db_cases: list[dict]) -> tuple[list[dict], dict]:
