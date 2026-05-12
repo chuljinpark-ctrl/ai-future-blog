@@ -149,6 +149,83 @@ body { padding-bottom: 64px; }
   color:var(--accent-teal);margin-bottom:6px;text-transform:uppercase
 }
 
+/* ── Card delete button ───────────────────────────────────────────────────── */
+.card-del{
+  position:absolute;top:8px;right:8px;z-index:3;
+  width:24px;height:24px;border-radius:50%;
+  background:rgba(20,20,19,.55);backdrop-filter:blur(4px);
+  color:#fff;font-size:14px;line-height:1;
+  border:none;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;transition:opacity .15s, background .12s;
+  flex-shrink:0
+}
+.card:hover .card-del{opacity:1}
+.card-del:hover{background:rgba(198,69,69,.85)}
+.card.processing{
+  pointer-events:none;
+  position:relative;
+}
+.card.processing::after{
+  content:'';
+  position:absolute;inset:0;
+  background:rgba(250,249,245,.7);
+  backdrop-filter:blur(2px);
+  border-radius:var(--radius);
+  z-index:4
+}
+.card-spinner{
+  position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  width:22px;height:22px;
+  border:2.5px solid var(--hairline);
+  border-top-color:var(--primary);
+  border-radius:50%;
+  animation:spin .7s linear infinite;
+  z-index:5;display:none
+}
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.card.processing .card-spinner{display:block}
+.card.deleted{
+  opacity:0;transform:scale(.96);
+  transition:opacity .3s,transform .3s;
+  pointer-events:none
+}
+
+/* ── Confirm overlay ──────────────────────────────────────────────────────── */
+.confirm-bg{
+  position:fixed;inset:0;background:rgba(20,20,19,.45);
+  backdrop-filter:blur(5px);z-index:500;
+  display:none;align-items:center;justify-content:center;padding:20px
+}
+.confirm-bg.open{display:flex}
+.confirm-box{
+  background:var(--surface-card);border-radius:14px;
+  width:100%;max-width:360px;padding:26px 24px 20px;
+  box-shadow:0 20px 56px rgba(20,20,19,.22);
+  border:0.5px solid var(--hairline)
+}
+.confirm-icon{font-size:24px;margin-bottom:12px}
+.confirm-title{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:6px}
+.confirm-desc{
+  font-size:13px;color:var(--body);line-height:1.6;margin-bottom:20px;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden
+}
+.confirm-btns{display:flex;gap:8px;justify-content:flex-end}
+
+/* ── Toast ────────────────────────────────────────────────────────────────── */
+.arc-toast{
+  position:fixed;bottom:24px;left:50%;transform:translateX(-50%);
+  background:var(--surface-dark);color:var(--on-dark);
+  font-size:12px;padding:10px 18px;border-radius:9999px;
+  opacity:0;transition:opacity .2s;pointer-events:none;
+  white-space:nowrap;z-index:600;
+  box-shadow:0 8px 24px rgba(20,20,19,.28);
+  border:0.5px solid rgba(255,255,255,.08)
+}
+.arc-toast.show{opacity:1}
+
+
 /* ── Empty / Loading ──────────────────────────────────────────────────────── */
 .empty{
   grid-column:1/-1;padding:56px 0;text-align:center;
@@ -158,6 +235,36 @@ body { padding-bottom: 64px; }
   display:flex;align-items:center;justify-content:center;
   height:38vh;font-size:13px;color:var(--text3)
 }
+
+/* ── Token notice banner ──────────────────────────────────────────────────── */
+.token-notice{
+  display:none;
+  margin:10px 24px 0;padding:10px 14px;
+  border-radius:8px;border:0.5px solid var(--g2-b);
+  background:var(--g2-bg);font-size:12px;color:var(--g2);
+  align-items:center;gap:10px;cursor:pointer
+}
+.token-notice.show{display:flex}
+.token-notice:hover{opacity:.85}
+
+/* ── Token inline input ───────────────────────────────────────────────────── */
+.token-form{
+  display:none;
+  margin:10px 24px 0;padding:14px 16px;
+  border-radius:8px;border:0.5px solid var(--hairline);
+  background:var(--surface-card);
+  align-items:center;gap:8px;flex-wrap:wrap
+}
+.token-form.show{display:flex}
+.token-form input{
+  flex:1;min-width:200px;padding:7px 10px;
+  border:1px solid var(--hairline);border-radius:7px;
+  background:var(--canvas);color:var(--ink);
+  font-family:monospace;font-size:12px;outline:none;
+  transition:border-color .12s
+}
+.token-form input:focus{border-color:var(--primary)}
+.token-form-label{font-size:12px;color:var(--muted);white-space:nowrap}
 
 @media(max-width:640px){
   .hd{padding:12px 16px}
@@ -177,6 +284,18 @@ body { padding-bottom: 64px; }
     <span class="hd-sub" id="hd-sub">로딩 중...</span>
   </div>
 </header>
+
+<!-- ── Token notice (미설정 시 표시) ─────────────────────────────────────── -->
+<div class="token-notice" id="token-notice" onclick="showTokenForm()">
+  🔑 삭제 기능을 사용하려면 GitHub 토큰이 필요합니다 — 클릭해서 설정하세요
+</div>
+<div class="token-form" id="token-form">
+  <span class="token-form-label">GitHub PAT</span>
+  <input type="password" id="pat-input" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx"
+         onkeydown="if(event.key==='Enter') savePAT()">
+  <button class="btn btn-primary btn-sm" onclick="savePAT()">저장</button>
+  <button class="btn btn-ghost btn-sm" onclick="hideTokenForm()">취소</button>
+</div>
 
 <!-- ── Filter bar ────────────────────────────────────────────────────────── -->
 <div class="filters" id="filters">
@@ -200,6 +319,22 @@ body { padding-bottom: 64px; }
   <div class="tt-label">아티클 요약</div>
   <div id="tt-text"></div>
 </div>
+
+<!-- ── Delete confirm ────────────────────────────────────────────────────── -->
+<div class="confirm-bg" id="confirm-bg">
+  <div class="confirm-box">
+    <div class="confirm-icon">🗑</div>
+    <div class="confirm-title">아티클을 삭제할까요?</div>
+    <div class="confirm-desc" id="confirm-desc"></div>
+    <div class="confirm-btns">
+      <button class="btn btn-ghost btn-sm" onclick="confirmNo()">취소</button>
+      <button class="btn btn-danger btn-sm" onclick="confirmYes()">삭제</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── Toast ──────────────────────────────────────────────────────────────── -->
+<div class="arc-toast" id="arc-toast"></div>
 
 <script>
 let DB = null;
@@ -277,7 +412,7 @@ function render(catId) {
   const list = (catId === 'all'
     ? [...DB.cases]
     : DB.cases.filter(c => c.category === catId)
-  ).sort((a, b) => b.added_date.localeCompare(a.added_date));
+  ).sort((a, b) => (b.published_date||b.added_date||'').localeCompare(a.published_date||a.added_date||''));
 
   document.getElementById('meta-n').textContent = list.length;
 
@@ -359,8 +494,8 @@ function buildThumb(c) {
 function makeCard(c) {
   const cat    = DB.categories[c.category] || {};
   const g = 'g' + (c.category.split('-')[0] || '1');
-  const dateStr = c.added_date
-    ? new Date(c.added_date).toLocaleDateString('ko-KR', {month:'short', day:'numeric'})
+  const dateStr = (c.published_date || c.added_date)
+    ? new Date(c.published_date || c.added_date).toLocaleDateString('ko-KR', {month:'short', day:'numeric'})
     : '';
   const tags = (c.tags || []).slice(0, 2)
     .map(t => `<span class="tag-pill">${t}</span>`).join('');
@@ -368,9 +503,27 @@ function makeCard(c) {
 
   const a = document.createElement('a');
   a.className = 'card';
+  a.id        = 'card-' + c.id;
   a.href      = c.url;
   a.target    = '_blank';
   a.rel       = 'noopener noreferrer';
+
+  // 스피너 (처리 중 표시)
+  const spinner = document.createElement('div');
+  spinner.className = 'card-spinner';
+  a.appendChild(spinner);
+
+  // X 삭제 버튼
+  const delBtn = document.createElement('button');
+  delBtn.className   = 'card-del';
+  delBtn.title       = '삭제';
+  delBtn.textContent = '×';
+  delBtn.addEventListener('click', e => {
+    e.preventDefault();
+    e.stopPropagation();
+    askDelete(c);
+  });
+  a.appendChild(delBtn);
 
   a.appendChild(buildThumb(c));               // thumb (Clearbit or SVG)
 
@@ -400,6 +553,124 @@ function makeCard(c) {
 }
 
 load();
+
+/* PAT — articles.html과 동일한 localStorage 키(gh_pat) 공유 */
+const PAT_KEY = 'gh_pat';
+const REPO    = 'skykelly/ai-future-blog';
+function getPAT() { return localStorage.getItem(PAT_KEY) || ''; }
+
+function updateTokenUI() {
+  const hasToken = !!getPAT();
+  document.getElementById('token-notice').classList.toggle('show', !hasToken);
+  if (hasToken) hideTokenForm();
+}
+function showTokenForm() {
+  document.getElementById('token-notice').classList.remove('show');
+  document.getElementById('token-form').classList.add('show');
+  setTimeout(() => document.getElementById('pat-input').focus(), 50);
+}
+function hideTokenForm() {
+  document.getElementById('token-form').classList.remove('show');
+  updateTokenUI();
+}
+function savePAT() {
+  const v = document.getElementById('pat-input').value.trim();
+  if (!v) return;
+  localStorage.setItem(PAT_KEY, v);
+  document.getElementById('pat-input').value = '';
+  updateTokenUI();
+  arcToast('✓ 토큰이 저장됐습니다');
+}
+updateTokenUI();
+
+/* ══════════════════════════════════════════════════════════
+   Toast
+══════════════════════════════════════════════════════════ */
+let _toastTimer = null;
+function arcToast(msg) {
+  const el = document.getElementById('arc-toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  clearTimeout(_toastTimer);
+  _toastTimer = setTimeout(() => el.classList.remove('show'), 2800);
+}
+
+/* ══════════════════════════════════════════════════════════
+   Delete — confirm + GitHub API
+══════════════════════════════════════════════════════════ */
+let _pendingCase = null;
+
+function askDelete(c) {
+  _pendingCase = c;
+  document.getElementById('confirm-desc').textContent =
+    `[${c.category}] ${c.company} — ${c.title}`;
+  document.getElementById('confirm-bg').classList.add('open');
+}
+
+function confirmNo() {
+  _pendingCase = null;
+  document.getElementById('confirm-bg').classList.remove('open');
+}
+
+async function confirmYes() {
+  document.getElementById('confirm-bg').classList.remove('open');
+  const c = _pendingCase; _pendingCase = null;
+  if (!c) return;
+
+  const token = getPAT();
+  if (!token) { arcToast('❌ 토큰 미설정 — 페이지 상단 안내를 클릭하세요'); return; }
+
+  const cardEl = document.getElementById('card-' + c.id);
+  if (cardEl) cardEl.classList.add('processing');
+  arcToast('삭제 중...');
+
+  const ok = await deleteViaAPI([c.id], token);
+  if (ok) {
+    if (cardEl) { cardEl.classList.remove('processing'); cardEl.classList.add('deleted'); setTimeout(() => cardEl.remove(), 320); }
+    const m = document.getElementById('meta-n');
+    if (m) m.textContent = Math.max(0, parseInt(m.textContent || '0') - 1);
+    arcToast('✓ 삭제 완료');
+  } else {
+    if (cardEl) cardEl.classList.remove('processing');
+  }
+}
+
+async function deleteViaAPI(ids, token) {
+  const paths = ['docs/data/cases.json'];
+  try {
+    for (const path of paths) {
+      const metaRes = await fetch(
+        `https://api.github.com/repos/${REPO}/contents/${path}`,
+        { headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' } }
+      );
+      if (!metaRes.ok) throw new Error(`읽기 실패: ${path} (${metaRes.status})`);
+      const meta = await metaRes.json();
+
+      const db = JSON.parse(atob(meta.content.replace(/\s/g, '')));
+      db.cases = db.cases.filter(c => !ids.includes(c.id));
+      db.meta.total_cases  = db.cases.length;
+      db.meta.last_updated = new Date().toISOString();
+
+      const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(db, null, 2))));
+      const putRes = await fetch(
+        `https://api.github.com/repos/${REPO}/contents/${path}`,
+        {
+          method: 'PUT',
+          headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json', 'Content-Type': 'application/json', 'X-GitHub-Api-Version': '2022-11-28' },
+          body: JSON.stringify({ message: `chore(articles): delete [${ids.join(',')}] [manual]`, content: encoded, sha: meta.sha, branch: 'main' }),
+        }
+      );
+      if (!putRes.ok) {
+        const err = await putRes.json().catch(() => ({}));
+        throw new Error(err.message || `저장 실패 (${putRes.status})`);
+      }
+    }
+    return true;
+  } catch(e) {
+    arcToast(`❌ ${e.message}`);
+    return false;
+  }
+}
 </script>
 <script src="./nav.js"></script>
 </body>

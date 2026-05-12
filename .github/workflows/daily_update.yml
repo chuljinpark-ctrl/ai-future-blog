@@ -44,12 +44,11 @@ jobs:
             python run_pipeline.py
           fi
 
-      # ── Sync data files → docs/data/ for GitHub Pages ──────────────────────
-      - name: Sync data to docs
+      # ── Sync sources → docs/data/ for GitHub Pages ───────────────────────────
+      - name: Sync sources to docs
         if: github.event.inputs.dry_run != 'true'
         run: |
           mkdir -p docs/data
-          cp data/cases.json docs/data/cases.json
           cp scraper/sources.json docs/data/sources.json
 
       # ── Commit if anything changed ───────────────────────────────────────────
@@ -58,12 +57,13 @@ jobs:
         run: |
           git config user.name  "Life After AI Bot"
           git config user.email "bot@life-after-ai.internal"
-          git add data/cases.json docs/data/cases.json docs/data/sources.json
-          COUNT=$(python3 -c "import json; d=json.load(open('data/cases.json')); print(len(d['cases']))")
+          git add docs/data/cases.json docs/data/sources.json
+          COUNT=$(python3 -c "import json; d=json.load(open('docs/data/cases.json')); print(len(d['cases']))")
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
             git commit -m "chore: daily update — ${COUNT} articles [$(date +'%Y-%m-%d KST')]"
+            git pull --rebase origin main
             git push
           fi
 

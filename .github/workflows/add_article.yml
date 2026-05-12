@@ -1,0 +1,72 @@
+name: Add Article by URL
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: 'Article URL'
+        required: true
+        type: string
+      category_hint:
+        description: 'Category hint (e.g. 1-1, 2-1) — optional'
+        required: false
+        type: string
+        default: ''
+
+permissions:
+  contents: write
+  models: read
+
+jobs:
+  add:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Add article
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd scraper
+          python add_article.py \
+            --url "${{ github.event.inputs.url }}" \
+            --category-hint "${{ github.event.inputs.category_hint }}"
+
+      - name: Commit
+        run: |
+          git config user.name  "Life After AI Bot"
+          git config user.email "bot@life-after-ai.internal"
+          git add docs/data/cases.json
+          if git diff --cached --quiet; then
+            echo "추가할 아티클이 없습니다."
+          else
+            TITLE=$(python3 -c "
+          import json, sys
+          url = '${{ github.event.inputs.url }}'
+          d = json.load(open('docs/data/cases.json'))
+          cases = [c for c in d['cases'] if c['url'] == url]
+          print(cases[0]['title'] if cases else 'article')
+          " 2>/dev/null || echo 'article')
+            git commit -m "feat(article): ${TITLE} [manual]"
+            git pull --rebase origin main
+            git push
+          fi
+
+      - name: Upload log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: add-article-log-${{ github.run_id }}
+          path: scraper/add_article.log
+          retention-days: 14

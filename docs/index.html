@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <title>Life After AI — AI 생활 변화 리서치</title>
 <meta name="description" content="AI가 고객의 집, 소비, 개인 생활, 관계를 어떻게 다시 설계하는지 추적하는 리서치 블로그. 5년 뒤 고객 생활 변화와 그 안의 사업 기회를 발굴합니다.">
 <link rel="stylesheet" href="./shared.css">
@@ -370,7 +373,8 @@
         <a href="./index.html"     class="nav__link active">홈</a>
         <a href="./dashboard.html" class="nav__link">리서치 맵</a>
         <a href="./archive.html"   class="nav__link">아티클</a>
-        <a href="./trinity.html"   class="nav__link">Trinity Eye</a>
+        <a href="./articles.html"  class="nav__link">아티클 관리</a>
+        <a href="./trinity.html"  class="nav__link">Trinity Eye</a>
       </div>
       <div class="nav__actions">
         <a href="./archive.html" class="btn btn-sm" id="nav-cta">아티클 보기 →</a>
@@ -619,7 +623,7 @@ async function loadCases() {
     const db = await res.json();
 
     const cases = [...db.cases]
-      .sort((a, b) => b.added_date.localeCompare(a.added_date))
+      .sort((a, b) => (b.published_date||b.added_date||'').localeCompare(a.published_date||a.added_date||''))
       .slice(0, 6);
 
     document.getElementById('cases-sub').textContent =
@@ -706,8 +710,8 @@ function buildThumb(c) {
 function buildCard(c, categories) {
   const cat   = categories?.[c.category] || {};
   const isTop = cat.type === 'top';
-  const date  = c.added_date
-    ? new Date(c.added_date).toLocaleDateString('ko-KR', { month:'short', day:'numeric' })
+  const date  = (c.published_date || c.added_date)
+    ? new Date(c.published_date || c.added_date).toLocaleDateString('ko-KR', { month:'short', day:'numeric' })
     : '';
   const tags  = (c.tags || []).slice(0, 2)
     .map(t => `<span class="post-card__tag">${t}</span>`).join('');

@@ -19,7 +19,7 @@ log = logging.getLogger(__name__)
 
 ROOT = Path(__file__).parent.parent
 SOURCES_FILE = Path(__file__).parent / "sources.json"
-DATA_FILE = ROOT / "data" / "cases.json"
+DATA_FILE = ROOT / "docs" / "data" / "cases.json"
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (compatible; LifeAfterAI-Bot/1.0; research aggregator)",
@@ -199,11 +199,23 @@ def scrape_all_sources() -> list[dict]:
             if not is_relevant(article["title"], body, all_keywords):
                 continue
 
-            article["body_text"]   = body
-            article["source_id"]   = source["id"]
-            article["source_name"] = source["name"]
-            article["source_cats"] = source.get("categories", [])
-            article["fetched_at"]  = datetime.now(timezone.utc).isoformat()
+            article["body_text"]      = body
+            article["source_id"]      = source["id"]
+            article["source_name"]    = source["name"]
+            article["source_cats"]    = source.get("categories", [])
+            article["fetched_at"]     = datetime.now(timezone.utc).isoformat()
+            # RSS published 날짜를 LLM에 힌트로 전달
+            raw_pub = article.get("published", "")
+            if raw_pub:
+                try:
+                    from email.utils import parsedate_to_datetime
+                    article["published_hint"] = parsedate_to_datetime(raw_pub).strftime("%Y-%m-%d")
+                except Exception:
+                    import re as _re
+                    m = _re.search(r"(20\d\d-\d\d-\d\d)", raw_pub)
+                    article["published_hint"] = m.group(1) if m else None
+            else:
+                article["published_hint"] = None
             new_articles.append(article)
             existing_urls.add(url)
 

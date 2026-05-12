@@ -303,7 +303,9 @@ function selCat(id) {
   activeCard = null;
   document.getElementById('det').classList.remove('open');
 
-  const cases = DB.cases.filter(c => c.category === id);
+  const cases = DB.cases
+    .filter(c => c.category === id)
+    .sort((a,b) => (b.published_date||b.added_date||'').localeCompare(a.published_date||a.added_date||''));
 
   const insightHtml = cat.insight
     ? `<div class="cat-insight"><p>${cat.insight.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')}</p></div>`
