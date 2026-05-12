@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-05-12T00:31:22.649728+00:00",
-    "total_cases": 49,
+    "last_updated": "2026-05-12T03:16:19.915564+00:00",
+    "total_cases": 48,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -458,38 +458,6 @@
       "added_date": "2026-05-10",
       "verified": true,
       "published_date": "2025-01-01"
-    },
-    {
-      "id": "ALI-001",
-      "category": "2-2",
-      "company": "Alibaba",
-      "short": "ALI",
-      "color_bg": "#FAEEDA",
-      "color_text": "#633806",
-      "kpi_value": "4B+",
-      "kpi_label": "상품 카탈로그",
-      "title": "Qwen AI integrated with Taobao",
-      "description": "AI Shopping이 상품 카탈로그, 주문 이력, 물류, CS가 결합된 대화형 쇼핑 운영체계로 진화한다는 사례.",
-      "body": "Alibaba는 Qwen AI를 Taobao에 통합해 사용자가 키워드 검색이 아니라 AI와 대화하며 상품을 탐색·비교·구매할 수 있는 agentic shopping 모델을 추진하고 있다. 대규모 상품 카탈로그와 개인화 추천, 구매 실행, 사후관리 기능이 결합되는 구조다.",
-      "metrics": [
-        {
-          "value": "4B+",
-          "label": "Taobao 상품 카탈로그 규모로 언급된 수치",
-          "trend": "pos"
-        }
-      ],
-      "tags": [
-        "AI_shopping",
-        "Alibaba",
-        "Qwen",
-        "Taobao",
-        "conversational_commerce"
-      ],
-      "source": "Reuters, 2026",
-      "url": "https://www.reuters.com/world/asia-pacific/alibaba-integrate-qwen-ai-with-taobao-launch-agentic-shopping-source-says-2026-05-10/",
-      "added_date": "2026-05-10",
-      "verified": true,
-      "published_date": "2026-01-01"
     },
     {
       "id": "ZAL-001",
