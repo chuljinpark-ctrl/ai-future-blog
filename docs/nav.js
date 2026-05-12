@@ -9,7 +9,6 @@
     { file: 'dashboard.html', label: '리서치 맵' },
     { file: 'archive.html',   label: '아티클' },
     { file: 'articles.html',  label: '아티클 관리' },
-    { file: 'admin.html',     label: '소스 관리' },
     { file: 'trinity.html',   label: 'Trinity Eye' },
   ];
 

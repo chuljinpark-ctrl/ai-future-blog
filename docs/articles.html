@@ -8,7 +8,7 @@
 <style>
 body { padding-bottom: 80px; font-size: 14px; }
 
-/* ── Sub-header ───────────────────────────────────────────── */
+/* ── Page sub-header ──────────────────────────────────────── */
 .hd {
   padding: 13px 24px;
   border-bottom: 0.5px solid var(--hairline);
@@ -21,29 +21,34 @@ body { padding-bottom: 80px; font-size: 14px; }
   letter-spacing: -0.02em; color: var(--ink);
 }
 
-/* ── Tabs ─────────────────────────────────────────────────── */
-.tabs {
+/* ── Top-level tabs ───────────────────────────────────────── */
+.top-tabs {
   padding: 0 24px; border-bottom: 0.5px solid var(--hairline);
   display: flex; background: var(--canvas);
+  position: sticky; top: 107px; z-index: 29;
 }
-.tab {
+.top-tab {
   font-size: 13px; font-weight: 500; padding: 11px 18px; cursor: pointer;
   border-bottom: 2px solid transparent; color: var(--muted);
   transition: all .12s; user-select: none;
 }
-.tab:hover { color: var(--ink); }
-.tab.on    { color: var(--ink); border-bottom-color: var(--primary); }
+.top-tab:hover { color: var(--ink); }
+.top-tab.on    { color: var(--ink); border-bottom-color: var(--primary); }
 
-/* ── Panel ────────────────────────────────────────────────── */
-.panel { display: none; padding: 20px 24px; max-width: 760px; }
+/* ── Panels ───────────────────────────────────────────────── */
+.panel { display: none; }
 .panel.on { display: block; }
 
-/* ── Add form ─────────────────────────────────────────────── */
+/* ──────────────────────────────────────────────────────────
+   TAB 1 & 2 — URL 추가 / 아티클 목록
+─────────────────────────────────────────────────────────── */
+#panel-add, #panel-manage { padding: 20px 24px; max-width: 760px; }
+#panel-manage { max-width: 100%; padding: 0; }
+
+/* Add form */
 .form-card {
-  background: var(--surface-card);
-  border-radius: 12px;
-  padding: 24px;
-  margin-bottom: 20px;
+  background: var(--surface-card); border-radius: 12px;
+  padding: 24px; margin-bottom: 20px;
 }
 .form-card label {
   display: block; font-size: 11px; font-weight: 600;
@@ -51,76 +56,42 @@ body { padding-bottom: 80px; font-size: 14px; }
   margin-bottom: 6px;
 }
 .url-row { display: flex; gap: 8px; margin-bottom: 16px; }
-.url-row input {
-  flex: 1; padding: 9px 12px;
-  border: 1px solid var(--hairline); border-radius: 8px;
+.url-row input, .cat-select {
+  padding: 9px 12px; border: 1px solid var(--hairline); border-radius: 8px;
   background: var(--canvas); color: var(--ink);
   font-family: var(--font); font-size: 13px; outline: none;
   transition: border-color .12s;
 }
-.url-row input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(204,120,92,.12); }
-.cat-select {
-  width: 100%; padding: 8px 12px;
-  border: 1px solid var(--hairline); border-radius: 8px;
-  background: var(--canvas); color: var(--ink);
-  font-family: var(--font); font-size: 13px; outline: none;
-  transition: border-color .12s; margin-bottom: 18px;
+.url-row input { flex: 1; }
+.url-row input:focus, .cat-select:focus {
+  border-color: var(--primary); box-shadow: 0 0 0 3px rgba(204,120,92,.12);
 }
-.cat-select:focus { border-color: var(--primary); }
+.cat-select { width: 100%; margin-bottom: 18px; }
 
-/* ── Command block ────────────────────────────────────────── */
-.cmd-wrap {
-  display: none;
-  background: var(--surface-dark);
-  border-radius: 10px;
-  padding: 16px 16px 14px;
-  margin-top: 4px;
-}
+/* Command block */
+.cmd-wrap { display: none; background: var(--surface-dark); border-radius: 10px; padding: 16px 16px 14px; margin-top: 4px; }
 .cmd-wrap.show { display: block; }
-.cmd-label {
-  font-size: 10px; font-weight: 700; letter-spacing: .08em;
-  text-transform: uppercase; color: var(--accent-teal);
-  margin-bottom: 8px;
-}
-.cmd-text {
-  font-family: "JetBrains Mono", "SFMono-Regular", monospace;
-  font-size: 12px; line-height: 1.7; color: var(--on-dark);
-  white-space: pre-wrap; word-break: break-all;
-  margin-bottom: 12px;
-}
+.cmd-label { font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent-teal); margin-bottom: 8px; }
+.cmd-text  { font-family: "JetBrains Mono","SFMono-Regular",monospace; font-size: 12px; line-height: 1.7; color: var(--on-dark); white-space: pre-wrap; word-break: break-all; margin-bottom: 12px; }
 .cmd-actions { display: flex; gap: 8px; align-items: center; }
-.btn-copy {
-  font-size: 12px; font-weight: 500; padding: 5px 14px;
-  border-radius: 6px; border: 1px solid rgba(255,255,255,.15);
-  background: rgba(255,255,255,.08); color: var(--on-dark);
-  cursor: pointer; transition: all .12s;
-}
+.btn-copy { font-size: 12px; font-weight: 500; padding: 5px 14px; border-radius: 6px; border: 1px solid rgba(255,255,255,.15); background: rgba(255,255,255,.08); color: var(--on-dark); cursor: pointer; transition: all .12s; }
 .btn-copy:hover { background: rgba(255,255,255,.16); }
 .btn-copy.copied { color: var(--accent-teal); border-color: var(--accent-teal); }
-.cmd-hint {
-  font-size: 11px; color: var(--on-dark-soft);
-  margin-left: 4px;
-}
+.cmd-hint { font-size: 11px; color: var(--on-dark-soft); margin-left: 4px; }
 
-/* ── Manage panel ─────────────────────────────────────────── */
-#panel-manage { max-width: 100%; }
-
-.filter-row {
-  display: flex; gap: 6px; flex-wrap: wrap;
-  padding: 12px 24px 12px; align-items: center;
-  border-bottom: 0.5px solid var(--hairline);
-  background: var(--canvas);
-  position: sticky; top: 125px; z-index: 19;
+/* Article filter / table */
+.art-filter {
+  display: flex; gap: 6px; flex-wrap: wrap; align-items: center;
+  padding: 10px 24px; border-bottom: 0.5px solid var(--hairline);
+  background: var(--canvas); position: sticky; top: 150px; z-index: 19;
 }
 .chip {
-  font-size: 12px; font-weight: 500; padding: 5px 13px;
-  border-radius: 9999px; cursor: pointer;
-  border: 0.5px solid var(--hairline);
-  background: transparent; color: var(--muted);
+  font-size: 12px; font-weight: 500; padding: 5px 13px; border-radius: 9999px;
+  cursor: pointer; border: 0.5px solid var(--hairline); background: transparent; color: var(--muted);
   transition: all .12s; user-select: none;
 }
 .chip:hover { background: var(--surface-card); color: var(--ink); }
-.chip.on { background: var(--ink); color: var(--canvas); border-color: var(--ink); }
+.chip.on    { background: var(--ink); color: var(--canvas); border-color: var(--ink); }
 .search-input {
   margin-left: auto; padding: 6px 12px; width: 180px;
   border: 1px solid var(--hairline); border-radius: 8px;
@@ -129,85 +100,181 @@ body { padding-bottom: 80px; font-size: 14px; }
 }
 .search-input:focus { border-color: var(--primary); }
 
-.meta-bar {
+.art-meta {
   padding: 8px 24px; font-size: 12px; color: var(--muted-soft);
   border-bottom: 0.5px solid var(--hairline);
   display: flex; align-items: center; gap: 8px;
 }
 .sel-badge {
-  font-size: 11px; font-weight: 600; color: var(--g4);
-  background: var(--g4-bg); padding: 2px 8px; border-radius: 9999px;
-  display: none;
+  font-size: 11px; font-weight: 600; color: var(--g4); background: var(--g4-bg);
+  padding: 2px 8px; border-radius: 9999px; display: none;
 }
 .sel-badge.on { display: inline-block; }
 
-.tbl-wrap { padding: 0 24px; overflow-x: auto; }
-table { width: 100%; border-collapse: collapse; min-width: 560px; }
-th {
-  font-size: 11px; font-weight: 600; color: var(--muted);
-  letter-spacing: .05em; text-transform: uppercase;
-  padding: 0 10px 8px; text-align: left;
+.art-tbl-wrap { padding: 0 24px; overflow-x: auto; }
+.art-tbl-wrap table { width: 100%; border-collapse: collapse; min-width: 520px; }
+.art-tbl-wrap th {
+  font-size: 11px; font-weight: 600; color: var(--muted); letter-spacing: .05em;
+  text-transform: uppercase; padding: 0 10px 8px; text-align: left;
   border-bottom: 0.5px solid var(--hairline);
 }
-td { padding: 10px; border-bottom: 0.5px solid var(--hairline); vertical-align: middle; }
-tr:last-child td { border-bottom: none; }
-tr:hover td { background: var(--surface-card); }
-tr.selected td { background: var(--g4-bg); }
-
-.badge {
-  font-size: 10px; font-weight: 700; padding: 2px 7px;
-  border-radius: 9999px; white-space: nowrap;
-}
-.g1 { background: var(--g1-bg); color: var(--g1); }
-.g2 { background: var(--g2-bg); color: var(--g2); }
-.g3 { background: var(--g3-bg); color: var(--g3); }
-.g4 { background: var(--g4-bg); color: var(--g4); }
-
-.td-title { font-weight: 500; font-size: 13px; color: var(--ink); max-width: 240px; }
+.art-tbl-wrap td { padding: 10px; border-bottom: 0.5px solid var(--hairline); vertical-align: middle; }
+.art-tbl-wrap tr:last-child td { border-bottom: none; }
+.art-tbl-wrap tr:hover td { background: var(--surface-card); }
+.art-tbl-wrap tr.selected td { background: var(--g4-bg); }
+.td-title { font-weight: 500; font-size: 13px; color: var(--ink); }
 .td-title a { color: inherit; text-decoration: none; }
 .td-title a:hover { color: var(--primary); }
 .td-co   { font-size: 12px; color: var(--muted-soft); }
 .td-date { font-size: 12px; color: var(--muted-soft); white-space: nowrap; }
-
-/* row checkbox */
 .row-check { width: 16px; height: 16px; accent-color: var(--primary); cursor: pointer; }
 
-/* ── Bottom delete command bar ────────────────────────────── */
+/* Delete command bar */
 .del-bar {
   position: fixed; bottom: 0; left: 0; right: 0;
   padding: 0 24px 16px;
   background: color-mix(in srgb, var(--canvas) 96%, transparent);
-  backdrop-filter: blur(16px);
-  border-top: 0.5px solid var(--hairline);
-  z-index: 40;
-  display: none;
+  backdrop-filter: blur(16px); border-top: 0.5px solid var(--hairline);
+  z-index: 40; display: none;
 }
 .del-bar.show { display: block; }
-.del-bar-inner {
-  background: var(--surface-dark);
-  border-radius: 12px;
-  padding: 14px 16px 12px;
-  margin-top: 12px;
-}
-.del-bar-head {
-  display: flex; align-items: center; justify-content: space-between;
-  margin-bottom: 10px;
-}
+.del-bar-inner { background: var(--surface-dark); border-radius: 12px; padding: 14px 16px 12px; margin-top: 12px; }
+.del-bar-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
 .del-bar-label { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent-teal); }
 .del-bar-close { font-size: 18px; color: var(--on-dark-soft); cursor: pointer; line-height: 1; }
 .del-bar-close:hover { color: var(--on-dark); }
 
-@media(max-width:640px){
-  .hd { padding: 11px 16px; }
-  .panel { padding: 16px; }
-  .filter-row { padding: 8px 16px; }
-  .tbl-wrap { padding: 0 16px; }
-  .meta-bar { padding: 7px 16px; }
+/* ──────────────────────────────────────────────────────────
+   TAB 3 — 구독 소스 (admin content)
+─────────────────────────────────────────────────────────── */
+
+/* Source toolbar */
+.src-toolbar {
+  padding: 10px 24px; border-bottom: 0.5px solid var(--hairline);
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  background: var(--canvas);
+}
+.dirty-dot   { width: 7px; height: 7px; border-radius: 50%; background: var(--accent-amber); flex-shrink: 0; display: none; }
+.dirty-dot.on { display: inline-block; }
+.dirty-label { font-size: 11px; color: var(--accent-amber); display: none; margin-right: 4px; }
+.dirty-dot.on + .dirty-label { display: inline; }
+.btn-green { background: var(--g3-bg); color: var(--g3); border-color: var(--g3-b); }
+.btn-green:hover { background: var(--success); color: #fff; border-color: var(--success); }
+.btn-sm { font-size: 12px; padding: 5px 11px; border-radius: 6px; }
+
+/* Source stats */
+.src-stats {
+  padding: 10px 24px; border-bottom: 0.5px solid var(--hairline);
+  display: flex; align-items: center; gap: 18px;
+  background: var(--surface-soft); font-size: 13px; color: var(--muted-soft); flex-wrap: wrap;
+}
+.stat     { display: flex; align-items: center; gap: 5px; }
+.stat-n   { font-weight: 700; color: var(--ink); font-size: 15px; }
+.stat-sep { width: 0.5px; height: 14px; background: var(--hairline); }
+
+/* Source sub-tabs */
+.src-tabs { padding: 0 24px; border-bottom: 0.5px solid var(--hairline); display: flex; background: var(--canvas); }
+.src-tab  {
+  font-size: 13px; font-weight: 500; padding: 11px 16px; cursor: pointer;
+  border-bottom: 2px solid transparent; color: var(--muted);
+  transition: all .12s; user-select: none; white-space: nowrap;
+}
+.src-tab:hover { color: var(--ink); }
+.src-tab.on    { color: var(--ink); border-bottom-color: var(--primary); }
+
+/* Source notice */
+.src-notice {
+  margin: 12px 24px 0; padding: 10px 14px; border-radius: 8px;
+  background: var(--g2-bg); border: 0.5px solid var(--g2-b);
+  font-size: 12px; color: var(--g2); display: flex; align-items: center; gap: 8px;
+}
+
+/* Source table */
+.src-tbl-wrap { padding: 14px 24px 0; overflow-x: auto; }
+.src-tbl-wrap table { width: 100%; border-collapse: collapse; min-width: 700px; }
+.src-tbl-wrap th {
+  font-size: 11px; font-weight: 600; color: var(--muted); letter-spacing: .06em;
+  text-transform: uppercase; padding: 0 10px 9px; text-align: left;
+  border-bottom: 0.5px solid var(--hairline); white-space: nowrap;
+}
+.src-tbl-wrap td { padding: 11px 10px; border-bottom: 0.5px solid var(--hairline); vertical-align: middle; }
+.src-tbl-wrap tr:last-child td { border-bottom: none; }
+.src-tbl-wrap tr:hover td { background: var(--surface-card); }
+.td-id   { font-family: monospace; font-size: 12px; color: var(--muted-soft); }
+.td-name { font-weight: 500; font-size: 14px; line-height: 1.3; color: var(--ink); }
+.td-url  { font-size: 12px; color: var(--muted-soft); margin-top: 2px; max-width: 220px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.td-url a { color: var(--primary); text-decoration: none; }
+.td-url a:hover { color: var(--primary-active); text-decoration: underline; }
+.empty-row td { text-align: center; padding: 48px; color: var(--muted-soft); font-size: 13px; }
+.row-actions { display: flex; gap: 5px; align-items: center; }
+.del-confirm { display: flex; align-items: center; gap: 6px; background: var(--red-bg); padding: 4px 10px; border-radius: 9999px; font-size: 11px; color: var(--error); }
+.tag-pills { display: flex; flex-wrap: wrap; gap: 3px; max-width: 180px; }
+.tag-pill  { font-size: 10px; padding: 2px 7px; border-radius: 9999px; background: var(--surface-cream-strong); color: var(--muted); }
+.toggle { position: relative; display: inline-block; width: 32px; height: 18px; cursor: pointer; }
+.toggle input { opacity: 0; width: 0; height: 0; position: absolute; }
+.slider { position: absolute; inset: 0; border-radius: 18px; background: var(--surface-cream-strong); transition: .2s; border: 0.5px solid var(--hairline); }
+.slider::before { content: ""; position: absolute; width: 12px; height: 12px; border-radius: 50%; background: #fff; left: 2px; bottom: 2px; transition: .2s; box-shadow: 0 1px 3px rgba(20,20,19,.2); }
+input:checked + .slider { background: var(--primary); border-color: var(--primary-active); }
+input:checked + .slider::before { transform: translateX(14px); }
+
+/* Shared badges */
+.badge { display: inline-flex; align-items: center; font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 9999px; white-space: nowrap; letter-spacing: .03em; }
+.g1 { background: var(--g1-bg); color: var(--g1); }
+.g2 { background: var(--g2-bg); color: var(--g2); }
+.g3 { background: var(--g3-bg); color: var(--g3); }
+.g4 { background: var(--g4-bg); color: var(--g4); }
+.badge-rss, .badge-public_research, .badge-industry_standard, .badge-medium { background: var(--g1-bg); color: var(--g1); }
+.badge-html, .badge-trade, .badge-market_research { background: var(--g2-bg); color: var(--g2); }
+.badge-high, .badge-company, .badge-company_docs, .badge-government_statistics, .badge-government_policy { background: var(--g3-bg); color: var(--g3); }
+.badge-research, .badge-vendor, .badge-consulting_research { background: var(--g4-bg); color: var(--g4); }
+.badge-low, .badge-academic, .badge-news, .badge-news_tabloid { background: var(--surface-cream-strong); color: var(--muted); }
+
+/* Modal */
+.modal-bg { position: fixed; inset: 0; background: rgba(20,20,19,.5); backdrop-filter: blur(6px); z-index: 100; display: none; align-items: center; justify-content: center; padding: 20px; }
+.modal-bg.open { display: flex; }
+.modal { background: var(--surface-card); border-radius: 16px; width: 100%; max-width: 520px; max-height: 90vh; overflow-y: auto; box-shadow: 0 24px 64px rgba(20,20,19,.18); border: 0.5px solid var(--hairline); }
+.modal-hd { padding: 18px 22px 14px; border-bottom: 0.5px solid var(--hairline); display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; background: var(--surface-card); z-index: 1; border-radius: 16px 16px 0 0; }
+.modal-title { font-family: var(--font-display); font-size: 16px; font-weight: 400; letter-spacing: -0.01em; color: var(--ink); }
+.modal-close { font-size: 20px; color: var(--muted-soft); cursor: pointer; padding: 0 4px; line-height: 1; user-select: none; }
+.modal-close:hover { color: var(--ink); }
+.modal-body { padding: 20px 22px; background: var(--canvas); }
+.modal-ft { padding: 14px 22px; border-top: 0.5px solid var(--hairline); display: flex; justify-content: flex-end; gap: 8px; position: sticky; bottom: 0; background: var(--surface-card); border-radius: 0 0 16px 16px; }
+.form-row { margin-bottom: 14px; }
+.form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px; }
+label { display: block; font-size: 11px; font-weight: 600; color: var(--muted); margin-bottom: 5px; letter-spacing: .04em; text-transform: uppercase; }
+input[type=text], input[type=url], select, textarea { width: 100%; padding: 8px 12px; border: 1px solid var(--hairline); border-radius: 8px; background: var(--canvas); color: var(--ink); font-family: var(--font); font-size: 13px; transition: border-color .12s; outline: none; }
+input[type=text]:focus, input[type=url]:focus, select:focus, textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(204,120,92,.12); }
+input.err { border-color: var(--error) !important; }
+.field-hint { font-size: 10px; color: var(--muted-soft); margin-top: 4px; }
+.field-err { font-size: 10px; color: var(--error); margin-top: 4px; display: none; }
+.field-err.on { display: block; }
+.tag-input-box { border: 1px solid var(--hairline); border-radius: 8px; background: var(--canvas); padding: 5px 8px; display: flex; flex-wrap: wrap; gap: 4px; align-items: center; cursor: text; min-height: 38px; transition: border-color .12s; }
+.tag-input-box:focus-within { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(204,120,92,.12); }
+.tag-chip { display: inline-flex; align-items: center; gap: 3px; font-size: 11px; padding: 3px 9px; border-radius: 9999px; background: var(--surface-cream-strong); color: var(--body); }
+.tag-chip button { background: none; border: none; cursor: pointer; color: var(--muted-soft); font-size: 13px; line-height: 1; padding: 0 1px; }
+.tag-chip button:hover { color: var(--error); }
+#tag-input { border: none; background: transparent; color: var(--ink); font-size: 12px; padding: 2px 4px; outline: none; min-width: 80px; flex: 1; }
+.form-toggle-row { display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; background: var(--surface-card); border-radius: 8px; border: 0.5px solid var(--hairline); margin-bottom: 14px; }
+.form-toggle-label { font-size: 13px; font-weight: 500; color: var(--ink); }
+.form-toggle-sub   { font-size: 11px; color: var(--muted-soft); margin-top: 2px; }
+
+/* Toast */
+.toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: var(--surface-dark); color: var(--on-dark); font-size: 12px; padding: 10px 18px; border-radius: 9999px; opacity: 0; transition: opacity .2s; pointer-events: none; white-space: nowrap; z-index: 200; box-shadow: 0 8px 24px rgba(20,20,19,.25); border: 0.5px solid rgba(255,255,255,.08); }
+.toast.show { opacity: 1; }
+
+@media(max-width:640px) {
+  #panel-add, #panel-manage { padding: 16px; }
+  .art-filter  { padding: 8px 16px; top: 148px; }
+  .art-meta    { padding: 7px 16px; }
+  .art-tbl-wrap{ padding: 0 16px; }
+  .src-toolbar, .src-stats, .src-notice, .src-tbl-wrap { padding-left: 16px; padding-right: 16px; }
+  .form-row-2  { grid-template-columns: 1fr; }
 }
 </style>
 </head>
 <body>
 
+<!-- ── Page header ───────────────────────────────────────────────────────── -->
 <header class="hd">
   <span class="hd-title">아티클 관리</span>
   <a href="https://github.com/skykelly/ai-future-blog/actions"
@@ -215,16 +282,17 @@ tr.selected td { background: var(--g4-bg); }
      class="btn btn-outline btn-sm">GitHub Actions ↗</a>
 </header>
 
-<div class="tabs">
-  <div class="tab on" id="tab-add"    onclick="selTab('add')">URL로 추가</div>
-  <div class="tab"    id="tab-manage" onclick="selTab('manage')">아티클 목록</div>
+<!-- ── Top tabs ──────────────────────────────────────────────────────────── -->
+<div class="top-tabs">
+  <div class="top-tab on" id="ttab-add"     onclick="selTopTab('add')">URL로 추가</div>
+  <div class="top-tab"    id="ttab-manage"  onclick="selTopTab('manage')">아티클 목록</div>
+  <div class="top-tab"    id="ttab-sources" onclick="selTopTab('sources')">구독 소스</div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════════
-     Tab 1 — URL로 추가
-═══════════════════════════════════════════════════════════ -->
+<!-- ════════════════════════════════════════════════════════
+     Panel: URL로 추가
+════════════════════════════════════════════════════════ -->
 <div class="panel on" id="panel-add">
-
   <div class="form-card">
     <label>아티클 URL</label>
     <div class="url-row">
@@ -232,7 +300,6 @@ tr.selected td { background: var(--g4-bg); }
              oninput="clearAddCmd()" onkeydown="if(event.key==='Enter') genAddCmd()">
       <button class="btn btn-primary" onclick="genAddCmd()">명령어 생성</button>
     </div>
-
     <label>카테고리 힌트 <span style="font-weight:400;color:var(--muted-soft)">(선택 — 없으면 AI 자동 분류)</span></label>
     <select class="cat-select" id="cat-hint" oninput="clearAddCmd()">
       <option value="">-- 자동 감지 --</option>
@@ -257,8 +324,6 @@ tr.selected td { background: var(--g4-bg); }
         <option value="4-3">4-3 Aging Society</option>
       </optgroup>
     </select>
-
-    <!-- Generated command -->
     <div class="cmd-wrap" id="add-cmd-wrap">
       <div class="cmd-label">터미널 명령어</div>
       <div class="cmd-text" id="add-cmd-text"></div>
@@ -268,61 +333,104 @@ tr.selected td { background: var(--g4-bg); }
       </div>
     </div>
   </div>
-
   <p style="font-size:12px;color:var(--muted-soft);line-height:1.8">
-    명령어 복사 → Claude Code 채팅창에 <code>! 명령어</code> 형태로 붙여넣어 실행<br>
-    또는 터미널에서 직접 실행 · GitHub Actions 페이지에서 수동 실행도 가능합니다.
+    명령어 복사 후 Claude Code 채팅창에 <code>! 명령어</code> 형태로 붙여넣어 실행하거나,
+    터미널에서 직접 실행하세요.
   </p>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════════
-     Tab 2 — 아티클 목록
-═══════════════════════════════════════════════════════════ -->
+<!-- ════════════════════════════════════════════════════════
+     Panel: 아티클 목록
+════════════════════════════════════════════════════════ -->
 <div class="panel" id="panel-manage">
-
-  <div class="filter-row" id="filter-row">
+  <div class="art-filter">
     <span class="chip on" data-cat="all" onclick="filterCat('all')">전체</span>
     <span class="chip" data-cat="1" onclick="filterCat('1')">생활 공간</span>
     <span class="chip" data-cat="2" onclick="filterCat('2')">소비 행동</span>
     <span class="chip" data-cat="3" onclick="filterCat('3')">개인 행동</span>
     <span class="chip" data-cat="4" onclick="filterCat('4')">인간 관계</span>
-    <input class="search-input" id="search-input" placeholder="검색..."
-           oninput="renderTable()">
+    <input class="search-input" id="search-input" placeholder="검색..." oninput="renderArticles()">
   </div>
-
-  <div class="meta-bar">
-    <span id="meta-count">–</span>개 표시 중
+  <div class="art-meta">
+    <span id="art-count">–</span>개 표시 중
     <span class="sel-badge" id="sel-badge">0개 선택됨</span>
-    <span id="meta-updated" style="margin-left:auto;font-size:11px"></span>
+    <span id="art-updated" style="margin-left:auto;font-size:11px"></span>
   </div>
-
-  <div class="tbl-wrap">
+  <div class="art-tbl-wrap">
     <table>
       <thead>
         <tr>
-          <th style="width:30px">
-            <input type="checkbox" class="row-check" id="check-all"
-                   onchange="toggleAll(this.checked)" title="전체 선택">
-          </th>
+          <th style="width:30px"><input type="checkbox" class="row-check" id="check-all" onchange="toggleAll(this.checked)"></th>
           <th style="width:80px">카테고리</th>
           <th style="width:100px">기업</th>
           <th>제목</th>
           <th style="width:80px">추가일</th>
         </tr>
       </thead>
-      <tbody id="tbl-body">
+      <tbody id="art-body">
         <tr><td colspan="5" style="padding:40px;text-align:center;color:var(--muted-soft)">불러오는 중...</td></tr>
       </tbody>
     </table>
   </div>
 </div>
 
-<!-- ── Delete command bar (sticky bottom) ──────────────────── -->
+<!-- ════════════════════════════════════════════════════════
+     Panel: 구독 소스
+════════════════════════════════════════════════════════ -->
+<div class="panel" id="panel-sources">
+
+  <!-- Toolbar -->
+  <div class="src-toolbar">
+    <div class="dirty-dot" id="dirty-dot"></div>
+    <span class="dirty-label" id="dirty-label">미저장 변경사항</span>
+    <button class="btn btn-ghost btn-sm" onclick="importFile()">JSON 가져오기</button>
+    <input type="file" id="file-input" accept=".json" style="display:none" onchange="onFileImport(event)">
+    <button class="btn btn-ghost btn-sm" onclick="copyJSON()">클립보드 복사</button>
+    <button class="btn btn-green btn-sm" onclick="exportJSON()">⬇ JSON 내보내기</button>
+    <button class="btn btn-primary btn-sm" onclick="openModal(null)" style="margin-left:auto">+ 소스 추가</button>
+  </div>
+
+  <!-- Stats -->
+  <div class="src-stats" id="stats">
+    <span class="stat"><span class="stat-n" id="st-active">–</span> 활성</span>
+    <div class="stat-sep"></div>
+    <span class="stat"><span class="stat-n" id="st-inactive">–</span> 비활성</span>
+    <div class="stat-sep"></div>
+    <span class="stat">RSS <span class="stat-n" id="st-rss">–</span></span>
+    <span class="stat">HTML <span class="stat-n" id="st-html">–</span></span>
+    <div class="stat-sep"></div>
+    <span class="stat">제외 도메인 <span class="stat-n" id="st-excl">–</span></span>
+    <span class="stat" id="st-updated" style="margin-left:auto;color:var(--muted-soft)"></span>
+  </div>
+
+  <!-- Notice -->
+  <div class="src-notice">
+    ⚠ 변경 후 <strong>JSON 내보내기</strong>로 다운로드 →
+    <code style="font-size:10px;background:rgba(0,0,0,.1);padding:1px 4px;border-radius:3px">scraper/sources.json</code>에 저장하고 커밋하세요.
+  </div>
+
+  <!-- Source sub-tabs -->
+  <div class="src-tabs">
+    <div class="src-tab on" id="tab-active"   onclick="selSrcTab('active')">활성 소스 <span id="tab-n-active"></span></div>
+    <div class="src-tab"    id="tab-inactive" onclick="selSrcTab('inactive')">비활성 <span id="tab-n-inactive"></span></div>
+    <div class="src-tab"    id="tab-excluded" onclick="selSrcTab('excluded')">제외 도메인 <span id="tab-n-excluded"></span></div>
+  </div>
+
+  <!-- Source table -->
+  <div class="src-tbl-wrap">
+    <table id="src-tbl">
+      <thead id="tbl-head"></thead>
+      <tbody id="tbl-body"><tr class="empty-row"><td>데이터 불러오는 중...</td></tr></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ── Delete command bar ─────────────────────────────────────────────────── -->
 <div class="del-bar" id="del-bar">
   <div class="del-bar-inner">
     <div class="del-bar-head">
       <span class="del-bar-label" id="del-bar-label">삭제 명령어</span>
-      <span class="del-bar-close" onclick="clearSelection()">×</span>
+      <span class="del-bar-close" onclick="clearSel()">×</span>
     </div>
     <div class="cmd-text" id="del-cmd-text" style="margin-bottom:10px"></div>
     <div class="cmd-actions">
@@ -332,8 +440,90 @@ tr.selected td { background: var(--g4-bg); }
   </div>
 </div>
 
+<!-- ── Source add/edit Modal ─────────────────────────────────────────────── -->
+<div class="modal-bg" id="modal-bg" onclick="bgClick(event)">
+  <div class="modal">
+    <div class="modal-hd">
+      <span class="modal-title" id="modal-title">소스 추가</span>
+      <span class="modal-close" onclick="closeModal()">×</span>
+    </div>
+    <div class="modal-body">
+      <div class="form-row-2">
+        <div>
+          <label>소스 ID <span style="font-weight:400;color:var(--muted-soft)">(자동 생성)</span></label>
+          <input type="text" id="f-id" placeholder="예: google-home-blog">
+          <div class="field-hint">URL 입력 시 자동 생성됩니다</div>
+          <div class="field-err" id="err-id">이미 존재하는 ID입니다</div>
+        </div>
+        <div>
+          <label>소스명</label>
+          <input type="text" id="f-name" placeholder="예: Google Home Blog">
+          <div class="field-err" id="err-name">소스명을 입력하세요</div>
+        </div>
+      </div>
+      <div class="form-row">
+        <label>섹션 URL</label>
+        <input type="url" id="f-url" placeholder="https://example.com/ai-section/" oninput="autoId()">
+        <div class="field-err" id="err-url">유효한 URL을 입력하세요</div>
+      </div>
+      <div class="form-row">
+        <label>RSS 피드 URL <span style="font-weight:400;color:var(--muted-soft)">(없으면 HTML 스크래핑)</span></label>
+        <input type="url" id="f-rss" placeholder="https://example.com/feed/">
+      </div>
+      <div class="form-row-2">
+        <div>
+          <label>타입</label>
+          <select id="f-type">
+            <option value="research">research</option>
+            <option value="vendor">vendor</option>
+            <option value="trade">trade</option>
+            <option value="company">company</option>
+          </select>
+        </div>
+        <div>
+          <label>우선순위</label>
+          <select id="f-priority">
+            <option value="high">high</option>
+            <option value="medium">medium</option>
+            <option value="low">low</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <label>Expected Tags</label>
+        <div class="tag-input-box" id="tag-box" onclick="focusTagInput()">
+          <div id="tag-chips"></div>
+          <input id="tag-input" type="text" placeholder="태그 입력 후 Enter 또는 쉼표"
+                 onkeydown="onTagKey(event)" onpaste="onTagPaste(event)">
+        </div>
+        <div class="field-hint">카테고리 커버리지 분석에 사용됩니다</div>
+      </div>
+      <div class="form-toggle-row">
+        <div>
+          <div class="form-toggle-label">활성화</div>
+          <div class="form-toggle-sub">비활성화하면 스크래핑에서 제외됩니다</div>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" id="f-active" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+    <div class="modal-ft">
+      <button class="btn btn-ghost btn-sm" onclick="closeModal()">취소</button>
+      <button class="btn btn-primary btn-sm" onclick="saveModal()">저장</button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
 <script src="./nav.js"></script>
 <script>
+/* ══════════════════════════════════════════════════════════
+   Config
+══════════════════════════════════════════════════════════ */
 const REPO    = 'skykelly/ai-future-blog';
 const CAT_MAP = {
   '1-1':'AI Home','1-2':'Wellness Home','1-3':'Energy Optimization',
@@ -342,177 +532,482 @@ const CAT_MAP = {
   '4-1':'Emotional AI','4-2':'Companion','4-3':'Aging Society',
 };
 
-let DB         = null;
-let activeCat  = 'all';
-let selectedIds = new Set();
-
-/* ─── Init ─────────────────────────────────────────────────── */
-loadDB();
-
-/* ─── Tabs ──────────────────────────────────────────────────── */
-function selTab(name) {
-  ['add','manage'].forEach(t => {
-    document.getElementById('tab-'+t).classList.toggle('on', t===name);
+/* ══════════════════════════════════════════════════════════
+   Top-level tab switching
+══════════════════════════════════════════════════════════ */
+function selTopTab(name) {
+  ['add','manage','sources'].forEach(t => {
+    document.getElementById('ttab-'+t).classList.toggle('on', t===name);
     document.getElementById('panel-'+t).classList.toggle('on', t===name);
   });
+  // Hide delete bar when switching away from manage
+  if (name !== 'manage') document.getElementById('del-bar').classList.remove('show');
+  // Lazy-load sources
+  if (name === 'sources' && !srcState) loadSources();
 }
 
-/* ─── Load DB ───────────────────────────────────────────────── */
-async function loadDB() {
-  try {
-    const res = await fetch('./data/cases.json?t=' + Date.now());
-    if (!res.ok) throw new Error(res.status);
-    DB = await res.json();
-    document.getElementById('meta-updated').textContent =
-      '최종 갱신 ' + new Date(DB.meta.last_updated).toLocaleDateString('ko-KR');
-    renderTable();
-  } catch {
-    document.getElementById('tbl-body').innerHTML =
-      `<tr><td colspan="5" style="padding:40px;text-align:center;color:var(--muted-soft)">
-         cases.json 로드 실패 — HTTP 서버로 접근하세요
-       </td></tr>`;
-  }
-}
-
-/* ─── Filter & render ───────────────────────────────────────── */
-function filterCat(cat) {
-  activeCat = cat;
-  document.querySelectorAll('.chip[data-cat]').forEach(c =>
-    c.classList.toggle('on', c.dataset.cat === cat));
-  selectedIds.clear();
-  renderTable();
-  updateDelBar();
-}
-
-function renderTable() {
-  if (!DB) return;
-  const q = (document.getElementById('search-input').value || '').toLowerCase();
-  const list = DB.cases.filter(c => {
-    const catOk = activeCat === 'all' || c.category.startsWith(activeCat + '-');
-    const qOk   = !q || [c.company, c.title, c.category, c.url]
-      .some(s => (s||'').toLowerCase().includes(q));
-    return catOk && qOk;
-  }).sort((a, b) => (b.added_date||'').localeCompare(a.added_date||''));
-
-  document.getElementById('meta-count').textContent = list.length;
-
-  const tbody = document.getElementById('tbl-body');
-  if (!list.length) {
-    tbody.innerHTML = `<tr><td colspan="5" style="padding:32px;text-align:center;color:var(--muted-soft)">아티클이 없습니다.</td></tr>`;
-    return;
-  }
-
-  tbody.innerHTML = list.map(c => {
-    const g      = 'g' + (c.category.split('-')[0] || '1');
-    const sel    = selectedIds.has(c.id);
-    const date   = c.added_date
-      ? new Date(c.added_date).toLocaleDateString('ko-KR', {month:'short', day:'numeric'})
-      : '';
-    return `<tr id="row-${esc(c.id)}" class="${sel ? 'selected' : ''}">
-      <td><input type="checkbox" class="row-check" ${sel ? 'checked' : ''}
-            onchange="toggleRow('${esc(c.id)}', this.checked)"></td>
-      <td>
-        <span class="badge ${g}">${c.category}</span>
-        <div style="font-size:10px;color:var(--muted-soft);margin-top:2px">${CAT_MAP[c.category]||''}</div>
-      </td>
-      <td class="td-co">${esc(c.company)}</td>
-      <td class="td-title">
-        <a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.title)}</a>
-      </td>
-      <td class="td-date">${date}</td>
-    </tr>`;
-  }).join('');
-}
-
-/* ─── Selection ─────────────────────────────────────────────── */
-function toggleRow(id, checked) {
-  checked ? selectedIds.add(id) : selectedIds.delete(id);
-  const row = document.getElementById('row-' + id);
-  if (row) row.className = checked ? 'selected' : '';
-  updateDelBar();
-}
-
-function toggleAll(checked) {
-  if (!DB) return;
-  const visible = getVisibleIds();
-  visible.forEach(id => checked ? selectedIds.add(id) : selectedIds.delete(id));
-  renderTable();
-  updateDelBar();
-}
-
-function getVisibleIds() {
-  const q = (document.getElementById('search-input').value || '').toLowerCase();
-  return DB.cases
-    .filter(c => {
-      const catOk = activeCat === 'all' || c.category.startsWith(activeCat + '-');
-      const qOk   = !q || [c.company,c.title,c.category].some(s=>(s||'').toLowerCase().includes(q));
-      return catOk && qOk;
-    })
-    .map(c => c.id);
-}
-
-function clearSelection() {
-  selectedIds.clear();
-  document.getElementById('check-all').checked = false;
-  renderTable();
-  updateDelBar();
-}
-
-/* ─── Delete command bar ────────────────────────────────────── */
-function updateDelBar() {
-  const n   = selectedIds.size;
-  const bar = document.getElementById('del-bar');
-  const badge = document.getElementById('sel-badge');
-
-  badge.textContent = `${n}개 선택됨`;
-  badge.className   = 'sel-badge' + (n > 0 ? ' on' : '');
-
-  if (n === 0) { bar.classList.remove('show'); return; }
-
-  const ids = [...selectedIds].join(',');
-  const cmd = `gh workflow run delete_articles.yml --repo ${REPO} -f ids="${ids}"`;
-  document.getElementById('del-cmd-text').textContent = cmd;
-  document.getElementById('del-bar-label').textContent = `${n}개 삭제 명령어`;
-  bar.classList.add('show');
-}
-
-/* ─── Add command generator ─────────────────────────────────── */
-function genAddCmd() {
-  const url  = document.getElementById('url-input').value.trim();
-  const hint = document.getElementById('cat-hint').value;
-  if (!url || !url.startsWith('http')) {
-    document.getElementById('url-input').focus();
-    return;
-  }
-  const hintPart = hint ? ` \\\n  -f category_hint="${hint}"` : '';
-  const cmd = `gh workflow run add_article.yml --repo ${REPO} \\\n  -f url="${url}"${hintPart}`;
-  document.getElementById('add-cmd-text').textContent = cmd;
-  document.getElementById('add-cmd-wrap').classList.add('show');
-  document.getElementById('add-copy-btn').textContent = '복사';
-  document.getElementById('add-copy-btn').classList.remove('copied');
-}
-
-function clearAddCmd() {
-  document.getElementById('add-cmd-wrap').classList.remove('show');
-}
-
-/* ─── Copy to clipboard ─────────────────────────────────────── */
-function copyCmd(textElId, btnId) {
-  const text = document.getElementById(textElId).textContent;
-  navigator.clipboard.writeText(text).then(() => {
-    const btn = document.getElementById(btnId);
-    btn.textContent = '복사됨 ✓';
-    btn.classList.add('copied');
-    setTimeout(() => { btn.textContent = '복사'; btn.classList.remove('copied'); }, 2000);
-  });
-}
-
-/* ─── Helpers ───────────────────────────────────────────────── */
+/* ══════════════════════════════════════════════════════════
+   Shared helpers
+══════════════════════════════════════════════════════════ */
 function esc(s) {
   return String(s ?? '')
     .replace(/&/g,'&amp;').replace(/</g,'&lt;')
     .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
+
+let toastTimer = null;
+function toast(msg) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove('show'), 2200);
+}
+
+function extractDomain(url) {
+  try { return new URL(url).hostname; } catch { return ''; }
+}
+
+/* ══════════════════════════════════════════════════════════
+   ARTICLE MANAGEMENT
+══════════════════════════════════════════════════════════ */
+let artDB      = null;
+let selIds     = new Set();
+let activeCat  = 'all';
+
+(async function initArticles() {
+  try {
+    const res = await fetch('./data/cases.json?t=' + Date.now());
+    if (!res.ok) throw new Error(res.status);
+    artDB = await res.json();
+    document.getElementById('art-updated').textContent =
+      '최종 갱신 ' + new Date(artDB.meta.last_updated).toLocaleDateString('ko-KR');
+    renderArticles();
+  } catch {
+    document.getElementById('art-body').innerHTML =
+      `<tr><td colspan="5" style="padding:40px;text-align:center;color:var(--muted-soft)">cases.json 로드 실패 — HTTP 서버로 접근하세요</td></tr>`;
+  }
+})();
+
+function filterCat(cat) {
+  activeCat = cat;
+  document.querySelectorAll('.chip[data-cat]').forEach(c =>
+    c.classList.toggle('on', c.dataset.cat === cat));
+  selIds.clear();
+  renderArticles();
+  updateDelBar();
+}
+
+function renderArticles() {
+  if (!artDB) return;
+  const q = (document.getElementById('search-input').value || '').toLowerCase();
+  const list = artDB.cases.filter(c => {
+    const catOk = activeCat === 'all' || c.category.startsWith(activeCat + '-');
+    const qOk   = !q || [c.company, c.title, c.category].some(s => (s||'').toLowerCase().includes(q));
+    return catOk && qOk;
+  }).sort((a,b) => (b.added_date||'').localeCompare(a.added_date||''));
+
+  document.getElementById('art-count').textContent = list.length;
+  const tbody = document.getElementById('art-body');
+  if (!list.length) {
+    tbody.innerHTML = `<tr><td colspan="5" style="padding:32px;text-align:center;color:var(--muted-soft)">아티클이 없습니다.</td></tr>`;
+    return;
+  }
+  tbody.innerHTML = list.map(c => {
+    const g   = 'g' + (c.category.split('-')[0] || '1');
+    const sel = selIds.has(c.id);
+    const date = c.added_date
+      ? new Date(c.added_date).toLocaleDateString('ko-KR',{month:'short',day:'numeric'}) : '';
+    return `<tr id="arow-${esc(c.id)}" class="${sel?'selected':''}">
+      <td><input type="checkbox" class="row-check" ${sel?'checked':''}
+            onchange="toggleArtRow('${esc(c.id)}',this.checked)"></td>
+      <td>
+        <span class="badge ${g}">${c.category}</span>
+        <div style="font-size:10px;color:var(--muted-soft);margin-top:2px">${CAT_MAP[c.category]||''}</div>
+      </td>
+      <td class="td-co">${esc(c.company)}</td>
+      <td class="td-title"><a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.title)}</a></td>
+      <td class="td-date">${date}</td>
+    </tr>`;
+  }).join('');
+}
+
+function toggleArtRow(id, checked) {
+  checked ? selIds.add(id) : selIds.delete(id);
+  const row = document.getElementById('arow-' + id);
+  if (row) row.className = checked ? 'selected' : '';
+  updateDelBar();
+}
+
+function toggleAll(checked) {
+  if (!artDB) return;
+  const q = (document.getElementById('search-input').value || '').toLowerCase();
+  artDB.cases
+    .filter(c => {
+      const catOk = activeCat === 'all' || c.category.startsWith(activeCat + '-');
+      const qOk   = !q || [c.company,c.title,c.category].some(s=>(s||'').toLowerCase().includes(q));
+      return catOk && qOk;
+    })
+    .forEach(c => checked ? selIds.add(c.id) : selIds.delete(c.id));
+  renderArticles();
+  updateDelBar();
+}
+
+function clearSel() {
+  selIds.clear();
+  document.getElementById('check-all').checked = false;
+  renderArticles();
+  updateDelBar();
+}
+
+function updateDelBar() {
+  const n   = selIds.size;
+  const bar = document.getElementById('del-bar');
+  const badge = document.getElementById('sel-badge');
+  badge.textContent = `${n}개 선택됨`;
+  badge.className   = 'sel-badge' + (n > 0 ? ' on' : '');
+  if (n === 0) { bar.classList.remove('show'); return; }
+  const ids = [...selIds].join(',');
+  document.getElementById('del-cmd-text').textContent =
+    `gh workflow run delete_articles.yml --repo ${REPO} -f ids="${ids}"`;
+  document.getElementById('del-bar-label').textContent = `${n}개 삭제 명령어`;
+  bar.classList.add('show');
+}
+
+/* ══════════════════════════════════════════════════════════
+   ADD COMMAND GENERATOR
+══════════════════════════════════════════════════════════ */
+function genAddCmd() {
+  const url  = document.getElementById('url-input').value.trim();
+  const hint = document.getElementById('cat-hint').value;
+  if (!url || !url.startsWith('http')) { document.getElementById('url-input').focus(); return; }
+  const hintPart = hint ? ` \\\n  -f category_hint="${hint}"` : '';
+  document.getElementById('add-cmd-text').textContent =
+    `gh workflow run add_article.yml --repo ${REPO} \\\n  -f url="${url}"${hintPart}`;
+  document.getElementById('add-cmd-wrap').classList.add('show');
+  document.getElementById('add-copy-btn').textContent = '복사';
+  document.getElementById('add-copy-btn').classList.remove('copied');
+}
+function clearAddCmd() { document.getElementById('add-cmd-wrap').classList.remove('show'); }
+
+function copyCmd(textId, btnId) {
+  navigator.clipboard.writeText(document.getElementById(textId).textContent).then(() => {
+    const btn = document.getElementById(btnId);
+    btn.textContent = '복사됨 ✓'; btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = '복사'; btn.classList.remove('copied'); }, 2000);
+  });
+}
+
+/* ══════════════════════════════════════════════════════════
+   SOURCE MANAGEMENT (from admin.html)
+══════════════════════════════════════════════════════════ */
+let srcState          = null;
+let srcDirty          = false;
+let srcActiveTab      = 'active';
+let editingId         = null;
+let currentTags       = [];
+let confirmingDelete  = null;
+
+async function loadSources() {
+  try {
+    const res = await fetch('./data/sources.json?t=' + Date.now());
+    if (!res.ok) throw new Error(res.status);
+    srcState = await res.json();
+  } catch {
+    try {
+      const res2 = await fetch('../scraper/sources.json');
+      if (!res2.ok) throw new Error();
+      srcState = await res2.json();
+    } catch {
+      document.getElementById('tbl-body').innerHTML =
+        `<tr class="empty-row"><td>sources.json 로드 실패. <strong>JSON 가져오기</strong>를 사용하세요.</td></tr>`;
+      return;
+    }
+  }
+  if (!srcState.sources) srcState.sources = [];
+  if (!srcState.excluded_sources) srcState.excluded_sources = { domains: [] };
+  if (!srcState.excluded_sources.domains) srcState.excluded_sources.domains = [];
+  updateStats();
+  renderSources();
+}
+
+function updateStats() {
+  const active   = srcState.sources.filter(s => s.active !== false);
+  const inactive = srcState.sources.filter(s => s.active === false);
+  const rss      = active.filter(s => s.rss);
+  const html     = active.filter(s => !s.rss);
+  const excl     = srcState.excluded_sources.domains.length;
+  document.getElementById('st-active').textContent   = active.length;
+  document.getElementById('st-inactive').textContent = inactive.length;
+  document.getElementById('st-rss').textContent      = rss.length;
+  document.getElementById('st-html').textContent     = html.length;
+  document.getElementById('st-excl').textContent     = excl;
+  document.getElementById('tab-n-active').textContent   = `(${active.length})`;
+  document.getElementById('tab-n-inactive').textContent = `(${inactive.length})`;
+  document.getElementById('tab-n-excluded').textContent = `(${excl})`;
+  const upd = srcState.meta?.last_updated;
+  if (upd) document.getElementById('st-updated').textContent =
+    '최종 갱신: ' + new Date(upd).toLocaleDateString('ko-KR');
+}
+
+function selSrcTab(tab) {
+  document.querySelectorAll('.src-tab').forEach(el => el.classList.remove('on'));
+  document.getElementById('tab-' + tab).classList.add('on');
+  srcActiveTab = tab;
+  confirmingDelete = null;
+  renderSources();
+}
+
+function renderSources() {
+  if (!srcState) return;
+  if (srcActiveTab === 'excluded') { renderExcluded(); return; }
+  const isActive = srcActiveTab === 'active';
+  const rows = srcState.sources.filter(s => (s.active !== false) === isActive);
+  document.getElementById('tbl-head').innerHTML = `<tr>
+    <th style="width:140px">ID</th>
+    <th>소스명 / URL</th>
+    <th style="width:60px">방식</th>
+    <th style="width:70px">타입</th>
+    <th style="width:70px">우선순위</th>
+    <th style="width:180px">Expected Tags</th>
+    <th style="width:60px;text-align:center">활성</th>
+    <th style="width:100px"></th>
+  </tr>`;
+  if (!rows.length) {
+    document.getElementById('tbl-body').innerHTML = `<tr class="empty-row"><td colspan="8">소스가 없습니다.</td></tr>`;
+    return;
+  }
+  document.getElementById('tbl-body').innerHTML = rows.map(s => sourceRow(s)).join('');
+}
+
+function sourceRow(s) {
+  const mCls = s.rss ? 'badge-rss' : 'badge-html';
+  const pCls = s.priority === 'high' ? 'badge-high' : s.priority === 'medium' ? 'badge-medium' : 'badge-low';
+  const tCls = `badge-${(s.type||'research').replace(/\s+/g,'_')}`;
+  const tags = (s.expected_tags || []).slice(0,4).map(t => `<span class="tag-pill">${esc(t)}</span>`).join('');
+  const checked = s.active !== false ? 'checked' : '';
+  const domId   = CSS.escape(s.id);
+  const isConf  = confirmingDelete === s.id;
+  return `<tr id="row-${domId}">
+    <td class="td-id">${esc(s.id)}</td>
+    <td>
+      <div class="td-name">${esc(s.name)}</div>
+      <div class="td-url"><a href="${esc(s.url||s.section_url||'')}" target="_blank" rel="noopener">${esc((s.url||s.section_url||'').replace(/^https?:\/\//,''))}</a></div>
+    </td>
+    <td><span class="badge ${mCls}">${s.rss ? 'RSS' : 'HTML'}</span></td>
+    <td><span class="badge ${tCls}">${esc(s.type||'')}</span></td>
+    <td><span class="badge ${pCls}">${esc(s.priority||'')}</span></td>
+    <td><div class="tag-pills">${tags}</div></td>
+    <td style="text-align:center">
+      <label class="toggle">
+        <input type="checkbox" ${checked} onchange="toggleActive('${s.id}',this.checked)">
+        <span class="slider"></span>
+      </label>
+    </td>
+    <td>${isConf
+      ? `<div class="del-confirm">삭제?
+           <button class="btn btn-danger btn-sm" onclick="confirmDelete('${s.id}')">삭제</button>
+           <button class="btn btn-ghost btn-sm" onclick="cancelDelete()">취소</button>
+         </div>`
+      : `<div class="row-actions">
+           <button class="btn btn-ghost btn-sm" onclick="openModal('${s.id}')">편집</button>
+           <button class="btn btn-ghost btn-sm" style="color:var(--error)" onclick="askDelete('${s.id}')">삭제</button>
+         </div>`
+    }</td>
+  </tr>`;
+}
+
+function renderExcluded() {
+  const list = srcState.excluded_sources.domains || [];
+  document.getElementById('tbl-head').innerHTML = `<tr>
+    <th style="width:240px">도메인</th><th>제외 사유</th><th style="width:80px"></th>
+  </tr>`;
+  if (!list.length) {
+    document.getElementById('tbl-body').innerHTML = `<tr class="empty-row"><td colspan="3">제외된 도메인이 없습니다.</td></tr>`;
+    return;
+  }
+  document.getElementById('tbl-body').innerHTML = list.map((d,i) => `
+    <tr>
+      <td class="td-id">${esc(d.domain)}</td>
+      <td style="font-size:12px;color:var(--body)">${esc(d.reason||'')}</td>
+      <td><button class="btn btn-ghost btn-sm" onclick="removeExcluded(${i})">제외 해제</button></td>
+    </tr>`).join('');
+}
+
+function toggleActive(id, val) {
+  const s = srcState.sources.find(x => x.id === id);
+  if (!s) return;
+  s.active = val; markDirty(); updateStats(); renderSources();
+}
+
+function askDelete(id)     { confirmingDelete = id; renderSources(); }
+function cancelDelete()    { confirmingDelete = null; renderSources(); }
+function confirmDelete(id) {
+  const s = srcState.sources.find(x => x.id === id);
+  if (!s) return;
+  const domain = extractDomain(s.url || s.section_url || '');
+  const alreadyExcluded = srcState.excluded_sources.domains.some(d => d.domain === domain);
+  if (domain && !alreadyExcluded) {
+    const reason = prompt(`"${s.name}"을(를) 삭제합니다.\n제외 목록에 추가할 이유를 입력하세요.\n(건너뛰려면 취소)`, '');
+    if (reason !== null) srcState.excluded_sources.domains.push({ domain, reason: reason || '수동 삭제' });
+  }
+  srcState.sources = srcState.sources.filter(x => x.id !== id);
+  confirmingDelete = null;
+  markDirty(); updateStats(); renderSources();
+  toast(`"${s.name}" 삭제됨`);
+}
+
+function removeExcluded(idx) {
+  const d = srcState.excluded_sources.domains[idx];
+  srcState.excluded_sources.domains.splice(idx, 1);
+  markDirty(); updateStats(); renderSources();
+  toast(`${d.domain} 제외 해제됨`);
+}
+
+function markDirty() {
+  srcDirty = true;
+  document.getElementById('dirty-dot').classList.add('on');
+}
+
+/* Modal */
+function openModal(id) {
+  editingId = id; currentTags = [];
+  document.querySelectorAll('.field-err').forEach(el => el.classList.remove('on'));
+  document.querySelectorAll('input[type=text],input[type=url],select').forEach(el => el.classList.remove('err'));
+  if (id) {
+    const s = srcState.sources.find(x => x.id === id);
+    if (!s) return;
+    document.getElementById('modal-title').textContent = '소스 편집';
+    document.getElementById('f-id').value        = s.id;
+    document.getElementById('f-id').readOnly     = true;
+    document.getElementById('f-name').value      = s.name || '';
+    document.getElementById('f-url').value       = s.url || s.section_url || '';
+    document.getElementById('f-rss').value       = s.rss || '';
+    document.getElementById('f-type').value      = s.type || 'research';
+    document.getElementById('f-priority').value  = s.priority || 'medium';
+    document.getElementById('f-active').checked  = s.active !== false;
+    currentTags = [...(s.expected_tags || [])];
+  } else {
+    document.getElementById('modal-title').textContent = '소스 추가';
+    ['f-id','f-name','f-url','f-rss'].forEach(id => document.getElementById(id).value = '');
+    document.getElementById('f-id').readOnly     = false;
+    document.getElementById('f-type').value      = 'trade';
+    document.getElementById('f-priority').value  = 'medium';
+    document.getElementById('f-active').checked  = true;
+    currentTags = [];
+  }
+  renderTagChips();
+  document.getElementById('modal-bg').classList.add('open');
+  setTimeout(() => document.getElementById(id ? 'f-name' : 'f-url').focus(), 50);
+}
+function closeModal() { document.getElementById('modal-bg').classList.remove('open'); }
+function bgClick(e)   { if (e.target === document.getElementById('modal-bg')) closeModal(); }
+
+function saveModal() {
+  const id       = document.getElementById('f-id').value.trim();
+  const name     = document.getElementById('f-name').value.trim();
+  const url      = document.getElementById('f-url').value.trim();
+  const rssRaw   = document.getElementById('f-rss').value.trim();
+  const type     = document.getElementById('f-type').value;
+  const priority = document.getElementById('f-priority').value;
+  const active   = document.getElementById('f-active').checked;
+  let ok = true;
+  if (!id)   { showErr('id','ID를 입력하세요'); ok=false; }
+  if (!name) { showErr('name','소스명을 입력하세요'); ok=false; }
+  if (!url || !url.startsWith('http')) { showErr('url','유효한 URL을 입력하세요'); ok=false; }
+  if (!editingId && srcState.sources.find(s => s.id===id)) { showErr('id','이미 존재하는 ID입니다'); ok=false; }
+  if (!ok) return;
+  const entry = { id, name, url, rss: rssRaw||null, type, scrape_method: rssRaw?'rss':'html', expected_tags:[...currentTags], priority, active };
+  if (editingId) {
+    const idx = srcState.sources.findIndex(s => s.id===editingId);
+    if (idx>=0) srcState.sources[idx] = {...srcState.sources[idx], ...entry};
+  } else {
+    entry.added_by = 'manual';
+    entry.added_date = new Date().toISOString().slice(0,10);
+    srcState.sources.push(entry);
+  }
+  markDirty(); updateStats(); closeModal(); renderSources();
+  toast(editingId ? `"${name}" 저장됨` : `"${name}" 추가됨`);
+}
+
+function showErr(field, msg) {
+  const errEl = document.getElementById('err-'+field);
+  const inEl  = document.getElementById('f-'+field);
+  if (errEl) { errEl.textContent=msg; errEl.classList.add('on'); }
+  if (inEl)  inEl.classList.add('err');
+}
+
+/* Tag input */
+function focusTagInput() { document.getElementById('tag-input').focus(); }
+function renderTagChips() {
+  document.getElementById('tag-chips').innerHTML =
+    currentTags.map(t=>`<span class="tag-chip">${esc(t)}<button type="button" onclick="removeTag('${esc(t)}')">×</button></span>`).join('');
+}
+function addTag(val) {
+  const v = val.trim().replace(/,$/, '');
+  if (v && !currentTags.includes(v)) { currentTags.push(v); renderTagChips(); }
+  document.getElementById('tag-input').value = '';
+}
+function removeTag(t) { currentTags = currentTags.filter(x=>x!==t); renderTagChips(); }
+function onTagKey(e) {
+  if (e.key==='Enter'||e.key===',') { e.preventDefault(); addTag(e.target.value); }
+  else if (e.key==='Backspace' && !e.target.value && currentTags.length) { currentTags.pop(); renderTagChips(); }
+}
+function onTagPaste(e) {
+  e.preventDefault();
+  (e.clipboardData||window.clipboardData).getData('text').split(/[,\n]+/).forEach(t=>addTag(t));
+}
+
+/* Auto-ID from URL */
+function autoId() {
+  if (editingId) return;
+  const url = document.getElementById('f-url').value.trim();
+  if (!url) return;
+  try {
+    const base  = new URL(url).hostname.replace(/^www\./,'').split('.')[0];
+    const idEl  = document.getElementById('f-id');
+    if (!idEl.value || idEl.dataset.autoset==='true') { idEl.value=base; idEl.dataset.autoset='true'; }
+    const nameEl = document.getElementById('f-name');
+    if (!nameEl.value) nameEl.value = new URL(url).hostname.replace(/^www\./,'');
+  } catch {}
+}
+
+/* Export / Import */
+function buildExport() {
+  return JSON.stringify({ meta:{...srcState.meta, last_updated:new Date().toISOString().slice(0,10)}, sources:srcState.sources, excluded_sources:srcState.excluded_sources, category_keywords:srcState.category_keywords }, null, 2);
+}
+function exportJSON() {
+  if (!srcState) return;
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([buildExport()], {type:'application/json'}));
+  a.download = 'sources.json'; a.click(); URL.revokeObjectURL(a.href);
+  srcDirty = false; document.getElementById('dirty-dot').classList.remove('on');
+  toast('sources.json 다운로드 완료');
+}
+function copyJSON() {
+  if (!srcState) return;
+  navigator.clipboard.writeText(buildExport()).then(() => toast('클립보드에 복사됨'));
+}
+function importFile() { document.getElementById('file-input').click(); }
+function onFileImport(e) {
+  const file = e.target.files[0]; if (!file) return;
+  const reader = new FileReader();
+  reader.onload = evt => {
+    try {
+      srcState = JSON.parse(evt.target.result);
+      if (!srcState.sources) srcState.sources = [];
+      if (!srcState.excluded_sources) srcState.excluded_sources = { domains: [] };
+      updateStats(); renderSources();
+      toast(`${file.name} 가져오기 완료`);
+    } catch { toast('JSON 파싱 실패'); }
+  };
+  reader.readAsText(file);
+  e.target.value = '';
+}
+
+window.addEventListener('beforeunload', e => {
+  if (srcDirty) { e.preventDefault(); e.returnValue = ''; }
+});
 </script>
 </body>
 </html>
