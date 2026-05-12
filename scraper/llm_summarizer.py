@@ -63,8 +63,9 @@ URL: {url}
 4. kpi_value = 가장 핵심적인 수치 또는 키워드 (수치 없으면 "N/A")
 5. metrics = 기사에서 언급된 실제 수치·사실 1~4개 (없으면 1개, 최대 4개)
 6. trend: "pos"(긍정·성장), "neg"(부정·감소·위험), "neu"(중립·정보)
-7. 모든 텍스트 필드(title, description, body)는 반드시 한국어로 작성
-8. 위 12개 카테고리와 무관한 아티클은 has_case: false 반환
+7. published_date = 아티클 최초 발행일 (YYYY-MM-DD). 날짜 불명 시 연도만 알면 YYYY-01-01. 완전 불명 시 null
+8. 모든 텍스트 필드(title, description, body)는 반드시 한국어로 작성
+9. 위 12개 카테고리와 무관한 아티클은 has_case: false 반환
 
 JSON 형식 (마크다운 코드블록 없이 순수 JSON만):
 {{
@@ -82,6 +83,7 @@ JSON 형식 (마크다운 코드블록 없이 순수 JSON만):
   ],
   "tags": ["태그1", "태그2"],
   "source": "출처명, 연도",
+  "published_date": "YYYY-MM-DD 또는 null",
   "url": "{url}"
 }}
 
@@ -159,24 +161,33 @@ def extract_case(article: dict) -> Optional[dict]:
                         "label": data.get("kpi_label", ""),
                         "trend": "neu"}]
 
+        # published_date: LLM 추출값 → RSS published 힌트 → None 순으로 사용
+        pub = data.get("published_date") or article.get("published_hint")
+        if pub:
+            # 연도만 있으면 YYYY-01-01 정규화
+            import re as _re
+            if _re.fullmatch(r"\d{4}", str(pub)):
+                pub = f"{pub}-01-01"
+
         return {
-            "id":          case_id,
-            "category":    cat,
-            "company":     data.get("company", ""),
-            "short":       short,
-            "color_bg":    bg,
-            "color_text":  tc,
-            "kpi_value":   data.get("kpi_value", "N/A"),
-            "kpi_label":   data.get("kpi_label", ""),
-            "title":       data.get("title", ""),
-            "description": data.get("description", ""),
-            "body":        data.get("body", ""),
-            "metrics":     metrics,
-            "tags":        data.get("tags", [])[:4],
-            "source":      data.get("source", article.get("source_name", "")),
-            "url":         data.get("url", article.get("url", "")),
-            "added_date":  date.today().isoformat(),
-            "verified":    False,
+            "id":             case_id,
+            "category":       cat,
+            "company":        data.get("company", ""),
+            "short":          short,
+            "color_bg":       bg,
+            "color_text":     tc,
+            "kpi_value":      data.get("kpi_value", "N/A"),
+            "kpi_label":      data.get("kpi_label", ""),
+            "title":          data.get("title", ""),
+            "description":    data.get("description", ""),
+            "body":           data.get("body", ""),
+            "metrics":        metrics,
+            "tags":           data.get("tags", [])[:4],
+            "source":         data.get("source", article.get("source_name", "")),
+            "published_date": pub or date.today().isoformat(),
+            "url":            data.get("url", article.get("url", "")),
+            "added_date":     date.today().isoformat(),
+            "verified":       False,
         }
 
     except json.JSONDecodeError as e:

@@ -364,7 +364,7 @@ input.err { border-color: var(--error) !important; }
           <th style="width:80px">카테고리</th>
           <th style="width:100px">기업</th>
           <th>제목</th>
-          <th style="width:80px">추가일</th>
+          <th style="width:80px">발행일</th>
         </tr>
       </thead>
       <tbody id="art-body">
@@ -605,7 +605,7 @@ function renderArticles() {
     const catOk = activeCat === 'all' || c.category.startsWith(activeCat + '-');
     const qOk   = !q || [c.company, c.title, c.category].some(s => (s||'').toLowerCase().includes(q));
     return catOk && qOk;
-  }).sort((a,b) => (b.added_date||'').localeCompare(a.added_date||''));
+  }).sort((a,b) => (b.published_date||b.added_date||'').localeCompare(a.published_date||a.added_date||''));
 
   document.getElementById('art-count').textContent = list.length;
   const tbody = document.getElementById('art-body');
@@ -616,8 +616,8 @@ function renderArticles() {
   tbody.innerHTML = list.map(c => {
     const g   = 'g' + (c.category.split('-')[0] || '1');
     const sel = selIds.has(c.id);
-    const date = c.added_date
-      ? new Date(c.added_date).toLocaleDateString('ko-KR',{month:'short',day:'numeric'}) : '';
+    const date = (c.published_date || c.added_date)
+      ? new Date(c.published_date || c.added_date).toLocaleDateString('ko-KR',{month:'short',day:'numeric'}) : '';
     return `<tr id="arow-${esc(c.id)}" class="${sel?'selected':''}">
       <td><input type="checkbox" class="row-check" ${sel?'checked':''}
             onchange="toggleArtRow('${esc(c.id)}',this.checked)"></td>

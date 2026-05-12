@@ -1,6 +1,6 @@
 {
   "meta": {
-    "last_updated": "2026-05-11T05:03:21.997723+00:00",
+    "last_updated": "2026-05-12T00:31:22.649728+00:00",
     "total_cases": 49,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
@@ -109,7 +109,8 @@
       "source": "Google Blog, 2025",
       "url": "https://blog.google/products-and-platforms/devices/google-nest/gemini-for-home/",
       "added_date": "2026-05-10",
-      "verified": true
+      "verified": true,
+      "published_date": "2025-01-01"
     },
     {
       "id": "AMA-001",
@@ -140,7 +141,8 @@
       "source": "Amazon News, 2025",
       "url": "https://www.aboutamazon.com/news/devices/new-alexa-generative-artificial-intelligence",
       "added_date": "2026-05-10",
-      "verified": true
+      "verified": true,
+      "published_date": "2025-01-01"
     },
     {
       "id": "VRG-001",
@@ -171,7 +173,8 @@
       "source": "The Verge, 2025",
       "url": "https://www.theverge.com/tech/845958/ai-smart-home-broken",
       "added_date": "2026-05-10",
-      "verified": true
+      "verified": true,
+      "published_date": "2025-01-01"
     },
     {
       "id": "GVR-001",
@@ -217,7 +220,8 @@
       "source": "Grand View Research, 2024",
       "url": "https://www.grandviewresearch.com/industry-analysis/ambient-assisted-living-smart-home-market-report",
       "added_date": "2026-05-10",
-      "verified": true
+      "verified": true,
+      "published_date": "2024-01-01"
     },
     {
       "id": "ULH-001",
@@ -248,7 +252,8 @@
       "source": "The Verge, 2025",
       "url": "https://www.theverge.com/news/682618/ultrahuman-home-air-quality-light-noise-tracker-price",
       "added_date": "2026-05-10",
-      "verified": true
+      "verified": true,
+      "published_date": "2025-01-01"
     },
     {
       "id": "ECO-001",
@@ -279,7 +284,8 @@
       "source": "The Verge, 2025",
       "url": "https://www.theverge.com/2025/1/5/24335856/ecoflow-oasis-smart-home-energy-management-system",
       "added_date": "2026-05-10",
-      "verified": true
+      "verified": true,
+      "published_date": "2025-01-01"
     },
     {
       "id": "NAT-001",
@@ -309,7 +315,8 @@
       "source": "Scientific Reports, 2025",
       "url": "https://www.nature.com/articles/s41598-025-26377-3",
       "added_date": "2026-05-10",
-      "verified": true
+      "verified": true,
+      "published_date": "2025-01-01"
     },
     {
       "id": "MCK-001",
@@ -355,7 +362,8 @@
       "source": "McKinsey, 2025",
       "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-agentic-commerce-opportunity-how-ai-agents-are-ushering-in-a-new-era-for-consumers-and-merchants",
       "added_date": "2026-05-10",
-      "verified": true
+      "verified": true,
+      "published_date": "2025-01-01"
     },
     {
       "id": "DEL-001",
@@ -401,7 +409,8 @@
       "source": "Deloitte, 2025",
       "url": "https://www.deloitte.com/us/en/Industries/consumer/articles/agentic-commerce-ai-shopping-agents-guide.html",
       "added_date": "2026-05-10",
-      "verified": true
+      "verified": true,
+      "published_date": "2025-01-01"
     },
     {
       "id": "BAI-001",
@@ -447,7 +456,8 @@
       "source": "Bain & Company, 2025",
       "url": "https://www.bain.com/insights/agentic-ai-in-retail-how-autonomous-shopping-redefining-customer-journey/",
       "added_date": "2026-05-10",
-      "verified": true
+      "verified": true,
+      "published_date": "2025-01-01"
     },
     {
       "id": "ALI-001",
@@ -478,7 +488,8 @@
       "source": "Reuters, 2026",
       "url": "https://www.reuters.com/world/asia-pacific/alibaba-integrate-qwen-ai-with-taobao-launch-agentic-shopping-source-says-2026-05-10/",
       "added_date": "2026-05-10",
-      "verified": true
+      "verified": true,
+      "published_date": "2026-01-01"
     },
     {
       "id": "ZAL-001",
@@ -509,7 +520,8 @@
       "source": "Reuters, 2026",
       "url": "https://www.reuters.com/business/zalando-posts-first-quarter-growth-above-last-years-level-2026-05-06/",
       "added_date": "2026-05-10",
-      "verified": true
+      "verified": true,
+      "published_date": "2026-01-01"
     },
     {
       "id": "ACE-001",
@@ -539,7 +551,8 @@
       "source": "The Sun, 2025",
       "url": "https://www.the-sun.com/money/16328844/ace-hardware-hey-arma-ai-technology/",
       "added_date": "2026-05-10",
-      "verified": true
+      "verified": true,
+      "published_date": "2025-01-01"
     },
     {
       "id": "ZUO-001",
@@ -585,7 +598,8 @@
       "source": "Zuora, 2025",
       "url": "https://www.zuora.com/press-release/zuora-subscription-economy-index-2025/",
       "added_date": "2026-05-10",
-      "verified": true
+      "verified": true,
+      "published_date": "2025-01-01"
     },
     {
       "id": "LGE-001",
@@ -616,7 +630,8 @@
       "source": "LG Singapore, 2025",
       "url": "https://www.lg.com/sg/about-lg/press-and-media/reimagining-home-living-at-your-convenience-lg-launches-all-inclusive-appliance-subscription-service//",
       "added_date": "2026-05-10",
-      "verified": true
+      "verified": true,
+      "published_date": "2025-01-01"
     },
     {
       "id": "ZEN-001",
@@ -662,7 +677,8 @@
       "source": "Zendesk / YouGov, 2025",
       "url": "https://www.zendesk.com/newsroom/press-releases/global-survey-reveals-growing-consumer-trust-in-personal-ai-assistants/",
       "added_date": "2026-05-10",
-      "verified": true
+      "verified": true,
+      "published_date": "2025-01-01"
     },
     {
       "id": "GOO-002",
@@ -693,7 +709,8 @@
       "source": "TechRadar, 2026",
       "url": "https://www.techradar.com/ai-platforms-assistants/google-is-turning-gemini-into-a-24-7-ai-agent-that-plans-your-life-for-you",
       "added_date": "2026-05-10",
-      "verified": true
+      "verified": true,
+      "published_date": "2026-01-01"
     },
     {
       "id": "GAL-001",
@@ -739,7 +756,8 @@
       "source": "Gallup, 2025",
       "url": "https://www.gallup.com/workplace/691643/work-nearly-doubled-two-years.aspx",
       "added_date": "2026-05-10",
-      "verified": true
+      "verified": true,
+      "published_date": "2025-01-01"
     },
     {
       "id": "MSF-001",
@@ -770,7 +788,8 @@
       "source": "Microsoft Work Trend Index / TechRadar, 2026",
       "url": "https://www.techradar.com/pro/every-business-leader-knows-the-world-is-changing-but-far-fewer-have-a-clear-picture-of-what-to-do-about-it-microsoft-flags-the-changing-world-of-ai-at-work-and-why-frontier-firms-are-leading-the-way",
       "added_date": "2026-05-10",
-      "verified": true
+      "verified": true,
+      "published_date": "2026-01-01"
     },
     {
       "id": "OEC-001",
@@ -801,7 +820,8 @@
       "source": "OECD Artificial Intelligence Papers No. 51, 2025",
       "url": "https://www.oecd.org/en/publications/ai-and-the-global-productivity-divide_c315ea90-en.html",
       "added_date": "2026-05-10",
-      "verified": true
+      "verified": true,
+      "published_date": "2025-01-01"
     },
     {
       "id": "UNE-001",
@@ -832,7 +852,8 @@
       "source": "UNESCO Institute for Lifelong Learning, 2025",
       "url": "https://www.uil.unesco.org/en/articles/bridging-grey-digital-divide-enhancing-ict-learning-older-adults",
       "added_date": "2026-05-10",
-      "verified": true
+      "verified": true,
+      "published_date": "2025-01-01"
     },
     {
       "id": "KAI-001",
@@ -863,7 +884,8 @@
       "source": "KAIST / Personal and Ubiquitous Computing, 2025",
       "url": "https://pure.kaist.ac.kr/en/publications/ai-assisted-smartphone-trading-and-the-digital-divide-among-older/",
       "added_date": "2026-05-10",
-      "verified": true
+      "verified": true,
+      "published_date": "2025-01-01"
     },
     {
       "id": "REU-001",
@@ -909,7 +931,8 @@
       "source": "Reuters, 2026",
       "url": "https://www.reuters.com/technology/young-europeans-turn-ai-chatbots-emotional-support-survey-shows-2026-05-05/",
       "added_date": "2026-05-10",
-      "verified": true
+      "verified": true,
+      "published_date": "2026-01-01"
     },
     {
       "id": "MDP-001",
@@ -955,7 +978,8 @@
       "source": "Healthcare, 2025",
       "url": "https://www.mdpi.com/2227-9032/13/5/446",
       "added_date": "2026-05-10",
-      "verified": true
+      "verified": true,
+      "published_date": "2025-01-01"
     },
     {
       "id": "SEN-001",
@@ -1001,7 +1025,8 @@
       "source": "TechRadar, 2026",
       "url": "https://www.techradar.com/ai-platforms-assistants/i-tested-sentai-the-ai-voice-companion-for-seniors-and-now-i-get-why-its-more-than-just-another-smart-speaker",
       "added_date": "2026-05-10",
-      "verified": true
+      "verified": true,
+      "published_date": "2026-01-01"
     },
     {
       "id": "FAM-001",
@@ -1032,7 +1057,8 @@
       "source": "TechRadar, 2026",
       "url": "https://www.techradar.com/ai-platforms-assistants/this-is-the-robot-i-wanted-to-build-forever-former-irobot-chief-on-his-extraordinary-familiar-ai-companion",
       "added_date": "2026-05-10",
-      "verified": true
+      "verified": true,
+      "published_date": "2026-01-01"
     },
     {
       "id": "MDP-002",
@@ -1063,7 +1089,8 @@
       "source": "Information, 2025",
       "url": "https://www.mdpi.com/2078-2489/16/11/948",
       "added_date": "2026-05-10",
-      "verified": true
+      "verified": true,
+      "published_date": "2025-01-01"
     },
     {
       "id": "MDP-003",
@@ -1109,7 +1136,8 @@
       "source": "Electronics, 2025",
       "url": "https://www.mdpi.com/2079-9292/14/12/2463",
       "added_date": "2026-05-10",
-      "verified": true
+      "verified": true,
+      "published_date": "2025-01-01"
     },
     {
       "id": "ASA-001",
@@ -1140,7 +1168,8 @@
       "source": "Asia Economy, 2025",
       "url": "https://cm.asiae.co.kr/en/article/2025101707364381249",
       "added_date": "2026-05-10",
-      "verified": true
+      "verified": true,
+      "published_date": "2025-01-01"
     },
     {
       "id": "DGU-001",
@@ -1171,7 +1200,8 @@
       "source": "Behavioral Sciences, 2025",
       "url": "https://www.mdpi.com/2076-328X/15/11/1541",
       "added_date": "2026-05-10",
-      "verified": true
+      "verified": true,
+      "published_date": "2025-01-01"
     },
     {
       "id": "GOO-20260511-667a20",
@@ -1199,7 +1229,8 @@
       "source": "Google Nest Help, 2023",
       "url": "https://support.google.com/googlenest/answer/16618650",
       "added_date": "2026-05-11",
-      "verified": false
+      "verified": false,
+      "published_date": "2023-01-01"
     },
     {
       "id": "GOO-20260511-b1acca",
@@ -1228,7 +1259,8 @@
       "source": "Google Nest Help, 2023",
       "url": "https://support.google.com/googlenest/answer/7685981#ccforGA",
       "added_date": "2026-05-11",
-      "verified": false
+      "verified": false,
+      "published_date": "2023-01-01"
     },
     {
       "id": "GOO-20260511-5dc508",
@@ -1256,7 +1288,8 @@
       "source": "Google Nest Help, 2023",
       "url": "https://support.google.com/googlenest/answer/16709732?hl=en&ref_topic=16607457",
       "added_date": "2026-05-11",
-      "verified": false
+      "verified": false,
+      "published_date": "2023-01-01"
     },
     {
       "id": "AMA-20260511-7e1999",
@@ -1290,7 +1323,8 @@
       "source": "Amazon News, 2023",
       "url": "https://www.aboutamazon.com/news/devices/alexa-plus-international-launch",
       "added_date": "2026-05-11",
-      "verified": false
+      "verified": false,
+      "published_date": "2023-01-01"
     },
     {
       "id": "AMA-20260511-c1dea3",
@@ -1324,7 +1358,8 @@
       "source": "Amazon News, 2023",
       "url": "https://www.aboutamazon.com/stories/amazon-alexa-plus-ai-culture-language",
       "added_date": "2026-05-11",
-      "verified": false
+      "verified": false,
+      "published_date": "2023-01-01"
     },
     {
       "id": "AMA-20260511-66cbf0",
@@ -1358,7 +1393,8 @@
       "source": "Amazon News, 2023",
       "url": "https://www.aboutamazon.com/news/devices/alexa-plus-italy",
       "added_date": "2026-05-11",
-      "verified": false
+      "verified": false,
+      "published_date": "2023-01-01"
     },
     {
       "id": "GOV-20260511-26d6f6",
@@ -1397,7 +1433,8 @@
       "source": "The Verge, 2026",
       "url": "https://www.theverge.com/gadgets/926434/govee-outdoor-solar-string-lights-star-fox-switch-2-deal-sale",
       "added_date": "2026-05-11",
-      "verified": false
+      "verified": false,
+      "published_date": "2026-01-01"
     },
     {
       "id": "GOO-20260511-2c86cb",
@@ -1431,7 +1468,8 @@
       "source": "The Verge, 2026",
       "url": "https://www.theverge.com/tech/924755/google-home-gemini-3-1-upgrade",
       "added_date": "2026-05-11",
-      "verified": false
+      "verified": false,
+      "published_date": "2026-01-01"
     },
     {
       "id": "GVR-20260511-5ffeff",
@@ -1475,7 +1513,8 @@
       "source": "Grand View Research, 2024",
       "url": "https://www.grandviewresearch.com/industry-analysis/smart-homes-industry",
       "added_date": "2026-05-11",
-      "verified": false
+      "verified": false,
+      "published_date": "2024-01-01"
     },
     {
       "id": "TRD-20260511-503fe2",
@@ -1504,7 +1543,8 @@
       "source": "TechRadar, 2023",
       "url": "https://www.techradar.com/home/smart-home",
       "added_date": "2026-05-11",
-      "verified": false
+      "verified": false,
+      "published_date": "2023-01-01"
     },
     {
       "id": "TRD-20260511-9660df",
@@ -1543,7 +1583,8 @@
       "source": "TechRadar, 2023",
       "url": "https://www.techradar.com/home/small-appliances/air-quality",
       "added_date": "2026-05-11",
-      "verified": false
+      "verified": false,
+      "published_date": "2023-01-01"
     },
     {
       "id": "AMA-20260511-006629",
@@ -1577,7 +1618,8 @@
       "source": "TechRadar, 2023",
       "url": "https://www.techradar.com/pro/the-stakes-are-high-a-misconfigured-payment-flow-doesnt-just-produce-a-bad-answer-it-moves-real-money-amazon-bedrock-teams-up-with-coinbase-and-stripe-to-let-ai-agents-carry-out-transactions-using-stablecoins",
       "added_date": "2026-05-11",
-      "verified": false
+      "verified": false,
+      "published_date": "2023-01-01"
     },
     {
       "id": "MS-20260511-4af5f5",
@@ -1606,7 +1648,8 @@
       "source": "Microsoft WorkLab, 2023",
       "url": "https://www.microsoft.com/en-us/worklab/ai-at-work",
       "added_date": "2026-05-11",
-      "verified": false
+      "verified": false,
+      "published_date": "2023-01-01"
     },
     {
       "id": "MSFT-20260511-2bd245",
@@ -1650,7 +1693,8 @@
       "source": "Microsoft WorkLab, 2025",
       "url": "https://www.microsoft.com/en-us/worklab/work-trend-index/breaking-down-infinite-workday",
       "added_date": "2026-05-11",
-      "verified": false
+      "verified": false,
+      "published_date": "2025-01-01"
     },
     {
       "id": "MSFT-20260511-6e94fa",
@@ -1694,7 +1738,8 @@
       "source": "Microsoft WorkLab, 2024",
       "url": "https://www.microsoft.com/en-us/worklab/work-trend-index/ai-at-work-is-here-now-comes-the-hard-part",
       "added_date": "2026-05-11",
-      "verified": false
+      "verified": false,
+      "published_date": "2024-01-01"
     },
     {
       "id": "MSFT-20260511-7f0636",
@@ -1738,7 +1783,8 @@
       "source": "Microsoft WorkLab, 2023",
       "url": "https://www.microsoft.com/en-us/worklab/work-trend-index/copilots-earliest-users-teach-us-about-generative-ai-at-work",
       "added_date": "2026-05-11",
-      "verified": false
+      "verified": false,
+      "published_date": "2023-01-01"
     },
     {
       "id": "MSFT-20260511-f00fb9",
@@ -1772,7 +1818,8 @@
       "source": "Microsoft WorkLab, 2023",
       "url": "https://www.microsoft.com/en-us/worklab/work-trend-index/the-new-performance-equation-in-the-age-of-ai",
       "added_date": "2026-05-11",
-      "verified": false
+      "verified": false,
+      "published_date": "2023-01-01"
     },
     {
       "id": "ZDK-20260511-38ae17",
@@ -1806,7 +1853,8 @@
       "source": "Zendesk, 2026",
       "url": "https://www.zendesk.com/newsroom/press-releases/zendesk-advances-resolution-platform-with-self-improving-ai-agents-from-proposed-forethought-acquisition/",
       "added_date": "2026-05-11",
-      "verified": false
+      "verified": false,
+      "published_date": "2026-01-01"
     },
     {
       "id": "ACE-20260511-2e4869",
@@ -1840,7 +1888,8 @@
       "source": "Ace Hardware Newsroom, 2026",
       "url": "https://newsroom.acehardware.com/ace-hardware-introduces-ai-assistant-to-strengthen-in-store-service/",
       "added_date": "2026-05-11",
-      "verified": false
+      "verified": false,
+      "published_date": "2026-01-01"
     }
   ]
 }

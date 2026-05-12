@@ -277,7 +277,7 @@ function render(catId) {
   const list = (catId === 'all'
     ? [...DB.cases]
     : DB.cases.filter(c => c.category === catId)
-  ).sort((a, b) => b.added_date.localeCompare(a.added_date));
+  ).sort((a, b) => (b.published_date||b.added_date||'').localeCompare(a.published_date||a.added_date||''));
 
   document.getElementById('meta-n').textContent = list.length;
 
@@ -359,8 +359,8 @@ function buildThumb(c) {
 function makeCard(c) {
   const cat    = DB.categories[c.category] || {};
   const g = 'g' + (c.category.split('-')[0] || '1');
-  const dateStr = c.added_date
-    ? new Date(c.added_date).toLocaleDateString('ko-KR', {month:'short', day:'numeric'})
+  const dateStr = (c.published_date || c.added_date)
+    ? new Date(c.published_date || c.added_date).toLocaleDateString('ko-KR', {month:'short', day:'numeric'})
     : '';
   const tags = (c.tags || []).slice(0, 2)
     .map(t => `<span class="tag-pill">${t}</span>`).join('');
