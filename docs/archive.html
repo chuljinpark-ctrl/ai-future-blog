@@ -236,6 +236,36 @@ body { padding-bottom: 64px; }
   height:38vh;font-size:13px;color:var(--text3)
 }
 
+/* ── Token notice banner ──────────────────────────────────────────────────── */
+.token-notice{
+  display:none;
+  margin:10px 24px 0;padding:10px 14px;
+  border-radius:8px;border:0.5px solid var(--g2-b);
+  background:var(--g2-bg);font-size:12px;color:var(--g2);
+  align-items:center;gap:10px;cursor:pointer
+}
+.token-notice.show{display:flex}
+.token-notice:hover{opacity:.85}
+
+/* ── Token inline input ───────────────────────────────────────────────────── */
+.token-form{
+  display:none;
+  margin:10px 24px 0;padding:14px 16px;
+  border-radius:8px;border:0.5px solid var(--hairline);
+  background:var(--surface-card);
+  align-items:center;gap:8px;flex-wrap:wrap
+}
+.token-form.show{display:flex}
+.token-form input{
+  flex:1;min-width:200px;padding:7px 10px;
+  border:1px solid var(--hairline);border-radius:7px;
+  background:var(--canvas);color:var(--ink);
+  font-family:monospace;font-size:12px;outline:none;
+  transition:border-color .12s
+}
+.token-form input:focus{border-color:var(--primary)}
+.token-form-label{font-size:12px;color:var(--muted);white-space:nowrap}
+
 @media(max-width:640px){
   .hd{padding:12px 16px}
   .hd-sub{display:none}
@@ -254,6 +284,18 @@ body { padding-bottom: 64px; }
     <span class="hd-sub" id="hd-sub">로딩 중...</span>
   </div>
 </header>
+
+<!-- ── Token notice (미설정 시 표시) ─────────────────────────────────────── -->
+<div class="token-notice" id="token-notice" onclick="showTokenForm()">
+  🔑 삭제 기능을 사용하려면 GitHub 토큰이 필요합니다 — 클릭해서 설정하세요
+</div>
+<div class="token-form" id="token-form">
+  <span class="token-form-label">GitHub PAT</span>
+  <input type="password" id="pat-input" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx"
+         onkeydown="if(event.key==='Enter') savePAT()">
+  <button class="btn btn-primary btn-sm" onclick="savePAT()">저장</button>
+  <button class="btn btn-ghost btn-sm" onclick="hideTokenForm()">취소</button>
+</div>
 
 <!-- ── Filter bar ────────────────────────────────────────────────────────── -->
 <div class="filters" id="filters">
@@ -512,10 +554,34 @@ function makeCard(c) {
 
 load();
 
-/* PAT는 아티클 관리 페이지(articles.html)와 공유 — 같은 localStorage 키 */
+/* PAT — articles.html과 동일한 localStorage 키(gh_pat) 공유 */
 const PAT_KEY = 'gh_pat';
 const REPO    = 'skykelly/ai-future-blog';
 function getPAT() { return localStorage.getItem(PAT_KEY) || ''; }
+
+function updateTokenUI() {
+  const hasToken = !!getPAT();
+  document.getElementById('token-notice').classList.toggle('show', !hasToken);
+  if (hasToken) hideTokenForm();
+}
+function showTokenForm() {
+  document.getElementById('token-notice').classList.remove('show');
+  document.getElementById('token-form').classList.add('show');
+  setTimeout(() => document.getElementById('pat-input').focus(), 50);
+}
+function hideTokenForm() {
+  document.getElementById('token-form').classList.remove('show');
+  updateTokenUI();
+}
+function savePAT() {
+  const v = document.getElementById('pat-input').value.trim();
+  if (!v) return;
+  localStorage.setItem(PAT_KEY, v);
+  document.getElementById('pat-input').value = '';
+  updateTokenUI();
+  arcToast('✓ 토큰이 저장됐습니다');
+}
+updateTokenUI();
 
 /* ══════════════════════════════════════════════════════════
    Toast
