@@ -614,105 +614,62 @@ function confirmNo() {
 
 async function confirmYes() {
   document.getElementById('confirm-bg').classList.remove('open');
-  const c = _pendingCase;
-  _pendingCase = null;
+  const c = _pendingCase; _pendingCase = null;
   if (!c) return;
 
   const token = getPAT();
-  if (!token) {
-    arcToast('❌ 토큰 미설정 — 아티클 관리 페이지에서 설정하세요');
-    return;
-  }
+  if (!token) { arcToast('❌ 토큰 미설정 — 페이지 상단 안내를 클릭하세요'); return; }
 
-  const cardEl    = document.getElementById('card-' + c.id);
-  const triggeredAt = new Date();
-
-  // UI: processing 상태
+  const cardEl = document.getElementById('card-' + c.id);
   if (cardEl) cardEl.classList.add('processing');
-  arcToast('⏳ 삭제 워크플로우 요청 중...');
+  arcToast('삭제 중...');
 
-  try {
-    const resp = await fetch(
-      `https://api.github.com/repos/${REPO}/actions/workflows/delete_articles.yml/dispatches`,
-      {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${token}`,
-          'Accept': 'application/vnd.github+json',
-          'Content-Type': 'application/json',
-          'X-GitHub-Api-Version': '2022-11-28',
-        },
-        body: JSON.stringify({ ref: 'main', inputs: { ids: c.id } }),
-      }
-    );
-
-    if (resp.status === 204) {
-      arcToast('⏳ 워크플로우 실행 중... (약 30초 소요)');
-      pollWorkflow(triggeredAt, token, cardEl);
-    } else {
-      const err = await resp.json().catch(() => ({}));
-      const hint = resp.status === 422 ? ' (workflow scope 권한 필요)' : '';
-      arcToast(`❌ 트리거 실패 ${resp.status}${hint}: ${err.message||''}`);
-      if (cardEl) cardEl.classList.remove('processing');
-    }
-  } catch(e) {
-    arcToast(`❌ 네트워크 오류: ${e.message}`);
+  const ok = await deleteViaAPI([c.id], token);
+  if (ok) {
+    if (cardEl) { cardEl.classList.remove('processing'); cardEl.classList.add('deleted'); setTimeout(() => cardEl.remove(), 320); }
+    const m = document.getElementById('meta-n');
+    if (m) m.textContent = Math.max(0, parseInt(m.textContent || '0') - 1);
+    arcToast('✓ 삭제 완료');
+  } else {
     if (cardEl) cardEl.classList.remove('processing');
   }
 }
 
-async function pollWorkflow(triggeredAt, token, cardEl) {
-  const MAX_ATTEMPTS = 24;  // 24 × 5s = 2분
-  let attempts = 0;
-
-  const check = async () => {
-    attempts++;
-    if (attempts > MAX_ATTEMPTS) {
-      arcToast('⚠ 타임아웃 — Actions 탭에서 직접 확인하세요');
-      if (cardEl) cardEl.classList.remove('processing');
-      return;
-    }
-
-    try {
-      const resp = await fetch(
-        `https://api.github.com/repos/${REPO}/actions/workflows/delete_articles.yml/runs?per_page=5`,
-        { headers: { 'Authorization': `Bearer ${token}`, 'Accept': 'application/vnd.github+json' } }
+async function deleteViaAPI(ids, token) {
+  const paths = ['data/cases.json', 'docs/data/cases.json'];
+  try {
+    for (const path of paths) {
+      const metaRes = await fetch(
+        `https://api.github.com/repos/${REPO}/contents/${path}`,
+        { headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' } }
       );
-      const data = await resp.json();
-      const run  = (data.workflow_runs || []).find(r => new Date(r.created_at) >= triggeredAt);
+      if (!metaRes.ok) throw new Error(`읽기 실패: ${path} (${metaRes.status})`);
+      const meta = await metaRes.json();
 
-      if (!run) {
-        // 아직 실행이 시작 안 됨
-        setTimeout(check, 5000);
-        return;
-      }
+      const db = JSON.parse(atob(meta.content.replace(/\s/g, '')));
+      db.cases = db.cases.filter(c => !ids.includes(c.id));
+      db.meta.total_cases  = db.cases.length;
+      db.meta.last_updated = new Date().toISOString();
 
-      if (run.status === 'completed') {
-        if (run.conclusion === 'success') {
-          // 카드 제거 애니메이션
-          if (cardEl) {
-            cardEl.classList.remove('processing');
-            cardEl.classList.add('deleted');
-            setTimeout(() => cardEl.remove(), 320);
-          }
-          // 카운트 업데이트
-          const metaEl = document.getElementById('meta-n');
-          if (metaEl) metaEl.textContent = Math.max(0, parseInt(metaEl.textContent || '0') - 1);
-          arcToast('✓ 삭제 완료 — DB에서 제거됐습니다');
-        } else {
-          if (cardEl) cardEl.classList.remove('processing');
-          arcToast(`❌ 워크플로우 실패 (${run.conclusion})`);
+      const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(db, null, 2))));
+      const putRes = await fetch(
+        `https://api.github.com/repos/${REPO}/contents/${path}`,
+        {
+          method: 'PUT',
+          headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json', 'Content-Type': 'application/json', 'X-GitHub-Api-Version': '2022-11-28' },
+          body: JSON.stringify({ message: `chore(articles): delete [${ids.join(',')}] [manual]`, content: encoded, sha: meta.sha, branch: 'main' }),
         }
-      } else {
-        arcToast(`⏳ 워크플로우 실행 중... (${run.status})`);
-        setTimeout(check, 5000);
+      );
+      if (!putRes.ok) {
+        const err = await putRes.json().catch(() => ({}));
+        throw new Error(err.message || `저장 실패 (${putRes.status})`);
       }
-    } catch {
-      setTimeout(check, 5000);
     }
-  };
-
-  setTimeout(check, 5000);
+    return true;
+  } catch(e) {
+    arcToast(`❌ ${e.message}`);
+    return false;
+  }
 }
 </script>
 <script src="./nav.js"></script>
