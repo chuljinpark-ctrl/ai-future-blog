@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-05-12T03:16:19.915564+00:00",
-    "total_cases": 48,
+    "last_updated": "2026-05-12T03:16:51.035886+00:00",
+    "total_cases": 47,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -1510,46 +1510,6 @@
       ],
       "source": "TechRadar, 2023",
       "url": "https://www.techradar.com/home/smart-home",
-      "added_date": "2026-05-11",
-      "verified": false,
-      "published_date": "2023-01-01"
-    },
-    {
-      "id": "TRD-20260511-9660df",
-      "category": "3-1",
-      "company": "TechRadar",
-      "short": "TRD",
-      "color_bg": "#f3e8fb",
-      "color_text": "#7b3ab5",
-      "kpi_value": "4.5",
-      "kpi_label": "별점",
-      "title": "공기질 관리 기기 소개",
-      "description": "여름철 알레르기 예방을 위한 공기청정기 추천",
-      "body": "여름철 알레르기 증상을 완화하기 위해 효과적인 공기청정기를 소개하는 기사입니다. 다양한 크기와 예산에 맞춘 제품들이 추천되며, 특히 Shark FlexBreeze와 ChillPill 같은 소형 기기가 주목받고 있습니다. 이 기기들은 사용자의 편리함을 고려하여 디자인되었으며, 높은 사용자 평가를 받고 있습니다.",
-      "metrics": [
-        {
-          "value": "3",
-          "label": "추천 제품 수",
-          "trend": "pos"
-        },
-        {
-          "value": "29%",
-          "label": "할인율",
-          "trend": "pos"
-        },
-        {
-          "value": "4.5",
-          "label": "평균 별점",
-          "trend": "pos"
-        }
-      ],
-      "tags": [
-        "공기질",
-        "여름",
-        "건강"
-      ],
-      "source": "TechRadar, 2023",
-      "url": "https://www.techradar.com/home/small-appliances/air-quality",
       "added_date": "2026-05-11",
       "verified": false,
       "published_date": "2023-01-01"
