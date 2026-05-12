@@ -48,17 +48,12 @@ def main(dry_run: bool = False):
         log.info("No relevant cases extracted. Pipeline complete.")
         return
 
-    # Step 3: Merge into DB
-    if dry_run:
-        log.info(f"\n[Step 3] DRY RUN — would add {len(new_cases)} cases:")
-        for c in new_cases:
-            log.info(f"  [{c['category']}] {c['company']}: {c['title']}")
-    else:
-        log.info(f"\n[Step 3] Updating cases.json...")
-        from updater import merge_new_cases
-        summary = merge_new_cases(new_cases)
-        log.info(f"  → Added: {summary['added']}, Skipped: {summary['skipped']}, "
-                 f"Total: {summary['total']}")
+    # Step 3: Quality filter + merge into DB
+    log.info(f"\n[Step 3] {'DRY RUN — ' if dry_run else ''}Quality filter + merge...")
+    from updater import merge_new_cases
+    summary = merge_new_cases(new_cases, dry_run=dry_run)
+    log.info(f"  → Added: {summary['added']}, Skipped: {summary['skipped']}, "
+             f"Total: {summary['total']}")
 
     log.info("\nPipeline complete.")
 

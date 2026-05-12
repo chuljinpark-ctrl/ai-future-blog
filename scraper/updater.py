@@ -56,17 +56,18 @@ def _append_rejected_log(case: dict, reason: str) -> None:
         f.write(json.dumps(entry, ensure_ascii=False) + "\n")
 
 
-def log_quality_decision(case: dict, result: dict) -> None:
+def log_quality_decision(case: dict, result: dict, dry_run: bool = False) -> None:
     decision = result["decision"]
     reason = result["reason"]
     title_snip = (case.get("title") or "")[:50]
     tag = {"accept": "[QF accept]", "hold": "[QF hold]  ", "reject": "[QF reject]"}[decision]
     log.info(f"  {tag} {case.get('company')} — {title_snip} ({reason})")
-    if decision == "reject":
+    if decision == "reject" and not dry_run:
         _append_rejected_log(case, reason)
 
 
-def _run_quality_filter(new_cases: list[dict], db_cases: list[dict]) -> tuple[list[dict], dict]:
+def _run_quality_filter(new_cases: list[dict], db_cases: list[dict],
+                        dry_run: bool) -> tuple[list[dict], dict]:
     """
     Route each case through quality_filter.evaluate_article.
     Returns (kept_cases, qf_summary). 'kept_cases' excludes rejects;
@@ -80,7 +81,7 @@ def _run_quality_filter(new_cases: list[dict], db_cases: list[dict]) -> tuple[li
 
     for case in new_cases:
         result = evaluate_article(case, db_cases, call_llm_json)
-        log_quality_decision(case, result)
+        log_quality_decision(case, result, dry_run=dry_run)
 
         if result["decision"] == "reject":
             summary["reject"] += 1
@@ -95,16 +96,20 @@ def _run_quality_filter(new_cases: list[dict], db_cases: list[dict]) -> tuple[li
     return kept, summary
 
 
-def merge_new_cases(new_cases: list[dict]) -> dict:
+def merge_new_cases(new_cases: list[dict], dry_run: bool = False) -> dict:
     """
     Merge new cases into the DB.
     Returns a summary dict: {added, skipped, total, quality_filter}.
+    With dry_run=True the quality filter still runs (to surface decisions),
+    but no DB save and no rejected_log writes happen.
     """
     db = load_db()
     existing_urls = {c["url"] for c in db["cases"]}
 
     if _quality_filter_enabled():
-        kept_cases, qf_summary = _run_quality_filter(new_cases, db["cases"])
+        kept_cases, qf_summary = _run_quality_filter(
+            new_cases, db["cases"], dry_run=dry_run,
+        )
         log.info(
             f"Quality filter: accept={qf_summary['accept']}, "
             f"hold={qf_summary['hold']}, reject={qf_summary['reject']}"
@@ -131,17 +136,19 @@ def merge_new_cases(new_cases: list[dict]) -> dict:
             skipped += 1
             continue
 
-        db["cases"].append(case)
+        if dry_run:
+            log.info(f"  [DRY] would add [{case['category']}] {case['company']} — {case['title']}")
+        else:
+            db["cases"].append(case)
+            log.info(f"Added: [{case['category']}] {case['company']} — {case['title']}")
         existing_urls.add(url)
         added += 1
-        log.info(f"Added: [{case['category']}] {case['company']} — {case['title']}")
 
-    # Update meta
-    db["meta"]["last_updated"] = datetime.now(timezone.utc).isoformat()
-    db["meta"]["total_cases"] = len(db["cases"])
-
-    if added > 0:
-        save_db(db)
+    if not dry_run:
+        db["meta"]["last_updated"] = datetime.now(timezone.utc).isoformat()
+        db["meta"]["total_cases"] = len(db["cases"])
+        if added > 0:
+            save_db(db)
 
     summary = {"added": added, "skipped": skipped, "total": len(db["cases"]),
                "quality_filter": qf_summary}
