@@ -1,11 +1,13 @@
 """
 updater.py
 Life After AI — DB updater
-Merges new extracted cases into cases.json, deduplicates, updates meta
+Merges new extracted cases into cases.json, deduplicates, updates meta.
+Routes new cases through quality_filter before merge: accept/hold/reject.
 """
 
 import json
 import logging
+import os
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -37,18 +39,70 @@ def deduplicate(cases: list[dict]) -> list[dict]:
     return unique
 
 
+def _quality_filter_enabled() -> bool:
+    return os.environ.get("QUALITY_FILTER_ENABLED", "true").lower() in ("1", "true", "yes")
+
+
+def log_quality_decision(case: dict, result: dict) -> None:
+    decision = result["decision"]
+    reason = result["reason"]
+    title_snip = (case.get("title") or "")[:50]
+    tag = {"accept": "[QF accept]", "hold": "[QF hold]  ", "reject": "[QF reject]"}[decision]
+    log.info(f"  {tag} {case.get('company')} — {title_snip} ({reason})")
+
+
+def _run_quality_filter(new_cases: list[dict], db_cases: list[dict]) -> tuple[list[dict], dict]:
+    """
+    Route each case through quality_filter.evaluate_article.
+    Returns (kept_cases, qf_summary). 'kept_cases' excludes rejects;
+    accepts get verified=True, holds get verified=False.
+    """
+    from quality_filter import evaluate_article
+    from llm_summarizer import call_llm_json
+
+    kept: list[dict] = []
+    summary = {"accept": 0, "hold": 0, "reject": 0}
+
+    for case in new_cases:
+        result = evaluate_article(case, db_cases, call_llm_json)
+        log_quality_decision(case, result)
+
+        if result["decision"] == "reject":
+            summary["reject"] += 1
+            continue
+
+        case["verified"] = (result["decision"] == "accept")
+        if result.get("scores"):
+            case["quality_scores"] = result["scores"]
+        kept.append(case)
+        summary[result["decision"]] += 1
+
+    return kept, summary
+
+
 def merge_new_cases(new_cases: list[dict]) -> dict:
     """
     Merge new cases into the DB.
-    Returns a summary dict: {added, skipped, total}
+    Returns a summary dict: {added, skipped, total, quality_filter}.
     """
     db = load_db()
     existing_urls = {c["url"] for c in db["cases"]}
 
+    if _quality_filter_enabled():
+        kept_cases, qf_summary = _run_quality_filter(new_cases, db["cases"])
+        log.info(
+            f"Quality filter: accept={qf_summary['accept']}, "
+            f"hold={qf_summary['hold']}, reject={qf_summary['reject']}"
+        )
+    else:
+        log.info("Quality filter disabled (QUALITY_FILTER_ENABLED)")
+        kept_cases = list(new_cases)
+        qf_summary = None
+
     added = 0
     skipped = 0
 
-    for case in new_cases:
+    for case in kept_cases:
         url = case.get("url", "")
         if url in existing_urls:
             log.info(f"Skip (duplicate): {case.get('company')} — {url[:60]}")
@@ -74,7 +128,8 @@ def merge_new_cases(new_cases: list[dict]) -> dict:
     if added > 0:
         save_db(db)
 
-    summary = {"added": added, "skipped": skipped, "total": len(db["cases"])}
+    summary = {"added": added, "skipped": skipped, "total": len(db["cases"]),
+               "quality_filter": qf_summary}
     log.info(f"Update summary: {summary}")
     return summary
 
