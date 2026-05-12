@@ -16,6 +16,10 @@ ROOT = Path(__file__).parent.parent
 DATA_FILE = ROOT / "docs" / "data" / "cases.json"
 REJECTED_LOG = Path(__file__).parent / "rejected_log.jsonl"
 
+# Abort the batch when LLM keeps failing — prevents a broken model from
+# silently flooding cases.json with llm_error holds for human review.
+ERROR_THRESHOLD = 5
+
 
 def load_db() -> dict:
     with open(DATA_FILE) as f:
@@ -77,10 +81,31 @@ def _run_quality_filter(new_cases: list[dict], db_cases: list[dict],
     from llm_summarizer import call_llm_json
 
     kept: list[dict] = []
-    summary = {"accept": 0, "hold": 0, "reject": 0}
+    summary = {"accept": 0, "hold": 0, "reject": 0, "llm_errors": 0}
 
     for case in new_cases:
-        result = evaluate_article(case, db_cases, call_llm_json)
+        try:
+            result = evaluate_article(case, db_cases, call_llm_json)
+        except Exception as e:
+            summary["llm_errors"] += 1
+            err_type = type(e).__name__
+            log.warning(
+                f"  [QF llm_error] id={case.get('id')} "
+                f"err={err_type}: {e} → fallback to hold"
+            )
+            if summary["llm_errors"] >= ERROR_THRESHOLD:
+                raise RuntimeError(
+                    f"Quality filter aborted: {summary['llm_errors']} LLM errors "
+                    f"in this batch (threshold={ERROR_THRESHOLD}). "
+                    "Check API key, quota, and GitHub Models service status."
+                )
+            result = {
+                "decision":     "hold",
+                "reason":       f"llm_error:{err_type}",
+                "scores":       None,
+                "duplicate_of": None,
+            }
+
         log_quality_decision(case, result, dry_run=dry_run)
 
         if result["decision"] == "reject":
@@ -112,7 +137,8 @@ def merge_new_cases(new_cases: list[dict], dry_run: bool = False) -> dict:
         )
         log.info(
             f"Quality filter: accept={qf_summary['accept']}, "
-            f"hold={qf_summary['hold']}, reject={qf_summary['reject']}"
+            f"hold={qf_summary['hold']}, reject={qf_summary['reject']}, "
+            f"llm_errors={qf_summary['llm_errors']}"
         )
     else:
         log.info("Quality filter disabled (QUALITY_FILTER_ENABLED)")
