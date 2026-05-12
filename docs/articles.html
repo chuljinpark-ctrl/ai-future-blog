@@ -618,7 +618,9 @@ input.err { border-color: var(--error) !important; }
 /* ══════════════════════════════════════════════════════════
    Config
 ══════════════════════════════════════════════════════════ */
-const REPO    = 'skykelly/ai-future-blog';
+const REPO      = 'skykelly/ai-future-blog';
+const TOKEN_KEY = 'gh_pat';
+function getPAT() { return localStorage.getItem(TOKEN_KEY) || ''; }
 const CAT_MAP = {
   '1-1':'AI Home','1-2':'Wellness Home','1-3':'Energy Optimization',
   '2-1':'Agentic Commerce','2-2':'AI Shopping','2-3':'Subscription AI',
@@ -723,7 +725,7 @@ function renderArticles() {
       <td class="td-title"><a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.title)}</a></td>
       <td class="td-date">${date}</td>
       <td><button class="art-del-btn" title="삭제"
-            onclick="askArtDelete(${JSON.stringify({id:c.id,category:c.category,company:c.company,title:c.title})})">×</button></td>
+            onclick="askArtDelete('${esc(c.id)}')">×</button></td>
     </tr>`;
   }).join('');
 }
@@ -805,7 +807,9 @@ function artToast(msg) {
 /* ── Single delete (× button) ─────────────────────────────────────────────── */
 let _artPending = null;
 
-function askArtDelete(c) {
+function askArtDelete(id) {
+  const c = artDB && artDB.cases.find(x => x.id === id);
+  if (!c) return;
   _artPending = c;
   document.getElementById('art-confirm-title').textContent = '아티클을 삭제할까요?';
   document.getElementById('art-confirm-desc').textContent  = `[${c.category}] ${c.company} — ${c.title}`;
