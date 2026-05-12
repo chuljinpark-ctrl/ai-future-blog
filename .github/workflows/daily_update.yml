@@ -64,6 +64,7 @@ jobs:
             echo "No changes to commit."
           else
             git commit -m "chore: daily update — ${COUNT} articles [$(date +'%Y-%m-%d KST')]"
+            git pull --rebase origin main
             git push
           fi
 

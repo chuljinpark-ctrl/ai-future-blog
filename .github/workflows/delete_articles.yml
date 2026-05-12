@@ -42,5 +42,6 @@ jobs:
           else
             COUNT=$(python3 -c "import json; print(json.load(open('data/cases.json'))['meta']['total_cases'])")
             git commit -m "chore(articles): delete [${{ github.event.inputs.ids }}] — 잔여 ${COUNT}개 [manual]"
+            git pull --rebase origin main
             git push
           fi
