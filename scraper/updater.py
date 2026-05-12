@@ -11,7 +11,7 @@ from pathlib import Path
 
 log = logging.getLogger(__name__)
 ROOT = Path(__file__).parent.parent
-DATA_FILE = ROOT / "data" / "cases.json"
+DATA_FILE = ROOT / "docs" / "data" / "cases.json"
 
 
 def load_db() -> dict:

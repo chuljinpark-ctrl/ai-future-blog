@@ -29,18 +29,15 @@ jobs:
           cd scraper
           python delete_articles.py --ids "${{ github.event.inputs.ids }}"
 
-      - name: Sync to docs/data
-        run: cp data/cases.json docs/data/cases.json
-
       - name: Commit
         run: |
           git config user.name  "Life After AI Bot"
           git config user.email "bot@life-after-ai.internal"
-          git add data/cases.json docs/data/cases.json
+          git add docs/data/cases.json
           if git diff --cached --quiet; then
             echo "삭제할 아티클이 없습니다."
           else
-            COUNT=$(python3 -c "import json; print(json.load(open('data/cases.json'))['meta']['total_cases'])")
+            COUNT=$(python3 -c "import json; print(json.load(open('docs/data/cases.json'))['meta']['total_cases'])")
             git commit -m "chore(articles): delete [${{ github.event.inputs.ids }}] — 잔여 ${COUNT}개 [manual]"
             git pull --rebase origin main
             git push

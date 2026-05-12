@@ -19,7 +19,7 @@ log = logging.getLogger(__name__)
 
 ROOT = Path(__file__).parent.parent
 SOURCES_FILE = Path(__file__).parent / "sources.json"
-DATA_FILE = ROOT / "data" / "cases.json"
+DATA_FILE = ROOT / "docs" / "data" / "cases.json"
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (compatible; LifeAfterAI-Bot/1.0; research aggregator)",

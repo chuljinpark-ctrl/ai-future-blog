@@ -863,7 +863,7 @@ async function triggerArtDelete(ids, rowEl, label) {
 }
 
 async function artDeleteViaAPI(ids, token) {
-  const paths = ['data/cases.json', 'docs/data/cases.json'];
+  const paths = ['docs/data/cases.json'];
   try {
     for (const path of paths) {
       const metaRes = await fetch(
