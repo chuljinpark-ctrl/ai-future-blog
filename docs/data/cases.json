@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-05-12T03:17:09.085474+00:00",
-    "total_cases": 46,
+    "last_updated": "2026-05-12T03:17:39.328312+00:00",
+    "total_cases": 45,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -1196,36 +1196,6 @@
       ],
       "source": "Google Nest Help, 2023",
       "url": "https://support.google.com/googlenest/answer/16618650",
-      "added_date": "2026-05-11",
-      "verified": false,
-      "published_date": "2023-01-01"
-    },
-    {
-      "id": "GOO-20260511-b1acca",
-      "category": "1-1",
-      "company": "구글",
-      "short": "GOO",
-      "color_bg": "#fdf3e7",
-      "color_text": "#b5711b",
-      "kpi_value": "N/A",
-      "kpi_label": "핵심 수치",
-      "title": "Gemini for Home 음성 비서 대화 기능",
-      "description": "Gemini for Home의 지속적인 대화 기능 소개",
-      "body": "Gemini for Home은 사용자가 '헤이 구글'이라고 반복하지 않고도 대화를 이어갈 수 있는 기능을 제공합니다. 이 기능을 통해 사용자는 질문을 하고, 후속 질문을 하며, 스마트홈 기기를 제어할 수 있습니다. 대화는 최대 15초 동안 이어지며, 사용자는 대화 중 언제든지 주제를 변경할 수 있습니다. 이로 인해 사용자 경험이 향상되고, 보다 자연스러운 상호작용이 가능해집니다.",
-      "metrics": [
-        {
-          "value": "15초",
-          "label": "후속 질문 대기 시간",
-          "trend": "pos"
-        }
-      ],
-      "tags": [
-        "AI",
-        "스마트홈",
-        "음성비서"
-      ],
-      "source": "Google Nest Help, 2023",
-      "url": "https://support.google.com/googlenest/answer/7685981#ccforGA",
       "added_date": "2026-05-11",
       "verified": false,
       "published_date": "2023-01-01"
