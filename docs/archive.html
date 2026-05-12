@@ -197,36 +197,6 @@ body { padding-bottom: 64px; }
 }
 .arc-toast.show{opacity:1}
 
-/* ── Token modal ──────────────────────────────────────────────────────────── */
-.token-modal-bg{
-  position:fixed;inset:0;background:rgba(20,20,19,.45);
-  backdrop-filter:blur(5px);z-index:500;
-  display:none;align-items:center;justify-content:center;padding:20px
-}
-.token-modal-bg.open{display:flex}
-.token-box{
-  background:var(--surface-card);border-radius:14px;
-  width:100%;max-width:400px;padding:24px;
-  box-shadow:0 20px 56px rgba(20,20,19,.22);
-  border:0.5px solid var(--hairline)
-}
-.token-box h3{
-  font-family:var(--font-display);font-size:16px;font-weight:400;
-  color:var(--ink);margin-bottom:6px;letter-spacing:-0.01em
-}
-.token-box p{font-size:12px;color:var(--muted-soft);line-height:1.6;margin-bottom:14px}
-.token-box input{
-  width:100%;padding:9px 12px;border:1px solid var(--hairline);
-  border-radius:8px;background:var(--canvas);color:var(--ink);
-  font-family:monospace;font-size:12px;outline:none;margin-bottom:12px;
-  transition:border-color .12s
-}
-.token-box input:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(204,120,92,.12)}
-.token-box-btns{display:flex;justify-content:flex-end;gap:8px}
-
-/* token dot in header */
-.tok-dot{width:7px;height:7px;border-radius:50%;background:var(--error);display:inline-block;margin-right:4px}
-.tok-dot.ok{background:var(--success)}
 
 /* ── Empty / Loading ──────────────────────────────────────────────────────── */
 .empty{
@@ -255,9 +225,6 @@ body { padding-bottom: 64px; }
     <span class="hd-title">AI 생활 변화 아티클</span>
     <span class="hd-sub" id="hd-sub">로딩 중...</span>
   </div>
-  <button class="btn btn-ghost btn-sm" onclick="openTokenModal()" style="flex-shrink:0">
-    <span class="tok-dot" id="tok-dot"></span>토큰 설정
-  </button>
 </header>
 
 <!-- ── Filter bar ────────────────────────────────────────────────────────── -->
@@ -292,21 +259,6 @@ body { padding-bottom: 64px; }
     <div class="confirm-btns">
       <button class="btn btn-ghost btn-sm" onclick="confirmNo()">취소</button>
       <button class="btn btn-danger btn-sm" onclick="confirmYes()">삭제</button>
-    </div>
-  </div>
-</div>
-
-<!-- ── Token modal ────────────────────────────────────────────────────────── -->
-<div class="token-modal-bg" id="token-modal-bg">
-  <div class="token-box">
-    <h3>GitHub Personal Access Token</h3>
-    <p>아티클 직접 삭제에 사용합니다. <strong>contents: write</strong> 권한이 필요합니다.<br>
-       토큰은 이 브라우저의 localStorage에만 저장됩니다.</p>
-    <input type="password" id="pat-input" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx">
-    <div class="token-box-btns">
-      <button class="btn btn-ghost btn-sm" onclick="clearPAT()">삭제</button>
-      <button class="btn btn-ghost btn-sm" onclick="closeTokenModal()">취소</button>
-      <button class="btn btn-primary btn-sm" onclick="savePAT()">저장</button>
     </div>
   </div>
 </div>
@@ -527,35 +479,10 @@ function makeCard(c) {
 
 load();
 
-/* ══════════════════════════════════════════════════════════
-   PAT management
-══════════════════════════════════════════════════════════ */
+/* PAT는 아티클 관리 페이지(articles.html)와 공유 — 같은 localStorage 키 */
 const PAT_KEY = 'gh_pat';
 const REPO    = 'skykelly/ai-future-blog';
-
-function getPAT()  { return localStorage.getItem(PAT_KEY) || ''; }
-function updateTokDot() {
-  const d = document.getElementById('tok-dot');
-  if (d) d.className = 'tok-dot' + (getPAT() ? ' ok' : '');
-}
-function openTokenModal() {
-  document.getElementById('pat-input').value = getPAT();
-  document.getElementById('token-modal-bg').classList.add('open');
-}
-function closeTokenModal() { document.getElementById('token-modal-bg').classList.remove('open'); }
-function savePAT() {
-  const v = document.getElementById('pat-input').value.trim();
-  if (v) localStorage.setItem(PAT_KEY, v);
-  updateTokDot();
-  closeTokenModal();
-}
-function clearPAT() {
-  localStorage.removeItem(PAT_KEY);
-  document.getElementById('pat-input').value = '';
-  updateTokDot();
-  closeTokenModal();
-}
-updateTokDot();
+function getPAT() { return localStorage.getItem(PAT_KEY) || ''; }
 
 /* ══════════════════════════════════════════════════════════
    Toast
@@ -594,7 +521,7 @@ async function confirmYes() {
 
   const token = getPAT();
   if (!token) {
-    arcToast('❌ GitHub 토큰을 먼저 설정하세요 (우측 상단)');
+    arcToast('❌ 토큰 미설정 — 아티클 관리 페이지에서 설정하세요');
     return;
   }
 
