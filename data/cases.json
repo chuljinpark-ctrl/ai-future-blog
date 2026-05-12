@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-05-12T03:16:51.035886+00:00",
-    "total_cases": 47,
+    "last_updated": "2026-05-12T03:17:09.085474+00:00",
+    "total_cases": 46,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -1290,41 +1290,6 @@
       ],
       "source": "Amazon News, 2023",
       "url": "https://www.aboutamazon.com/news/devices/alexa-plus-international-launch",
-      "added_date": "2026-05-11",
-      "verified": false,
-      "published_date": "2023-01-01"
-    },
-    {
-      "id": "AMA-20260511-c1dea3",
-      "category": "1-1",
-      "company": "아마존",
-      "short": "AMA",
-      "color_bg": "#f3e8fb",
-      "color_text": "#7b3ab5",
-      "kpi_value": "N/A",
-      "kpi_label": "핵심 키워드",
-      "title": "문화 이해하는 글로벌 Alexa+ 구축",
-      "description": "아마존이 Alexa+를 통해 문화적 뉘앙스를 이해하는 AI 비서를 개발하고 있다.",
-      "body": "아마존의 Alexa+는 단순한 번역을 넘어, 멕시코에서 문화적 뉘앙스와 유머를 이해하는 AI 비서를 목표로 하고 있다. 이 AI는 지역의 속어와 대화의 리듬을 이해하여 자연스럽고 진정한 상호작용을 제공하며, 가족의 일원처럼 느껴지도록 설계되었다. Alexa+는 지속적으로 언어와 속어의 변화를 학습하며, 다양한 문화에 맞춰 진화할 예정이다.",
-      "metrics": [
-        {
-          "value": "130 million",
-          "label": "멕시코 인구",
-          "trend": "pos"
-        },
-        {
-          "value": "N/A",
-          "label": "문화적 뉘앙스 이해",
-          "trend": "pos"
-        }
-      ],
-      "tags": [
-        "AI",
-        "스마트홈",
-        "문화"
-      ],
-      "source": "Amazon News, 2023",
-      "url": "https://www.aboutamazon.com/stories/amazon-alexa-plus-ai-culture-language",
       "added_date": "2026-05-11",
       "verified": false,
       "published_date": "2023-01-01"
