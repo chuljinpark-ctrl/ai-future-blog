@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-05-13T10:12:27.818760+00:00",
-    "total_cases": 43,
+    "last_updated": "2026-05-14T09:45:33.024729+00:00",
+    "total_cases": 44,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -1768,6 +1768,51 @@
         "life_change_score": 3,
         "debate_potential": 2,
         "topic_match": "1-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "AMA-20260514-08eb6c",
+      "category": "2-1",
+      "company": "아마존",
+      "short": "AMA",
+      "color_bg": "#f3e8fb",
+      "color_text": "#7b3ab5",
+      "kpi_value": "N/A",
+      "kpi_label": "핵심 수치",
+      "title": "알렉사가 아마존에 진출하다",
+      "description": "아마존의 AI 쇼핑 비서 알렉사가 웹사이트에 통합된다.",
+      "body": "아마존은 알렉사 플러스를 통해 AI 기반 쇼핑 비서를 아마존.com에 통합하고, 사용자가 질문을 입력하면 알렉사가 직접 답변하는 기능을 제공한다. 이 비서는 가격 알림 설정, 제품 비교, 자동 재주문 등의 기능을 갖추고 있으며, 다른 웹사이트에서 쇼핑할 수 있는 기능도 포함되어 있다. 이는 사용자에게 더 나은 쇼핑 경험을 제공하고, 알렉사의 활용도를 높이는 방향으로 나아가고 있다.",
+      "metrics": [
+        {
+          "value": "자동 구매 기능",
+          "label": "특징",
+          "trend": "pos"
+        },
+        {
+          "value": "가격 이력 추적",
+          "label": "기능",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI",
+        "쇼핑",
+        "알렉사",
+        "아마존"
+      ],
+      "source": "The Verge, 2026",
+      "published_date": "2026-05-13",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/929457/amazon-announces-alexa-for-shopping-ai-assistant-rufus",
+      "added_date": "2026-05-14",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 4,
+        "topic_match": "2-1",
         "topic_match_strength": 4,
         "korea_relevance": 4,
         "perspective": "낙관",
