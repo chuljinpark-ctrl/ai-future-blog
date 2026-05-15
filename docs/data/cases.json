@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-05-15T01:59:36.432394+00:00",
-    "total_cases": 45,
+    "last_updated": "2026-05-15T02:09:48.648829+00:00",
+    "total_cases": 46,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -1855,6 +1855,49 @@
         "topic_match_strength": 4,
         "korea_relevance": 4,
         "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "TRD-20260515-503fe2",
+      "category": "1-1",
+      "company": "TechRadar",
+      "short": "TRD",
+      "color_bg": "#e8f0fb",
+      "color_text": "#2a5fc8",
+      "kpi_value": "스마트홈",
+      "kpi_label": "핵심 키워드",
+      "title": "스마트 홈 기술 동향",
+      "description": "스마트 홈 기술의 발전과 제품 소개를 다룬 기사입니다.",
+      "body": "이 기사는 스마트 홈 기술의 최신 동향을 소개하며, 다양한 스마트 조명, 보안 시스템, 가전제품의 기능과 성능을 강조합니다. 예를 들어, Philips의 스마트 조명 제품은 TV 화면의 색상을 반영하는 기능을 제공하며, Google Home 앱은 음성 명령에 대한 성능이 크게 향상되었습니다. 이러한 기술들은 사용자에게 더 나은 생활 환경을 제공하고 있습니다.",
+      "metrics": [
+        {
+          "value": "2026년 월드컵",
+          "label": "스포츠 라이브 기능",
+          "trend": "pos"
+        },
+        {
+          "value": "AI 생성 비디오 설명",
+          "label": "Blink Doorbell 기능",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "스마트홈",
+        "AI 기술"
+      ],
+      "source": "TechRadar, 2023",
+      "published_date": "2023-01-01",
+      "url": "https://www.techradar.com/home/smart-home",
+      "added_date": "2026-05-15",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 2,
+        "debate_potential": 2,
+        "topic_match": "1-1",
+        "topic_match_strength": 3,
+        "korea_relevance": 4,
+        "perspective": "중립",
         "rejection_signal": ""
       }
     }
