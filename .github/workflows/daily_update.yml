@@ -58,6 +58,7 @@ jobs:
           git config user.name  "Life After AI Bot"
           git config user.email "bot@life-after-ai.internal"
           git add docs/data/cases.json docs/data/sources.json
+          git add scraper/rejected_log.jsonl 2>/dev/null || true
           COUNT=$(python3 -c "import json; d=json.load(open('docs/data/cases.json')); print(len(d['cases']))")
           if git diff --cached --quiet; then
             echo "No changes to commit."
