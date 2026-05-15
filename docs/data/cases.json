@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-05-15T02:09:48.648829+00:00",
-    "total_cases": 46,
+    "last_updated": "2026-05-15T07:18:51.000318+00:00",
+    "total_cases": 44,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -1353,94 +1353,6 @@
       "added_date": "2026-05-11",
       "verified": false,
       "published_date": "2023-01-01"
-    },
-    {
-      "id": "AMA-20260513-7e1999",
-      "category": "1-1",
-      "company": "아마존",
-      "short": "AMA",
-      "color_bg": "#fdf0eb",
-      "color_text": "#a9583e",
-      "kpi_value": "N/A",
-      "kpi_label": "핵심 키워드",
-      "title": "알렉사+가 독일에 출시",
-      "description": "아마존의 차세대 AI 비서 알렉사+가 독일에 출시되었습니다.",
-      "body": "알렉사+는 독일에서 사용 가능해지며, 대화형 및 개인화된 기능을 통해 사용자와의 상호작용을 개선합니다. 이 AI 비서는 독일 문화에 맞춰 설계되어, 현지의 유머와 표현을 이해하고, 다양한 서비스와 연결됩니다. 알렉사+는 항상 사용자의 곁에 있어 필요한 순간에 도움을 주며, 일상생활에서의 편리함을 제공합니다.",
-      "metrics": [
-        {
-          "value": "7월 5일",
-          "label": "출시일",
-          "trend": "pos"
-        },
-        {
-          "value": "1,000개",
-          "label": "로컬 라디오 스테이션 수",
-          "trend": "pos"
-        }
-      ],
-      "tags": [
-        "AI",
-        "스마트홈",
-        "알렉사"
-      ],
-      "source": "Amazon News, 2023",
-      "published_date": "2023-05-07",
-      "url": "https://www.aboutamazon.com/news/devices/alexa-plus-international-launch",
-      "added_date": "2026-05-13",
-      "verified": true,
-      "quality_scores": {
-        "life_change_score": 3,
-        "debate_potential": 4,
-        "topic_match": "3-1",
-        "topic_match_strength": 4,
-        "korea_relevance": 4,
-        "perspective": "낙관",
-        "rejection_signal": ""
-      }
-    },
-    {
-      "id": "AMA-20260513-c1dea3",
-      "category": "1-1",
-      "company": "아마존",
-      "short": "AMA",
-      "color_bg": "#fdf0eb",
-      "color_text": "#a9583e",
-      "kpi_value": "N/A",
-      "kpi_label": "핵심 수치",
-      "title": "문화 이해하는 글로벌 Alexa+ 구축",
-      "description": "아마존이 Alexa+를 통해 문화적 뉘앙스를 이해하는 AI 비서를 개발하고 있다.",
-      "body": "아마존의 Alexa+는 단순한 번역을 넘어 문화적 뉘앙스를 이해하는 AI 비서로 발전하고 있다. 멕시코에서 첫 출시된 Alexa+는 현지의 슬랭과 대화 리듬을 이해하여 자연스럽고 진정한 상호작용을 목표로 한다. 이 과정에서 Alexa+는 가족의 일원처럼 느껴지도록 설계되었으며, 문화적 세부사항을 정확히 반영하는 것이 중요하다. 아마존은 Alexa+의 문화적 IQ와 EQ를 높이기 위해 다양한 팀과 협력하고 있으며, 앞으로 더 많은 언어로 확장할 계획이다.",
-      "metrics": [
-        {
-          "value": "130 million",
-          "label": "멕시코 인구",
-          "trend": "pos"
-        },
-        {
-          "value": "N/A",
-          "label": "슬랭 이해",
-          "trend": "pos"
-        }
-      ],
-      "tags": [
-        "AI",
-        "스마트홈",
-        "문화"
-      ],
-      "source": "Amazon News, 2023",
-      "published_date": "2023-01-01",
-      "url": "https://www.aboutamazon.com/stories/amazon-alexa-plus-ai-culture-language",
-      "added_date": "2026-05-13",
-      "verified": true,
-      "quality_scores": {
-        "life_change_score": 4,
-        "debate_potential": 3,
-        "topic_match": "4-2",
-        "topic_match_strength": 4,
-        "korea_relevance": 3,
-        "perspective": "낙관",
-        "rejection_signal": ""
-      }
     },
     {
       "id": "CSA-20260513-65d86d",
