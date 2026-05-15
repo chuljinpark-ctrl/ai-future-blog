@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-05-14T09:45:33.024729+00:00",
-    "total_cases": 44,
+    "last_updated": "2026-05-15T01:59:36.432394+00:00",
+    "total_cases": 45,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -1808,6 +1808,45 @@
       "published_date": "2026-05-13",
       "url": "https://www.theverge.com/ai-artificial-intelligence/929457/amazon-announces-alexa-for-shopping-ai-assistant-rufus",
       "added_date": "2026-05-14",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 4,
+        "topic_match": "2-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "APL-20260515-783550",
+      "category": "3-1",
+      "company": "Apple",
+      "short": "APL",
+      "color_bg": "#eaf5f3",
+      "color_text": "#3a8f7d",
+      "kpi_value": "AI 에이전트",
+      "kpi_label": "핵심 키워드",
+      "title": "애플, AI 앱을 위한 ‘에이전트 스토어’ 계획",
+      "description": "애플이 AI 에이전트를 지원하는 앱 스토어를 준비 중이라는 보도.",
+      "body": "애플이 AI 에이전트를 공식적으로 지원하는 앱 스토어를 구축할 계획이라는 보도가 나왔다. 이는 애플이 최근 AI 앱에 대한 정책을 변경한 것으로, 기존의 보안 기준을 유지하면서도 AI 기능을 통합한 앱의 필요성을 인식한 결과로 보인다. 애플은 AI의 발전에 발맞추어 변화하고 있으며, WWDC에서 Siri의 AI 업그레이드를 발표할 예정이다.",
+      "metrics": [
+        {
+          "value": "N/A",
+          "label": "구체적 수치 없음",
+          "trend": "neu"
+        }
+      ],
+      "tags": [
+        "AI",
+        "애플",
+        "앱 스토어"
+      ],
+      "source": "TechRadar, 2023",
+      "published_date": "2023-05-14",
+      "url": "https://www.techradar.com/ai-platforms-assistants/forget-the-app-store-apple-could-be-about-to-launch-the-agent-store-for-ai-apps-and-it-could-transform-how-you-use-your-iphone",
+      "added_date": "2026-05-15",
       "verified": true,
       "quality_scores": {
         "life_change_score": 3,
