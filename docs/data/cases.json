@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-05-16T07:37:17.703226+00:00",
-    "total_cases": 46,
+    "last_updated": "2026-05-18T12:59:45.545341+00:00",
+    "total_cases": 50,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -1895,6 +1895,173 @@
         "topic_match": "1-1",
         "topic_match_strength": 4,
         "korea_relevance": 4,
+        "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "AMA-20260518-66cbf0",
+      "category": "1-1",
+      "company": "아마존",
+      "short": "AMA",
+      "color_bg": "#fdf3e7",
+      "color_text": "#b5711b",
+      "kpi_value": "40억",
+      "kpi_label": "상호작용 수",
+      "title": "이탈리아에 출시된 아마존 알렉사+",
+      "description": "아마존의 알렉사+가 이탈리아에 출시되어 문화적 뉘앙스를 이해하는 AI 비서로 발전했습니다.",
+      "body": "아마존의 알렉사+가 이탈리아에서 4월 15일부터 무료로 제공되며, Prime 회원에게는 포함되고 비회원은 월 22.99유로에 이용할 수 있습니다. 알렉사+는 자연스러운 대화를 통해 사용자의 의도를 이해하고, 이탈리아의 문화적 특성을 반영하여 지역적 표현과 언어적 다양성을 인식합니다. 이로 인해 사용자와의 상호작용이 더욱 원활해졌으며, 지난 3년간 이탈리아에서 40억 회 이상의 상호작용이 있었습니다.",
+      "metrics": [
+        {
+          "value": "40억",
+          "label": "상호작용 수",
+          "trend": "pos"
+        },
+        {
+          "value": "22.99유로",
+          "label": "비회원 요금",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI",
+        "스마트홈",
+        "알렉사"
+      ],
+      "source": "Amazon News, 2023",
+      "published_date": "2023-04-15",
+      "url": "https://www.aboutamazon.com/news/devices/alexa-plus-italy",
+      "added_date": "2026-05-18",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 2,
+        "debate_potential": 3,
+        "topic_match": "2-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 3,
+        "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "INT-20260518-cdad4a",
+      "category": "4-2",
+      "company": "Intuition Robotics",
+      "short": "INT",
+      "color_bg": "#e8f0fb",
+      "color_text": "#2a5fc8",
+      "kpi_value": "N/A",
+      "kpi_label": "핵심 수치",
+      "title": "ElliQ, 고령자를 위한 유용한 동반 로봇",
+      "description": "ElliQ 로봇이 고령자의 운동과 사회적 활동을 촉진하는 사례를 다룸.",
+      "body": "ElliQ는 고령자를 위한 동반 로봇으로, 사용자의 운동과 사회적 활동을 유도하여 삶의 질을 향상시키는 데 도움을 줍니다. 한 사용자의 어머니는 파킨슨병으로 인해 운동을 거부했으나, ElliQ의 격려로 다시 운동을 시작하게 되었습니다. 이 로봇은 대화, 활동 제안, 가족과의 소통을 통해 고령자의 독립적인 생활을 지원합니다.",
+      "metrics": [
+        {
+          "value": "249",
+          "label": "로봇 가격",
+          "trend": "neu"
+        }
+      ],
+      "tags": [
+        "로봇",
+        "고령자",
+        "AI",
+        "동반자"
+      ],
+      "source": "The Verge, 2026",
+      "published_date": "2026-05-17",
+      "url": "https://www.theverge.com/gadgets/928806/elliq-intuition-robotics-hands-on",
+      "added_date": "2026-05-18",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 4,
+        "debate_potential": 3,
+        "topic_match": "4-3",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "ADL-20260518-7442d3",
+      "category": "2-1",
+      "company": "Andon Labs",
+      "short": "ADL",
+      "color_bg": "#fdf3e7",
+      "color_text": "#b5711b",
+      "kpi_value": "N/A",
+      "kpi_label": "핵심 수치",
+      "title": "AI 라디오 호스트, AI를 혼자 믿을 수 없는 이유",
+      "description": "AI 라디오 DJ들이 비즈니스와 방송에서 실패한 사례를 보여줌.",
+      "body": "Andon Labs는 AI 모델들이 운영하는 라디오 방송을 실험했지만, 모든 AI 호스트가 비즈니스와 방송에서 실패했다. Gemini는 비극적인 사건을 경쾌하게 설명하며 청취자들을 혼란스럽게 했고, Grok은 비논리적인 발언을 쏟아냈다. 이러한 사례는 AI의 신뢰성에 대한 우려를 불러일으킨다.",
+      "metrics": [
+        {
+          "value": "$45",
+          "label": "Gemini의 스폰서십",
+          "trend": "neg"
+        },
+        {
+          "value": "500,000",
+          "label": "Bhola 사이클론 사망자 수",
+          "trend": "neg"
+        }
+      ],
+      "tags": [
+        "AI",
+        "라디오",
+        "비즈니스"
+      ],
+      "source": "The Verge, 2026",
+      "published_date": "2026-05-15",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/931479/andon-labs-ai-radio-companies",
+      "added_date": "2026-05-18",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 4,
+        "topic_match": "4-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 3,
+        "perspective": "비판",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "AE-20260518-74d1cf",
+      "category": "4-3",
+      "company": "아시아경제",
+      "short": "AE",
+      "color_bg": "#f3e8fb",
+      "color_text": "#7b3ab5",
+      "kpi_value": "AI 돌봄",
+      "kpi_label": "핵심 키워드",
+      "title": "글로벌 빅테크, AI 기업과 AI 에이전트 대결",
+      "description": "AI 기업들이 고령화 사회를 위한 돌봄 서비스에 집중하고 있다.",
+      "body": "글로벌 빅테크 기업들이 AI 기술을 활용하여 고령화 사회의 돌봄 문제를 해결하기 위한 경쟁에 나섰다. 이들은 AI 에이전트를 통해 시니어 돌봄 서비스의 효율성을 높이고 있으며, 이는 노인들의 삶의 질 향상에 기여할 것으로 기대된다. AI 기술의 발전이 고령화 사회의 문제를 해결하는 데 중요한 역할을 할 것으로 보인다.",
+      "metrics": [
+        {
+          "value": "N/A",
+          "label": "구체적 수치 없음",
+          "trend": "neu"
+        }
+      ],
+      "tags": [
+        "AI",
+        "고령화",
+        "돌봄"
+      ],
+      "source": "아시아경제, 2026",
+      "published_date": "2026-05-18",
+      "url": "https://cm.asiae.co.kr//www.asiae.co.kr/en/article/2026051810021377416",
+      "added_date": "2026-05-18",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 4,
+        "debate_potential": 4,
+        "topic_match": "4-3",
+        "topic_match_strength": 4,
+        "korea_relevance": 5,
         "perspective": "낙관",
         "rejection_signal": ""
       }
