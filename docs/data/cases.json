@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-05-19T12:25:56.609131+00:00",
-    "total_cases": 52,
+    "last_updated": "2026-05-20T11:40:56.602714+00:00",
+    "total_cases": 57,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -2142,6 +2142,232 @@
         "topic_match_strength": 4,
         "korea_relevance": 5,
         "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "GOO-20260520-40602b",
+      "category": "2-1",
+      "company": "구글",
+      "short": "GOO",
+      "color_bg": "#fdf3e7",
+      "color_text": "#b5711b",
+      "kpi_value": "N/A",
+      "kpi_label": "핵심 수치",
+      "title": "구글의 AI 미래는 신뢰와 개인 데이터에 달려있다",
+      "description": "구글의 AI 도구들은 개인 데이터를 기반으로 사용자 경험을 개선한다.",
+      "body": "구글은 I/O 2026에서 Gemini Spark와 같은 AI 도구를 소개하며, 개인 데이터를 활용해 사용자에게 맞춤형 서비스를 제공할 것이라고 밝혔다. Gemini는 Gmail, Google Photos 등 다양한 서비스와 통합되어 개인화된 추천과 결정을 지원한다. 그러나 이러한 기능은 사용자의 신뢰와 데이터 공유에 의존하고 있어, 개인 정보 보호에 대한 우려가 제기되고 있다.",
+      "metrics": [
+        {
+          "value": "2024",
+          "label": "개인화 시작 연도",
+          "trend": "pos"
+        },
+        {
+          "value": "N/A",
+          "label": "사용자 수",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI",
+        "개인화",
+        "구글",
+        "데이터"
+      ],
+      "source": "The Verge, 2026",
+      "published_date": "2026-05-19",
+      "url": "https://www.theverge.com/tech/934172/google-io-gemini-ai-trust-personal-data",
+      "added_date": "2026-05-20",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 4,
+        "debate_potential": 4,
+        "topic_match": "3-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "비판",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "GOO-20260520-91ed73",
+      "category": "2-1",
+      "company": "구글",
+      "short": "GOO",
+      "color_bg": "#fdf3e7",
+      "color_text": "#b5711b",
+      "kpi_value": "Universal Cart",
+      "kpi_label": "핵심 기능",
+      "title": "로봇이 당신의 돈을 쓰게 하시겠습니까?",
+      "description": "구글이 AI 기반 쇼핑의 미래를 선보였습니다.",
+      "body": "구글은 AI 시대의 쇼핑을 위한 'Universal Cart'를 공개했습니다. 이 카트는 다양한 소매업체와 구글 제품에서 작동하며, 사용자가 검색하고 대화하는 동안 제품을 추가할 수 있습니다. 또한 가격 추적, 재고 알림, 할인 제안 등의 기능을 제공합니다. 구글은 AI가 쇼핑을 더 쉽게 만들어줄 것이라고 믿고 있으며, 이를 통해 사용자 경험을 개선하고자 합니다.",
+      "metrics": [
+        {
+          "value": "Sephora, Target, Wayfair, Walmart",
+          "label": "참여 소매업체",
+          "trend": "pos"
+        },
+        {
+          "value": "N/A",
+          "label": "AI 음성 호출 기능",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI 쇼핑",
+        "Universal Cart",
+        "구글"
+      ],
+      "source": "The Verge, 2026",
+      "published_date": "2026-05-19",
+      "url": "https://www.theverge.com/news/932927/google-io-agentic-ai-shopping-universal-cart",
+      "added_date": "2026-05-20",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 4,
+        "topic_match": "2-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "HBO-20260520-a06142",
+      "category": "3-2",
+      "company": "HiBob",
+      "short": "HBO",
+      "color_bg": "#e8f0fb",
+      "color_text": "#2a5fc8",
+      "kpi_value": "63%",
+      "kpi_label": "AI 기술과 승진",
+      "title": "AI 기술 습득이 승진의 열쇠",
+      "description": "AI 기술이 승진과 급여에 미치는 영향에 대한 연구 결과",
+      "body": "최근 HiBob의 연구에 따르면, AI 기술이 승진과 급여 결정에 중요한 요소로 자리잡고 있으며, 63%의 기업이 AI 기술을 승진 결정에 반영하고 있다고 합니다. 기업들은 AI 기술을 보유한 직원에게 더 높은 급여를 제공하고 있으며, AI 기술 습득이 필수적이라는 인식이 확산되고 있습니다. 이는 디지털 리터러시와 유사한 변화로, 다양한 직무에서 AI 기술의 필요성이 증가하고 있음을 보여줍니다.",
+      "metrics": [
+        {
+          "value": "97%",
+          "label": "AI 기술 보유 시 급여 인상",
+          "trend": "pos"
+        },
+        {
+          "value": "61%",
+          "label": "AI 기술을 성과 평가에 반영",
+          "trend": "pos"
+        },
+        {
+          "value": "31%",
+          "label": "AI 능력과 급여 직접 연결",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI",
+        "업스킬링",
+        "승진"
+      ],
+      "source": "TechRadar, 2023",
+      "published_date": "2023-05-19",
+      "url": "https://www.techradar.com/pro/want-to-get-promoted-at-work-new-study-says-learning-new-ai-skills-is-the-key-to-a-pay-rise",
+      "added_date": "2026-05-20",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 4,
+        "topic_match": "3-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "중립",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "GOO-20260520-28eefe",
+      "category": "3-1",
+      "company": "구글",
+      "short": "GOO",
+      "color_bg": "#fdf3e7",
+      "color_text": "#b5711b",
+      "kpi_value": "Gemini",
+      "kpi_label": "AI 비서",
+      "title": "Gemini, 구글을 지배하다",
+      "description": "구글 I/O 2026에서 Gemini의 확장을 발표했다.",
+      "body": "구글은 I/O 2026에서 Gemini의 확장을 통해 검색, 쇼핑, 생산성 및 AI 에이전트에 깊이 통합된 AI 레이어를 선보였다. Gemini는 사용자들이 자주 사용하는 도구에 통합되어 항상 켜져 있는 AI 비서로 자리 잡을 예정이다. 특히 Gemini Omni는 이미지, 비디오, 오디오, 텍스트를 동시에 처리할 수 있는 다중 모달 모델로, AI 비서와 창작 도구의 경계를 허물고 있다.",
+      "metrics": [
+        {
+          "value": "4배",
+          "label": "속도 향상",
+          "trend": "pos"
+        },
+        {
+          "value": "N/A",
+          "label": "비용 절감",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI 비서",
+        "Gemini",
+        "구글"
+      ],
+      "source": "TechRadar, 2026",
+      "published_date": "2026-05-19",
+      "url": "https://www.techradar.com/ai-platforms-assistants/google-i-o-2026-made-one-thing-clear-gemini-is-becoming-impossible-to-avoid",
+      "added_date": "2026-05-20",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 4,
+        "debate_potential": 4,
+        "topic_match": "2-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "EFL-20260520-16cf46",
+      "category": "1-3",
+      "company": "EcoFlow",
+      "short": "EFL",
+      "color_bg": "#eaf7ec",
+      "color_text": "#2e7d4f",
+      "kpi_value": "N/A",
+      "kpi_label": "핵심 수치",
+      "title": "2026년 발전기 유형: 포터블, 인버터, 스탠바이, 태양광 발전기",
+      "description": "2026년 가정용 발전기 유형과 특징을 설명합니다.",
+      "body": "2026년, 전력 신뢰성이 많은 가정에서 우려되고 있으며, 발전기 사용이 증가하고 있습니다. 이 글에서는 포터블, 인버터, 스탠바이, 태양광 발전기의 특징을 비교하고, 각 발전기가 어떤 상황에 적합한지 설명합니다. 특히, 태양광 발전기는 연료 의존도를 줄이는 현대적인 대안으로 주목받고 있습니다.",
+      "metrics": [
+        {
+          "value": "3,000W – 10,000W",
+          "label": "포터블 발전기 출력",
+          "trend": "pos"
+        },
+        {
+          "value": "70-80 dB",
+          "label": "포터블 발전기 소음",
+          "trend": "neg"
+        }
+      ],
+      "tags": [
+        "발전기",
+        "태양광",
+        "에너지"
+      ],
+      "source": "EcoFlow Blog, 2026",
+      "published_date": "2026-05-20",
+      "url": "https://www.ecoflow.com/us/blog/types-of-generators",
+      "added_date": "2026-05-20",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 2,
+        "debate_potential": 2,
+        "topic_match": "3-3",
+        "topic_match_strength": 3,
+        "korea_relevance": 4,
+        "perspective": "중립",
         "rejection_signal": ""
       }
     }
