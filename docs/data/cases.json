@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-05-20T11:40:56.602714+00:00",
-    "total_cases": 57,
+    "last_updated": "2026-05-21T12:34:28.468833+00:00",
+    "total_cases": 58,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -2366,6 +2366,50 @@
         "debate_potential": 2,
         "topic_match": "3-3",
         "topic_match_strength": 3,
+        "korea_relevance": 4,
+        "perspective": "중립",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "GOO-20260521-e5dc1c",
+      "category": "2-1",
+      "company": "구글",
+      "short": "GOO",
+      "color_bg": "#e8f0fb",
+      "color_text": "#2a5fc8",
+      "kpi_value": "OpenClaw",
+      "kpi_label": "AI 에이전트 플랫폼",
+      "title": "구글이 AI 에이전트를 유용하게 만들지 못한다면",
+      "description": "구글의 AI 에이전트 개발 현황과 OpenClaw의 성공을 다룸.",
+      "body": "구글은 AI 에이전트 개발에 오랜 시간을 투자해왔으며, OpenClaw의 성공을 통해 AI 에이전트의 실용성을 높이려 하고 있다. I/O 2026에서 구글은 정보 수집, 일정 계획, 이메일 요약 등을 수행하는 새로운 AI 에이전트를 발표했다. 이러한 에이전트는 구글의 다양한 도구와 통합되어 사용자에게 더 나은 경험을 제공할 예정이다. OpenClaw의 성공은 AI 에이전트의 가능성을 보여주었고, 구글은 이를 바탕으로 시장에서의 경쟁력을 강화할 계획이다.",
+      "metrics": [
+        {
+          "value": "수백만",
+          "label": "OpenClaw 사용자 수",
+          "trend": "pos"
+        },
+        {
+          "value": "2026",
+          "label": "구글 I/O 발표 연도",
+          "trend": "neu"
+        }
+      ],
+      "tags": [
+        "AI 에이전트",
+        "구글",
+        "OpenClaw"
+      ],
+      "source": "The Verge, 2026",
+      "published_date": "2026-05-20",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/934478/if-google-cant-make-ai-agents-useful-maybe-no-one-can",
+      "added_date": "2026-05-21",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 4,
+        "topic_match": "2-1",
+        "topic_match_strength": 4,
         "korea_relevance": 4,
         "perspective": "중립",
         "rejection_signal": ""
