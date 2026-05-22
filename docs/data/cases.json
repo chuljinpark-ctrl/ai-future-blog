@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-05-21T12:34:28.468833+00:00",
-    "total_cases": 58,
+    "last_updated": "2026-05-22T11:37:42.745000+00:00",
+    "total_cases": 65,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -2412,6 +2412,298 @@
         "topic_match_strength": 4,
         "korea_relevance": 4,
         "perspective": "중립",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "BRD-20260522-e0cd61",
+      "category": "1-2",
+      "company": "Birdie",
+      "short": "BRD",
+      "color_bg": "#f3e8fb",
+      "color_text": "#7b3ab5",
+      "kpi_value": "N/A",
+      "kpi_label": "공기질 모니터",
+      "title": "공기질 악화 시 죽는 기계 새",
+      "description": "새로운 공기질 모니터가 공기질 저하 시 죽는 모습을 연출합니다.",
+      "body": "Birdie Pro는 공기질을 모니터링하는 기계 새로, CO2 수치가 높아지면 죽는 모습을 연출하여 사용자에게 경고합니다. 새로운 버전은 온도, 습도, 곰팡이 위험 등 다양한 환경 요소를 추적하며, 스마트홈 플랫폼과 연동되어 자동으로 공기청정기를 작동시킬 수 있습니다. 이는 건강한 생활 환경을 유지하는 데 도움을 줍니다.",
+      "metrics": [
+        {
+          "value": "299달러",
+          "label": "정가",
+          "trend": "neu"
+        },
+        {
+          "value": "199달러",
+          "label": "할인 가격",
+          "trend": "pos"
+        },
+        {
+          "value": "2026년 8월",
+          "label": "배송 예정",
+          "trend": "neu"
+        }
+      ],
+      "tags": [
+        "스마트홈",
+        "공기질",
+        "헬스케어"
+      ],
+      "source": "The Verge, 2026",
+      "published_date": "2026-05-21",
+      "url": "https://www.theverge.com/tech/935292/birdie-pro-smart-air-monitor-kickstarter-crowdfunding",
+      "added_date": "2026-05-22",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 3,
+        "topic_match": "1-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "GOO-20260522-919ec8",
+      "category": "1-1",
+      "company": "구글",
+      "short": "GOO",
+      "color_bg": "#eaf5f3",
+      "color_text": "#3a8f7d",
+      "kpi_value": "AI 구독",
+      "kpi_label": "구독 모델",
+      "title": "스마트홈 비용이 증가하고 있다",
+      "description": "스마트홈의 AI 구독 모델이 비용 증가를 초래하고 있다.",
+      "body": "스마트홈 산업은 AI를 통한 구독 모델을 통해 수익을 창출하려 하지만, 소비자에게는 더 나은 알림과 높은 요금만이 돌아오고 있다. 구글은 Gemini for Home 기능을 확장하여 타사와 협력해 더 많은 AI 기반 서비스를 제공하고 있으며, 이는 소비자에게 새로운 비용 부담을 안길 수 있다.",
+      "metrics": [
+        {
+          "value": "N/A",
+          "label": "핵심 수치",
+          "trend": "neg"
+        }
+      ],
+      "tags": [
+        "스마트홈",
+        "AI",
+        "구독"
+      ],
+      "source": "The Verge, 2026",
+      "published_date": "2026-05-21",
+      "url": "https://www.theverge.com/tech/935298/smart-home-cost-increase-ai-subscription-fatigue",
+      "added_date": "2026-05-22",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 4,
+        "topic_match": "1-3",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "비판",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "GOO-20260522-32ece9",
+      "category": "2-1",
+      "company": "구글",
+      "short": "GOO",
+      "color_bg": "#eaf5f3",
+      "color_text": "#3a8f7d",
+      "kpi_value": "N/A",
+      "kpi_label": "핵심 수치",
+      "title": "졸업생들이 기술 CEO를 조롱하다",
+      "description": "졸업식에서 AI를 찬양하는 CEO에게 졸업생들이 반발하는 현상.",
+      "body": "2026년 졸업식에서 구글 전 CEO 에릭 슈미트가 AI를 찬양하자 졸업생들이 큰 반발을 보였다. 졸업생들은 AI가 자신들의 일자리를 위협하고 있다고 느끼며, 이러한 기술에 대한 불만이 커지고 있다. 이들은 고액의 교육비를 지불했음에도 불구하고 불확실한 미래에 직면해 있으며, 기술 CEO들의 태도에 큰 실망감을 느끼고 있다.",
+      "metrics": [
+        {
+          "value": "N/A",
+          "label": "졸업생 반발",
+          "trend": "neg"
+        }
+      ],
+      "tags": [
+        "AI",
+        "졸업식",
+        "기술 CEO",
+        "불만"
+      ],
+      "source": "The Verge, 2026",
+      "published_date": "2026-05-21",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/935602/graduates-boo-ai-ceos",
+      "added_date": "2026-05-22",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 4,
+        "debate_potential": 5,
+        "topic_match": "3-3",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "비판",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "SPT-20260522-5445f4",
+      "category": "2-1",
+      "company": "Spotify",
+      "short": "SPT",
+      "color_bg": "#e8f0fb",
+      "color_text": "#2a5fc8",
+      "kpi_value": "AI 생성 팟캐스트",
+      "kpi_label": "핵심 키워드",
+      "title": "스포티파이 스튜디오, 개인 맞춤형 팟캐스트 생성",
+      "description": "스포티파이가 AI 기반 개인 맞춤형 팟캐스트를 출시합니다.",
+      "body": "스포티파이는 새로운 AI 앱 '스튜디오'를 통해 사용자의 청취 기록과 연결된 앱 정보를 바탕으로 개인 맞춤형 팟캐스트를 생성합니다. 이 앱은 사용자가 챗봇 프롬프트를 통해 매일 브리핑, 팟캐스트, 재생 목록을 생성할 수 있게 하며, 사용자의 이메일, 캘린더와도 연동됩니다. 스포티파이는 AI가 사용자를 대신해 정보를 조사하고 작업을 완료하는 기능도 제공한다고 밝혔습니다.",
+      "metrics": [
+        {
+          "value": "2026년 출시 예정",
+          "label": "출시 일정",
+          "trend": "pos"
+        },
+        {
+          "value": "18세 이상 사용 가능",
+          "label": "사용자 연령 제한",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI",
+        "팟캐스트",
+        "스포티파이"
+      ],
+      "source": "The Verge, 2026",
+      "published_date": "2026-05-21",
+      "url": "https://www.theverge.com/entertainment/935390/spotify-studio-ai-app-personal-podcasts",
+      "added_date": "2026-05-22",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 4,
+        "topic_match": "2-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "CSA-20260522-52e28a",
+      "category": "1-1",
+      "company": "Connectivity Standards Alliance",
+      "short": "CSA",
+      "color_bg": "#fdf0eb",
+      "color_text": "#a9583e",
+      "kpi_value": "500",
+      "kpi_label": "회원사 수",
+      "title": "소비자, 스마트홈 구축의 진정한 유연성 경험",
+      "description": "스마트홈 기기 간의 상호운용성 문제 해결",
+      "body": "스마트홈 기기 간의 상호운용성 문제는 과거에 비해 크게 개선되었습니다. Matter 표준 덕분에 소비자들은 이제 브랜드에 구애받지 않고 다양한 기기를 혼합하여 사용할 수 있게 되었습니다. 이 표준은 500개 이상의 기술 회사가 참여하여 개발하였으며, Wi-Fi, Thread, Bluetooth Low Energy와 같은 기본 네트워킹 기술을 사용하여 기존 기기와의 호환성을 높였습니다. 이는 소비자들에게 더 많은 선택권과 유연성을 제공합니다.",
+      "metrics": [
+        {
+          "value": "500",
+          "label": "회원사 수",
+          "trend": "pos"
+        },
+        {
+          "value": "N/A",
+          "label": "상호운용성 개선",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "스마트홈",
+        "상호운용성",
+        "Matter"
+      ],
+      "source": "Connectivity Standards Alliance, 2026",
+      "published_date": "2026-05-19",
+      "url": "https://www.makeuseof.com/i-stopped-caring-which-brand-made-my-smart-devices/",
+      "added_date": "2026-05-22",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 2,
+        "topic_match": "1-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "CSA-20260522-0ec16e",
+      "category": "1-1",
+      "company": "Connectivity Standards Alliance",
+      "short": "CSA",
+      "color_bg": "#fdf0eb",
+      "color_text": "#a9583e",
+      "kpi_value": "N/A",
+      "kpi_label": "핵심 수치",
+      "title": "스마트홈이 전력망 균형을 잡는다",
+      "description": "스마트홈 기술이 에너지 효율성을 높이고 비용 절감에 기여할 전망입니다.",
+      "body": "Connectivity Standards Alliance와 OpenADR Alliance가 협력하여 스마트홈과 에너지 관리 시스템 간의 통신을 개선합니다. 이로 인해 가전제품이 전력망과 직접 연결되어 에너지 소비를 조절할 수 있게 됩니다. 예를 들어, 연결된 식기세척기는 수요가 낮을 때까지 작동을 지연할 수 있습니다. 이러한 변화는 수백만 가정에서 누적되어 에너지 효율성을 높이고 비용 절감에 기여할 것입니다.",
+      "metrics": [
+        {
+          "value": "N/A",
+          "label": "핵심 수치",
+          "trend": "neu"
+        }
+      ],
+      "tags": [
+        "스마트홈",
+        "에너지 관리"
+      ],
+      "source": "Forbes, 2026",
+      "published_date": "2026-05-13",
+      "url": "https://www.forbes.com/sites/paullamkin/2026/05/13/your-smart-home-could-soon-help-balance-the-grid-and-save-you-money/",
+      "added_date": "2026-05-22",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 4,
+        "debate_potential": 3,
+        "topic_match": "3-3",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "CSA-20260522-cfd448",
+      "category": "1-1",
+      "company": "Connectivity Standards Alliance",
+      "short": "CSA",
+      "color_bg": "#fdf0eb",
+      "color_text": "#a9583e",
+      "kpi_value": "N/A",
+      "kpi_label": "핵심 수치",
+      "title": "스마트홈과 전력망의 대화",
+      "description": "OpenADR과 Matter의 협력으로 스마트홈 기기가 전력망과 소통하게 된다.",
+      "body": "OpenADR과 Matter가 협력하여 스마트홈 기기가 전력망과 자동으로 소통할 수 있는 기술을 개발하고 있다. 이는 소비자가 에너지 관리에 참여할 수 있는 기회를 제공하며, 특히 전기차 충전기와 같은 고전력 기기의 효율성을 높일 수 있다. 이 기술은 기존의 수요 반응 시스템을 개선하여, 소비자가 에너지 요금을 절감할 수 있는 새로운 경로를 제시할 것으로 기대된다.",
+      "metrics": [
+        {
+          "value": "N/A",
+          "label": "핵심 수치",
+          "trend": "neu"
+        }
+      ],
+      "tags": [
+        "스마트홈",
+        "에너지 관리"
+      ],
+      "source": "Connectivity Standards Alliance, 2026",
+      "published_date": "2026-05-11",
+      "url": "https://www.engadget.com/2169973/openadr-and-matter-are-collaborating-to-let-your-smart-home-talk-to-the-grid/",
+      "added_date": "2026-05-22",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 4,
+        "debate_potential": 3,
+        "topic_match": "3-3",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "낙관",
         "rejection_signal": ""
       }
     }
