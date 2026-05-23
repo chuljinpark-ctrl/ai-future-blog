@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-05-22T11:37:42.745000+00:00",
-    "total_cases": 65,
+    "last_updated": "2026-05-23T08:39:07.762786+00:00",
+    "total_cases": 66,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -2701,6 +2701,50 @@
         "life_change_score": 4,
         "debate_potential": 3,
         "topic_match": "3-3",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "ZDK-20260523-72f88f",
+      "category": "3-1",
+      "company": "Zendesk",
+      "short": "ZDK",
+      "color_bg": "#eaf7ec",
+      "color_text": "#2e7d4f",
+      "kpi_value": "60개 언어 지원",
+      "kpi_label": "언어 지원 수",
+      "title": "젠데스크, AI 에이전트 확장",
+      "description": "젠데스크가 AI 에이전트를 다양한 플랫폼으로 확장하여 고객 지원을 강화합니다.",
+      "body": "젠데스크는 AI 에이전트를 ChatGPT와 Gemini 등 다양한 제3자 플랫폼으로 확장하여 고객 서비스의 일관성을 높이고 있습니다. 이 변화는 고객이 원하는 곳에서 지원을 받을 수 있도록 하며, 60개 이상의 언어를 지원하는 음성 AI 에이전트도 포함됩니다. 이는 고객 서비스가 전통적인 지원 방식에서 벗어나 AI 에이전트가 여러 채널을 통해 고객과 상호작용할 수 있는 방향으로 나아가고 있음을 보여줍니다.",
+      "metrics": [
+        {
+          "value": "60",
+          "label": "지원 언어 수",
+          "trend": "pos"
+        },
+        {
+          "value": "N/A",
+          "label": "고객 지원 일관성",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI",
+        "고객 서비스",
+        "Zendesk"
+      ],
+      "source": "TechRadar, 2023",
+      "published_date": "2023-05-21",
+      "url": "https://www.techradar.com/pro/zendesk-expands-ai-agents-across-chatgpt-gemini-voice-and-messaging",
+      "added_date": "2026-05-23",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 4,
+        "topic_match": "2-1",
         "topic_match_strength": 4,
         "korea_relevance": 4,
         "perspective": "낙관",
