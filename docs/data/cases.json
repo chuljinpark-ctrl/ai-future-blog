@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-05-23T08:39:07.762786+00:00",
-    "total_cases": 66,
+    "last_updated": "2026-05-24T09:28:08.500321+00:00",
+    "total_cases": 67,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -2748,6 +2748,56 @@
         "topic_match_strength": 4,
         "korea_relevance": 4,
         "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "TRD-20260524-027842",
+      "category": "3-3",
+      "company": "TechRadar",
+      "short": "TRD",
+      "color_bg": "#f3e8fb",
+      "color_text": "#7b3ab5",
+      "kpi_value": "63%",
+      "kpi_label": "AI 기술 과장 비율",
+      "title": "직원 63%가 AI 기술을 과장한다고 응답",
+      "description": "직원들이 AI 기술을 과장하는 이유와 그로 인한 문제를 다룸.",
+      "body": "최근 조사에 따르면, 직원의 63%가 AI 기술을 과장하고 있으며, 이는 직업 안정성에 대한 두려움에서 비롯된 것으로 나타났다. 특히 Z세대 직원들 사이에서 과장 비율이 높아, AI 관련 기술이 취업과 승진에 중요한 요소로 작용하고 있음을 보여준다. 이러한 현상은 직원들이 자신감을 느끼지 못하고 있음을 시사하며, AI 기술에 대한 교육과 지원이 필요함을 강조한다.",
+      "metrics": [
+        {
+          "value": "69%",
+          "label": "AI 자동화 우려 비율",
+          "trend": "neg"
+        },
+        {
+          "value": "80%",
+          "label": "Z세대 과장 비율",
+          "trend": "neg"
+        },
+        {
+          "value": "34%",
+          "label": "자신감 있는 비율",
+          "trend": "neg"
+        }
+      ],
+      "tags": [
+        "AI",
+        "직원",
+        "기술",
+        "과장"
+      ],
+      "source": "TechRadar, 2023",
+      "published_date": "2023-05-26",
+      "url": "https://www.techradar.com/pro/its-not-just-you-nearly-two-thirds-of-workers-say-theyve-exaggerated-ai-skills-to-get-ahead-at-their-company",
+      "added_date": "2026-05-24",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 4,
+        "topic_match": "3-3",
+        "topic_match_strength": 3,
+        "korea_relevance": 4,
+        "perspective": "비판",
         "rejection_signal": ""
       }
     }
