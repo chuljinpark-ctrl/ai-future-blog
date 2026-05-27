@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-05-24T09:28:08.500321+00:00",
-    "total_cases": 67,
+    "last_updated": "2026-05-27T12:47:46.403363+00:00",
+    "total_cases": 70,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -2798,6 +2798,144 @@
         "topic_match_strength": 3,
         "korea_relevance": 4,
         "perspective": "비판",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "DYS-20260527-9660df",
+      "category": "1-2",
+      "company": "Dyson",
+      "short": "DYS",
+      "color_bg": "#e8f0fb",
+      "color_text": "#2a5fc8",
+      "kpi_value": "4.5",
+      "kpi_label": "평점",
+      "title": "공기질 관리 기기",
+      "description": "여름철 공기질을 개선하는 기기 소개",
+      "body": "다양한 공기청정기와 팬이 여름철 더위와 알레르기를 완화하는 데 도움을 줄 수 있다. Dyson의 소형 공기청정기는 컴팩트한 크기에도 불구하고 전체 방 공기 정화 기능을 제공하며, 여러 모델이 높은 평점을 기록하고 있다. 이러한 기기들은 개인의 건강과 웰빙을 증진시키는 데 중요한 역할을 한다.",
+      "metrics": [
+        {
+          "value": "3",
+          "label": "추천 제품 수",
+          "trend": "pos"
+        },
+        {
+          "value": "4.5",
+          "label": "평균 평점",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "공기질",
+        "건강",
+        "여름"
+      ],
+      "source": "TechRadar, 2023",
+      "published_date": "2023-01-01",
+      "url": "https://www.techradar.com/home/small-appliances/air-quality",
+      "added_date": "2026-05-27",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 2,
+        "debate_potential": 2,
+        "topic_match": "1-2",
+        "topic_match_strength": 3,
+        "korea_relevance": 4,
+        "perspective": "중립",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "HAR-20260527-e5629d",
+      "category": "3-1",
+      "company": "Harmonic",
+      "short": "HAR",
+      "color_bg": "#eaf5f3",
+      "color_text": "#3a8f7d",
+      "kpi_value": "64.5%",
+      "kpi_label": "업무용 AI 사용 비율",
+      "title": "직원들이 개인 AI 계정을 업무에 사용하고 있다",
+      "description": "직원들이 개인 AI 계정을 통해 업무를 수행하는 비율이 높아지고 있다.",
+      "body": "Harmonic의 연구에 따르면, 개인 AI 계정의 64.5%가 업무 용도로 사용되고 있으며, 이는 기업들이 AI 사용을 제대로 파악하지 못하고 있음을 나타낸다. 직원들은 개인 AI와 회사 제공 AI를 구분하지 않고, 편리한 도구를 선택해 사용하고 있다. 이러한 경향은 기업의 데이터 보안에 위험을 초래할 수 있다.",
+      "metrics": [
+        {
+          "value": "64.5%",
+          "label": "개인 AI 업무 사용 비율",
+          "trend": "pos"
+        },
+        {
+          "value": "45.6%",
+          "label": "회사 비용으로 개인 AI 사용 비율",
+          "trend": "pos"
+        },
+        {
+          "value": "19.5%",
+          "label": "법률 및 거버넌스 팀 AI 사용 비율",
+          "trend": "pos"
+        },
+        {
+          "value": "47%",
+          "label": "AI 사용 목적: 효율성",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI",
+        "업무",
+        "개인 계정"
+      ],
+      "source": "TechRadar, 2023",
+      "published_date": "2023-05-26",
+      "url": "https://www.techradar.com/pro/every-organization-is-pouring-money-into-ai-right-now-and-almost-none-of-them-know-what-their-people-are-actually-doing-with-it-study-reveals-employees-are-using-their-personal-ai-accounts-at-work-raising-a-whole-host-of-issues",
+      "added_date": "2026-05-27",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 4,
+        "topic_match": "3-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "비판",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "LGE-20260527-9d6024",
+      "category": "4-3",
+      "company": "LG 전자",
+      "short": "LGE",
+      "color_bg": "#fdf0eb",
+      "color_text": "#a9583e",
+      "kpi_value": "AI 홈",
+      "kpi_label": "핵심 키워드",
+      "title": "LG 전자의 AI 홈, 생명체처럼 숨 쉬는 집",
+      "description": "LG 전자의 AI 홈이 고령화 사회에서의 돌봄 역할을 강조합니다.",
+      "body": "LG 전자의 AI 홈은 고령화 사회에서 시니어 돌봄을 위한 혁신적인 솔루션을 제공합니다. 이 시스템은 집이 스스로 운영되며, 사용자에게 맞춤형 돌봄 서비스를 제공하여 생활의 질을 향상시킵니다. AI 기술을 통해 집은 마치 생명체처럼 반응하고, 사용자와의 상호작용을 통해 더욱 편리한 환경을 조성합니다.",
+      "metrics": [
+        {
+          "value": "N/A",
+          "label": "구체적 수치 없음",
+          "trend": "neu"
+        }
+      ],
+      "tags": [
+        "AI",
+        "고령화",
+        "돌봄",
+        "스마트홈"
+      ],
+      "source": "Asia Economy, 2023",
+      "published_date": "2023-05-27",
+      "url": "https://cm.asiae.co.kr//www.asiae.co.kr/en/article/2026052709492202760",
+      "added_date": "2026-05-27",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 4,
+        "debate_potential": 4,
+        "topic_match": "3-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 5,
+        "perspective": "낙관",
         "rejection_signal": ""
       }
     }
