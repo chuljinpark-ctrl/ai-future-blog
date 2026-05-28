@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-05-27T12:47:46.403363+00:00",
-    "total_cases": 70,
+    "last_updated": "2026-05-28T12:59:12.128540+00:00",
+    "total_cases": 73,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -2935,6 +2935,132 @@
         "topic_match": "3-1",
         "topic_match_strength": 4,
         "korea_relevance": 5,
+        "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "GOO-20260528-41d973",
+      "category": "1-1",
+      "company": "구글",
+      "short": "GOO",
+      "color_bg": "#f3e8fb",
+      "color_text": "#7b3ab5",
+      "kpi_value": "N/A",
+      "kpi_label": "핵심 수치",
+      "title": "구글 홈의 제미니, 카메라로 자동화 기능 지원",
+      "description": "구글 홈의 제미니가 카메라를 통해 스마트홈 자동화를 지원합니다.",
+      "body": "구글 홈은 제미니 기반의 새로운 자동화 기능을 도입하여, 보안 카메라가 감지한 이벤트에 따라 스마트홈 루틴을 자동으로 실행할 수 있게 되었습니다. 사용자는 자연어로 특정 이벤트를 설명하고, 카메라가 이를 인식하여 조명 조절이나 음악 재생 등의 작업을 수행할 수 있습니다. 이 기능은 현재 미국의 구글 홈 퍼블릭 프리뷰 프로그램에 등록된 사용자에게 제공됩니다.",
+      "metrics": [
+        {
+          "value": "20달러",
+          "label": "프리미엄 요금",
+          "trend": "pos"
+        },
+        {
+          "value": "N/A",
+          "label": "지원 카메라",
+          "trend": "neu"
+        }
+      ],
+      "tags": [
+        "스마트홈",
+        "AI 자동화"
+      ],
+      "source": "The Verge, 2026",
+      "published_date": "2026-05-28",
+      "url": "https://www.theverge.com/tech/938771/google-home-gemini-ai-camera-automations",
+      "added_date": "2026-05-28",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 4,
+        "topic_match": "1-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "RBN-20260528-2422c4",
+      "category": "2-1",
+      "company": "Robinhood",
+      "short": "RBN",
+      "color_bg": "#fdf0eb",
+      "color_text": "#a9583e",
+      "kpi_value": "AI 에이전트",
+      "kpi_label": "핵심 키워드",
+      "title": "로빈후드, AI 에이전트 주식 거래 허용",
+      "description": "로빈후드가 AI 에이전트를 통한 주식 거래를 시작합니다.",
+      "body": "로빈후드는 사용자들이 AI 에이전트를 통해 주식 거래를 할 수 있도록 플랫폼을 개방했습니다. 사용자는 AI 에이전트에게 특정 금액을 할당하고 주식 매매를 자동으로 수행하도록 설정할 수 있습니다. 그러나 로빈후드는 AI 기반 거래가 상당한 위험을 동반하며, 투자 손실 가능성을 경고하고 있습니다. 이 기능은 주식 외에도 옵션, 암호화폐 등으로 확장될 예정입니다.",
+      "metrics": [
+        {
+          "value": "N/A",
+          "label": "거래 위험",
+          "trend": "neg"
+        }
+      ],
+      "tags": [
+        "AI",
+        "주식 거래",
+        "로빈후드"
+      ],
+      "source": "The Verge, 2026",
+      "published_date": "2026-05-27",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/938095/robinhood-ai-agent-stock-trading",
+      "added_date": "2026-05-28",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 4,
+        "topic_match": "2-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 3,
+        "perspective": "중립",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "EFL-20260528-fb5beb",
+      "category": "1-3",
+      "company": "EcoFlow",
+      "short": "EFL",
+      "color_bg": "#eaf5f3",
+      "color_text": "#3a8f7d",
+      "kpi_value": "2026 CES Innovation Award",
+      "kpi_label": "수상 내역",
+      "title": "EcoFlow, 2026 CES 혁신상 수상",
+      "description": "EcoFlow가 2026 CES에서 혁신상을 수상하며 스마트 홈 에너지 기술 분야에서 선두주자로 자리매김했습니다.",
+      "body": "EcoFlow는 최근 발표된 Frost & Sullivan 보고서에 따르면 스마트 홈 에너지 기술 분야에서 2026 CES 혁신상을 수상하고 업계 판매에서 선두를 차지했습니다. 이 회사는 홈 에너지 관리 시스템과 배터리 저장 솔루션을 통해 에너지 효율성을 높이고, 소비자들에게 더 나은 전력 관리 옵션을 제공하고 있습니다. 이러한 성과는 EcoFlow의 기술이 지속 가능한 에너지 솔루션을 제공하는 데 기여하고 있음을 보여줍니다.",
+      "metrics": [
+        {
+          "value": "2026 CES Innovation Award",
+          "label": "혁신상 수상",
+          "trend": "pos"
+        },
+        {
+          "value": "업계 판매 선두",
+          "label": "판매 성과",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "스마트홈",
+        "에너지 관리",
+        "EcoFlow"
+      ],
+      "source": "EcoFlow Blog, 2026",
+      "published_date": "2026-01-01",
+      "url": "https://www.ecoflow.com/us/blog/www.prnewswire.com/news-releases/ecoflow-leads-in-smart-home-energy-tech-with-2026-ces-innovation-award-and-in-industry-sales-according-to-new-frost--sullivan-report-302647658.html",
+      "added_date": "2026-05-28",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 2,
+        "topic_match": "3-3",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
         "perspective": "낙관",
         "rejection_signal": ""
       }
