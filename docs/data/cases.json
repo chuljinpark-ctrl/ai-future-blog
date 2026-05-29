@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-05-28T12:59:12.128540+00:00",
-    "total_cases": 73,
+    "last_updated": "2026-05-29T12:35:46.577069+00:00",
+    "total_cases": 75,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -3062,6 +3062,89 @@
         "topic_match_strength": 4,
         "korea_relevance": 4,
         "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "ADO-20260529-e71b5c",
+      "category": "2-1",
+      "company": "Adobe",
+      "short": "ADO",
+      "color_bg": "#e8f0fb",
+      "color_text": "#2a5fc8",
+      "kpi_value": "N/A",
+      "kpi_label": "핵심 수치",
+      "title": "Adobe의 대화형 AI 에이전트는 평범한 디자인 인턴",
+      "description": "Adobe의 Firefly AI Assistant는 디자인 작업을 도와주는 대화형 AI입니다.",
+      "body": "Adobe의 Firefly AI Assistant는 사용자가 요청한 디자인 작업을 수행하면서 그 과정을 설명하는 대화형 AI입니다. 이 AI는 Photoshop과 Illustrator의 기능을 활용해 사용자의 요청을 처리하지만, 결과물은 초보 디자이너의 수준에 그칩니다. 사용자는 AI와의 상호작용을 통해 창의적인 작업을 보다 쉽게 수행할 수 있습니다.",
+      "metrics": [
+        {
+          "value": "N/A",
+          "label": "핵심 수치",
+          "trend": "neu"
+        }
+      ],
+      "tags": [
+        "AI",
+        "디자인",
+        "Adobe"
+      ],
+      "source": "The Verge, 2026",
+      "published_date": "2026-05-29",
+      "url": "https://www.theverge.com/tech/939686/adobes-conversational-ai-agent-is-a-mediocre-design-intern",
+      "added_date": "2026-05-29",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 4,
+        "topic_match": "3-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "중립",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "GAR-20260529-a88e68",
+      "category": "3-1",
+      "company": "Gartner",
+      "short": "GAR",
+      "color_bg": "#fdf3e7",
+      "color_text": "#b5711b",
+      "kpi_value": "40%",
+      "kpi_label": "AI 에이전트 축소 비율",
+      "title": "AI 거버넌스 부족으로 40% 기업, AI 에이전트 축소 가능성",
+      "description": "AI 거버넌스 미비로 인해 많은 기업들이 AI 에이전트를 축소할 수 있다는 경고.",
+      "body": "Gartner는 2027년까지 40%의 기업이 AI 에이전트를 축소해야 할 수 있다고 경고했다. 이는 AI 에이전트에 대한 거버넌스 체계의 부족으로 인해 발생하며, 기업들이 AI 에이전트를 완전히 신뢰하거나 완전히 차단하는 방식으로 접근하고 있기 때문이다. 이러한 접근은 보안 문제를 초래할 수 있으며, 기업들은 보다 세분화된 접근 통제를 위한 4단계 프레임워크를 채택해야 한다.",
+      "metrics": [
+        {
+          "value": "40%",
+          "label": "AI 에이전트 축소 비율",
+          "trend": "neg"
+        },
+        {
+          "value": "4단계",
+          "label": "거버넌스 프레임워크 단계",
+          "trend": "neu"
+        }
+      ],
+      "tags": [
+        "AI",
+        "거버넌스",
+        "기업"
+      ],
+      "source": "TechRadar, 2026",
+      "published_date": "2026-05-28",
+      "url": "https://www.techradar.com/pro/lack-of-ai-governance-could-force-40-percent-of-enterprises-to-roll-back-autonomous-ai-agents-by-2027",
+      "added_date": "2026-05-29",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 4,
+        "topic_match": "3-3",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "비판",
         "rejection_signal": ""
       }
     }
