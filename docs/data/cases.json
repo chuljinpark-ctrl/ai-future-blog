@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-05-29T12:35:46.577069+00:00",
-    "total_cases": 75,
+    "last_updated": "2026-05-30T09:26:41.357823+00:00",
+    "total_cases": 76,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -3145,6 +3145,50 @@
         "topic_match_strength": 4,
         "korea_relevance": 4,
         "perspective": "비판",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "TVG-20260530-a882d9",
+      "category": "1-1",
+      "company": "The Verge",
+      "short": "TVG",
+      "color_bg": "#fdf3e7",
+      "color_text": "#b5711b",
+      "kpi_value": "로봇 진공청소기",
+      "kpi_label": "주요 제품",
+      "title": "로봇 진공청소기 리뷰를 합니다",
+      "description": "로봇 진공청소기에 대한 질문을 받는 AMA 세션입니다.",
+      "body": "이 기사는 로봇 진공청소기 리뷰어가 독자들의 질문에 답하는 AMA 세션을 소개합니다. 저자는 다양한 로봇 청소기를 테스트하며, 소비자들이 선택할 수 있도록 돕고 있습니다. 최신 제품 리뷰와 함께 로봇 청소기의 비즈니스 측면에 대해서도 논의합니다. 이로 인해 스마트홈 기술의 발전과 소비자 선택의 폭이 넓어지는 현상을 보여줍니다.",
+      "metrics": [
+        {
+          "value": "12",
+          "label": "보유 로봇 수",
+          "trend": "pos"
+        },
+        {
+          "value": "7",
+          "label": "리뷰 경력",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "로봇청소기",
+        "스마트홈",
+        "기술"
+      ],
+      "source": "The Verge, 2026",
+      "published_date": "2026-05-21",
+      "url": "https://www.theverge.com/tech/935196/i-review-robot-vacuums-for-a-living-ask-me-anything",
+      "added_date": "2026-05-30",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 2,
+        "debate_potential": 2,
+        "topic_match": "1-1",
+        "topic_match_strength": 3,
+        "korea_relevance": 4,
+        "perspective": "중립",
         "rejection_signal": ""
       }
     }
