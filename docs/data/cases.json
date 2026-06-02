@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-05-30T09:26:41.357823+00:00",
-    "total_cases": 76,
+    "last_updated": "2026-06-02T17:55:33.244066+00:00",
+    "total_cases": 81,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -3189,6 +3189,223 @@
         "topic_match_strength": 3,
         "korea_relevance": 4,
         "perspective": "중립",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "MSF-20260602-783824",
+      "category": "2-1",
+      "company": "Microsoft",
+      "short": "MSF",
+      "color_bg": "#fdf0eb",
+      "color_text": "#a9583e",
+      "kpi_value": "N/A",
+      "kpi_label": "핵심 키워드",
+      "title": "마이크로소프트의 프로젝트 솔라라",
+      "description": "AI 에이전트 기기를 위한 새로운 운영체제 발표",
+      "body": "마이크로소프트는 Build 2026에서 AI 에이전트를 위한 새로운 운영체제 '프로젝트 솔라라'를 발표했다. 이 플랫폼은 에이전트 중심의 경험을 지원하며, 안드로이드 기반으로 설계되었다. 데스크와 배지 개념의 두 가지 기기가 시연되었으며, 이들은 AI 에이전트와의 상호작용을 용이하게 한다. 마이크로소프트는 이 기술을 통해 AI 하드웨어 시장에 진입하고자 하며, 여러 기업들이 이 하드웨어의 파일럿을 계획하고 있다.",
+      "metrics": [
+        {
+          "value": "N/A",
+          "label": "핵심 수치",
+          "trend": "neu"
+        }
+      ],
+      "tags": [
+        "AI",
+        "운영체제",
+        "마이크로소프트"
+      ],
+      "source": "The Verge, 2026",
+      "published_date": "2026-06-02",
+      "url": "https://www.theverge.com/news/941830/microsoft-project-solara-os-ai-agent-gadgets",
+      "added_date": "2026-06-02",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 4,
+        "topic_match": "2-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 3,
+        "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "GOO-20260602-f15aed",
+      "category": "2-1",
+      "company": "구글",
+      "short": "GOO",
+      "color_bg": "#fdf0eb",
+      "color_text": "#a9583e",
+      "kpi_value": "N/A",
+      "kpi_label": "핵심 수치",
+      "title": "Gemini의 새로운 AI 에이전트 성능",
+      "description": "Gemini Spark는 여러 작업을 대행하는 AI 에이전트입니다.",
+      "body": "구글의 Gemini Spark는 사용자의 지시에 따라 여러 작업을 수행할 수 있는 AI 에이전트로, 실제 사용에서 인상적인 성능을 보였습니다. 사용자는 Spark를 통해 이메일 작성, 데이터 분석 등 다양한 작업을 자동으로 처리할 수 있으며, 이는 개인의 생산성을 높이는 데 기여할 수 있습니다. 그러나 비용과 개인정보 보호 문제에 대한 우려도 존재합니다.",
+      "metrics": [
+        {
+          "value": "2026",
+          "label": "테스트 연도",
+          "trend": "neu"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Gemini",
+        "자동화"
+      ],
+      "source": "The Verge, 2026",
+      "published_date": "2026-06-01",
+      "url": "https://www.theverge.com/tech/941138/google-gemini-spark-ai-agent-hands-on",
+      "added_date": "2026-06-02",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 4,
+        "topic_match": "3-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "중립",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "GOO-20260602-b3624c",
+      "category": "3-1",
+      "company": "구글",
+      "short": "GOO",
+      "color_bg": "#fdf0eb",
+      "color_text": "#a9583e",
+      "kpi_value": "72시간",
+      "kpi_label": "대화 유지 시간",
+      "title": "제미니, 인간이 내 채팅을 검토할 수 있다고 경고",
+      "description": "구글 제미니의 개인 정보 설정과 대화 유지 시간의 상관관계를 다룸.",
+      "body": "구글 제미니는 사용자가 채팅을 비공개로 설정할 수 있지만, 이 경우 대화가 72시간 후 사라진다는 단점이 있다. 이는 사용자가 장기적인 대화를 유지하기 어렵게 만들어, 개인 비서의 유용성을 감소시킬 수 있다. 구글은 이러한 설정을 통해 사용자에게 명확한 선택을 요구하고 있다.",
+      "metrics": [
+        {
+          "value": "N/A",
+          "label": "인간 검토",
+          "trend": "neg"
+        },
+        {
+          "value": "72시간",
+          "label": "대화 유지 시간",
+          "trend": "neg"
+        }
+      ],
+      "tags": [
+        "AI 비서",
+        "개인정보"
+      ],
+      "source": "TechRadar, 2023",
+      "published_date": "2023-06-26",
+      "url": "https://www.techradar.com/ai-platforms-assistants/gemini/gemini-warned-me-humans-might-review-my-chats-but-turning-it-off-comes-with-a-surprising-downside",
+      "added_date": "2026-06-02",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 2,
+        "debate_potential": 3,
+        "topic_match": "3-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "비판",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "SHK-20260602-80181d",
+      "category": "3-1",
+      "company": "Shokz",
+      "short": "SHK",
+      "color_bg": "#eaf5f3",
+      "color_text": "#3a8f7d",
+      "kpi_value": "AI 비서",
+      "kpi_label": "핵심 기술",
+      "title": "Shokz, AI 비서와 스마트 안경 개발 중",
+      "description": "Shokz가 AI 비서와 스마트 안경을 개발하고 있다는 소식입니다.",
+      "body": "Shokz의 CEO는 스마트 안경과 AI 비서를 포함한 새로운 기술을 개발 중이라고 밝혔습니다. 이들은 아직 초기 단계에 있으며, AI 기술이 향후 웨어러블 제품에 어떻게 영향을 미칠지 탐구하고 있습니다. AI 비서는 사용자의 음성을 기록하여 AI 챗봇의 응답에 맥락을 추가하는 기능을 가질 예정입니다.",
+      "metrics": [
+        {
+          "value": "N/A",
+          "label": "출시 일정",
+          "trend": "neu"
+        },
+        {
+          "value": "N/A",
+          "label": "개발 단계",
+          "trend": "neu"
+        }
+      ],
+      "tags": [
+        "AI 비서",
+        "스마트 안경"
+      ],
+      "source": "TechRadar, 2023",
+      "published_date": "2023-06-26",
+      "url": "https://www.techradar.com/health-fitness/fitness-headphones/for-glasses-specifically-we-have-already-gone-through-several-iterations-shokz-ceo-confirms-the-sports-headphones-company-is-working-on-ai-smart-glasses-hearing-solutions-and-a-record-everything-ai-powered-assistant-for-future-headphones",
+      "added_date": "2026-06-02",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 2,
+        "debate_potential": 3,
+        "topic_match": "3-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "ANT-20260602-fc4f12",
+      "category": "3-1",
+      "company": "Anthropic",
+      "short": "ANT",
+      "color_bg": "#f3e8fb",
+      "color_text": "#7b3ab5",
+      "kpi_value": "216",
+      "kpi_label": "영국 보고 수",
+      "title": "클로드 서비스 장애 발생",
+      "description": "AI 비서 클로드의 서비스 장애에 대한 최신 소식입니다.",
+      "body": "클로드는 오늘 많은 사용자에게 서비스 장애가 발생했습니다. 문제는 오전 2시 10분(ET)경 시작되었으며, 영국에서 216건, 미국에서 139건의 보고가 있었습니다. 현재는 문제 해결을 위한 조치가 진행 중이며, 서비스가 점차 정상화되고 있습니다. 이러한 장애는 AI 비서의 신뢰성에 대한 우려를 불러일으킬 수 있습니다.",
+      "metrics": [
+        {
+          "value": "216",
+          "label": "영국 보고 수",
+          "trend": "neg"
+        },
+        {
+          "value": "139",
+          "label": "미국 보고 수",
+          "trend": "neg"
+        },
+        {
+          "value": "30",
+          "label": "영국 보고 감소",
+          "trend": "pos"
+        },
+        {
+          "value": "100",
+          "label": "미국 보고 감소",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI 비서",
+        "서비스 장애"
+      ],
+      "source": "TechRadar, 2026",
+      "published_date": "2026-06-02",
+      "url": "https://www.techradar.com/news/live/claude-outage-june-2026",
+      "added_date": "2026-06-02",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 2,
+        "debate_potential": 4,
+        "topic_match": "3-1",
+        "topic_match_strength": 3,
+        "korea_relevance": 4,
+        "perspective": "비판",
         "rejection_signal": ""
       }
     }
