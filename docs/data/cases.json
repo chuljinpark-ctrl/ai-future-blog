@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-06-02T17:55:33.244066+00:00",
-    "total_cases": 81,
+    "last_updated": "2026-06-03T18:14:50.530145+00:00",
+    "total_cases": 86,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -3406,6 +3406,208 @@
         "topic_match_strength": 3,
         "korea_relevance": 4,
         "perspective": "비판",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "GOO-20260603-29a9ef",
+      "category": "2-1",
+      "company": "구글",
+      "short": "GOO",
+      "color_bg": "#eaf5f3",
+      "color_text": "#3a8f7d",
+      "kpi_value": "생산성",
+      "kpi_label": "핵심 키워드",
+      "title": "AI가 발전할수록 드러나는 빈 약속",
+      "description": "AI 비서의 발전이 생산성을 높이지만, 근본적인 문제 해결은 미비함을 지적.",
+      "body": "AI 비서가 개인의 일정을 관리하는 등 생산성을 높이는 데 기여하고 있지만, 이러한 기술이 실제로 해결해야 할 사회적 문제는 여전히 존재한다. 구글의 Gemini AI와 같은 도구들은 사용자의 개인 정보를 수집하여 맞춤형 서비스를 제공하지만, 이는 오히려 '바쁘게 살기'를 강요하는 문화와 연결된다. 결국, AI의 발전이 경제적 시스템의 문제를 해결하지 못한다는 점에서 빈 약속으로 여겨질 수 있다.",
+      "metrics": [
+        {
+          "value": "N/A",
+          "label": "핵심 수치",
+          "trend": "neg"
+        }
+      ],
+      "tags": [
+        "AI",
+        "생산성",
+        "비서",
+        "사회적문제"
+      ],
+      "source": "The Verge, 2026",
+      "published_date": "2026-06-03",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/942629/as-ai-gets-better-it-reveals-an-empty-promise",
+      "added_date": "2026-06-03",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 4,
+        "debate_potential": 4,
+        "topic_match": "3-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "비판",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "MS-20260603-2186a0",
+      "category": "3-1",
+      "company": "Microsoft",
+      "short": "MS",
+      "color_bg": "#f3e8fb",
+      "color_text": "#7b3ab5",
+      "kpi_value": "Autopilot",
+      "kpi_label": "AI 에이전트",
+      "title": "마이크로소프트, 첫 번째 오토파일럿 스카우트 공개",
+      "description": "마이크로소프트가 새로운 AI 에이전트 스카우트를 발표하며 생산성과 효율성을 개선할 계획이다.",
+      "body": "마이크로소프트는 자사의 새로운 AI 에이전트인 스카우트를 발표했다. 스카우트는 사용자의 작업 방식을 학습하고, 배경에서 독립적으로 작업을 수행하여 사용자가 중요한 작업에 집중할 수 있도록 돕는다. 사용자는 스카우트를 개인화할 수 있으며, 다양한 작업을 자동으로 처리할 수 있다. 이는 업무 효율성을 높이는 데 기여할 것으로 기대된다.",
+      "metrics": [
+        {
+          "value": "N/A",
+          "label": "사용자 맞춤형",
+          "trend": "pos"
+        },
+        {
+          "value": "N/A",
+          "label": "자동 작업 수행",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI",
+        "생산성",
+        "마이크로소프트"
+      ],
+      "source": "TechRadar, 2026",
+      "published_date": "2026-06-26",
+      "url": "https://www.techradar.com/pro/a-new-category-of-agents-microsoft-reveals-scout-its-first-autopilot-which-wants-to-change-how-you-work-for-good",
+      "added_date": "2026-06-03",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 4,
+        "topic_match": "3-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "INT-20260603-99d8e4",
+      "category": "4-3",
+      "company": "Intel",
+      "short": "INT",
+      "color_bg": "#f3e8fb",
+      "color_text": "#7b3ab5",
+      "kpi_value": "N/A",
+      "kpi_label": "핵심 수치",
+      "title": "인텔 CEO: AI 에이전트 확산 속 CPU 중요성 증가",
+      "description": "AI 에이전트의 확산 속에서 CPU의 중요성이 커지고 있음을 강조.",
+      "body": "인텔 CEO는 AI 에이전트의 확산으로 인해 CPU의 중요성이 증가하고 있으며, 기업의 공급 요청이 급증하고 있다고 밝혔다. 이는 고령화 사회에서 AI 기술이 시니어 돌봄에 미치는 영향과 관련이 깊다. AI 기술이 발전함에 따라, 시니어 돌봄 서비스의 수요가 증가하고 있으며, 이에 따라 CPU와 같은 하드웨어의 필요성이 더욱 부각되고 있다.",
+      "metrics": [
+        {
+          "value": "N/A",
+          "label": "AI 에이전트 확산",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI",
+        "CPU",
+        "고령화",
+        "돌봄"
+      ],
+      "source": "Asia Economy, 2026",
+      "published_date": "2026-06-03",
+      "url": "https://cm.asiae.co.kr//www.asiae.co.kr/en/article/2026060314291124308",
+      "added_date": "2026-06-03",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 4,
+        "topic_match": "4-3",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "중립",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "RES-20260603-be7d4e",
+      "category": "1-1",
+      "company": "Resideo",
+      "short": "RES",
+      "color_bg": "#eaf5f3",
+      "color_text": "#3a8f7d",
+      "kpi_value": "Matter",
+      "kpi_label": "핵심 키워드",
+      "title": "Matter 지원 스마트 온도조절기의 중요성",
+      "description": "스마트홈 기기의 상호운용성을 높이는 Matter의 필요성",
+      "body": "Matter는 다양한 스마트홈 생태계와의 상호운용성을 제공하는 오픈 소스 연결 표준으로, 스마트 온도조절기와 같은 Matter 지원 기기를 통해 소비자들은 더 나은 에너지 관리와 데이터 보안을 경험할 수 있다. 건축업자들은 Matter 지원 기기를 통해 고객이 미래 지향적인 스마트홈을 구축하도록 도울 수 있는 기회를 가지고 있다.",
+      "metrics": [
+        {
+          "value": "N/A",
+          "label": "구체적 수치 없음",
+          "trend": "neu"
+        }
+      ],
+      "tags": [
+        "스마트홈",
+        "Matter",
+        "온도조절기"
+      ],
+      "source": "Connectivity Standards Alliance, 2026",
+      "published_date": "2026-06-03",
+      "url": "https://www.resideo.com/us/en/corporate/newsroom/featured-articles/matter-enabled-smart-thermostat-benefits/",
+      "added_date": "2026-06-03",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 2,
+        "topic_match": "3-3",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "CSA-20260603-568548",
+      "category": "1-1",
+      "company": "Connectivity Standards Alliance",
+      "short": "CSA",
+      "color_bg": "#fdf0eb",
+      "color_text": "#a9583e",
+      "kpi_value": "N/A",
+      "kpi_label": "핵심 수치",
+      "title": "‘Matter’ 스마트홈 표준의 모든 것",
+      "description": "스마트홈 기기 간의 호환성을 높이는 Matter 표준에 대한 설명.",
+      "body": "스마트홈의 이상적인 모습은 사용자의 필요를 예측하고 즉각적으로 반응하는 것입니다. 그러나 기존의 스마트홈 표준들은 기기 운영을 복잡하게 만들어 왔습니다. Matter는 다양한 기기와 생태계 간의 호환성을 제공하여 사용자가 원하는 음성 비서로 기기를 제어할 수 있도록 합니다. 이 표준은 Wi-Fi와 Thread 네트워크에서 작동하며, 로컬 네트워크에서 더 빠르고 안정적인 반응을 기대할 수 있습니다.",
+      "metrics": [
+        {
+          "value": "2022",
+          "label": "Matter 출시 연도",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "스마트홈",
+        "호환성",
+        "Matter"
+      ],
+      "source": "Connectivity Standards Alliance, 2026",
+      "published_date": "2026-06-03",
+      "url": "https://www.wired.com/story/what-is-matter/",
+      "added_date": "2026-06-03",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 4,
+        "topic_match": "1-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "낙관",
         "rejection_signal": ""
       }
     }
