@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-06-05T12:23:18.737129+00:00",
-    "total_cases": 87,
+    "last_updated": "2026-06-10T05:10:49.828095+00:00",
+    "total_cases": 88,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -3657,6 +3657,50 @@
         "topic_match_strength": 3,
         "korea_relevance": 4,
         "perspective": "중립",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "PHL-20260610-51cc05",
+      "category": "1-1",
+      "company": "Philips",
+      "short": "PHL",
+      "color_bg": "#eaf7ec",
+      "color_text": "#2e7d4f",
+      "kpi_value": "SpatialAware",
+      "kpi_label": "핵심 기능",
+      "title": "Hue의 SpatialAware로 색상 변화 조명에 대한 인식 변화",
+      "description": "Philips Hue의 새로운 기능이 조명 사용 경험을 혁신적으로 변화시킵니다.",
+      "body": "Philips Hue의 Bridge Pro는 SpatialAware 기능을 통해 조명의 색상과 톤을 더 지능적으로 분배하여 사용자의 조명 경험을 혁신적으로 변화시킵니다. 이 기능은 기존의 조명 시스템을 새롭게 만들어 주며, 스마트 홈 환경에서의 조명 활용도를 높입니다. MotionAware와 함께 사용되며, 더 빠르고 강력한 성능을 제공합니다.",
+      "metrics": [
+        {
+          "value": "150",
+          "label": "지원 조명 수",
+          "trend": "pos"
+        },
+        {
+          "value": "99",
+          "label": "가격 (USD)",
+          "trend": "neu"
+        }
+      ],
+      "tags": [
+        "스마트홈",
+        "조명",
+        "Philips Hue"
+      ],
+      "source": "The Verge, 2026",
+      "published_date": "2026-06-09",
+      "url": "https://www.theverge.com/tech/945624/philips-hue-bridge-pro-review-spatialaware-motionaware",
+      "added_date": "2026-06-10",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 2,
+        "topic_match": "1-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "낙관",
         "rejection_signal": ""
       }
     }
