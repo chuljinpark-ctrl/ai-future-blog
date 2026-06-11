@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-06-10T05:10:49.828095+00:00",
-    "total_cases": 88,
+    "last_updated": "2026-06-11T05:20:50.619765+00:00",
+    "total_cases": 89,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -3701,6 +3701,50 @@
         "topic_match_strength": 4,
         "korea_relevance": 4,
         "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "APPG-20260611-152ade",
+      "category": "1-1",
+      "company": "Apple, Google",
+      "short": "APPG",
+      "color_bg": "#fdf0eb",
+      "color_text": "#a9583e",
+      "kpi_value": "Thread 1.4",
+      "kpi_label": "스마트홈 프로토콜",
+      "title": "애플과 구글, Thread 1.4 지원 추가",
+      "description": "애플과 구글이 스마트홈 기기에 Thread 1.4 지원을 추가하여 연결성을 향상시켰습니다.",
+      "body": "애플과 구글이 스마트홈 스트리밍 기기에 Thread 1.4를 업데이트하여, 기존 Thread 네트워크에 더 쉽게 연결할 수 있는 기반을 마련했습니다. Thread는 Matter의 상호 운용성 표준의 일부로, 사용자와 제조업체가 네트워크 자격 증명을 공유할 수 있도록 합니다. 그러나 현재 모든 기기가 업데이트되지 않아 통합된 Thread 네트워크 구현에는 시간이 필요할 것으로 보입니다.",
+      "metrics": [
+        {
+          "value": "2026",
+          "label": "예상 통합 연도",
+          "trend": "neu"
+        },
+        {
+          "value": "1.4",
+          "label": "Thread 버전",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "스마트홈",
+        "연결성",
+        "AI"
+      ],
+      "source": "The Verge, 2026",
+      "published_date": "2026-06-10",
+      "url": "https://www.theverge.com/tech/947888/apple-google-add-support-for-thread-1-4",
+      "added_date": "2026-06-11",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 2,
+        "debate_potential": 2,
+        "topic_match": "1-1",
+        "topic_match_strength": 3,
+        "korea_relevance": 4,
+        "perspective": "중립",
         "rejection_signal": ""
       }
     }
