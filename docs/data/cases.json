@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-06-11T05:20:50.619765+00:00",
-    "total_cases": 89,
+    "last_updated": "2026-06-12T05:26:41.256628+00:00",
+    "total_cases": 94,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -3745,6 +3745,227 @@
         "topic_match_strength": 3,
         "korea_relevance": 4,
         "perspective": "중립",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "AMA-20260612-92fba5",
+      "category": "1-1",
+      "company": "아마존",
+      "short": "AMA",
+      "color_bg": "#e8f0fb",
+      "color_text": "#2a5fc8",
+      "kpi_value": "8인치",
+      "kpi_label": "디스플레이 크기",
+      "title": "Echo Hub 팁: 스마트 홈 제어 패널 활용법",
+      "description": "Echo Hub로 스마트 홈 기기를 쉽게 관리하는 방법 소개",
+      "body": "Echo Hub는 아마존의 Alexa 기능이 탑재된 스마트 홈 제어 패널로, 다양한 스마트 기기를 통합하여 관리할 수 있도록 설계되었습니다. 8인치 터치 디스플레이를 통해 사용자 맞춤형 대시보드를 제공하며, Zigbee, Bluetooth 등 다양한 프로토콜을 지원하여 여러 기기를 연결할 수 있습니다. 이 기기는 보안 시스템 제어, 자동화, 개인화된 대시보드 설정 등 다양한 기능을 통해 스마트 홈의 효율성을 높입니다.",
+      "metrics": [
+        {
+          "value": "Zigbee, Bluetooth, Matter",
+          "label": "지원 프로토콜",
+          "trend": "pos"
+        },
+        {
+          "value": "9",
+          "label": "활용 팁 수",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "스마트홈",
+        "AI",
+        "아마존"
+      ],
+      "source": "Amazon News, 2023",
+      "published_date": "2023-01-01",
+      "url": "https://www.aboutamazon.com/news/devices/amazon-echo-hub-best-features",
+      "added_date": "2026-06-12",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 2,
+        "debate_potential": 3,
+        "topic_match": "1-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "AMA-20260612-5699dc",
+      "category": "1-1",
+      "company": "아마존",
+      "short": "AMA",
+      "color_bg": "#e8f0fb",
+      "color_text": "#2a5fc8",
+      "kpi_value": "600M",
+      "kpi_label": "Alexa 기기 수",
+      "title": "Alexa+ 캐나다 전역에서 출시",
+      "description": "Alexa+가 캐나다 전역에서 무료로 제공됩니다.",
+      "body": "Alexa+는 캐나다에서 모든 Prime 회원에게 무료로 제공되며, 영어와 프랑스어를 지원합니다. 이 AI 비서는 사용자의 일정을 관리하고, 스마트 홈 기기를 제어하며, 자연스러운 대화를 통해 다양한 작업을 수행합니다. Alexa는 캐나다 가정에서 필수적인 동반자로 자리 잡았으며, 매달 5억 회 이상 사용되고 있습니다.",
+      "metrics": [
+        {
+          "value": "500M",
+          "label": "월간 사용 횟수",
+          "trend": "pos"
+        },
+        {
+          "value": "50M",
+          "label": "월간 음악 청취 시간",
+          "trend": "pos"
+        },
+        {
+          "value": "600M",
+          "label": "전 세계 Alexa 기기 수",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI",
+        "스마트홈",
+        "Alexa"
+      ],
+      "source": "Amazon News, 2026",
+      "published_date": "2025-11-20",
+      "url": "https://www.aboutamazon.com/news/devices/alexa-plus-canada-launch",
+      "added_date": "2026-06-12",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 4,
+        "topic_match": "3-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "AMA-20260612-65add8",
+      "category": "1-1",
+      "company": "아마존",
+      "short": "AMA",
+      "color_bg": "#e8f0fb",
+      "color_text": "#2a5fc8",
+      "kpi_value": "N/A",
+      "kpi_label": "핵심 수치",
+      "title": "아마존 에코 허브, 새로운 사용자 맞춤형 인터페이스",
+      "description": "아마존 에코 허브가 사용자 맞춤형 인터페이스로 업데이트되었습니다.",
+      "body": "아마존은 에코 허브의 소프트웨어 업데이트를 통해 사용자 맞춤형 인터페이스를 제공하고 있습니다. 새로운 디자인은 스마트홈 정보를 더 효율적으로 표시하며, 사용자는 방별로 기기를 그룹화하고, 간편하게 제어할 수 있습니다. 또한, 링 AI의 비디오 검색 기능을 통해 자연어로 카메라 영상을 검색할 수 있는 기능도 추가되었습니다.",
+      "metrics": [
+        {
+          "value": "5",
+          "label": "새로운 기능 수",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "스마트홈",
+        "AI",
+        "아마존",
+        "에코 허브"
+      ],
+      "source": "The Verge, 2026",
+      "published_date": "2026-06-11",
+      "url": "https://www.theverge.com/tech/948814/amazon-echo-hub-homescreen-redesign",
+      "added_date": "2026-06-12",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 2,
+        "debate_potential": 2,
+        "topic_match": "1-1",
+        "topic_match_strength": 3,
+        "korea_relevance": 4,
+        "perspective": "중립",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "ACC-20260612-7b3f7a",
+      "category": "3-1",
+      "company": "Accenture",
+      "short": "ACC",
+      "color_bg": "#eaf7ec",
+      "color_text": "#2e7d4f",
+      "kpi_value": "74%",
+      "kpi_label": "AI 신뢰도",
+      "title": "개인 AI 비서가 친구보다 더 신뢰받는 시대",
+      "description": "소비자들이 개인 AI 비서를 친구보다 더 신뢰하는 경향이 증가하고 있다.",
+      "body": "최근 Accenture의 조사에 따르면, 74%의 소비자가 개인 AI 비서를 친구보다 더 신뢰한다고 응답했다. 조사에 참여한 25,000명 이상의 소비자 중 9%는 AI가 승인 없이 거래를 완료하도록 허용할 의향이 있다고 밝혔다. 이는 AI가 소비자와의 신뢰를 구축하고 있음을 보여준다. 그러나 여전히 많은 소비자들은 오프라인 매장과 대면 상호작용의 중요성을 인식하고 있다.",
+      "metrics": [
+        {
+          "value": "74%",
+          "label": "AI 비서 신뢰도",
+          "trend": "pos"
+        },
+        {
+          "value": "9%",
+          "label": "승인 없는 거래 허용",
+          "trend": "pos"
+        },
+        {
+          "value": "31%",
+          "label": "오프라인 매장 중요성",
+          "trend": "neu"
+        }
+      ],
+      "tags": [
+        "AI",
+        "신뢰",
+        "소비자 행동"
+      ],
+      "source": "TechRadar, 2023",
+      "published_date": "2023-06-26",
+      "url": "https://www.techradar.com/pro/are-we-finally-starting-to-trust-agents-new-report-claims-74-percent-trust-a-personal-ai-agent-more-than-their-best-friend",
+      "added_date": "2026-06-12",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 4,
+        "topic_match": "3-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "중립",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "OAI-20260612-caaddb",
+      "category": "2-1",
+      "company": "OpenAI",
+      "short": "OAI",
+      "color_bg": "#e8f0fb",
+      "color_text": "#2a5fc8",
+      "kpi_value": "N/A",
+      "kpi_label": "핵심 키워드",
+      "title": "OpenAI, 비자와의 협력으로 결제 혁신",
+      "description": "OpenAI가 비자와 협력하여 AI가 결제를 수행할 수 있는 길을 열었다.",
+      "body": "OpenAI는 비자와의 파트너십을 통해 AI 에이전트가 사용자를 대신해 결제 및 구매를 수행할 수 있는 시스템을 구축하고 있다. 이 협력은 AI가 전체 구매 과정을 관리할 수 있는 기반을 마련하며, 사용자에게는 안전한 거래를 보장하기 위한 여러 가지 통제 수단이 제공된다. 이러한 변화는 AI가 경제에 적극 참여하는 새로운 시대를 열 것으로 기대된다.",
+      "metrics": [
+        {
+          "value": "N/A",
+          "label": "결제 시스템",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI",
+        "결제",
+        "비자"
+      ],
+      "source": "TechRadar, 2023",
+      "published_date": "2023-06-26",
+      "url": "https://www.techradar.com/pro/openai-signs-major-visa-deal-so-ai-agents-will-soon-be-able-to-make-payments-and-purchases-for-you",
+      "added_date": "2026-06-12",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 4,
+        "debate_potential": 4,
+        "topic_match": "2-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 3,
+        "perspective": "낙관",
         "rejection_signal": ""
       }
     }
