@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-06-19T06:07:47.275909+00:00",
-    "total_cases": 101,
+    "last_updated": "2026-06-21T05:53:15.242843+00:00",
+    "total_cases": 102,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -4275,6 +4275,50 @@
         "topic_match": "3-2",
         "topic_match_strength": 4,
         "korea_relevance": 4,
+        "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "GOV-20260621-fd8835",
+      "category": "1-1",
+      "company": "Govee",
+      "short": "GOV",
+      "color_bg": "#f3e8fb",
+      "color_text": "#7b3ab5",
+      "kpi_value": "N/A",
+      "kpi_label": "핵심 수치",
+      "title": "내 정원이 스마트 조명의 매력에 빠지다",
+      "description": "스마트 조명이 정원에서의 분위기를 변화시킨 사례",
+      "body": "이 아티클에서는 Govee의 스마트 조명 제품을 통해 정원에서의 조명 경험이 어떻게 변화했는지를 다룹니다. 색상 변화가 가능한 조명은 편리함과 분위기를 동시에 제공하며, 다양한 제품을 통해 여름철 야외 활동의 질을 높일 수 있음을 보여줍니다. Govee의 제품은 특히 연결성과 스타일을 강조하며, 사용자가 원하는 분위기를 쉽게 조성할 수 있도록 돕습니다.",
+      "metrics": [
+        {
+          "value": "50 %",
+          "label": "할인율",
+          "trend": "pos"
+        },
+        {
+          "value": "8-foot",
+          "label": "조명 높이",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "스마트홈",
+        "조명",
+        "Govee"
+      ],
+      "source": "The Verge, 2026",
+      "published_date": "2026-06-17",
+      "url": "https://www.theverge.com/tech/942467/smart-lighting-backyard-govee-outdoor",
+      "added_date": "2026-06-21",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 2,
+        "debate_potential": 2,
+        "topic_match": "1-1",
+        "topic_match_strength": 3,
+        "korea_relevance": 3,
         "perspective": "낙관",
         "rejection_signal": ""
       }
