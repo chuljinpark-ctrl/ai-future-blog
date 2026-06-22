@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-06-21T05:53:15.242843+00:00",
-    "total_cases": 102,
+    "last_updated": "2026-06-22T06:19:47.178249+00:00",
+    "total_cases": 103,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -4320,6 +4320,50 @@
         "topic_match_strength": 3,
         "korea_relevance": 3,
         "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "IRO-20260622-cbd680",
+      "category": "1-1",
+      "company": "iRobot",
+      "short": "IRO",
+      "color_bg": "#fdf3e7",
+      "color_text": "#b5711b",
+      "kpi_value": "로봇 진화",
+      "kpi_label": "핵심 키워드",
+      "title": "로봇 혁명을 이끈 루바",
+      "description": "루바가 청소 방식을 어떻게 변화시켰는지에 대한 이야기입니다.",
+      "body": "루바는 초기에는 단순한 기계였지만, 시간이 지나면서 사랑받는 청소 로봇으로 자리 잡았습니다. iRobot의 공동 창립자와의 인터뷰를 통해 루바의 개발 과정과 성공 요인을 살펴보며, 이 로봇이 어떻게 가정에서의 청소 개념을 변화시켰는지에 대해 논의합니다. 또한, 루바를 중심으로 형성된 시장과 iRobot의 도전 과제도 다룹니다.",
+      "metrics": [
+        {
+          "value": "10년",
+          "label": "개발 기간",
+          "trend": "pos"
+        },
+        {
+          "value": "N/A",
+          "label": "사랑받는 로봇",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "로봇",
+        "청소",
+        "스마트홈"
+      ],
+      "source": "The Verge, 2026",
+      "published_date": "2026-06-21",
+      "url": "https://www.theverge.com/podcast/953275/roomba-robot-vacuum-version-history",
+      "added_date": "2026-06-22",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 2,
+        "topic_match": "1-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "중립",
         "rejection_signal": ""
       }
     }
