@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-06-22T06:19:47.178249+00:00",
-    "total_cases": 103,
+    "last_updated": "2026-06-23T04:55:01.662825+00:00",
+    "total_cases": 105,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -4364,6 +4364,98 @@
         "topic_match_strength": 4,
         "korea_relevance": 4,
         "perspective": "중립",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "GOO-20260623-b25bfd",
+      "category": "1-1",
+      "company": "구글",
+      "short": "GOO",
+      "color_bg": "#fdf3e7",
+      "color_text": "#b5711b",
+      "kpi_value": "99.99",
+      "kpi_label": "가격(달러)",
+      "title": "새로운 구글 홈 스피커 소개",
+      "description": "자연어로 스마트홈을 제어하는 구글 홈 스피커 출시",
+      "body": "구글은 Gemini를 기반으로 한 새로운 홈 스피커를 출시합니다. 이 스피커는 자연어 이해 기능을 통해 사용자가 복잡한 명령을 기억할 필요 없이 대화하듯이 스마트홈 기기를 제어할 수 있도록 돕습니다. 가격은 99.99달러이며, 6월 25일부터 판매됩니다. 이 기기는 구글 TV와 연결하여 향상된 오디오 경험을 제공합니다.",
+      "metrics": [
+        {
+          "value": "10",
+          "label": "자연스러운 목소리 수",
+          "trend": "pos"
+        },
+        {
+          "value": "99.99",
+          "label": "가격(달러)",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "스마트홈",
+        "AI 비서"
+      ],
+      "source": "Google Home & Nest Blog, 2026",
+      "published_date": "2026-06-17",
+      "url": "https://blog.google/products-and-platforms/devices/google-nest/google-home-speaker-gemini-features/",
+      "added_date": "2026-06-23",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 2,
+        "debate_potential": 2,
+        "topic_match": "1-1",
+        "topic_match_strength": 3,
+        "korea_relevance": 4,
+        "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "OHA-20260623-11fb3d",
+      "category": "3-1",
+      "company": "OpenClaw 및 Hermes Agent",
+      "short": "OHA",
+      "color_bg": "#eaf7ec",
+      "color_text": "#2e7d4f",
+      "kpi_value": "373,000 stars",
+      "kpi_label": "OpenClaw GitHub 스타 수",
+      "title": "오픈소스 AI 에이전트로 워크플로우 자동화하기",
+      "description": "AI 에이전트가 개인 비즈니스의 효율성을 높이는 방법을 설명합니다.",
+      "body": "이 아티클은 오픈소스 AI 에이전트인 OpenClaw와 Hermes Agent를 통해 개인 비즈니스의 워크플로우를 자동화하는 방법을 다룹니다. 이 도구들은 사용자의 요청 없이도 작업을 수행하며, 소규모 기업 운영에 큰 도움이 됩니다. 특히, 반복적인 작업을 대신 처리함으로써 창의적인 업무에 더 많은 시간을 할애할 수 있도록 돕습니다.",
+      "metrics": [
+        {
+          "value": "190,000 stars",
+          "label": "Hermes Agent GitHub 스타 수",
+          "trend": "pos"
+        },
+        {
+          "value": "2025",
+          "label": "OpenClaw 시작 연도",
+          "trend": "neu"
+        },
+        {
+          "value": "2026",
+          "label": "Hermes Agent 시작 연도",
+          "trend": "neu"
+        }
+      ],
+      "tags": [
+        "AI",
+        "자동화",
+        "비즈니스"
+      ],
+      "source": "TechRadar, 2026",
+      "published_date": "2026-06-26",
+      "url": "https://www.techradar.com/pro/how-to-automate-workflows-using-open-source-ai-agents",
+      "added_date": "2026-06-23",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 4,
+        "topic_match": "3-2",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "낙관",
         "rejection_signal": ""
       }
     }
