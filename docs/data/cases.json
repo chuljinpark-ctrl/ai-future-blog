@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-06-23T04:55:01.662825+00:00",
-    "total_cases": 105,
+    "last_updated": "2026-06-24T04:58:48.765210+00:00",
+    "total_cases": 106,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -4453,6 +4453,45 @@
         "life_change_score": 3,
         "debate_potential": 4,
         "topic_match": "3-2",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "DIS-20260624-b79898",
+      "category": "2-2",
+      "company": "Disney Store",
+      "short": "DIS",
+      "color_bg": "#e8f0fb",
+      "color_text": "#2a5fc8",
+      "kpi_value": "AI Personal Shopping Assistant",
+      "kpi_label": "핵심 기능",
+      "title": "디즈니 스토어, AI 쇼핑 비서 테스트 중",
+      "description": "디즈니 스토어가 AI 쇼핑 비서를 통해 쇼핑 경험을 혁신하고 있습니다.",
+      "body": "디즈니 스토어는 iOS 앱에서 AI 개인 쇼핑 비서를 베타 테스트 중입니다. 이 도구는 사용자가 자연어로 원하는 제품을 설명하면 맞춤형 추천을 제공합니다. 기존의 키워드 검색 대신 대화형 인터페이스를 통해 쇼핑을 보다 직관적으로 만들어 줍니다. 디즈니는 이 기능이 사용자 경험을 향상시키고, 향후 안드로이드 및 국제 시장으로 확장할 계획이라고 밝혔습니다.",
+      "metrics": [
+        {
+          "value": "N/A",
+          "label": "사용자 수",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI",
+        "쇼핑",
+        "디즈니"
+      ],
+      "source": "TechRadar, 2023",
+      "published_date": "2023-06-26",
+      "url": "https://www.techradar.com/streaming/entertainment/exclusive-disney-store-is-testing-an-ai-shopping-assistant-that-could-change-how-you-shop",
+      "added_date": "2026-06-24",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 2,
+        "debate_potential": 3,
+        "topic_match": "2-2",
         "topic_match_strength": 4,
         "korea_relevance": 4,
         "perspective": "낙관",
