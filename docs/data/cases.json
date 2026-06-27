@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-06-26T05:04:00.930508+00:00",
-    "total_cases": 115,
+    "last_updated": "2026-06-27T04:44:55.517144+00:00",
+    "total_cases": 116,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -4882,6 +4882,45 @@
         "topic_match_strength": 3,
         "korea_relevance": 4,
         "perspective": "중립",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "SAM-20260627-a3811f",
+      "category": "1-1",
+      "company": "삼성",
+      "short": "SAM",
+      "color_bg": "#eaf7ec",
+      "color_text": "#2e7d4f",
+      "kpi_value": "$4.99",
+      "kpi_label": "월 요금",
+      "title": "삼성, 스마트홈 API 접근에 요금 부과 예정",
+      "description": "삼성이 스마트홈 API 접근에 월 $4.99 요금을 부과할 계획이다.",
+      "body": "삼성은 2026년 10월부터 SmartThings API에 대한 유료 요금제를 도입할 예정이다. 개인 개발자에게는 월 $4.99의 요금이 부과되며, 고급 스마트홈 사용자도 새로운 규정에 따라 요금을 지불해야 할 가능성이 있다. 삼성은 이러한 요금제를 통해 파트너와 사용자들이 요구하는 기업급 기능에 투자할 계획이라고 밝혔다.",
+      "metrics": [
+        {
+          "value": "$4.99",
+          "label": "개인 개발자 요금",
+          "trend": "neg"
+        }
+      ],
+      "tags": [
+        "스마트홈",
+        "API",
+        "삼성"
+      ],
+      "source": "The Verge, 2026",
+      "published_date": "2026-06-26",
+      "url": "https://www.theverge.com/tech/957597/samsung-smartthings-api-charges",
+      "added_date": "2026-06-27",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 2,
+        "debate_potential": 3,
+        "topic_match": "1-1",
+        "topic_match_strength": 3,
+        "korea_relevance": 4,
+        "perspective": "비판",
         "rejection_signal": ""
       }
     }
