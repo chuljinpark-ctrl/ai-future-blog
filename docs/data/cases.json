@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-06-27T04:44:55.517144+00:00",
-    "total_cases": 116,
+    "last_updated": "2026-06-30T04:57:53.418408+00:00",
+    "total_cases": 117,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -4921,6 +4921,50 @@
         "topic_match_strength": 3,
         "korea_relevance": 4,
         "perspective": "비판",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "META-20260630-893f22",
+      "category": "3-1",
+      "company": "메타",
+      "short": "META",
+      "color_bg": "#f3e8fb",
+      "color_text": "#7b3ab5",
+      "kpi_value": "경제적 가치",
+      "kpi_label": "핵심 키워드",
+      "title": "AI 에이전트의 경제적 가치 강조",
+      "description": "메타 AI 연구 책임자가 AI 에이전트의 경제적 가치를 강조합니다.",
+      "body": "메타의 AI 연구 책임자인 Dawn Song은 AI 에이전트가 인간을 대체하는 것이 아니라 보완해야 한다고 강조합니다. 그녀는 AI가 반복적이고 시간 소모적인 작업을 수행하여 인간이 더 창의적인 작업에 집중할 수 있도록 해야 한다고 말합니다. 또한 AI의 실제 영향이 벤치마크 점수보다 중요하다고 주장하며, AI의 안전성과 신뢰성을 강조합니다.",
+      "metrics": [
+        {
+          "value": "1,500",
+          "label": "경제적 가치 작업 수",
+          "trend": "pos"
+        },
+        {
+          "value": "55",
+          "label": "산업 수",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI",
+        "경제적 가치",
+        "메타"
+      ],
+      "source": "TechRadar, 2023",
+      "published_date": "2023-06-26",
+      "url": "https://www.techradar.com/pro/the-goal-is-not-to-replace-humans-new-meta-ai-research-chief-dawn-song-says-the-next-frontier-is-ai-agents-that-are-economically-valuable",
+      "added_date": "2026-06-30",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 4,
+        "debate_potential": 4,
+        "topic_match": "3-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "낙관",
         "rejection_signal": ""
       }
     }
