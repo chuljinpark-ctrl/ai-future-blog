@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-06-30T04:57:53.418408+00:00",
-    "total_cases": 117,
+    "last_updated": "2026-07-01T05:16:33.465706+00:00",
+    "total_cases": 120,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -4962,6 +4962,148 @@
         "life_change_score": 4,
         "debate_potential": 4,
         "topic_match": "3-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "GOO-20260701-d120fa",
+      "category": "1-1",
+      "company": "구글",
+      "short": "GOO",
+      "color_bg": "#f3e8fb",
+      "color_text": "#7b3ab5",
+      "kpi_value": "100",
+      "kpi_label": "사용 방법 수",
+      "title": "Gemini로 하루를 쉽게 만드는 100가지 방법",
+      "description": "Gemini 음성 비서로 집안일을 간편하게 관리하는 방법을 소개합니다.",
+      "body": "Gemini for Home은 구글 홈 스피커에서 사용할 수 있는 음성 비서로, 일상적인 작업과 스마트 기기를 관리하는 데 도움을 줍니다. 사용자는 간단한 음성 명령으로 조명을 조절하고, 일정을 정리하며, 요리와 취미에 대한 창의적인 도움을 받을 수 있습니다. 프리미엄 기능을 통해 보안 카메라를 확인하는 등의 고급 기능도 이용할 수 있습니다.",
+      "metrics": [
+        {
+          "value": "10달러",
+          "label": "프리미엄 요금",
+          "trend": "pos"
+        },
+        {
+          "value": "N/A",
+          "label": "음성 명령 사용",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI",
+        "스마트홈",
+        "음성비서"
+      ],
+      "source": "Google Home & Nest Blog, 2026",
+      "published_date": "2026-06-25",
+      "url": "https://blog.google/products-and-platforms/devices/google-nest/gemini-home-voice-assistant-tips/",
+      "added_date": "2026-07-01",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 2,
+        "debate_potential": 3,
+        "topic_match": "1-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "CSA-20260701-058023",
+      "category": "1-1",
+      "company": "Connectivity Standards Alliance",
+      "short": "CSA",
+      "color_bg": "#fdf0eb",
+      "color_text": "#a9583e",
+      "kpi_value": "2025",
+      "kpi_label": "목표 연도",
+      "title": "스마트홈 산업, Matter에 여전히 베팅하다",
+      "description": "스마트홈의 상호운용성 표준 Matter의 발전 상황을 다룬 기사입니다.",
+      "body": "스마트홈 산업은 Matter라는 상호운용성 표준에 대한 기대를 가지고 있지만, 여전히 많은 문제를 안고 있습니다. 최근 Unify 컨퍼런스에서 Matter의 개선 사항이 발표되었고, 2025년까지 모든 플랫폼이 이를 채택할 수 있을지에 대한 논의가 있었습니다. Joint Fabric 기능이 추가되어 다양한 플랫폼에서 단일 스마트홈 네트워크를 제어할 수 있게 되었지만, 여전히 많은 과제가 남아 있습니다.",
+      "metrics": [
+        {
+          "value": "1.6",
+          "label": "Matter 버전",
+          "trend": "pos"
+        },
+        {
+          "value": "2025",
+          "label": "목표 연도",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "스마트홈",
+        "Matter",
+        "상호운용성"
+      ],
+      "source": "The Verge, 2026",
+      "published_date": "2026-06-27",
+      "url": "https://www.theverge.com/tech/958008/matter-unify-conference-csa-apple-google-amazon-samsung-smart-home-interoperability",
+      "added_date": "2026-07-01",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 4,
+        "topic_match": "1-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "중립",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "BOX-20260701-407722",
+      "category": "3-1",
+      "company": "Box",
+      "short": "BOX",
+      "color_bg": "#fdf0eb",
+      "color_text": "#a9583e",
+      "kpi_value": "65%",
+      "kpi_label": "고용 증가 예상",
+      "title": "AI로 인해 고용 증가 기대",
+      "description": "AI가 새로운 일자리를 창출할 것으로 기대되는 기사입니다.",
+      "body": "Box의 연구에 따르면, 65%의 IT 의사결정자들이 AI의 발전으로 인해 향후 3년간 고용이 증가할 것이라고 예상하고 있습니다. AI 에이전트 운영자, 자동화 전문가, 보안 전문가와 같은 새로운 역할이 생길 것으로 보이며, 이는 AI와 인간이 협력하여 목표를 달성하는 새로운 시대를 열 것입니다.",
+      "metrics": [
+        {
+          "value": "65%",
+          "label": "고용 증가 예상",
+          "trend": "pos"
+        },
+        {
+          "value": "14%",
+          "label": "고용 감소 예상",
+          "trend": "neg"
+        },
+        {
+          "value": "48%",
+          "label": "AI 에이전트 운영자 채용",
+          "trend": "pos"
+        },
+        {
+          "value": "94%",
+          "label": "더 나은 거버넌스 필요",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI",
+        "고용",
+        "자동화"
+      ],
+      "source": "TechRadar, 2023",
+      "published_date": "2023-06-26",
+      "url": "https://www.techradar.com/pro/some-businesses-expect-to-hire-more-workers-thanks-to-ai-not-sack-them",
+      "added_date": "2026-07-01",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 4,
+        "debate_potential": 3,
+        "topic_match": "3-3",
         "topic_match_strength": 4,
         "korea_relevance": 4,
         "perspective": "낙관",
