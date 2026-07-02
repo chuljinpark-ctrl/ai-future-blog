@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-07-01T05:16:33.465706+00:00",
-    "total_cases": 120,
+    "last_updated": "2026-07-02T04:53:23.466096+00:00",
+    "total_cases": 121,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -5107,6 +5107,55 @@
         "topic_match_strength": 4,
         "korea_relevance": 4,
         "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "EFL-20260702-2b3f07",
+      "category": "1-2",
+      "company": "EcoFlow",
+      "short": "EFL",
+      "color_bg": "#e8f0fb",
+      "color_text": "#2a5fc8",
+      "kpi_value": "PM2.5",
+      "kpi_label": "미세먼지",
+      "title": "산불 연기와 공기질: 여름철 집 보호 방법",
+      "description": "산불 연기로 인한 실내 공기질 저하를 방지하는 방법을 제시합니다.",
+      "body": "산불 시즌이 길어지고 강도도 증가하면서 실내 공기질이 악화되고 있습니다. PM2.5와 같은 미세먼지는 실내로 침투해 건강에 해로운 영향을 미칠 수 있습니다. AQI, PM2.5, CO, CO2, VOCs를 모니터링하고, 공기 정화 시스템을 통해 실내 공기를 안전하게 유지하는 방법을 제안합니다. 또한, 정전 시에도 공기 보호를 유지할 수 있는 백업 전원 시스템의 중요성을 강조합니다.",
+      "metrics": [
+        {
+          "value": "AQI 100",
+          "label": "민감군 건강 위험",
+          "trend": "neg"
+        },
+        {
+          "value": "PM2.5",
+          "label": "가장 위험한 미세먼지",
+          "trend": "neg"
+        },
+        {
+          "value": "N/A",
+          "label": "VOC 포함",
+          "trend": "neu"
+        }
+      ],
+      "tags": [
+        "산불",
+        "공기질",
+        "건강"
+      ],
+      "source": "EcoFlow Blog, 2026",
+      "published_date": "2026-07-02",
+      "url": "https://www.ecoflow.com/us/blog/wildfire-smoke-air-quality-protect-home-summer",
+      "added_date": "2026-07-02",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 2,
+        "debate_potential": 3,
+        "topic_match": "1-1",
+        "topic_match_strength": 3,
+        "korea_relevance": 4,
+        "perspective": "중립",
         "rejection_signal": ""
       }
     }
