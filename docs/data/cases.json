@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-07-02T04:53:23.466096+00:00",
-    "total_cases": 121,
+    "last_updated": "2026-07-04T04:28:08.579064+00:00",
+    "total_cases": 122,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -5156,6 +5156,55 @@
         "topic_match_strength": 3,
         "korea_relevance": 4,
         "perspective": "중립",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "EFL-20260704-24f934",
+      "category": "1-3",
+      "company": "EcoFlow",
+      "short": "EFL",
+      "color_bg": "#f3e8fb",
+      "color_text": "#7b3ab5",
+      "kpi_value": "420W",
+      "kpi_label": "최대 출력",
+      "title": "메인주 플러그인 태양광 법안",
+      "description": "2026년 메인주에서 시행되는 플러그인 태양광 법안 소개",
+      "body": "2026년 7월부터 메인주는 플러그인 태양광 시스템을 통해 소형 태양광 발전을 허용하는 법안을 시행합니다. 이 법안은 전문 설치 없이 가정의 전기 회로에 직접 연결할 수 있도록 하여 태양광 접근성을 높입니다. 두 가지 시스템 카테고리로 나뉘며, 소형 시스템은 아파트와 소형 주택에 적합합니다. 이로 인해 가정에서 전기 소비를 줄이고 에너지 자립성을 높일 수 있습니다.",
+      "metrics": [
+        {
+          "value": "2",
+          "label": "시스템 카테고리",
+          "trend": "pos"
+        },
+        {
+          "value": "420W",
+          "label": "최대 출력",
+          "trend": "pos"
+        },
+        {
+          "value": "N/A",
+          "label": "전문 설치 불필요",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "태양광",
+        "에너지",
+        "메인주"
+      ],
+      "source": "EcoFlow Blog, 2026",
+      "published_date": "2026-07-15",
+      "url": "https://www.ecoflow.com/us/blog/plug-in-solar-maine-law-overview",
+      "added_date": "2026-07-04",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 4,
+        "debate_potential": 3,
+        "topic_match": "3-3",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "낙관",
         "rejection_signal": ""
       }
     }
