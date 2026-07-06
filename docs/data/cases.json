@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-07-04T04:28:08.579064+00:00",
-    "total_cases": 122,
+    "last_updated": "2026-07-06T05:03:27.382124+00:00",
+    "total_cases": 123,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -5205,6 +5205,50 @@
         "topic_match_strength": 4,
         "korea_relevance": 4,
         "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "ASP-20260706-f4dfdd",
+      "category": "2-1",
+      "company": "Alpha School, Forge Prep",
+      "short": "ASP",
+      "color_bg": "#eaf5f3",
+      "color_text": "#3a8f7d",
+      "kpi_value": "75,000",
+      "kpi_label": "연간 교육비",
+      "title": "부유층, AI로 자녀 교육",
+      "description": "부유층이 AI를 통해 자녀 교육을 시도하는 현상.",
+      "body": "미국의 일부 부유층이 전통 학교 대신 AI를 통해 자녀를 교육하고 있다. Alpha School과 Forge Prep은 AI 튜터와 프로젝트 기반 워크숍을 제공하며, 연간 75,000달러의 교육비를 청구한다. 그러나 이러한 교육 모델이 실제로 교육 성과를 개선하는지에 대한 증거는 부족하다. AI의 교육적 효과와 사회적 이슈를 배제하는 접근 방식이 우려를 낳고 있다.",
+      "metrics": [
+        {
+          "value": "75,000",
+          "label": "연간 교육비",
+          "trend": "pos"
+        },
+        {
+          "value": "N/A",
+          "label": "교육 성과 증거",
+          "trend": "neg"
+        }
+      ],
+      "tags": [
+        "AI 교육",
+        "부유층",
+        "혁신"
+      ],
+      "source": "The Verge, 2026",
+      "published_date": "2026-07-05",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/961505/wealthy-ai-schools-alpha-forge-prep",
+      "added_date": "2026-07-06",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 4,
+        "debate_potential": 4,
+        "topic_match": "3-3",
+        "topic_match_strength": 4,
+        "korea_relevance": 3,
+        "perspective": "비판",
         "rejection_signal": ""
       }
     }
