@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-07-06T05:03:27.382124+00:00",
-    "total_cases": 123,
+    "last_updated": "2026-07-08T04:02:17.980359+00:00",
+    "total_cases": 125,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -5249,6 +5249,88 @@
         "topic_match_strength": 4,
         "korea_relevance": 3,
         "perspective": "비판",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "SOL-20260708-c4d562",
+      "category": "4-2",
+      "company": "Solos",
+      "short": "SOL",
+      "color_bg": "#f3e8fb",
+      "color_text": "#7b3ab5",
+      "kpi_value": "19g",
+      "kpi_label": "안경 무게",
+      "title": "카메라 없는 스마트 안경 출시",
+      "description": "Solos의 새로운 스마트 안경은 AI 비서를 지원합니다.",
+      "body": "Solos는 카메라를 제외한 새로운 AirGo A6 스마트 안경을 출시했습니다. 이 안경은 19그램으로 가벼워졌으며, 음성 명령을 통해 AI 비서 기능을 제공합니다. 사용자는 음악을 듣거나 전화를 받을 수 있으며, 주변 소음도 들을 수 있습니다. 또한, 개인 정보 보호를 위한 액세서리도 함께 출시되었습니다.",
+      "metrics": [
+        {
+          "value": "19g",
+          "label": "안경 무게",
+          "trend": "pos"
+        },
+        {
+          "value": "36-40g",
+          "label": "이전 모델 무게",
+          "trend": "neg"
+        }
+      ],
+      "tags": [
+        "스마트안경",
+        "AI비서"
+      ],
+      "source": "The Verge, 2026",
+      "published_date": "2026-07-07",
+      "url": "https://www.theverge.com/tech/961711/solos-airgo-a6-smart-glasses-ai-assistant-privacy",
+      "added_date": "2026-07-08",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 2,
+        "debate_potential": 3,
+        "topic_match": "3-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "중립",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "GOO-20260708-1fab05",
+      "category": "3-1",
+      "company": "구글",
+      "short": "GOO",
+      "color_bg": "#e8f0fb",
+      "color_text": "#2a5fc8",
+      "kpi_value": "Gemini Gems",
+      "kpi_label": "AI 비서 도구",
+      "title": "AI로 시간을 절약하는 5가지 Gemini Gem",
+      "description": "Gemini Gems는 반복적인 작업을 위한 재사용 가능한 AI 비서입니다.",
+      "body": "이 아티클에서는 구글의 Gemini Gems를 활용하여 반복적인 작업을 효율적으로 처리하는 방법을 소개합니다. 사용자는 특정 역할과 이력을 기억하는 AI 비서를 만들어, 매번 대화 시작 시 불필요한 설명을 줄일 수 있습니다. 예를 들어, 가족 나들이 계획, 여행 예약 등 다양한 상황에서 유용하게 활용할 수 있습니다.",
+      "metrics": [
+        {
+          "value": "N/A",
+          "label": "구체적 수치 없음",
+          "trend": "neu"
+        }
+      ],
+      "tags": [
+        "AI 비서",
+        "Gemini",
+        "생산성"
+      ],
+      "source": "TechRadar, 2023",
+      "published_date": "2023-07-26",
+      "url": "https://www.techradar.com/ai-platforms-assistants/gemini/i-built-5-gemini-gems-that-stop-me-repeating-myself-to-ai-heres-how-to-make-them",
+      "added_date": "2026-07-08",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 3,
+        "topic_match": "3-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "낙관",
         "rejection_signal": ""
       }
     }
