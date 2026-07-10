@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-07-08T04:02:17.980359+00:00",
-    "total_cases": 125,
+    "last_updated": "2026-07-10T04:44:25.171905+00:00",
+    "total_cases": 127,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -5331,6 +5331,89 @@
         "topic_match_strength": 4,
         "korea_relevance": 4,
         "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "APL-20260710-fa4531",
+      "category": "3-1",
+      "company": "Apple",
+      "short": "APL",
+      "color_bg": "#e8f0fb",
+      "color_text": "#2a5fc8",
+      "kpi_value": "N/A",
+      "kpi_label": "핵심 수치",
+      "title": "맥 미니, AI 에이전트 운영의 놀라운 선택",
+      "description": "애플의 맥 미니가 AI 에이전트 운영에 적합한 이유를 설명합니다.",
+      "body": "애플의 맥 미니는 에이전틱 AI 작업을 처리하는 데 적합한 시스템으로, 가격 대비 성능이 뛰어나고 전력 효율성이 높습니다. 애플 실리콘의 발전 덕분에 이 시스템은 로컬 AI 작업을 효과적으로 수행할 수 있으며, 많은 사용자들이 에이전틱 AI를 탐색하고 배포하는 데 이 시스템을 선택하고 있습니다.",
+      "metrics": [
+        {
+          "value": "N/A",
+          "label": "AI 에이전트",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI",
+        "맥 미니",
+        "에이전틱 AI"
+      ],
+      "source": "TechRadar, 2023",
+      "published_date": "2023-07-26",
+      "url": "https://www.techradar.com/pro/its-not-just-about-the-gpu-crunching-on-an-llm-anymore-apple-silicon-leader-explains-why-a-mac-mini-could-be-the-surprising-choice-for-a-machine-running-all-your-ai-agents",
+      "added_date": "2026-07-10",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 2,
+        "debate_potential": 3,
+        "topic_match": "2-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "OAI-20260710-59b611",
+      "category": "3-1",
+      "company": "OpenAI",
+      "short": "OAI",
+      "color_bg": "#eaf7ec",
+      "color_text": "#2e7d4f",
+      "kpi_value": "$200k",
+      "kpi_label": "연봉",
+      "title": "OpenAI, 투자은행 전문가 채용",
+      "description": "OpenAI가 투자은행 분야 전문가를 채용하여 금융 부문에서 AI 기회를 모색합니다.",
+      "body": "OpenAI는 투자은행 분야의 전문가를 채용하여 금융 정확성과 일관성을 높이고자 합니다. 이 역할은 고급 지식 작업을 요구하며, AI가 금융 관련 작업을 지원하는 방향으로 나아가고 있음을 보여줍니다. OpenAI는 이미 개인 금융 도구를 통해 소비자 시장에 진출했으며, 이번 채용은 금융 부문에서의 영향력을 확대하려는 의도를 나타냅니다.",
+      "metrics": [
+        {
+          "value": "$185,000 to $205,000",
+          "label": "연봉 범위",
+          "trend": "pos"
+        },
+        {
+          "value": "N/A",
+          "label": "AI 기회 식별",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI",
+        "금융",
+        "투자은행"
+      ],
+      "source": "TechRadar, 2023",
+      "published_date": "2023-07-26",
+      "url": "https://www.techradar.com/pro/openai-is-looking-for-a-subject-matter-expert-in-investment-banking-could-chatgpt-be-set-to-replace-bankers-next",
+      "added_date": "2026-07-10",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 2,
+        "debate_potential": 3,
+        "topic_match": "2-1",
+        "topic_match_strength": 3,
+        "korea_relevance": 4,
+        "perspective": "중립",
         "rejection_signal": ""
       }
     }
