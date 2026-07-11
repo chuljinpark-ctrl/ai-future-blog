@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-07-10T04:44:25.171905+00:00",
-    "total_cases": 127,
+    "last_updated": "2026-07-11T04:00:06.044384+00:00",
+    "total_cases": 128,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -5413,6 +5413,50 @@
         "topic_match": "2-1",
         "topic_match_strength": 3,
         "korea_relevance": 4,
+        "perspective": "중립",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "SUN-20260711-25b310",
+      "category": "2-1",
+      "company": "Sunrun",
+      "short": "SUN",
+      "color_bg": "#eaf5f3",
+      "color_text": "#3a8f7d",
+      "kpi_value": "70%",
+      "kpi_label": "데이터 센터 반대 비율",
+      "title": "AI 데이터 센터를 집에서 호스팅하시겠습니까?",
+      "description": "Sunrun이 고객의 집에 AI 데이터 센터를 설치하는 프로그램을 시작합니다.",
+      "body": "Sunrun은 고객의 집에 AI 컴퓨팅 노드를 설치하고 이를 통해 AI 서비스를 제공하는 새로운 프로그램을 시작합니다. 이 프로그램은 고객에게 보상을 제공하며, 데이터 센터 건설에 대한 반대 여론이 높아지는 가운데 새로운 자원 확보 방안으로 주목받고 있습니다. Sunrun은 1.1백만 고객을 대상으로 파일럿 프로그램을 진행할 예정이며, 성공적인 결과를 바탕으로 프로그램을 확대할 계획입니다.",
+      "metrics": [
+        {
+          "value": "1.1M",
+          "label": "고객 수",
+          "trend": "pos"
+        },
+        {
+          "value": "70%",
+          "label": "데이터 센터 반대 비율",
+          "trend": "neg"
+        }
+      ],
+      "tags": [
+        "AI",
+        "데이터 센터",
+        "스마트홈"
+      ],
+      "source": "The Verge, 2026",
+      "published_date": "2026-07-10",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/963930/sunrun-distributed-ai-data-center",
+      "added_date": "2026-07-11",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 4,
+        "topic_match": "1-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 3,
         "perspective": "중립",
         "rejection_signal": ""
       }
