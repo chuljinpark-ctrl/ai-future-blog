@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-07-11T04:00:06.044384+00:00",
-    "total_cases": 128,
+    "last_updated": "2026-07-12T04:21:18.307642+00:00",
+    "total_cases": 129,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -5457,6 +5457,45 @@
         "topic_match": "1-1",
         "topic_match_strength": 4,
         "korea_relevance": 3,
+        "perspective": "중립",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "CSA-20260712-b0e19c",
+      "category": "1-1",
+      "company": "Connectivity Standards Alliance",
+      "short": "CSA",
+      "color_bg": "#fdf0eb",
+      "color_text": "#a9583e",
+      "kpi_value": "N/A",
+      "kpi_label": "핵심 수치",
+      "title": "스마트홈 네트워크 개선하는 Thread",
+      "description": "Thread가 스마트홈 네트워크의 문제를 해결하는 방법을 다룹니다.",
+      "body": "Thread는 스마트홈 기기 간의 연결성을 개선하여 사용자 경험을 향상시키고 있습니다. 이 기술은 다양한 기기들이 원활하게 통신할 수 있도록 하여, 스마트홈의 효율성과 안정성을 높이는 데 기여하고 있습니다. 이는 특히 Matter와 같은 연결 표준과의 통합을 통해 더욱 강화되고 있습니다.",
+      "metrics": [
+        {
+          "value": "N/A",
+          "label": "핵심 수치",
+          "trend": "neu"
+        }
+      ],
+      "tags": [
+        "스마트홈",
+        "Thread",
+        "연결성"
+      ],
+      "source": "Connectivity Standards Alliance, 2026",
+      "published_date": "2026-07-08",
+      "url": "https://appleinsider.com/articles/26/06/29/how-thread-is-fixing-smart-home-networks-on-smart-home-insider",
+      "added_date": "2026-07-12",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 2,
+        "debate_potential": 2,
+        "topic_match": "1-1",
+        "topic_match_strength": 3,
+        "korea_relevance": 4,
         "perspective": "중립",
         "rejection_signal": ""
       }
