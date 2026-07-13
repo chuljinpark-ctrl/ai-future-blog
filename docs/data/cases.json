@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-07-12T04:21:18.307642+00:00",
-    "total_cases": 129,
+    "last_updated": "2026-07-13T04:24:51.032661+00:00",
+    "total_cases": 130,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -5497,6 +5497,51 @@
         "topic_match_strength": 3,
         "korea_relevance": 4,
         "perspective": "중립",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "PHI-20260713-18eefc",
+      "category": "1-1",
+      "company": "Philips",
+      "short": "PHI",
+      "color_bg": "#fdf3e7",
+      "color_text": "#b5711b",
+      "kpi_value": "16 million colors",
+      "kpi_label": "색상 수",
+      "title": "필립스 휴가 스마트홈을 완벽하게 만든 방법",
+      "description": "필립스 휴는 스마트홈의 이상적인 기능을 구현한 조명 시스템입니다.",
+      "body": "필립스 휴는 스마트홈의 이상적인 기능을 구현하여 사용자들이 원하는 집의 모습에 가까워졌습니다. 이 제품은 스마트폰의 발전과 함께 등장했으며, 다양한 스마트홈 플랫폼과의 호환성을 갖추고 있습니다. 가격이 다소 비쌌지만, 사용자가 원하는 기능을 충족시키며, 조명이 단순히 밝기를 조절하는 것을 넘어 감정과 활동에 맞춰 조정될 수 있도록 설계되었습니다.",
+      "metrics": [
+        {
+          "value": "199달러",
+          "label": "스타터 키트 가격",
+          "trend": "pos"
+        },
+        {
+          "value": "N/A",
+          "label": "스마트홈 플랫폼 호환성",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "스마트홈",
+        "조명",
+        "필립스",
+        "기술"
+      ],
+      "source": "The Verge, 2026",
+      "published_date": "2026-07-12",
+      "url": "https://www.theverge.com/podcast/964515/philips-hue-smart-lights-version-history",
+      "added_date": "2026-07-13",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 2,
+        "topic_match": "1-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "낙관",
         "rejection_signal": ""
       }
     }
