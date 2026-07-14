@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-07-13T04:24:51.032661+00:00",
-    "total_cases": 130,
+    "last_updated": "2026-07-14T03:53:02.579015+00:00",
+    "total_cases": 132,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -5542,6 +5542,103 @@
         "topic_match_strength": 4,
         "korea_relevance": 4,
         "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "BRA-20260714-10f0f8",
+      "category": "3-1",
+      "company": "Brave",
+      "short": "BRA",
+      "color_bg": "#fdf3e7",
+      "color_text": "#b5711b",
+      "kpi_value": "N/A",
+      "kpi_label": "핵심 수치",
+      "title": "Brave Leo AI 리뷰",
+      "description": "Brave 브라우저에 내장된 개인 비서 AI의 리뷰입니다.",
+      "body": "Brave Leo는 Brave 브라우저에 통합된 개인 비서 AI로, 사용자의 개인정보를 보호하며 다양한 기능을 제공합니다. 페이지 인식 기능을 통해 사용자가 현재 보고 있는 콘텐츠를 이해하고, 이를 기반으로 질문에 답변합니다. 브라우저 전용으로 제한되지만, 사용자에게 강력한 개인 정보 보호를 제공합니다.",
+      "metrics": [
+        {
+          "value": "브라우저 전용 접근",
+          "label": "접근성",
+          "trend": "neg"
+        },
+        {
+          "value": "계정 필요 없음",
+          "label": "사용 편리성",
+          "trend": "pos"
+        },
+        {
+          "value": "다양한 모델 지원",
+          "label": "기능 다양성",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI 비서",
+        "개인정보 보호",
+        "Brave"
+      ],
+      "source": "TechRadar, 2023",
+      "published_date": "2023-07-26",
+      "url": "https://www.techradar.com/pro/brave-leo-ai-review",
+      "added_date": "2026-07-14",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 2,
+        "debate_potential": 3,
+        "topic_match": "3-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "중립",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "PRO-20260714-d25f68",
+      "category": "3-1",
+      "company": "Proton",
+      "short": "PRO",
+      "color_bg": "#fdf0eb",
+      "color_text": "#a9583e",
+      "kpi_value": "제로 접근 암호화",
+      "kpi_label": "보안 기술",
+      "title": "Lumo AI 리뷰",
+      "description": "Lumo는 개인 정보 보호를 중시하는 AI 비서입니다.",
+      "body": "Lumo는 Proton이 개발한 개인 정보 보호 중심의 AI 비서로, 대화 내용이 외부에 노출되지 않도록 제로 접근 암호화를 제공합니다. 이 AI는 민감한 정보를 다루는 전문가들에게 적합하며, 법률, 저널리즘, 의료 분야에서 유용하게 사용될 수 있습니다. Lumo는 오픈 소스 모델을 기반으로 하여 사용자에게 높은 수준의 보안을 제공합니다.",
+      "metrics": [
+        {
+          "value": "2025년 출시",
+          "label": "출시 연도",
+          "trend": "pos"
+        },
+        {
+          "value": "제로 접근 암호화",
+          "label": "보안 기능",
+          "trend": "pos"
+        },
+        {
+          "value": "무료 티어 제한",
+          "label": "제한 사항",
+          "trend": "neg"
+        }
+      ],
+      "tags": [
+        "AI 비서",
+        "개인 정보 보호"
+      ],
+      "source": "TechRadar, 2025",
+      "published_date": "2025-07-26",
+      "url": "https://www.techradar.com/pro/lumo-ai-review",
+      "added_date": "2026-07-14",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 4,
+        "topic_match": "3-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "중립",
         "rejection_signal": ""
       }
     }
