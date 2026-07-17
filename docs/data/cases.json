@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-07-14T03:53:02.579015+00:00",
-    "total_cases": 132,
+    "last_updated": "2026-07-17T03:55:39.114630+00:00",
+    "total_cases": 133,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -5638,6 +5638,46 @@
         "topic_match": "3-1",
         "topic_match_strength": 4,
         "korea_relevance": 4,
+        "perspective": "중립",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "GOO-20260717-53ca43",
+      "category": "2-1",
+      "company": "구글",
+      "short": "GOO",
+      "color_bg": "#fdf3e7",
+      "color_text": "#b5711b",
+      "kpi_value": "N/A",
+      "kpi_label": "핵심 키워드",
+      "title": "구글, 유럽에서 안드로이드 및 검색 개방 명령",
+      "description": "EU가 구글에 경쟁사에 대한 데이터 접근을 허용하라는 명령을 내림.",
+      "body": "유럽연합(EU)은 구글이 안드로이드와 검색 데이터에 대해 경쟁 AI 비서와 검색 엔진에 동등한 접근을 허용해야 한다고 명령했다. 이는 구글의 시장 지배력을 약화시키고, 경쟁사에게 새로운 기회를 제공할 수 있다. 구글은 2027년까지 이러한 변경을 이행해야 하며, 이를 위반할 경우 막대한 벌금이 부과될 수 있다.",
+      "metrics": [
+        {
+          "value": "10%",
+          "label": "연간 매출의 최대 벌금",
+          "trend": "neg"
+        }
+      ],
+      "tags": [
+        "구글",
+        "EU",
+        "AI",
+        "안드로이드"
+      ],
+      "source": "The Verge, 2026",
+      "published_date": "2026-07-16",
+      "url": "https://www.theverge.com/policy/966438/eu-google-android-ai-interoperability-search-data-dma",
+      "added_date": "2026-07-17",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 4,
+        "topic_match": "2-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 3,
         "perspective": "중립",
         "rejection_signal": ""
       }
