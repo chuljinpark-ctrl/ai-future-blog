@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-07-19T04:18:16.844737+00:00",
-    "total_cases": 134,
+    "last_updated": "2026-07-20T04:31:13.359202+00:00",
+    "total_cases": 135,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -5718,6 +5718,45 @@
         "topic_match_strength": 3,
         "korea_relevance": 4,
         "perspective": "중립",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "VER-20260720-787ebf",
+      "category": "1-1",
+      "company": "The Verge",
+      "short": "VER",
+      "color_bg": "#f3e8fb",
+      "color_text": "#7b3ab5",
+      "kpi_value": "N/A",
+      "kpi_label": "핵심 수치",
+      "title": "클래퍼: 실패한 스마트홈 기기",
+      "description": "클래퍼는 작동이 불안정했지만 큰 인기를 끌었다.",
+      "body": "클래퍼는 사용자가 손뼉을 치면 전등을 켜고 끌 수 있는 스마트홈 기기로, 실제로는 작동이 불안정했다. 그럼에도 불구하고 뛰어난 광고 캠페인 덕분에 큰 인기를 얻었다. 이 아티클은 클래퍼의 역사와 유산을 탐구하며, 제품의 실제 효용성과 마케팅의 중요성을 강조한다.",
+      "metrics": [
+        {
+          "value": "N/A",
+          "label": "핵심 수치",
+          "trend": "neu"
+        }
+      ],
+      "tags": [
+        "스마트홈",
+        "기술",
+        "클래퍼"
+      ],
+      "source": "The Verge, 2026",
+      "published_date": "2026-07-19",
+      "url": "https://www.theverge.com/podcast/967642/the-clapper-version-history",
+      "added_date": "2026-07-20",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 2,
+        "debate_potential": 3,
+        "topic_match": "1-1",
+        "topic_match_strength": 3,
+        "korea_relevance": 4,
+        "perspective": "비판",
         "rejection_signal": ""
       }
     }
