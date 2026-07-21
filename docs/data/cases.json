@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-07-20T04:31:13.359202+00:00",
-    "total_cases": 135,
+    "last_updated": "2026-07-21T04:10:19.002780+00:00",
+    "total_cases": 137,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -5757,6 +5757,95 @@
         "topic_match_strength": 3,
         "korea_relevance": 4,
         "perspective": "비판",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "CAC-20260721-0d3d6a",
+      "category": "4-2",
+      "company": "중국 정부",
+      "short": "CAC",
+      "color_bg": "#eaf7ec",
+      "color_text": "#2e7d4f",
+      "kpi_value": "N/A",
+      "kpi_label": "핵심 수치",
+      "title": "중국, AI 동반자 금지로 현실 관계 촉진",
+      "description": "중국 정부가 AI 동반자 서비스를 금지하여 실제 인간 관계를 장려하고 있다.",
+      "body": "중국 정부는 AI 동반자 서비스에 대한 새로운 규제를 시행하여 사용자들이 실제 인간 관계를 형성하도록 유도하고 있다. 이 규제는 AI 도구가 감정을 유도하거나 중독을 초래하는 것을 금지하며, 특히 미성년자와의 가상 관계를 차단한다. 이러한 조치는 출산율 감소와 관련이 있으며, AI 동반자 사용이 실제 관계 형성을 방해하고 있다고 우려하고 있다.",
+      "metrics": [
+        {
+          "value": "2025",
+          "label": "중국 출산율 최저",
+          "trend": "neg"
+        }
+      ],
+      "tags": [
+        "AI",
+        "동반자",
+        "중국",
+        "정부 규제"
+      ],
+      "source": "TechRadar, 2023",
+      "published_date": "2023-07-26",
+      "url": "https://www.techradar.com/ai-platforms-assistants/china-is-banning-ai-generated-companions-to-encourage-users-to-form-real-life-relationships-sparking-nationwide-virtual-breakups-and-therapists-think-its-for-the-best",
+      "added_date": "2026-07-21",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 4,
+        "debate_potential": 4,
+        "topic_match": "4-2",
+        "topic_match_strength": 4,
+        "korea_relevance": 3,
+        "perspective": "비판",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "SON-20260721-c3a372",
+      "category": "1-1",
+      "company": "SONOFF",
+      "short": "SON",
+      "color_bg": "#e8f0fb",
+      "color_text": "#2a5fc8",
+      "kpi_value": "Matter 지원",
+      "kpi_label": "기술 지원",
+      "title": "SONOFF 스마트 플러그 제어 방법",
+      "description": "SONOFF S61STPF로 스마트 플러그를 다양한 방식으로 제어할 수 있습니다.",
+      "body": "SONOFF S61STPF와 리모컨 번들이 출시되었습니다. 이 제품은 Matter를 지원하여 Apple Home, Alexa 등과 호환되며, 앱, 음성, 리모컨으로 제어할 수 있습니다. 실시간 에너지 모니터링과 스마트 스케줄 및 자동화 기능이 포함되어 있어 사용자에게 편리함을 제공합니다. 이러한 기술은 스마트홈의 운영 방식을 혁신적으로 변화시키고 있습니다.",
+      "metrics": [
+        {
+          "value": "실시간 에너지 모니터링",
+          "label": "기능 설명",
+          "trend": "pos"
+        },
+        {
+          "value": "스마트 스케줄",
+          "label": "기능 설명",
+          "trend": "pos"
+        },
+        {
+          "value": "Matter 지원",
+          "label": "기술 설명",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "스마트홈",
+        "자동화",
+        "에너지 모니터링"
+      ],
+      "source": "Connectivity Standards Alliance, 2023",
+      "published_date": "2023-01-01",
+      "url": "https://twitter.com/sonoff_global/status/2078057925960987057",
+      "added_date": "2026-07-21",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 2,
+        "debate_potential": 2,
+        "topic_match": "1-1",
+        "topic_match_strength": 3,
+        "korea_relevance": 4,
+        "perspective": "중립",
         "rejection_signal": ""
       }
     }
