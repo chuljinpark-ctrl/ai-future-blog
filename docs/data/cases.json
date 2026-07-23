@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-07-21T04:10:19.002780+00:00",
-    "total_cases": 137,
+    "last_updated": "2026-07-23T04:02:27.818936+00:00",
+    "total_cases": 138,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -5846,6 +5846,56 @@
         "topic_match_strength": 3,
         "korea_relevance": 4,
         "perspective": "중립",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "TVW-20260723-63b579",
+      "category": "3-1",
+      "company": "TeamViewer",
+      "short": "TVW",
+      "color_bg": "#eaf5f3",
+      "color_text": "#3a8f7d",
+      "kpi_value": "95%",
+      "kpi_label": "AI 신뢰도",
+      "title": "많은 기업들이 AI를 신뢰하지 못하고 있다",
+      "description": "직원들이 AI의 독립적인 작동에 대해 우려하고 있다.",
+      "body": "TeamViewer의 연구에 따르면, 95%의 직원들이 AI가 인간 없이 작동하는 것에 대해 우려를 표명하고 있으며, 61%는 아예 자율 AI를 사용하지 않겠다고 응답했다. 직원들은 AI의 결과를 검증하는 데 평균 2시간 이상 소요하며, 안전성과 가이드라인이 필요하다고 강조하고 있다. AI의 신뢰가 생산성에 미치는 영향도 크며, 강력한 보안과 개인 정보 보호가 자율 AI 수용에 중요한 요소로 작용하고 있다.",
+      "metrics": [
+        {
+          "value": "71%",
+          "label": "가이드라인 설정 비율",
+          "trend": "neu"
+        },
+        {
+          "value": "61%",
+          "label": "자율 AI 사용 거부 비율",
+          "trend": "neg"
+        },
+        {
+          "value": "2+",
+          "label": "AI 결과 검증 시간",
+          "trend": "neg"
+        }
+      ],
+      "tags": [
+        "AI",
+        "신뢰",
+        "생산성",
+        "직원"
+      ],
+      "source": "TechRadar, 2023",
+      "published_date": "2023-07-26",
+      "url": "https://www.techradar.com/pro/many-companies-are-struggling-to-fully-trust-ai-at-work-especially-when-theres-no-human-involved",
+      "added_date": "2026-07-23",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 4,
+        "topic_match": "3-3",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "비판",
         "rejection_signal": ""
       }
     }
