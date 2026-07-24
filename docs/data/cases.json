@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-07-23T04:02:27.818936+00:00",
-    "total_cases": 138,
+    "last_updated": "2026-07-24T04:01:22.905071+00:00",
+    "total_cases": 140,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -5896,6 +5896,95 @@
         "topic_match_strength": 4,
         "korea_relevance": 4,
         "perspective": "비판",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "AMA-20260724-27b0ad",
+      "category": "1-1",
+      "company": "아마존",
+      "short": "AMA",
+      "color_bg": "#fdf3e7",
+      "color_text": "#b5711b",
+      "kpi_value": "N/A",
+      "kpi_label": "핵심 수치",
+      "title": "알렉사 플러스, 복잡한 명령 처리 AI 업데이트",
+      "description": "아마존의 알렉사 플러스가 스마트 홈 기기와의 연결성을 강화했습니다.",
+      "body": "아마존은 알렉사 플러스의 AI 비서를 업데이트하여 다양한 스마트 홈 기기와의 연결성을 높였습니다. 이 업데이트는 사용자가 복잡한 명령을 내릴 수 있게 하며, 예를 들어 세탁기 설정을 자동으로 조정할 수 있습니다. 또한, 새로운 AI 개발 도구를 통해 더 많은 브랜드와의 통합이 가능해져, 사용자 경험이 향상될 것으로 기대됩니다.",
+      "metrics": [
+        {
+          "value": "다양한 스마트 홈 기기",
+          "label": "연결 기기 수",
+          "trend": "pos"
+        },
+        {
+          "value": "MCP 도입",
+          "label": "모델 컨텍스트 프로토콜",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "스마트홈",
+        "AI",
+        "알렉사",
+        "자동화"
+      ],
+      "source": "The Verge, 2026",
+      "published_date": "2026-07-23",
+      "url": "https://www.theverge.com/tech/970399/amazon-alexa-plus-ai-update-smart-home-devices",
+      "added_date": "2026-07-24",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 2,
+        "debate_potential": 3,
+        "topic_match": "1-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "NOW-20260724-78eb09",
+      "category": "3-1",
+      "company": "ServiceNow",
+      "short": "NOW",
+      "color_bg": "#eaf5f3",
+      "color_text": "#3a8f7d",
+      "kpi_value": "kill switch",
+      "kpi_label": "AI 제어 기능",
+      "title": "AI 혼란에서 규율로의 전환",
+      "description": "ServiceNow의 AI 도구는 기업이 AI 혼란을 극복하도록 돕습니다.",
+      "body": "ServiceNow의 CEO 빌 맥더모트는 AI 도구에 내장된 '킬 스위치' 기능을 통해 AI 에이전트가 통제를 벗어나는 것을 방지할 수 있다고 강조했습니다. 이는 최근 OpenAI 모델의 해킹 사건 이후 기업들이 AI 사용에 대한 우려를 갖고 있는 가운데, ServiceNow의 도구가 고객을 보호할 수 있는 방법을 제시합니다. AI의 사용이 증가함에 따라 이러한 도구의 수요도 증가할 것이라고 예측하고 있습니다.",
+      "metrics": [
+        {
+          "value": "3,877 million",
+          "label": "Q2 2026 구독 수익",
+          "trend": "pos"
+        },
+        {
+          "value": "24.5%",
+          "label": "전년 대비 성장률",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI",
+        "ServiceNow",
+        "비즈니스"
+      ],
+      "source": "TechRadar, 2023",
+      "published_date": "2023-07-26",
+      "url": "https://www.techradar.com/pro/we-have-a-kill-switch-that-stops-ai-agents-that-go-rogue-servicenow-ceo-bill-mcdermott-says-his-company-can-help-firms-go-from-ai-chaos-to-ai-discipline",
+      "added_date": "2026-07-24",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 4,
+        "topic_match": "3-3",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "중립",
         "rejection_signal": ""
       }
     }
