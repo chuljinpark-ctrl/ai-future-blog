@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-07-24T04:01:22.905071+00:00",
-    "total_cases": 140,
+    "last_updated": "2026-07-25T03:58:37.496241+00:00",
+    "total_cases": 141,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -5983,6 +5983,50 @@
         "debate_potential": 4,
         "topic_match": "3-3",
         "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "중립",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "GOO-20260725-53bf97",
+      "category": "3-1",
+      "company": "구글",
+      "short": "GOO",
+      "color_bg": "#fdf3e7",
+      "color_text": "#b5711b",
+      "kpi_value": "15분",
+      "kpi_label": "대화 기억 시간",
+      "title": "구글, 구형 스마트 스피커에 Gemini Live 출시",
+      "description": "구글이 구형 스마트 스피커에 AI 기능을 추가했습니다.",
+      "body": "구글은 첫 번째 세대의 Home Mini 스피커와 Nest Hub 스마트 디스플레이에 Gemini Live를 출시했습니다. 이 업데이트는 구독 서비스인 Google Home Premium이 필요하며, 대화 기억 시간이 15분으로 늘어났습니다. 사용자는 'Hey Google, let’s chat'이라고 말해 다양한 질문을 할 수 있습니다. 이는 구형 기기 사용자에게 긍정적인 소식이며, 구글이 오래된 기기를 여전히 지원하는 모습을 보여줍니다.",
+      "metrics": [
+        {
+          "value": "$10",
+          "label": "구독 비용",
+          "trend": "pos"
+        },
+        {
+          "value": "15분",
+          "label": "대화 기억 시간",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI",
+        "스마트홈",
+        "구독서비스"
+      ],
+      "source": "TechRadar, 2023",
+      "published_date": "2023-07-26",
+      "url": "https://www.techradar.com/home/smart-speakers/google-is-rolling-out-gemini-live-to-its-first-gen-smart-home-devices-and-its-great-news-if-your-home-mini-speaker-is-still-going-strong-heres-how-you-can-sign-up-to-early-access",
+      "added_date": "2026-07-25",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 2,
+        "debate_potential": 2,
+        "topic_match": "1-1",
+        "topic_match_strength": 3,
         "korea_relevance": 4,
         "perspective": "중립",
         "rejection_signal": ""
