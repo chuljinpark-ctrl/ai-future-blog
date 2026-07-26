@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-07-25T03:58:37.496241+00:00",
-    "total_cases": 141,
+    "last_updated": "2026-07-26T04:21:32.396806+00:00",
+    "total_cases": 142,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -6028,6 +6028,45 @@
         "topic_match": "1-1",
         "topic_match_strength": 3,
         "korea_relevance": 4,
+        "perspective": "중립",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "SAM-20260726-6a364d",
+      "category": "3-1",
+      "company": "삼성",
+      "short": "SAM",
+      "color_bg": "#eaf5f3",
+      "color_text": "#3a8f7d",
+      "kpi_value": "N/A",
+      "kpi_label": "핵심 수치",
+      "title": "삼성이 AI 건강에 전념하는 이유",
+      "description": "삼성 헬스 앱의 AI 활용과 사용자 신뢰 문제를 다룸.",
+      "body": "삼성은 AI를 통해 헬스케어를 혁신하고 있으며, 사용자 데이터를 안전하게 보호하는 데 중점을 두고 있다. 삼성 헬스 앱은 수면 무호흡증, 불규칙한 심장 리듬 등을 감지하여 사용자에게 알림을 제공한다. 그러나 사용자 데이터 수집에 대한 우려가 커지고 있으며, 삼성은 사용자 신뢰를 구축하기 위해 데이터 사용에 대한 투명성을 강조하고 있다.",
+      "metrics": [
+        {
+          "value": "N/A",
+          "label": "핵심 수치",
+          "trend": "neu"
+        }
+      ],
+      "tags": [
+        "AI",
+        "헬스케어",
+        "삼성"
+      ],
+      "source": "TechRadar, 2023",
+      "published_date": "2023-07-26",
+      "url": "https://www.techradar.com/health-fitness/exclusive-we-want-to-keep-people-away-from-doctors-why-samsung-has-gone-all-in-on-ai-health-according-to-its-executives-but-do-users-trust-it",
+      "added_date": "2026-07-26",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 4,
+        "debate_potential": 3,
+        "topic_match": "1-2",
+        "topic_match_strength": 4,
+        "korea_relevance": 5,
         "perspective": "중립",
         "rejection_signal": ""
       }
