@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-07-26T04:21:32.396806+00:00",
-    "total_cases": 142,
+    "last_updated": "2026-07-27T04:31:04.445015+00:00",
+    "total_cases": 143,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -6067,6 +6067,60 @@
         "topic_match": "1-2",
         "topic_match_strength": 4,
         "korea_relevance": 5,
+        "perspective": "중립",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "HBO-20260727-244942",
+      "category": "3-3",
+      "company": "HiBob",
+      "short": "HBO",
+      "color_bg": "#fdf3e7",
+      "color_text": "#b5711b",
+      "kpi_value": "77%",
+      "kpi_label": "AI 기술 요구 비율",
+      "title": "고용주, 모든 근로자에게 AI 기술 기대",
+      "description": "AI 기술이 근로자의 기본 요구사항으로 자리잡고 있다.",
+      "body": "최근 연구에 따르면, 77%의 영국 기업들이 비기술 직무에서 AI 능력을 기본 요구사항으로 삼을 것이라고 한다. 기업들은 AI 기술을 갖춘 직원에게 10% 이상의 급여 프리미엄을 제공할 준비가 되어 있으며, 이는 근로자들이 AI 기술을 스스로 습득해야 할 필요성을 강조한다. AI 기술은 성과 평가와 승진 결정에서도 중요한 요소로 자리잡고 있다.",
+      "metrics": [
+        {
+          "value": "82%",
+          "label": "AI 재교육 투자 비율",
+          "trend": "pos"
+        },
+        {
+          "value": "63%",
+          "label": "승진 결정 시 AI 고려 비율",
+          "trend": "pos"
+        },
+        {
+          "value": "61%",
+          "label": "성과 평가에 AI 포함 비율",
+          "trend": "pos"
+        },
+        {
+          "value": "97%",
+          "label": "AI 능력에 대한 급여 프리미엄 제공 비율",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI 기술",
+        "고용주",
+        "재교육"
+      ],
+      "source": "TechRadar, 2023",
+      "published_date": "2023-07-26",
+      "url": "https://www.techradar.com/pro/that-is-the-wrong-model-for-the-ai-era-employers-now-expect-basic-ai-skills-from-all-workers",
+      "added_date": "2026-07-27",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 4,
+        "debate_potential": 4,
+        "topic_match": "3-3",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
         "perspective": "중립",
         "rejection_signal": ""
       }
