@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-07-27T04:31:04.445015+00:00",
-    "total_cases": 143,
+    "last_updated": "2026-07-28T03:55:28.224638+00:00",
+    "total_cases": 144,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -6121,6 +6121,45 @@
         "topic_match": "3-3",
         "topic_match_strength": 4,
         "korea_relevance": 4,
+        "perspective": "중립",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "CSA-20260728-7409f9",
+      "category": "1-1",
+      "company": "Connectivity Standards Alliance",
+      "short": "CSA",
+      "color_bg": "#fdf3e7",
+      "color_text": "#b5711b",
+      "kpi_value": "N/A",
+      "kpi_label": "핵심 수치",
+      "title": "Unify 이벤트, CSA의 스마트홈 초월",
+      "description": "CSA가 스마트홈을 넘어서는 비전을 제시한 Unify 이벤트.",
+      "body": "Unify 이벤트에서 CSA는 Matter의 발전을 통해 상업용 건물, 산업 IoT, 에너지 관리 등 다양한 분야로의 확장을 강조했다. Matter V1.6은 장치 간 상호작용을 개선하고, 보안 인증을 시스템 수준으로 확장하는 등 IoT의 상호운용성 문제를 해결하기 위한 노력을 보여준다. 이는 소비자 장치를 넘어서는 중요한 변화로, 상업 IoT의 필요성을 반영한다.",
+      "metrics": [
+        {
+          "value": "N/A",
+          "label": "핵심 수치",
+          "trend": "neu"
+        }
+      ],
+      "tags": [
+        "IoT",
+        "스마트홈",
+        "상업용 IoT"
+      ],
+      "source": "Embedded Computing Design, 2026",
+      "published_date": "2026-07-22",
+      "url": "https://hubs.la/Q04qNxqc0",
+      "added_date": "2026-07-28",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 2,
+        "topic_match": "1-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 3,
         "perspective": "중립",
         "rejection_signal": ""
       }
