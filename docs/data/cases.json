@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-07-28T03:55:28.224638+00:00",
-    "total_cases": 144,
+    "last_updated": "2026-07-29T03:58:51.717228+00:00",
+    "total_cases": 147,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -6161,6 +6161,138 @@
         "topic_match_strength": 4,
         "korea_relevance": 3,
         "perspective": "중립",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "APL-20260729-5fed9a",
+      "category": "1-1",
+      "company": "Apple",
+      "short": "APL",
+      "color_bg": "#eaf7ec",
+      "color_text": "#2e7d4f",
+      "kpi_value": "7인치 디스플레이",
+      "kpi_label": "디스플레이 크기",
+      "title": "애플의 ‘HomePad’가 10월 출시될 가능성",
+      "description": "애플의 새로운 스마트 홈 허브 ‘HomePad’ 출시 소식.",
+      "body": "애플이 새로운 스마트 홈 허브 ‘HomePad’를 출시할 가능성이 높아지고 있다. 이 장치는 7인치 디스플레이와 새로운 운영 체제를 갖추고 있으며, 향상된 Siri AI를 기반으로 한다. 사용자 맞춤형 인터페이스와 보안 기능, 비디오 채팅 등을 지원할 예정이다. 애플은 이 장치를 통해 스마트 홈 시장에서의 입지를 강화하고자 한다.",
+      "metrics": [
+        {
+          "value": "7인치",
+          "label": "디스플레이 크기",
+          "trend": "pos"
+        },
+        {
+          "value": "2025년 봄",
+          "label": "예정 출시일",
+          "trend": "neu"
+        }
+      ],
+      "tags": [
+        "스마트홈",
+        "AI",
+        "애플"
+      ],
+      "source": "The Verge, 2026",
+      "published_date": "2026-07-28",
+      "url": "https://www.theverge.com/tech/971790/apple-homepad-rumor-launch",
+      "added_date": "2026-07-29",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 2,
+        "debate_potential": 3,
+        "topic_match": "1-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "PRP-20260729-39519f",
+      "category": "2-1",
+      "company": "Perplexity",
+      "short": "PRP",
+      "color_bg": "#eaf5f3",
+      "color_text": "#3a8f7d",
+      "kpi_value": "N/A",
+      "kpi_label": "핵심 수치",
+      "title": "Perplexity의 개인 컴퓨터, AI 에이전트로 변신",
+      "description": "Perplexity의 새로운 도구가 Windows PC를 AI 에이전트로 변환합니다.",
+      "body": "Perplexity는 Windows용 개인 컴퓨터 도구를 출시하여 사용자가 로컬 파일과 Microsoft Office 365, 웹을 통합하여 작업할 수 있도록 지원합니다. 이 도구는 일반적인 디지털 작업을 수행하며, 기업 환경에서의 AI 활용을 촉진합니다. 사용자는 AI에게 명령을 내리고, 문서 작성 및 스프레드시트 업데이트를 요청할 수 있습니다. 이 도구는 기업 데이터에 대한 학습을 하지 않으며, 민감한 작업을 수행하기 전에 사용자에게 알림을 제공합니다.",
+      "metrics": [
+        {
+          "value": "$200",
+          "label": "구독 요금",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Windows",
+        "에이전트"
+      ],
+      "source": "The Verge, 2026",
+      "published_date": "2026-07-28",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/971750/perplexity-personal-computer-windows-ai-agents",
+      "added_date": "2026-07-29",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 3,
+        "debate_potential": 4,
+        "topic_match": "3-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "중립",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "TGH-20260729-0173de",
+      "category": "3-1",
+      "company": "TGR Haas",
+      "short": "TGH",
+      "color_bg": "#f3e8fb",
+      "color_text": "#7b3ab5",
+      "kpi_value": "30%",
+      "kpi_label": "재방문 팬 비율",
+      "title": "RaceMate, 팬과의 새로운 소통 방식",
+      "description": "RaceMate는 팬과의 소통을 혁신하는 AI 동반자입니다.",
+      "body": "TGR Haas는 Infobip와 협력하여 RaceMate라는 AI 동반자를 개발했습니다. 이 AI는 팬들에게 팀 정보와 경주 결과를 제공하며, 팬들의 질문에 답변하는 기능도 갖추고 있습니다. 팬들이 안전하게 소통할 수 있는 플랫폼을 제공하여, 재방문 팬 비율이 30%에 달하는 성과를 올렸습니다.",
+      "metrics": [
+        {
+          "value": "800 million",
+          "label": "전 세계 팬 수",
+          "trend": "pos"
+        },
+        {
+          "value": "12%",
+          "label": "팬 증가율",
+          "trend": "pos"
+        },
+        {
+          "value": "30%",
+          "label": "재방문 팬 비율",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI",
+        "팬 소통",
+        "Formula 1"
+      ],
+      "source": "TechRadar, 2023",
+      "published_date": "2023-07-26",
+      "url": "https://www.techradar.com/pro/i-want-racemate-to-be-the-second-screen-infobip-is-helping-tgr-haas-to-fund-formula-1-car-development-through-an-entirely-new-kind-of-fan-engagement",
+      "added_date": "2026-07-29",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 2,
+        "debate_potential": 3,
+        "topic_match": "4-2",
+        "topic_match_strength": 4,
+        "korea_relevance": 3,
+        "perspective": "낙관",
         "rejection_signal": ""
       }
     }
