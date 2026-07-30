@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-07-29T03:58:51.717228+00:00",
-    "total_cases": 147,
+    "last_updated": "2026-07-30T03:51:53.413557+00:00",
+    "total_cases": 149,
     "version": "1.0",
     "description": "Life After AI — AI-driven Living & Lifestyle Research Article DB"
   },
@@ -6293,6 +6293,89 @@
         "topic_match_strength": 4,
         "korea_relevance": 3,
         "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "META-20260730-169a6f",
+      "category": "3-1",
+      "company": "메타",
+      "short": "META",
+      "color_bg": "#fdf3e7",
+      "color_text": "#b5711b",
+      "kpi_value": "1백만",
+      "kpi_label": "비즈니스 에이전트 사용",
+      "title": "마크 저커버그, 개인 AI 에이전트 추진 계획",
+      "description": "메타가 개인 AI 에이전트에 대한 큰 추진을 계획하고 있다.",
+      "body": "마크 저커버그는 메타가 개인 AI 에이전트를 통해 사용자들의 목표 달성을 지원할 것이라고 밝혔다. 이 에이전트는 24시간 작동하며, 건강, 관계, 재정 등 다양한 분야에서 도움을 줄 예정이다. 메타는 비즈니스 에이전트가 주간 100만 개 이상의 사용 사례를 보유하고 있으며, 개인 에이전트는 향후 제품과 수익의 기반이 될 것이라고 강조했다.",
+      "metrics": [
+        {
+          "value": "1백만",
+          "label": "비즈니스 에이전트 사용",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI",
+        "개인 비서",
+        "메타"
+      ],
+      "source": "The Verge, 2026",
+      "published_date": "2026-07-29",
+      "url": "https://www.theverge.com/tech/972294/meta-q2-2026-earnings-mark-zuckerberg-personal-ai-agents",
+      "added_date": "2026-07-30",
+      "verified": true,
+      "quality_scores": {
+        "life_change_score": 4,
+        "debate_potential": 4,
+        "topic_match": "3-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 4,
+        "perspective": "낙관",
+        "rejection_signal": ""
+      }
+    },
+    {
+      "id": "OAG-20260730-b03ac8",
+      "category": "3-1",
+      "company": "OpenAI 및 Google",
+      "short": "OAG",
+      "color_bg": "#f3e8fb",
+      "color_text": "#7b3ab5",
+      "kpi_value": "실제 AI 비서",
+      "kpi_label": "AI 비서 성능",
+      "title": "AI 비서 성능 비교: Gemini vs GPT",
+      "description": "Gemini와 GPT의 일상 문제 해결 능력을 비교한 사례.",
+      "body": "이 아티클에서는 OpenAI의 GPT-5.6과 Google의 Gemini 3.6 Flash를 비교하여, 두 AI 모델이 사용자의 디지털 데이터를 기반으로 실제로 유용한 계획을 제시하는 능력을 평가합니다. 사용자는 두 모델에 자신의 은행 명세서, 일정, 영수증 등 다양한 데이터를 제공하고, '이번 주에 해야 할 일'을 요청했습니다. Gemini는 일정 정보를 반복하는 데 그쳤고, 충돌하는 이벤트를 놓치는 등 실질적인 도움을 주지 못했습니다. 반면 GPT는 더 나은 결과를 제공했습니다.",
+      "metrics": [
+        {
+          "value": "2",
+          "label": "충돌하는 이벤트 수",
+          "trend": "neg"
+        },
+        {
+          "value": "1",
+          "label": "유용한 계획 제공 AI",
+          "trend": "pos"
+        }
+      ],
+      "tags": [
+        "AI 비서",
+        "Gemini",
+        "GPT"
+      ],
+      "source": "TechRadar, 2023",
+      "published_date": "2023-07-26",
+      "url": "https://www.techradar.com/ai-platforms-assistants/i-gave-gemini-3-6-flash-and-gpt-5-6-access-to-my-entire-digital-life-heres-which-one-actually-helped-me-more",
+      "added_date": "2026-07-30",
+      "verified": false,
+      "quality_scores": {
+        "life_change_score": 2,
+        "debate_potential": 4,
+        "topic_match": "3-1",
+        "topic_match_strength": 4,
+        "korea_relevance": 3,
+        "perspective": "중립",
         "rejection_signal": ""
       }
     }
